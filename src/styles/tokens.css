@@ -1,0 +1,86 @@
+/*
+ * ZKSC Design Tokens (Story 1.1)
+ *
+ * 派生自 docs/bmad/DESIGN.md。这里只承载"基础"颜色、字体栈、间距、圆角，
+ * 供 Story 1.1 首页骨架和后续所有页面模板共享消费。
+ *
+ * 规则（AD-5）：
+ * - 全局 CSS variables 是唯一视觉源；页面级 CSS 不得覆写主色 / 按钮形态 /
+ *   字体栈 / 卡片圆角。
+ * - 新增页面/组件只能引用这里的 token，不允许硬编码色值。
+ */
+
+:root {
+  /* --- Surfaces --- */
+  --zksc-surface-base: #f7f8f6;
+  --zksc-surface-raised: #ffffff;
+  --zksc-surface-muted: #eef2f1;
+  --zksc-surface-inverse: #121518;
+  --zksc-surface-inverse-soft: #1c2226;
+
+  /* --- Ink (Text) --- */
+  --zksc-ink-primary: #15181c;
+  --zksc-ink-secondary: #53606b;
+  --zksc-ink-muted: #7a858e;
+  --zksc-ink-inverse: #f5f7f6;
+
+  /* --- Borders --- */
+  --zksc-border-subtle: #d9dfe3;
+  --zksc-border-strong: #aab5bd;
+
+  /* --- Brand / Semantic --- */
+  --zksc-primary: #0e5a5a;
+  --zksc-primary-foreground: #ffffff;
+  --zksc-primary-soft: #d9f0ee;
+  --zksc-accent: #b23a2e;
+  --zksc-accent-foreground: #ffffff;
+  --zksc-amber: #b98217;
+  --zksc-amber-soft: #f4e6c8;
+  --zksc-success: #2f7d50;
+  --zksc-warning: #a66812;
+  --zksc-danger: #b42318;
+
+  /* --- Typography --- */
+  --zksc-font-sans:
+    "Inter", "PingFang SC", "Microsoft YaHei", system-ui, -apple-system,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+  --zksc-font-size-display-xl: 56px;
+  --zksc-font-size-display-lg: 44px;
+  --zksc-font-size-headline-md: 30px;
+  --zksc-font-size-headline-sm: 22px;
+  --zksc-font-size-body-lg: 18px;
+  --zksc-font-size-body-md: 16px;
+  --zksc-font-size-body-sm: 14px;
+  --zksc-font-size-label: 13px;
+
+  --zksc-line-height-display: 1.08;
+  --zksc-line-height-headline: 1.24;
+  --zksc-line-height-body: 1.7;
+  --zksc-letter-spacing: 0;
+
+  /* --- Radius --- */
+  --zksc-radius-sm: 4px;
+  --zksc-radius-md: 6px;
+  --zksc-radius-lg: 8px;
+  --zksc-radius-full: 9999px;
+
+  /* --- Spacing scale --- */
+  --zksc-space-1: 4px;
+  --zksc-space-2: 8px;
+  --zksc-space-3: 12px;
+  --zksc-space-4: 16px;
+  --zksc-space-5: 24px;
+  --zksc-space-6: 32px;
+  --zksc-space-7: 48px;
+  --zksc-space-8: 64px;
+  --zksc-space-9: 96px;
+
+  /* --- Layout gutters --- */
+  --zksc-gutter-mobile: 20px;
+  --zksc-gutter-tablet: 32px;
+  --zksc-gutter-desktop: 64px;
+  --zksc-section-y-mobile: 56px;
+  --zksc-section-y-desktop: 96px;
+  --zksc-content-max-width: 1280px;
+}
