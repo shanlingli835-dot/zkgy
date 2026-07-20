@@ -43,19 +43,13 @@ export function GlobalFooter() {
           }}
         >
           <div>
-            <div style={{ display: "flex", alignItems: "baseline", gap: 8 }}>
-              <span style={{ fontSize: 22, fontWeight: 700 }}>{brand.name}</span>
-              <span
-                style={{
-                  fontSize: 12,
-                  fontWeight: 600,
-                  color: "var(--zksc-primary-soft)",
-                  letterSpacing: "0.14em",
-                }}
-              >
-                {brand.short}
-              </span>
-            </div>
+            <a
+              href={brand.homeHref}
+              aria-label={`${brand.name} 首页`}
+              style={{ display: "inline-flex", alignItems: "center" }}
+            >
+              <BrandLogo variant="reverse" height={44} />
+            </a>
             <p
               style={{
                 marginTop: "var(--zksc-space-3)",
