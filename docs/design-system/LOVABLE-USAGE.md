@@ -51,6 +51,15 @@ canonical components. Do not add one-off colors, spacing, radii, shadows, or but
 variants. Remove internal notes and report which specifications were used.
 ```
 
+## Canonical Button prompt
+
+```text
+For any in-page or form action, read docs/design-system/components/actions/button.md and reuse
+src/components/ui/button.tsx. Use only primary, secondary, tertiary, or danger. Do not recreate
+button styles, use Button for navigation, or add variants. Icon-only buttons require an
+accessible name; asynchronous actions use the loading API.
+```
+
 ## New component prompt
 
 ```text

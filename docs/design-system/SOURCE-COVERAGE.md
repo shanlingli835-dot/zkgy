@@ -9,7 +9,7 @@ implementation APIs from being treated as local components.
 - Official elements：<https://ux.redhat.com/elements/>
 - Official repository：<https://github.com/RedHat-UX/red-hat-design-system>
 - Upstream color package：`@rhds/tokens@3.1.0`
-- Local design-system version：`0.4.0-red-hat-colors`
+- Local design-system version：`0.5.0-button`
 
 ## Local status terms
 
@@ -33,7 +33,7 @@ needed for the SOURCEGUARD website.
 | -------------- | ------------------- | -------- |
 | Back to top    | Planned             | Phase 2  |
 | Button group   | Planned             | Phase 1  |
-| Button         | Existing unreviewed | Phase 1  |
+| Button         | Implemented         | Phase 1  |
 | Call to action | Planned             | Phase 1  |
 | Menu dropdown  | Existing unreviewed | Phase 1  |
 | Skip link      | Planned             | Phase 1  |

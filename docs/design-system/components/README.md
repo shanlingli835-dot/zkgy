@@ -19,22 +19,22 @@ adapted before reuse in new public UI.
 
 ## Phase 1 foundation components
 
-| Component       | Canonical path                          | Local spec  | Status              |
-| --------------- | --------------------------------------- | ----------- | ------------------- |
-| Button          | `src/components/ui/button.tsx`          | Not created | Existing unreviewed |
-| Button group    | To be confirmed                         | Not created | Planned             |
-| Call to action  | To be confirmed                         | Not created | Planned             |
-| Card            | `src/components/ui/card.tsx`            | Not created | Existing unreviewed |
-| Surface         | To be confirmed                         | Not created | Planned             |
-| Navigation menu | `src/components/ui/navigation-menu.tsx` | Not created | Existing unreviewed |
-| Global header   | `src/components/site/GlobalHeader.tsx`  | Not created | Existing unreviewed |
-| Mobile menu     | `src/components/site/MobileMenu.tsx`    | Not created | Existing unreviewed |
-| Footer          | `src/components/site/GlobalFooter.tsx`  | Not created | Existing unreviewed |
-| Breadcrumb      | `src/components/ui/breadcrumb.tsx`      | Not created | Existing unreviewed |
-| Skip link       | To be confirmed                         | Not created | Planned             |
+| Component       | Canonical path                          | Local spec                               | Status              |
+| --------------- | --------------------------------------- | ---------------------------------------- | ------------------- |
+| Button          | `src/components/ui/button.tsx`          | [`actions/button.md`](actions/button.md) | Implemented         |
+| Button group    | To be confirmed                         | Not created                              | Planned             |
+| Call to action  | To be confirmed                         | Not created                              | Planned             |
+| Card            | `src/components/ui/card.tsx`            | Not created                              | Existing unreviewed |
+| Surface         | To be confirmed                         | Not created                              | Planned             |
+| Navigation menu | `src/components/ui/navigation-menu.tsx` | Not created                              | Existing unreviewed |
+| Global header   | `src/components/site/GlobalHeader.tsx`  | Not created                              | Existing unreviewed |
+| Mobile menu     | `src/components/site/MobileMenu.tsx`    | Not created                              | Existing unreviewed |
+| Footer          | `src/components/site/GlobalFooter.tsx`  | Not created                              | Existing unreviewed |
+| Breadcrumb      | `src/components/ui/breadcrumb.tsx`      | Not created                              | Existing unreviewed |
+| Skip link       | To be confirmed                         | Not created                              | Planned             |
 
-No component-specific Markdown files are linked yet because none has completed the local
-contract. This is intentional and prevents Lovable from chasing nonexistent specifications.
+Only completed component specifications are linked. Unreviewed and Planned components remain
+unavailable so Lovable does not treat technical starter files as approved UI.
 
 ## Phase 2 candidates
 

@@ -69,11 +69,26 @@
   --ds-color-action-primary-foreground: var(--rh-color-white);
   --ds-color-action-primary-subtle: var(--rh-color-red-10);
   --ds-color-action-secondary: var(--rh-color-white);
-  --ds-color-action-secondary-hover: var(--rh-color-gray-10);
-  --ds-color-action-secondary-foreground: var(--rh-color-text-primary-on-light);
+  --ds-color-action-secondary-hover: var(--rh-color-red-10);
+  --ds-color-action-secondary-active: var(--rh-color-brand-red-lightest);
+  --ds-color-action-secondary-foreground: var(--rh-color-brand-red-on-light);
+  --ds-color-action-secondary-hover-foreground: var(--rh-color-brand-red-dark);
+  --ds-color-action-secondary-active-foreground: var(--rh-color-brand-red-darker);
+  --ds-color-action-secondary-border: var(--rh-color-brand-red-on-light);
+  --ds-color-action-secondary-hover-border: var(--rh-color-brand-red-dark);
+  --ds-color-action-secondary-active-border: var(--rh-color-brand-red-darker);
+  --ds-color-action-tertiary: var(--rh-color-white);
+  --ds-color-action-tertiary-hover: var(--rh-color-gray-10);
+  --ds-color-action-tertiary-active: var(--rh-color-gray-20);
+  --ds-color-action-tertiary-foreground: var(--rh-color-text-primary-on-light);
+  --ds-color-action-tertiary-border: var(--rh-color-border-strong-on-light);
   --ds-color-action-danger: var(--rh-color-status-danger-on-light);
   --ds-color-action-danger-hover: var(--rh-color-red-orange-70);
+  --ds-color-action-danger-active: var(--rh-color-red-orange-70);
   --ds-color-action-danger-foreground: var(--rh-color-white);
+  --ds-color-action-disabled: var(--rh-color-gray-30);
+  --ds-color-action-disabled-foreground: var(--rh-color-gray-50);
+  --ds-color-action-disabled-border: var(--rh-color-gray-30);
   --ds-color-focus: var(--rh-color-interactive-primary-focus-on-light);
 
   /* Status */
