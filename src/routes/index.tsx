@@ -253,12 +253,9 @@ function HomeRoute() {
         >
           {homeHero.description}
         </p>
-        <a
-          href={homeHero.primaryCta.href}
-          style={{ textDecoration: "none", display: "inline-block" }}
-        >
-          <Button variant="primary">{homeHero.primaryCta.label}</Button>
-        </a>
+        <Link to={homeHero.primaryCta.href} variant="standalone">
+          {homeHero.primaryCta.label}
+        </Link>
       </Section>
 
       {/* Stats / 合作生态 */}
