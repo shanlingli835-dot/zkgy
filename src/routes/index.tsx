@@ -367,8 +367,10 @@ function HomeRoute() {
           {homeSolutions.items.map((s) => (
             <CardTile
               key={s.name}
+              icon={s.icon}
               tag={s.tag}
               title={s.name}
+
               description={
                 <>
                   <strong
