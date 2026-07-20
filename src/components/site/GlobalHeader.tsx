@@ -201,32 +201,13 @@ function BrandMark() {
       to={brand.homeHref}
       style={{
         display: "inline-flex",
-        alignItems: "baseline",
-        gap: 8,
+        alignItems: "center",
         textDecoration: "none",
         color: "var(--zksc-ink-primary)",
       }}
       aria-label={`${brand.name} 首页`}
     >
-      <span
-        style={{
-          fontSize: 22,
-          fontWeight: 700,
-          letterSpacing: "0.02em",
-        }}
-      >
-        {brand.name}
-      </span>
-      <span
-        style={{
-          fontSize: 12,
-          fontWeight: 600,
-          color: "var(--zksc-primary)",
-          letterSpacing: "0.14em",
-        }}
-      >
-        {brand.short}
-      </span>
+      <BrandLogo variant="color" height={40} />
     </Link>
   );
 }
