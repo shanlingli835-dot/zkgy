@@ -8,6 +8,7 @@ import {
   type NavGroup,
   type NavLink,
 } from "@/content/navigation";
+import { BrandLogo } from "./BrandLogo";
 import { MobileMenu } from "./MobileMenu";
 
 /**
