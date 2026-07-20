@@ -82,6 +82,8 @@
   --color-link-navigation-active: var(--ds-color-link-navigation-active);
   --color-link-navigation-inverse: var(--ds-color-link-navigation-inverse);
   --color-link-navigation-inverse-hover: var(--ds-color-link-navigation-inverse-hover);
+  --color-navigation-accent-hover: var(--ds-color-navigation-accent-hover);
+  --color-navigation-accent-active: var(--ds-color-navigation-accent-active);
   --color-border: var(--ds-color-border-default);
   --color-input: var(--ds-color-border-default);
   --color-ring: var(--ds-color-focus);

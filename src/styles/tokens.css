@@ -110,6 +110,8 @@
   --ds-color-link-navigation-active: var(--rh-color-brand-red-on-light);
   --ds-color-link-navigation-inverse: var(--rh-color-text-secondary-on-dark);
   --ds-color-link-navigation-inverse-hover: var(--rh-color-text-primary-on-dark);
+  --ds-color-navigation-accent-hover: var(--rh-color-gray-50);
+  --ds-color-navigation-accent-active: var(--rh-color-brand-red-on-light);
 
   /* Status */
   --ds-color-status-info: var(--rh-color-status-info-on-light);
@@ -145,6 +147,7 @@
   --ds-radius-round: 9999px;
   --ds-border-width-default: 1px;
   --ds-border-width-strong: 2px;
+  --ds-border-width-accent: 4px;
   --ds-shadow-sm: 0 1px 2px color-mix(in srgb, var(--rh-color-black) 8%, transparent);
   --ds-shadow-md: 0 12px 32px color-mix(in srgb, var(--rh-color-black) 8%, transparent);
 
@@ -161,6 +164,7 @@
   --ds-size-header: 4.5rem;
   --ds-size-control-min: 2.75rem;
   --ds-size-menu-min: 16rem;
+  --ds-z-navigation: 50;
   --ds-gutter-mobile: 1.25rem;
   --ds-gutter-tablet: 2rem;
   --ds-gutter-desktop: 4rem;

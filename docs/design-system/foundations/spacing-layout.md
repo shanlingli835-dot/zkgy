@@ -46,6 +46,17 @@ Do not create temporary `10px`, `14px`, or oversized pill radii in routes.
 - Default Cards use borders or surface contrast, not shadows.
 - Page hierarchy cannot depend on multiple shadow levels.
 
+## Borders and stacking
+
+| Token                       | Value | Purpose                                 |
+| --------------------------- | ----- | --------------------------------------- |
+| `--ds-border-width-default` | `1px` | Default component and surface boundary  |
+| `--ds-border-width-strong`  | `2px` | Focus and strong component boundary     |
+| `--ds-border-width-accent`  | `4px` | Expanded primary-navigation accent      |
+| `--ds-z-navigation`         | `50`  | Desktop navigation panel stacking layer |
+
+Do not add route-level z-index values or reuse the navigation accent as general decoration.
+
 ## Container and grid
 
 - Page content maximum width：`1280px` through `--ds-container-page`.

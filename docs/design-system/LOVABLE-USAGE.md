@@ -69,6 +69,16 @@ navigation, with inverse tone only on an approved dark surface. Do not use Butto
 force external links into a new tab, or recreate link styles in route code.
 ```
 
+## Desktop Navigation prompt
+
+```text
+For the desktop primary navigation, read
+docs/design-system/components/navigation/desktop-navigation.md and reuse
+src/components/site/DesktopNavigation.tsx with src/content/navigation.ts. Do not recreate
+dropdowns in GlobalHeader, add role="menu", change source-faithful destinations, or expose the
+desktop component as the mobile fallback.
+```
+
 ## New component prompt
 
 ```text

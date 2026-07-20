@@ -1,8 +1,9 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, useRouterState } from "@tanstack/react-router";
 
-import { brand, primaryCta, primaryNav, type NavGroup, type NavLink } from "@/content/navigation";
+import { brand, primaryCta, primaryNav } from "@/content/navigation";
 import { BrandLogo } from "./BrandLogo";
+import { DesktopNavigation } from "./DesktopNavigation";
 import { MobileMenu } from "./MobileMenu";
 
 /**
@@ -18,14 +19,11 @@ import { MobileMenu } from "./MobileMenu";
  */
 export function GlobalHeader() {
   const pathname = useRouterState({ select: (s) => s.location.pathname });
-  const [openGroupId, setOpenGroupId] = useState<string | null>(null);
   const [mobileOpen, setMobileOpen] = useState(false);
-  const rootRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     function onKey(e: KeyboardEvent) {
       if (e.key === "Escape") {
-        setOpenGroupId(null);
         setMobileOpen(false);
       }
     }
@@ -33,20 +31,8 @@ export function GlobalHeader() {
     return () => document.removeEventListener("keydown", onKey);
   }, []);
 
-  useEffect(() => {
-    function onClick(e: MouseEvent) {
-      if (!rootRef.current) return;
-      if (!rootRef.current.contains(e.target as Node)) {
-        setOpenGroupId(null);
-      }
-    }
-    document.addEventListener("mousedown", onClick);
-    return () => document.removeEventListener("mousedown", onClick);
-  }, []);
-
   return (
     <div
-      ref={rootRef}
       style={{
         position: "sticky",
         top: 0,
@@ -69,29 +55,10 @@ export function GlobalHeader() {
       >
         <BrandMark />
 
-        {/* 桌面端一级导航 */}
-        <nav
-          aria-label="主要导航"
-          className="site-desktop-nav"
-          style={{
-            display: "flex",
-            alignItems: "center",
-            gap: "var(--ds-space-xl)",
-          }}
-        >
-          {primaryNav
-            .filter((g) => g.id !== "contact")
-            .map((group) => (
-              <DesktopNavItem
-                key={group.id}
-                group={group}
-                pathname={pathname}
-                open={openGroupId === group.id}
-                onOpen={() => setOpenGroupId(group.id)}
-                onClose={() => setOpenGroupId((cur) => (cur === group.id ? null : cur))}
-              />
-            ))}
-        </nav>
+        <DesktopNavigation
+          currentPath={pathname}
+          items={primaryNav.filter((group) => group.id !== "contact")}
+        />
 
         <div
           className="site-desktop-cta"
@@ -174,15 +141,6 @@ export function GlobalHeader() {
             padding-right: var(--ds-gutter-mobile) !important;
           }
         }
-        .site-nav-link:focus-visible,
-        .site-nav-link:hover {
-          color: var(--ds-color-action-primary) !important;
-        }
-        .site-nav-link:focus-visible {
-          outline: var(--ds-border-width-strong) solid var(--ds-color-focus);
-          outline-offset: var(--ds-space-xs);
-          border-radius: var(--ds-radius-control);
-        }
       `}</style>
     </div>
   );
@@ -202,139 +160,6 @@ function BrandMark() {
     >
       <BrandLogo variant="color" height={40} />
     </Link>
-  );
-}
-
-function DesktopNavItem({
-  group,
-  pathname,
-  open,
-  onOpen,
-  onClose,
-}: {
-  group: NavGroup;
-  pathname: string;
-  open: boolean;
-  onOpen: () => void;
-  onClose: () => void;
-}) {
-  const hasChildren = !!group.children?.length;
-  const isActive =
-    (group.href && pathname === group.href) || !!group.children?.some((c) => pathname === c.href);
-
-  return (
-    <div
-      onMouseEnter={hasChildren ? onOpen : undefined}
-      onMouseLeave={hasChildren ? onClose : undefined}
-      onFocus={hasChildren ? onOpen : undefined}
-      onBlur={(e) => {
-        if (hasChildren && e.currentTarget && !e.currentTarget.contains(e.relatedTarget as Node)) {
-          onClose();
-        }
-      }}
-      style={{ position: "relative" }}
-    >
-      {group.href ? (
-        <a
-          href={group.href}
-          className="site-nav-link"
-          aria-current={isActive ? "page" : undefined}
-          style={navTriggerStyle(isActive)}
-        >
-          {group.label}
-        </a>
-      ) : (
-        <button
-          type="button"
-          className="site-nav-link"
-          aria-expanded={open}
-          aria-haspopup={hasChildren ? "menu" : undefined}
-          style={{
-            ...navTriggerStyle(isActive),
-            background: "transparent",
-            border: "none",
-            cursor: hasChildren ? "pointer" : "default",
-          }}
-        >
-          {group.label}
-          {hasChildren && <Caret open={open} />}
-        </button>
-      )}
-
-      {hasChildren && open && (
-        <div
-          role="menu"
-          style={{
-            position: "absolute",
-            top: "100%",
-            left: 0,
-            marginTop: "var(--ds-space-sm)",
-            minWidth: "var(--ds-size-menu-min)",
-            backgroundColor: "var(--ds-color-surface-default)",
-            border: "var(--ds-border-width-default) solid var(--ds-color-border-subtle)",
-            borderRadius: "var(--ds-radius-surface)",
-            boxShadow: "var(--ds-shadow-md)",
-            padding: "var(--ds-space-sm)",
-          }}
-        >
-          {group.children!.map((child) => (
-            <DesktopSubLink key={child.href} link={child} active={pathname === child.href} />
-          ))}
-        </div>
-      )}
-    </div>
-  );
-}
-
-function DesktopSubLink({ link, active }: { link: NavLink; active: boolean }) {
-  return (
-    <a
-      role="menuitem"
-      href={link.href}
-      className="site-nav-link"
-      aria-current={active ? "page" : undefined}
-      style={{
-        display: "block",
-        padding: "var(--ds-space-md)",
-        borderRadius: "var(--ds-radius-control)",
-        fontSize: "var(--ds-font-size-md)",
-        color: active ? "var(--ds-color-action-primary)" : "var(--ds-color-text-primary)",
-        textDecoration: "none",
-        whiteSpace: "nowrap",
-      }}
-    >
-      {link.label}
-    </a>
-  );
-}
-
-function navTriggerStyle(active: boolean): React.CSSProperties {
-  return {
-    display: "inline-flex",
-    alignItems: "center",
-    gap: "var(--ds-space-xs)",
-    padding: "var(--ds-space-sm) var(--ds-space-xs)",
-    fontSize: "var(--ds-font-size-md)",
-    fontWeight: "var(--ds-font-weight-medium)",
-    color: active ? "var(--ds-color-action-primary)" : "var(--ds-color-text-primary)",
-    textDecoration: "none",
-  };
-}
-
-function Caret({ open }: { open: boolean }) {
-  return (
-    <svg
-      width="10"
-      height="10"
-      viewBox="0 0 10 10"
-      aria-hidden="true"
-      style={{
-        transition: "transform var(--ds-duration-normal) var(--ds-ease-standard)",
-        transform: open ? "rotate(180deg)" : "rotate(0)",
-      }}
-    >
-      <path d="M2 3.5 L5 6.5 L8 3.5" fill="none" stroke="currentColor" strokeWidth="1.5" />
-    </svg>
   );
 }
 

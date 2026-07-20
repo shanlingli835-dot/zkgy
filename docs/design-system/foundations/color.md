@@ -35,6 +35,7 @@ upstream names. Legacy `--zksc-*` and default shadcn theme values remain removed
 | Borders             | `--ds-color-border-*`                       | Subtle, default, strong, disabled                        |
 | Actions             | `--ds-color-action-*`                       | Primary, hover, active, subtle, danger                   |
 | Links               | `--ds-color-link-*`                         | Default, visited, navigation, inverse, underline         |
+| Navigation          | `--ds-color-navigation-*`                   | Expanded and hover accent treatments                     |
 | Focus               | `--ds-color-focus`                          | Visible focus ring                                       |
 | Status              | `--ds-color-status-*`                       | Info, success, warning, danger foreground/surface/border |
 
