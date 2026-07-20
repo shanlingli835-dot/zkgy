@@ -4,7 +4,7 @@ import type { CSSProperties, ReactNode } from "react";
 import { SiteShell } from "@/components/site/SiteShell";
 import { GlobalHeader } from "@/components/site/GlobalHeader";
 import { GlobalFooter } from "@/components/site/GlobalFooter";
-import { Button } from "@/components/ui/button";
+
 import { Link } from "@/components/ui/link";
 import {
   homePage,
