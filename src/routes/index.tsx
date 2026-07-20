@@ -346,8 +346,10 @@ function HomeRoute() {
           {homeProducts.items.map((p) => (
             <CardTile
               key={p.name}
+              icon={p.icon}
               title={p.name}
               description={p.description}
+
               footer={
                 <Link to={p.href} variant="standalone">
                   了解更多
