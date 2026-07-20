@@ -1,6 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 
 import { SiteShell } from "@/components/site/SiteShell";
+import { GlobalHeader } from "@/components/site/GlobalHeader";
+import { GlobalFooter } from "@/components/site/GlobalFooter";
 import { homePage } from "@/content/pages/home";
 
 /**
@@ -32,7 +34,7 @@ export const Route = createFileRoute("/")({
 
 function HomeRoute() {
   return (
-    <SiteShell>
+    <SiteShell header={<GlobalHeader />} footer={<GlobalFooter />}>
       <section
         aria-labelledby="home-skeleton-title"
         style={{
