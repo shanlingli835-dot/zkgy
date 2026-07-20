@@ -462,7 +462,7 @@ function HomeRoute() {
         <SectionHeading id="home-cases-title" title={homeCases.title} />
         <div style={gridStyle("280px")}>
           {homeCases.items.map((c) => (
-            <CardTile key={c.title} tag={c.tag} title={c.title} />
+            <CardTile key={c.title} icon={c.icon} tag={c.tag} title={c.title} />
           ))}
         </div>
       </Section>
