@@ -257,9 +257,7 @@ function HomeRoute() {
           href={homeHero.primaryCta.href}
           style={{ textDecoration: "none", display: "inline-block" }}
         >
-          <Button variant="primary" asChild={false as never}>
-            {homeHero.primaryCta.label}
-          </Button>
+          <Button variant="primary">{homeHero.primaryCta.label}</Button>
         </a>
       </Section>
 
