@@ -459,9 +459,6 @@ function HomeRoute() {
           <Link to={homeBottomCta.primaryCta.href} variant="standalone" tone="inverse">
             {homeBottomCta.primaryCta.label}
           </Link>
-          >
-            <Button variant="primary">{homeBottomCta.primaryCta.label}</Button>
-          </a>
         </div>
       </Section>
 
