@@ -8,7 +8,8 @@ implementation APIs from being treated as local components.
 - Upstream website version：Red Hat Design System `v4.2.0`
 - Official elements：<https://ux.redhat.com/elements/>
 - Official repository：<https://github.com/RedHat-UX/red-hat-design-system>
-- Local design-system version：`0.3.0-tokens`
+- Upstream color package：`@rhds/tokens@3.1.0`
+- Local design-system version：`0.4.0-red-hat-colors`
 
 ## Local status terms
 
@@ -114,10 +115,19 @@ needed for the SOURCEGUARD website.
 ## Explicit exclusions
 
 - Red Hat Logo, brand imagery, example screenshots, fonts, icons, and legal copy.
-- Red Hat color values or theme identity.
-- `--rh-*` Token names, `<rh-*>` elements, and RH Elements package APIs.
+- Red Hat non-color Token categories, `<rh-*>` elements, and RH Elements package APIs.
 - Dark theme and scheme switching unless explicitly requested later.
 - Components that do not serve an identified SOURCEGUARD page requirement.
+
+## Approved color exception
+
+- `src/styles/red-hat-colors.css` directly preserves all 364 original `--rh-color-*` Token
+  declarations from `@rhds/tokens@3.1.0`: 209 HEX declarations, 77 HSL channel declarations,
+  77 RGB channel declarations, and 1 computed color declaration.
+- The upstream MIT notice is preserved in `upstream/RED-HAT-TOKENS-LICENSE.md`.
+- The snapshot contains 75 distinct HEX values and includes both `on-light` and `on-dark`
+  upstream declarations; importing them does not activate a local Dark theme.
+- Application code uses only `--ds-color-*`; `src/styles/tokens.css` owns the semantic mapping.
 
 ## Adoption rule
 

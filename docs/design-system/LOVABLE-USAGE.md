@@ -27,8 +27,10 @@ For every UI change, follow AGENTS.md and use docs/design-system/README.md to ro
 only the relevant foundation, Implemented component, and Implemented pattern files.
 Reuse src/components/ui and src/components/site; do not create one-off visual values or
 duplicate components. Use only approved 中科固源 / SOURCEGUARD brand assets. Red Hat is
-an upstream interaction and accessibility reference only; never use its brand assets,
-fonts, icons, --rh-* tokens, or rh-* Web Components. Report the specification files used.
+the approved full color-token, interaction, and accessibility source. Preserve
+src/styles/red-hat-colors.css exactly; UI code uses its colors only through --ds-color-*.
+Never use Red Hat logos, imagery, fonts, icons, copy, or rh-* Web Components. Report the
+specification files used.
 ```
 
 ## Foundation migration prompt

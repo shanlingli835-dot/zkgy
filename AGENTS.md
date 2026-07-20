@@ -42,8 +42,9 @@ meaning while normalizing the visible brand to `中科固源 / SOURCEGUARD`.
 ## Design System Instructions
 
 `docs/design-system/` is the single routing source for UI design and implementation.
-Red Hat Design System is an upstream reference for component hierarchy, behavior,
-content guidance, responsive rules, and accessibility only. It is not the site brand.
+Red Hat Design System is the approved upstream source for the complete original color
+Token snapshot plus component hierarchy, behavior, content guidance, responsive rules,
+and accessibility. It is not the public site brand.
 
 Before creating or modifying UI:
 
@@ -59,8 +60,12 @@ Before creating or modifying UI:
 
 ### Mandatory boundaries
 
-- Do not use or copy Red Hat logos, brand assets, images, icon files, fonts,
-  `--rh-*` tokens, or `rh-*` Web Components.
+- Do not use or copy Red Hat logos, brand assets, images, icon files, fonts, or
+  `rh-*` Web Components.
+- `src/styles/red-hat-colors.css` is the only approved direct Red Hat copy. It must
+  preserve the complete `@rhds/tokens@3.1.0` color snapshot without local edits.
+- Components and routes must use `--ds-color-*`; direct `--rh-color-*` consumption is
+  limited to the semantic mappings in `src/styles/tokens.css`.
 - Use only approved 中科固源 / SOURCEGUARD assets documented in
   `docs/design-system/brand/brand-assets.md`.
 - Do not add one-off colors, spacing, radii, shadows, gradients, glass effects,

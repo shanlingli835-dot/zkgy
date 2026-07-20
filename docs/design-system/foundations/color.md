@@ -2,15 +2,22 @@
 
 状态：Implemented.
 
-实现位置：`src/styles/tokens.css`
+上游原始色板：`src/styles/red-hat-colors.css`
+
+本地语义映射：`src/styles/tokens.css`
 
 主题：Light only.
 
 ## Implementation boundary
 
-`src/styles/tokens.css` is the single executable source. Tailwind and shadcn-compatible aliases
-in `src/styles.css` map to `--ds-*`; they do not declare another palette. Legacy `--zksc-*`
-variables and the default shadcn Light/Dark values have been removed from executable source.
+`red-hat-colors.css` is a direct, complete copy of all 364 `--rh-color-*` declarations in
+`@rhds/tokens@3.1.0`: 209 HEX declarations, 77 HSL channel declarations, 77 RGB channel
+declarations, and 1 computed color declaration. It preserves all 75 distinct HEX values. Do not
+edit, shorten, rename, reformat, or selectively replace that snapshot.
+
+`tokens.css` maps the upstream colors to local `--ds-color-*` semantics. Components, routes,
+Tailwind, and shadcn-compatible aliases consume only `--ds-*`; they must not couple directly to
+upstream names. Legacy `--zksc-*` and default shadcn theme values remain removed.
 
 ## Principles
 
@@ -30,9 +37,22 @@ variables and the default shadcn Light/Dark values have been removed from execut
 | Focus               | `--ds-color-focus`                          | Visible focus ring                                       |
 | Status              | `--ds-color-status-*`                       | Info, success, warning, danger foreground/surface/border |
 
-The current values are derived from the approved SOURCEGUARD brand direction, not the Red Hat
-palette. Exact values remain centralized in `tokens.css`; documentation records semantics and
-usage rather than duplicating an editable palette.
+The exact color values come directly from the approved Red Hat snapshot. Semantic selection and
+component usage remain controlled by the SOURCEGUARD `--ds-color-*` layer.
+
+## Current Light mapping
+
+| Local purpose          | Red Hat source                                                                     |
+| ---------------------- | ---------------------------------------------------------------------------------- |
+| Primary action         | `--rh-color-brand-red-on-light`                                                    |
+| Primary hover / active | `--rh-color-brand-red-dark` / `--rh-color-brand-red-darker`                        |
+| Link and focus         | `--rh-color-interactive-primary-*`                                                 |
+| Canvas and surfaces    | `--rh-color-canvas-*`, `--rh-color-surface-*`                                      |
+| Text and borders       | `--rh-color-text-*-on-light`, `--rh-color-border-*-on-light`                       |
+| Status                 | `--rh-color-status-*`, `--rh-color-surface-status-*`, `--rh-color-border-status-*` |
+
+The copied `on-dark` declarations remain available because the user requested the complete
+source palette. They do not activate a Dark theme.
 
 ## Disabled states
 
@@ -50,5 +70,6 @@ usage rather than duplicating an editable palette.
 - New raw color values in JSX, TSX, or route CSS.
 - Palette names such as `blue-500` or `gray-200` used as component semantics.
 - Duplicate semantic names for the same purpose.
-- Red Hat palette values, `--rh-*`, or a Red Hat-branded theme.
+- Direct `--rh-color-*` usage outside `tokens.css`.
+- Editing or removing individual values from `red-hat-colors.css`.
 - A Dark theme without an explicit project decision.

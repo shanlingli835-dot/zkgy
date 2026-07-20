@@ -3,7 +3,8 @@
  *
  * This is the single executable source for visual values. Components and routes
  * consume semantic --ds-* names or Tailwind aliases mapped to these values in
- * src/styles.css. Red Hat tokens and brand values are intentionally excluded.
+ * src/styles.css. Color semantics map to the complete Red Hat token snapshot in
+ * red-hat-colors.css by explicit user direction; other foundations remain local.
  */
 
 :root {
@@ -35,91 +36,59 @@
   --ds-letter-spacing-default: 0;
 
   /* Canvas and surfaces */
-  --ds-color-canvas: #f7f8f6;
-  --ds-color-surface-default: #ffffff;
-  --ds-color-surface-subtle: #eef2f1;
-  --ds-color-surface-muted: #eef2f1;
-  --ds-color-surface-inverse: #121518;
-  --ds-color-surface-inverse-soft: #1c2226;
-  --ds-color-surface-disabled: #d9dfe3;
-  --ds-color-overlay: rgb(21 24 28 / 0.32);
+  --ds-color-canvas: var(--rh-color-canvas-white);
+  --ds-color-surface-default: var(--rh-color-surface-lightest);
+  --ds-color-surface-subtle: var(--rh-color-surface-lighter);
+  --ds-color-surface-muted: var(--rh-color-surface-light);
+  --ds-color-surface-inverse: var(--rh-color-surface-darkest);
+  --ds-color-surface-inverse-soft: var(--rh-color-surface-darker);
+  --ds-color-surface-disabled: var(--rh-color-gray-20);
+  --ds-color-overlay: color-mix(in srgb, var(--rh-color-black) 40%, transparent);
 
   /* Text */
-  --ds-color-text-primary: #15181c;
-  --ds-color-text-secondary: #53606b;
-  --ds-color-text-muted: #7a858e;
-  --ds-color-text-disabled: #7a858e;
-  --ds-color-text-inverse: #f5f7f6;
-  --ds-color-text-inverse-secondary: rgb(245 247 246 / 0.72);
-  --ds-color-text-inverse-muted: rgb(245 247 246 / 0.6);
-  --ds-color-text-inverse-link: rgb(245 247 246 / 0.85);
+  --ds-color-text-primary: var(--rh-color-text-primary-on-light);
+  --ds-color-text-secondary: var(--rh-color-text-secondary-on-light);
+  --ds-color-text-muted: var(--rh-color-gray-50);
+  --ds-color-text-disabled: var(--rh-color-gray-50);
+  --ds-color-text-inverse: var(--rh-color-text-primary-on-dark);
+  --ds-color-text-inverse-secondary: var(--rh-color-text-secondary-on-dark);
+  --ds-color-text-inverse-muted: var(--rh-color-gray-40);
+  --ds-color-text-inverse-link: var(--rh-color-accent-base-on-dark);
 
   /* Borders */
-  --ds-color-border-subtle: #d9dfe3;
-  --ds-color-border-default: #d9dfe3;
-  --ds-color-border-strong: #aab5bd;
-  --ds-color-border-disabled: #d9dfe3;
-  --ds-color-border-inverse: rgb(245 247 246 / 0.12);
+  --ds-color-border-subtle: var(--rh-color-border-subtle-on-light);
+  --ds-color-border-default: var(--rh-color-border-subtle-on-light);
+  --ds-color-border-strong: var(--rh-color-border-strong-on-light);
+  --ds-color-border-disabled: var(--rh-color-gray-30);
+  --ds-color-border-inverse: var(--rh-color-border-subtle-on-dark);
 
   /* Actions */
-  --ds-color-action-primary: #d71618;
-  --ds-color-action-primary-hover: #b23a2e;
-  --ds-color-action-primary-active: color-mix(
-    in srgb,
-    var(--ds-color-action-primary-hover) 84%,
-    var(--ds-color-surface-inverse)
-  );
-  --ds-color-action-primary-foreground: #ffffff;
-  --ds-color-action-primary-subtle: #fce7e8;
-  --ds-color-action-secondary: #ffffff;
-  --ds-color-action-secondary-hover: #eef2f1;
-  --ds-color-action-secondary-foreground: #15181c;
-  --ds-color-action-danger: #b42318;
-  --ds-color-action-danger-hover: color-mix(
-    in srgb,
-    var(--ds-color-action-danger) 84%,
-    var(--ds-color-surface-inverse)
-  );
-  --ds-color-action-danger-foreground: #ffffff;
-  --ds-color-focus: #b98217;
+  --ds-color-action-primary: var(--rh-color-brand-red-on-light);
+  --ds-color-action-primary-hover: var(--rh-color-brand-red-dark);
+  --ds-color-action-primary-active: var(--rh-color-brand-red-darker);
+  --ds-color-action-primary-foreground: var(--rh-color-white);
+  --ds-color-action-primary-subtle: var(--rh-color-red-10);
+  --ds-color-action-secondary: var(--rh-color-white);
+  --ds-color-action-secondary-hover: var(--rh-color-gray-10);
+  --ds-color-action-secondary-foreground: var(--rh-color-text-primary-on-light);
+  --ds-color-action-danger: var(--rh-color-status-danger-on-light);
+  --ds-color-action-danger-hover: var(--rh-color-red-orange-70);
+  --ds-color-action-danger-foreground: var(--rh-color-white);
+  --ds-color-focus: var(--rh-color-interactive-primary-focus-on-light);
 
   /* Status */
-  --ds-color-status-info: #53606b;
-  --ds-color-status-info-surface: color-mix(
-    in srgb,
-    var(--ds-color-status-info) 10%,
-    var(--ds-color-surface-default)
-  );
-  --ds-color-status-info-border: color-mix(
-    in srgb,
-    var(--ds-color-status-info) 35%,
-    var(--ds-color-surface-default)
-  );
-  --ds-color-status-success: #2f7d50;
-  --ds-color-status-success-surface: color-mix(
-    in srgb,
-    var(--ds-color-status-success) 10%,
-    var(--ds-color-surface-default)
-  );
-  --ds-color-status-success-border: color-mix(
-    in srgb,
-    var(--ds-color-status-success) 35%,
-    var(--ds-color-surface-default)
-  );
-  --ds-color-status-warning: #a66812;
-  --ds-color-status-warning-surface: #f4e6c8;
-  --ds-color-status-warning-border: #b98217;
-  --ds-color-status-danger: #b42318;
-  --ds-color-status-danger-surface: color-mix(
-    in srgb,
-    var(--ds-color-status-danger) 10%,
-    var(--ds-color-surface-default)
-  );
-  --ds-color-status-danger-border: color-mix(
-    in srgb,
-    var(--ds-color-status-danger) 35%,
-    var(--ds-color-surface-default)
-  );
+  --ds-color-status-info: var(--rh-color-status-info-on-light);
+  --ds-color-status-info-surface: var(--rh-color-surface-status-info-on-light);
+  --ds-color-status-info-border: var(--rh-color-border-status-info-on-light);
+  --ds-color-status-success: var(--rh-color-status-success-on-light);
+  --ds-color-status-success-surface: var(--rh-color-surface-status-success-on-light);
+  --ds-color-status-success-border: var(--rh-color-border-status-success-on-light);
+  --ds-color-status-warning: var(--rh-color-status-warning-on-light);
+  --ds-color-status-warning-surface: var(--rh-color-surface-status-warning-on-light);
+  --ds-color-status-warning-border: var(--rh-color-border-status-warning-on-light);
+  --ds-color-status-danger: var(--rh-color-status-danger-on-light);
+  --ds-color-status-danger-surface: var(--rh-color-surface-status-danger-on-light);
+  --ds-color-status-danger-border: var(--rh-color-border-status-danger-on-light);
 
   /* Spacing */
   --ds-space-0: 0;
@@ -139,8 +108,8 @@
   --ds-radius-round: 9999px;
   --ds-border-width-default: 1px;
   --ds-border-width-strong: 2px;
-  --ds-shadow-sm: 0 1px 2px rgb(20 24 28 / 0.08);
-  --ds-shadow-md: 0 12px 32px rgb(20 24 28 / 0.08);
+  --ds-shadow-sm: 0 1px 2px color-mix(in srgb, var(--rh-color-black) 8%, transparent);
+  --ds-shadow-md: 0 12px 32px color-mix(in srgb, var(--rh-color-black) 8%, transparent);
 
   /* Motion */
   --ds-duration-fast: 120ms;

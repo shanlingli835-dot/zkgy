@@ -38,7 +38,8 @@
 
 - The official brand is `中科固源 / SOURCEGUARD`.
 - Use only approved brand assets documented in `../brand/brand-assets.md`.
-- Red Hat is a behavior and accessibility reference, not a visual brand source.
+- Red Hat is the approved complete color-token, behavior, and accessibility source; it is not
+  the public brand or asset source.
 - Future brand evolution should primarily change Tokens and approved assets, not fork components.
 
 ## Prohibited patterns

@@ -40,7 +40,8 @@ return behavior.
 - Public API：list allowed props and values.
 - Tokens：list semantic Token categories; do not add page-level values.
 - Dependencies：list behavior libraries without importing their default visual identity.
-- Forbidden：`<rh-*>`, `--rh-*`, Red Hat assets, and duplicate route-level implementations.
+- Forbidden：`<rh-*>`, direct `--rh-color-*` usage, Red Hat assets, and duplicate route-level
+  implementations.
 
 ## Asset exclusions
 

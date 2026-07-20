@@ -1,4 +1,5 @@
 @import "tailwindcss" source(none);
+@import "./styles/red-hat-colors.css";
 @import "./styles/tokens.css";
 @source "../src";
 @import "tw-animate-css";

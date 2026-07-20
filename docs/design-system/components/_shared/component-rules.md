@@ -10,7 +10,8 @@ its semantic purpose, API, states, content, responsive behavior, and exceptions.
 - Keep canonical primitives in `src/components/ui/` and site-wide compositions in
   `src/components/site/`.
 - Routes cannot copy component classes or inline styles to create a second implementation.
-- Do not output `<rh-*>`, depend on `--rh-*`, or install Red Hat assets.
+- Do not output `<rh-*>` or install Red Hat assets. Component styles depend on `--ds-color-*`;
+  only `tokens.css` may map those semantics to the copied `--rh-color-*` snapshot.
 - Existing shadcn/Radix code may provide behavior, but its default visual variants are not
   approved until adapted to the local contract.
 
