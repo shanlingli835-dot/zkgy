@@ -456,9 +456,9 @@ function HomeRoute() {
           >
             {homeBottomCta.description}
           </p>
-          <a
-            href={homeBottomCta.primaryCta.href}
-            style={{ textDecoration: "none", display: "inline-block" }}
+          <Link to={homeBottomCta.primaryCta.href} variant="standalone" tone="inverse">
+            {homeBottomCta.primaryCta.label}
+          </Link>
           >
             <Button variant="primary">{homeBottomCta.primaryCta.label}</Button>
           </a>
