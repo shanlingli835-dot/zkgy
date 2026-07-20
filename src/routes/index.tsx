@@ -140,16 +140,43 @@ function SectionHeading({
   );
 }
 
+function IconTile({ name, inverse = false }: { name?: string; inverse?: boolean }) {
+  const Cmp =
+    (name && (lucideIcons as Record<string, typeof Shield>)[name]) || Shield;
+  return (
+    <span
+      aria-hidden="true"
+      style={{
+        display: "inline-flex",
+        alignItems: "center",
+        justifyContent: "center",
+        width: 44,
+        height: 44,
+        borderRadius: "var(--ds-radius-control)",
+        backgroundColor: inverse
+          ? "var(--ds-color-surface-inverse-subtle, rgba(255,255,255,0.08))"
+          : "var(--ds-color-action-primary-subtle)",
+        color: "var(--ds-color-action-primary)",
+        flexShrink: 0,
+      }}
+    >
+      <Cmp size={22} strokeWidth={1.75} />
+    </span>
+  );
+}
+
 function CardTile({
   title,
   description,
   footer,
   tag,
+  icon,
 }: {
   title: string;
   description?: ReactNode;
   footer?: ReactNode;
   tag?: string;
+  icon?: string;
 }) {
   return (
     <article
@@ -164,6 +191,7 @@ function CardTile({
         height: "100%",
       }}
     >
+      {icon ? <IconTile name={icon} /> : null}
       {tag ? (
         <span
           style={{
@@ -207,6 +235,7 @@ function CardTile({
     </article>
   );
 }
+
 
 const gridStyle = (min: string): CSSProperties => ({
   display: "grid",
