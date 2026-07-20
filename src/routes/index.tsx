@@ -1,11 +1,13 @@
 import { createFileRoute } from "@tanstack/react-router";
 import type { CSSProperties, ReactNode } from "react";
+import { icons as lucideIcons, Shield } from "lucide-react";
 
 import { SiteShell } from "@/components/site/SiteShell";
 import { GlobalHeader } from "@/components/site/GlobalHeader";
 import { GlobalFooter } from "@/components/site/GlobalFooter";
 
 import { Link } from "@/components/ui/link";
+
 import {
   homePage,
   homeHero,
@@ -138,16 +140,43 @@ function SectionHeading({
   );
 }
 
+function IconTile({ name, inverse = false }: { name?: string; inverse?: boolean }) {
+  const Cmp =
+    (name && (lucideIcons as Record<string, typeof Shield>)[name]) || Shield;
+  return (
+    <span
+      aria-hidden="true"
+      style={{
+        display: "inline-flex",
+        alignItems: "center",
+        justifyContent: "center",
+        width: 44,
+        height: 44,
+        borderRadius: "var(--ds-radius-control)",
+        backgroundColor: inverse
+          ? "var(--ds-color-surface-inverse-subtle, rgba(255,255,255,0.08))"
+          : "var(--ds-color-action-primary-subtle)",
+        color: "var(--ds-color-action-primary)",
+        flexShrink: 0,
+      }}
+    >
+      <Cmp size={22} strokeWidth={1.75} />
+    </span>
+  );
+}
+
 function CardTile({
   title,
   description,
   footer,
   tag,
+  icon,
 }: {
   title: string;
   description?: ReactNode;
   footer?: ReactNode;
   tag?: string;
+  icon?: string;
 }) {
   return (
     <article
@@ -162,6 +191,7 @@ function CardTile({
         height: "100%",
       }}
     >
+      {icon ? <IconTile name={icon} /> : null}
       {tag ? (
         <span
           style={{
@@ -205,6 +235,7 @@ function CardTile({
     </article>
   );
 }
+
 
 const gridStyle = (min: string): CSSProperties => ({
   display: "grid",
@@ -303,7 +334,7 @@ function HomeRoute() {
         <SectionHeading id="home-capabilities-title" title={homeCapabilities.title} />
         <div style={gridStyle("280px")}>
           {homeCapabilities.items.map((c) => (
-            <CardTile key={c.name} title={c.name} description={c.description} />
+            <CardTile key={c.name} icon={c.icon} title={c.name} description={c.description} />
           ))}
         </div>
       </Section>
@@ -315,8 +346,10 @@ function HomeRoute() {
           {homeProducts.items.map((p) => (
             <CardTile
               key={p.name}
+              icon={p.icon}
               title={p.name}
               description={p.description}
+
               footer={
                 <Link to={p.href} variant="standalone">
                   了解更多
@@ -334,8 +367,10 @@ function HomeRoute() {
           {homeSolutions.items.map((s) => (
             <CardTile
               key={s.name}
+              icon={s.icon}
               tag={s.tag}
               title={s.name}
+
               description={
                 <>
                   <strong
@@ -427,7 +462,7 @@ function HomeRoute() {
         <SectionHeading id="home-cases-title" title={homeCases.title} />
         <div style={gridStyle("280px")}>
           {homeCases.items.map((c) => (
-            <CardTile key={c.title} tag={c.tag} title={c.title} />
+            <CardTile key={c.title} icon={c.icon} tag={c.tag} title={c.title} />
           ))}
         </div>
       </Section>
