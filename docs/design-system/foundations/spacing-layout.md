@@ -19,6 +19,16 @@ All margin, padding, and gap values resolve through these semantic scale names:
 | `--ds-space-4xl` | `64px`       | Large sections                        |
 | `--ds-space-5xl` | `96px`       | Wide-screen marketing rhythm          |
 
+## Approved component-specific spacing
+
+| Token                               | Value | Purpose                      |
+| ----------------------------------- | ----- | ---------------------------- |
+| `--ds-space-link-underline-default` | `5px` | Inline Link underline offset |
+| `--ds-space-link-underline-hover`   | `6px` | Hover Link underline offset  |
+
+These two Link values reproduce the approved Red Hat interaction treatment and must not be reused
+as general layout spacing or replaced with route-level values.
+
 ## Radii
 
 | Token                 | Target value | Purpose                                 |

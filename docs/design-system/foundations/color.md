@@ -34,6 +34,7 @@ upstream names. Legacy `--zksc-*` and default shadcn theme values remain removed
 | Text                | `--ds-color-text-*`                         | Primary, secondary, muted, inverse, disabled             |
 | Borders             | `--ds-color-border-*`                       | Subtle, default, strong, disabled                        |
 | Actions             | `--ds-color-action-*`                       | Primary, hover, active, subtle, danger                   |
+| Links               | `--ds-color-link-*`                         | Default, visited, navigation, inverse, underline         |
 | Focus               | `--ds-color-focus`                          | Visible focus ring                                       |
 | Status              | `--ds-color-status-*`                       | Info, success, warning, danger foreground/surface/border |
 
@@ -53,6 +54,10 @@ component usage remain controlled by the SOURCEGUARD `--ds-color-*` layer.
 
 The copied `on-dark` declarations remain available because the user requested the complete
 source palette. They do not activate a Dark theme.
+
+Link uses the upstream interactive default, hover, active, visited, and on-dark values through
+`--ds-color-link-*`. The on-dark mapping is limited to approved inverse surfaces such as the
+footer and does not introduce a second theme.
 
 ## Disabled states
 

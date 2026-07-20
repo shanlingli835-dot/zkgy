@@ -22,6 +22,7 @@ adapted before reuse in new public UI.
 | Component       | Canonical path                          | Local spec                               | Status              |
 | --------------- | --------------------------------------- | ---------------------------------------- | ------------------- |
 | Button          | `src/components/ui/button.tsx`          | [`actions/button.md`](actions/button.md) | Implemented         |
+| Link            | `src/components/ui/link.tsx`            | [`actions/link.md`](actions/link.md)     | Implemented         |
 | Button group    | To be confirmed                         | Not created                              | Planned             |
 | Call to action  | To be confirmed                         | Not created                              | Planned             |
 | Card            | `src/components/ui/card.tsx`            | Not created                              | Existing unreviewed |

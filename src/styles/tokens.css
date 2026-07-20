@@ -91,6 +91,26 @@
   --ds-color-action-disabled-border: var(--rh-color-gray-30);
   --ds-color-focus: var(--rh-color-interactive-primary-focus-on-light);
 
+  /* Links */
+  --ds-color-link-default: var(--rh-color-interactive-primary-default-on-light);
+  --ds-color-link-hover: var(--rh-color-interactive-primary-hover-on-light);
+  --ds-color-link-active: var(--rh-color-interactive-primary-active-on-light);
+  --ds-color-link-visited: var(--rh-color-interactive-primary-visited-default-on-light);
+  --ds-color-link-visited-hover: var(--rh-color-interactive-primary-visited-hover-on-light);
+  --ds-color-link-underline: var(--rh-color-gray-50);
+  --ds-color-link-inverse: var(--rh-color-interactive-primary-default-on-dark);
+  --ds-color-link-inverse-hover: var(--rh-color-interactive-primary-hover-on-dark);
+  --ds-color-link-inverse-active: var(--rh-color-interactive-primary-active-on-dark);
+  --ds-color-link-inverse-focus: var(--rh-color-interactive-primary-focus-on-dark);
+  --ds-color-link-inverse-visited: var(--rh-color-interactive-primary-visited-default-on-dark);
+  --ds-color-link-inverse-visited-hover: var(--rh-color-interactive-primary-visited-hover-on-dark);
+  --ds-color-link-inverse-underline: var(--rh-color-gray-40);
+  --ds-color-link-navigation: var(--rh-color-text-primary-on-light);
+  --ds-color-link-navigation-hover: var(--rh-color-interactive-primary-default-on-light);
+  --ds-color-link-navigation-active: var(--rh-color-brand-red-on-light);
+  --ds-color-link-navigation-inverse: var(--rh-color-text-secondary-on-dark);
+  --ds-color-link-navigation-inverse-hover: var(--rh-color-text-primary-on-dark);
+
   /* Status */
   --ds-color-status-info: var(--rh-color-status-info-on-light);
   --ds-color-status-info-surface: var(--rh-color-surface-status-info-on-light);
@@ -116,6 +136,8 @@
   --ds-space-3xl: 3rem;
   --ds-space-4xl: 4rem;
   --ds-space-5xl: 6rem;
+  --ds-space-link-underline-default: 0.3125rem;
+  --ds-space-link-underline-hover: 0.375rem;
 
   /* Shape and elevation */
   --ds-radius-control: 0.375rem;

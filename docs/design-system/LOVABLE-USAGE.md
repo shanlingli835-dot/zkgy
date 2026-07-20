@@ -60,6 +60,15 @@ button styles, use Button for navigation, or add variants. Icon-only buttons req
 accessible name; asynchronous actions use the loading API.
 ```
 
+## Canonical Link prompt
+
+```text
+For navigation, read docs/design-system/components/actions/link.md and import Link from
+src/components/ui/link.tsx. Use to rather than href. Choose only inline, standalone, or
+navigation, with inverse tone only on an approved dark surface. Do not use Button for navigation,
+force external links into a new tab, or recreate link styles in route code.
+```
+
 ## New component prompt
 
 ```text
