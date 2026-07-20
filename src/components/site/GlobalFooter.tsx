@@ -4,6 +4,7 @@ import {
   footerExternalLinks,
   footerNavGroups,
 } from "@/content/navigation";
+import { BrandLogo } from "./BrandLogo";
 
 /**
  * GlobalFooter (Story 1.2)
