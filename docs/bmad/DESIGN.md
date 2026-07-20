@@ -18,9 +18,9 @@ colors:
   ink-inverse: '#F5F7F6'
   border-subtle: '#D9DFE3'
   border-strong: '#AAB5BD'
-  primary: '#0E5A5A'
+  primary: '#D71618'
   primary-foreground: '#FFFFFF'
-  primary-soft: '#D9F0EE'
+  primary-soft: '#FCE7E8'
   accent: '#B23A2E'
   accent-foreground: '#FFFFFF'
   amber: '#B98217'
@@ -143,7 +143,7 @@ components:
 - **Surface Base `{colors.surface-base}`** 是默认页面底色，避免纯白造成的信息疲劳。
 - **Surface Raised `{colors.surface-raised}`** 用于导航、重要模块、产品能力块和表单/FAQ 区域。
 - **Surface Inverse `{colors.surface-inverse}`** 只用于首屏、页脚或需要强调安全实验室气质的深色区段，不允许黑白区段机械交替。
-- **Primary Teal `{colors.primary}`** 是主操作色，用于主按钮、当前导航、活动 tab 和关键强调线。
+- **Brand Red `{colors.primary}`** 是主操作色，用于主按钮、当前导航、活动 tab 和关键强调线。
 - **Accent Red `{colors.accent}`** 用于高风险、安全验证、重要提示和少量视觉强调，不用于大面积背景。
 - **Amber `{colors.amber}`** 用于合规、标准、认证和实验室能力的辅助标识。
 - **Ink Primary `{colors.ink-primary}`** 用于主要文字；`{colors.ink-secondary}` 用于说明文字；`{colors.ink-muted}` 用于弱提示。
