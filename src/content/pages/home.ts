@@ -14,12 +14,7 @@ export type PageRecord = {
   /** 页面路由（新站；`/` 与旧 `/index.html` 均映射到首页） */
   route: string;
   /** 页面模板类型（AD-4） */
-  template:
-    | "home"
-    | "product"
-    | "solution"
-    | "service"
-    | "about";
+  template: "home" | "product" | "solution" | "service" | "about";
   /** 源站旧路由，用于向后兼容和 canonical 归档 */
   canonicalLegacyUrl: string;
   /** SEO */
@@ -36,7 +31,7 @@ export const homePage: PageRecord = {
   template: "home",
   canonicalLegacyUrl: "/index.html",
   // SEO 三项均来自源站页面盘点 §1
-  title: "中科数测",
+  title: "中科固源 | SOURCEGUARD",
   description:
     "充分整合集团在低空发展体系、商业航天发展体系及生态协同方面的资源优势，致力于构建星图集团在低空与商业航天领域的安全底座，力争成为全球领先的低空及商业航天网络安全产品与解决方案提供商。",
   keywords: "代码安全、协议安全、供应链安全、AI安全、第三方测评能力。",

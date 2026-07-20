@@ -1,13 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Link, useRouterState } from "@tanstack/react-router";
 
-import {
-  brand,
-  primaryCta,
-  primaryNav,
-  type NavGroup,
-  type NavLink,
-} from "@/content/navigation";
+import { brand, primaryCta, primaryNav, type NavGroup, type NavLink } from "@/content/navigation";
 import { BrandLogo } from "./BrandLogo";
 import { MobileMenu } from "./MobileMenu";
 
@@ -57,20 +51,20 @@ export function GlobalHeader() {
         position: "sticky",
         top: 0,
         zIndex: 40,
-        backgroundColor: "var(--zksc-surface-raised)",
-        borderBottom: "1px solid var(--zksc-border-subtle)",
+        backgroundColor: "var(--ds-color-surface-default)",
+        borderBottom: "var(--ds-border-width-default) solid var(--ds-color-border-subtle)",
       }}
     >
       <div
         style={{
-          maxWidth: "var(--zksc-content-max-width)",
+          maxWidth: "var(--ds-container-page)",
           margin: "0 auto",
-          padding: "0 var(--zksc-gutter-desktop)",
-          height: 72,
+          padding: "0 var(--ds-gutter-desktop)",
+          height: "var(--ds-size-header)",
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
-          gap: "var(--zksc-space-6)",
+          gap: "var(--ds-space-2xl)",
         }}
       >
         <BrandMark />
@@ -78,11 +72,11 @@ export function GlobalHeader() {
         {/* 桌面端一级导航 */}
         <nav
           aria-label="主要导航"
-          className="zksc-desktop-nav"
+          className="site-desktop-nav"
           style={{
             display: "flex",
             alignItems: "center",
-            gap: "var(--zksc-space-5)",
+            gap: "var(--ds-space-xl)",
           }}
         >
           {primaryNav
@@ -94,26 +88,24 @@ export function GlobalHeader() {
                 pathname={pathname}
                 open={openGroupId === group.id}
                 onOpen={() => setOpenGroupId(group.id)}
-                onClose={() =>
-                  setOpenGroupId((cur) => (cur === group.id ? null : cur))
-                }
+                onClose={() => setOpenGroupId((cur) => (cur === group.id ? null : cur))}
               />
             ))}
         </nav>
 
         <div
-          className="zksc-desktop-cta"
+          className="site-desktop-cta"
           style={{
             display: "flex",
             alignItems: "center",
-            gap: "var(--zksc-space-3)",
+            gap: "var(--ds-space-md)",
           }}
         >
           <a
             href="/contact.html"
             style={{
-              fontSize: "var(--zksc-font-size-body-md)",
-              color: "var(--zksc-ink-secondary)",
+              fontSize: "var(--ds-font-size-md)",
+              color: "var(--ds-color-text-secondary)",
               textDecoration: "none",
             }}
           >
@@ -124,12 +116,13 @@ export function GlobalHeader() {
             style={{
               display: "inline-flex",
               alignItems: "center",
-              padding: "10px 18px",
-              backgroundColor: "var(--zksc-primary)",
-              color: "var(--zksc-primary-foreground)",
-              borderRadius: "var(--zksc-radius-md)",
-              fontSize: "var(--zksc-font-size-body-md)",
-              fontWeight: 600,
+              minHeight: "var(--ds-size-control-min)",
+              padding: "var(--ds-space-md) var(--ds-space-xl)",
+              backgroundColor: "var(--ds-color-action-primary)",
+              color: "var(--ds-color-action-primary-foreground)",
+              borderRadius: "var(--ds-radius-control)",
+              fontSize: "var(--ds-font-size-md)",
+              fontWeight: "var(--ds-font-weight-semibold)",
               textDecoration: "none",
             }}
           >
@@ -142,17 +135,17 @@ export function GlobalHeader() {
           type="button"
           aria-label={mobileOpen ? "关闭菜单" : "打开菜单"}
           aria-expanded={mobileOpen}
-          aria-controls="zksc-mobile-menu"
+          aria-controls="site-mobile-menu"
           onClick={() => setMobileOpen((v) => !v)}
-          className="zksc-mobile-toggle"
+          className="site-mobile-toggle"
           style={{
             display: "none",
-            width: 44,
-            height: 44,
+            width: "var(--ds-size-control-min)",
+            height: "var(--ds-size-control-min)",
             alignItems: "center",
             justifyContent: "center",
-            border: "1px solid var(--zksc-border-subtle)",
-            borderRadius: "var(--zksc-radius-md)",
+            border: "var(--ds-border-width-default) solid var(--ds-color-border-subtle)",
+            borderRadius: "var(--ds-radius-control)",
             background: "transparent",
             cursor: "pointer",
           }}
@@ -162,7 +155,7 @@ export function GlobalHeader() {
       </div>
 
       <MobileMenu
-        id="zksc-mobile-menu"
+        id="site-mobile-menu"
         open={mobileOpen}
         pathname={pathname}
         onClose={() => setMobileOpen(false)}
@@ -171,24 +164,24 @@ export function GlobalHeader() {
       {/* 响应式：仅通过 CSS 切换桌面/移动布局，避免运行时抖动 */}
       <style>{`
         @media (max-width: 1023px) {
-          .zksc-desktop-nav { display: none !important; }
-          .zksc-desktop-cta { display: none !important; }
-          .zksc-mobile-toggle { display: inline-flex !important; }
+          .site-desktop-nav { display: none !important; }
+          .site-desktop-cta { display: none !important; }
+          .site-mobile-toggle { display: inline-flex !important; }
         }
         @media (max-width: 767px) {
-          [data-zksc-slot="global-header"] > div > div:first-child {
-            padding-left: var(--zksc-gutter-mobile) !important;
-            padding-right: var(--zksc-gutter-mobile) !important;
+          [data-site-slot="global-header"] > div > div:first-child {
+            padding-left: var(--ds-gutter-mobile) !important;
+            padding-right: var(--ds-gutter-mobile) !important;
           }
         }
-        .zksc-nav-link:focus-visible,
-        .zksc-nav-link:hover {
-          color: var(--zksc-primary) !important;
+        .site-nav-link:focus-visible,
+        .site-nav-link:hover {
+          color: var(--ds-color-action-primary) !important;
         }
-        .zksc-nav-link:focus-visible {
-          outline: 2px solid var(--zksc-primary);
-          outline-offset: 4px;
-          border-radius: 2px;
+        .site-nav-link:focus-visible {
+          outline: var(--ds-border-width-strong) solid var(--ds-color-focus);
+          outline-offset: var(--ds-space-xs);
+          border-radius: var(--ds-radius-control);
         }
       `}</style>
     </div>
@@ -203,7 +196,7 @@ function BrandMark() {
         display: "inline-flex",
         alignItems: "center",
         textDecoration: "none",
-        color: "var(--zksc-ink-primary)",
+        color: "var(--ds-color-text-primary)",
       }}
       aria-label={`${brand.name} 首页`}
     >
@@ -227,8 +220,7 @@ function DesktopNavItem({
 }) {
   const hasChildren = !!group.children?.length;
   const isActive =
-    (group.href && pathname === group.href) ||
-    !!group.children?.some((c) => pathname === c.href);
+    (group.href && pathname === group.href) || !!group.children?.some((c) => pathname === c.href);
 
   return (
     <div
@@ -236,11 +228,7 @@ function DesktopNavItem({
       onMouseLeave={hasChildren ? onClose : undefined}
       onFocus={hasChildren ? onOpen : undefined}
       onBlur={(e) => {
-        if (
-          hasChildren &&
-          e.currentTarget &&
-          !e.currentTarget.contains(e.relatedTarget as Node)
-        ) {
+        if (hasChildren && e.currentTarget && !e.currentTarget.contains(e.relatedTarget as Node)) {
           onClose();
         }
       }}
@@ -249,7 +237,7 @@ function DesktopNavItem({
       {group.href ? (
         <a
           href={group.href}
-          className="zksc-nav-link"
+          className="site-nav-link"
           aria-current={isActive ? "page" : undefined}
           style={navTriggerStyle(isActive)}
         >
@@ -258,7 +246,7 @@ function DesktopNavItem({
       ) : (
         <button
           type="button"
-          className="zksc-nav-link"
+          className="site-nav-link"
           aria-expanded={open}
           aria-haspopup={hasChildren ? "menu" : undefined}
           style={{
@@ -280,13 +268,13 @@ function DesktopNavItem({
             position: "absolute",
             top: "100%",
             left: 0,
-            marginTop: 8,
-            minWidth: 260,
-            backgroundColor: "var(--zksc-surface-raised)",
-            border: "1px solid var(--zksc-border-subtle)",
-            borderRadius: "var(--zksc-radius-lg)",
-            boxShadow: "0 12px 32px rgba(20,24,28,0.08)",
-            padding: "var(--zksc-space-2)",
+            marginTop: "var(--ds-space-sm)",
+            minWidth: "var(--ds-size-menu-min)",
+            backgroundColor: "var(--ds-color-surface-default)",
+            border: "var(--ds-border-width-default) solid var(--ds-color-border-subtle)",
+            borderRadius: "var(--ds-radius-surface)",
+            boxShadow: "var(--ds-shadow-md)",
+            padding: "var(--ds-space-sm)",
           }}
         >
           {group.children!.map((child) => (
@@ -303,14 +291,14 @@ function DesktopSubLink({ link, active }: { link: NavLink; active: boolean }) {
     <a
       role="menuitem"
       href={link.href}
-      className="zksc-nav-link"
+      className="site-nav-link"
       aria-current={active ? "page" : undefined}
       style={{
         display: "block",
-        padding: "10px 12px",
-        borderRadius: "var(--zksc-radius-sm)",
-        fontSize: "var(--zksc-font-size-body-md)",
-        color: active ? "var(--zksc-primary)" : "var(--zksc-ink-primary)",
+        padding: "var(--ds-space-md)",
+        borderRadius: "var(--ds-radius-control)",
+        fontSize: "var(--ds-font-size-md)",
+        color: active ? "var(--ds-color-action-primary)" : "var(--ds-color-text-primary)",
         textDecoration: "none",
         whiteSpace: "nowrap",
       }}
@@ -324,11 +312,11 @@ function navTriggerStyle(active: boolean): React.CSSProperties {
   return {
     display: "inline-flex",
     alignItems: "center",
-    gap: 4,
-    padding: "8px 4px",
-    fontSize: "var(--zksc-font-size-body-md)",
-    fontWeight: 500,
-    color: active ? "var(--zksc-primary)" : "var(--zksc-ink-primary)",
+    gap: "var(--ds-space-xs)",
+    padding: "var(--ds-space-sm) var(--ds-space-xs)",
+    fontSize: "var(--ds-font-size-md)",
+    fontWeight: "var(--ds-font-weight-medium)",
+    color: active ? "var(--ds-color-action-primary)" : "var(--ds-color-text-primary)",
     textDecoration: "none",
   };
 }
@@ -341,7 +329,7 @@ function Caret({ open }: { open: boolean }) {
       viewBox="0 0 10 10"
       aria-hidden="true"
       style={{
-        transition: "transform 160ms ease",
+        transition: "transform var(--ds-duration-normal) var(--ds-ease-standard)",
         transform: open ? "rotate(180deg)" : "rotate(0)",
       }}
     >

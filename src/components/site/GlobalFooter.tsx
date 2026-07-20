@@ -1,9 +1,4 @@
-import {
-  brand,
-  footerBeian,
-  footerExternalLinks,
-  footerNavGroups,
-} from "@/content/navigation";
+import { brand, footerBeian, footerExternalLinks, footerNavGroups } from "@/content/navigation";
 import { BrandLogo } from "./BrandLogo";
 
 /**
@@ -23,23 +18,23 @@ export function GlobalFooter() {
   return (
     <div
       style={{
-        backgroundColor: "var(--zksc-surface-inverse)",
-        color: "var(--zksc-ink-inverse)",
+        backgroundColor: "var(--ds-color-surface-inverse)",
+        color: "var(--ds-color-text-inverse)",
       }}
     >
       <div
         style={{
-          maxWidth: "var(--zksc-content-max-width)",
+          maxWidth: "var(--ds-container-page)",
           margin: "0 auto",
-          padding: "var(--zksc-space-8) var(--zksc-gutter-desktop) var(--zksc-space-6)",
+          padding: "var(--ds-space-4xl) var(--ds-gutter-desktop) var(--ds-space-2xl)",
         }}
       >
         <div
-          className="zksc-footer-grid"
+          className="site-footer-grid"
           style={{
             display: "grid",
             gridTemplateColumns: "1.4fr repeat(4, minmax(0, 1fr))",
-            gap: "var(--zksc-space-6)",
+            gap: "var(--ds-space-2xl)",
           }}
         >
           <div>
@@ -52,11 +47,11 @@ export function GlobalFooter() {
             </a>
             <p
               style={{
-                marginTop: "var(--zksc-space-3)",
-                color: "rgba(245,247,246,0.72)",
-                fontSize: "var(--zksc-font-size-body-sm)",
-                maxWidth: 320,
-                lineHeight: 1.7,
+                marginTop: "var(--ds-space-md)",
+                color: "var(--ds-color-text-inverse-secondary)",
+                fontSize: "var(--ds-font-size-sm)",
+                maxWidth: "var(--ds-container-summary)",
+                lineHeight: "var(--ds-line-height-sm)",
               }}
             >
               致力于成为全球领先的低空与商业航天网络安全方案提供商。
@@ -65,13 +60,14 @@ export function GlobalFooter() {
               href="/contact.html"
               style={{
                 display: "inline-block",
-                marginTop: "var(--zksc-space-4)",
-                padding: "10px 16px",
-                backgroundColor: "var(--zksc-primary)",
-                color: "var(--zksc-primary-foreground)",
-                borderRadius: "var(--zksc-radius-md)",
-                fontSize: "var(--zksc-font-size-body-sm)",
-                fontWeight: 600,
+                marginTop: "var(--ds-space-lg)",
+                minHeight: "var(--ds-size-control-min)",
+                padding: "var(--ds-space-md) var(--ds-space-lg)",
+                backgroundColor: "var(--ds-color-action-primary)",
+                color: "var(--ds-color-action-primary-foreground)",
+                borderRadius: "var(--ds-radius-control)",
+                fontSize: "var(--ds-font-size-sm)",
+                fontWeight: "var(--ds-font-weight-semibold)",
                 textDecoration: "none",
               }}
             >
@@ -83,26 +79,22 @@ export function GlobalFooter() {
             <div key={group.id}>
               <div
                 style={{
-                  fontSize: "var(--zksc-font-size-label)",
-                  fontWeight: 600,
-                  textTransform: "uppercase",
-                  letterSpacing: "0.08em",
-                  color: "rgba(245,247,246,0.6)",
-                  marginBottom: "var(--zksc-space-3)",
+                  fontSize: "var(--ds-font-size-sm)",
+                  fontWeight: "var(--ds-font-weight-semibold)",
+                  color: "var(--ds-color-text-inverse-muted)",
+                  marginBottom: "var(--ds-space-md)",
                 }}
               >
                 {group.label}
               </div>
               <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
-                {(group.children ?? [{ label: group.label, href: group.href! }]).map(
-                  (link) => (
-                    <li key={link.href} style={{ marginBottom: "var(--zksc-space-2)" }}>
-                      <a href={link.href} style={footerLinkStyle}>
-                        {link.label}
-                      </a>
-                    </li>
-                  ),
-                )}
+                {(group.children ?? [{ label: group.label, href: group.href! }]).map((link) => (
+                  <li key={link.href} style={{ marginBottom: "var(--ds-space-sm)" }}>
+                    <a href={link.href} style={footerLinkStyle}>
+                      {link.label}
+                    </a>
+                  </li>
+                ))}
               </ul>
             </div>
           ))}
@@ -110,19 +102,17 @@ export function GlobalFooter() {
           <div>
             <div
               style={{
-                fontSize: "var(--zksc-font-size-label)",
-                fontWeight: 600,
-                textTransform: "uppercase",
-                letterSpacing: "0.08em",
-                color: "rgba(245,247,246,0.6)",
-                marginBottom: "var(--zksc-space-3)",
+                fontSize: "var(--ds-font-size-sm)",
+                fontWeight: "var(--ds-font-weight-semibold)",
+                color: "var(--ds-color-text-inverse-muted)",
+                marginBottom: "var(--ds-space-md)",
               }}
             >
               社区
             </div>
             <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
               {footerExternalLinks.map((link) => (
-                <li key={link.href} style={{ marginBottom: "var(--zksc-space-2)" }}>
+                <li key={link.href} style={{ marginBottom: "var(--ds-space-sm)" }}>
                   <a
                     href={link.href}
                     target="_blank"
@@ -139,18 +129,20 @@ export function GlobalFooter() {
 
         <div
           style={{
-            marginTop: "var(--zksc-space-7)",
-            paddingTop: "var(--zksc-space-4)",
-            borderTop: "1px solid rgba(245,247,246,0.12)",
+            marginTop: "var(--ds-space-3xl)",
+            paddingTop: "var(--ds-space-lg)",
+            borderTop: "var(--ds-border-width-default) solid var(--ds-color-border-inverse)",
             display: "flex",
             flexWrap: "wrap",
             justifyContent: "space-between",
-            gap: "var(--zksc-space-3)",
-            fontSize: "var(--zksc-font-size-body-sm)",
-            color: "rgba(245,247,246,0.6)",
+            gap: "var(--ds-space-md)",
+            fontSize: "var(--ds-font-size-sm)",
+            color: "var(--ds-color-text-inverse-muted)",
           }}
         >
-          <div>© {year} {brand.name}科技有限公司</div>
+          <div>
+            © {year} {brand.name}科技有限公司
+          </div>
           <a
             href={footerBeian.href}
             target="_blank"
@@ -164,15 +156,14 @@ export function GlobalFooter() {
 
       <style>{`
         @media (max-width: 1023px) {
-          .zksc-footer-grid {
+          .site-footer-grid {
             grid-template-columns: 1fr 1fr !important;
           }
         }
         @media (max-width: 639px) {
-          .zksc-footer-grid {
+          .site-footer-grid {
             grid-template-columns: 1fr !important;
           }
-          [style*="var(--zksc-gutter-desktop)"] {}
         }
       `}</style>
     </div>
@@ -180,7 +171,7 @@ export function GlobalFooter() {
 }
 
 const footerLinkStyle: React.CSSProperties = {
-  color: "rgba(245,247,246,0.85)",
-  fontSize: "var(--zksc-font-size-body-sm)",
+  color: "var(--ds-color-text-inverse-link)",
+  fontSize: "var(--ds-font-size-sm)",
   textDecoration: "none",
 };

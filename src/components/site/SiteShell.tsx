@@ -28,43 +28,45 @@ export function SiteShell({
         minHeight: "100vh",
         display: "flex",
         flexDirection: "column",
-        backgroundColor: "var(--zksc-surface-base)",
-        color: "var(--zksc-ink-primary)",
-        fontFamily: "var(--zksc-font-sans)",
-        fontSize: "var(--zksc-font-size-body-md)",
-        lineHeight: "var(--zksc-line-height-body)",
-        letterSpacing: "var(--zksc-letter-spacing)",
+        backgroundColor: "var(--ds-color-canvas)",
+        color: "var(--ds-color-text-primary)",
+        fontFamily: "var(--ds-font-family-sans)",
+        fontSize: "var(--ds-font-size-md)",
+        lineHeight: "var(--ds-line-height-md)",
+        letterSpacing: "var(--ds-letter-spacing-default)",
         WebkitFontSmoothing: "antialiased",
       }}
     >
-      <a
-        href="#site-main"
-        style={{
-          position: "absolute",
-          left: "-9999px",
-          top: 0,
-        }}
-        onFocus={(e) => {
-          e.currentTarget.style.left = "16px";
-          e.currentTarget.style.top = "16px";
-          e.currentTarget.style.background = "var(--zksc-surface-raised)";
-          e.currentTarget.style.padding = "8px 12px";
-          e.currentTarget.style.zIndex = "100";
-        }}
-        onBlur={(e) => {
-          e.currentTarget.style.left = "-9999px";
-        }}
-      >
+      <a href="#site-main" className="site-skip-link">
         跳到主要内容
       </a>
 
-      <header data-zksc-slot="global-header">{header ?? null}</header>
+      <style>{`
+        .site-skip-link {
+          position: absolute;
+          left: var(--ds-space-lg);
+          top: var(--ds-space-lg);
+          z-index: 100;
+          transform: translateY(-200%);
+          padding: var(--ds-space-sm) var(--ds-space-md);
+          border: var(--ds-border-width-default) solid var(--ds-color-border-default);
+          border-radius: var(--ds-radius-control);
+          background: var(--ds-color-surface-default);
+          color: var(--ds-color-text-primary);
+          transition: transform var(--ds-duration-fast) var(--ds-ease-standard);
+        }
+        .site-skip-link:focus {
+          transform: translateY(0);
+        }
+      `}</style>
+
+      <header data-site-slot="global-header">{header ?? null}</header>
 
       <main id="site-main" style={{ flex: 1 }}>
         {children}
       </main>
 
-      <footer data-zksc-slot="global-footer">{footer ?? null}</footer>
+      <footer data-site-slot="global-footer">{footer ?? null}</footer>
     </div>
   );
 }

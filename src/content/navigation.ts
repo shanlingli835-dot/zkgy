@@ -81,9 +81,7 @@ export const primaryCta: NavLink = {
 };
 
 /** 页脚内部导航（复用主导航结构，扁平呈现） */
-export const footerNavGroups: NavGroup[] = primaryNav.filter(
-  (g) => g.id !== "contact",
-);
+export const footerNavGroups: NavGroup[] = primaryNav.filter((g) => g.id !== "contact");
 
 /** 页脚外部链接（源站页脚） */
 export const footerExternalLinks: NavLink[] = [
@@ -102,7 +100,8 @@ export const footerBeian = {
 
 /** 品牌信息 */
 export const brand = {
-  name: "中科数测",
-  short: "ZKSC",
+  name: "中科固源",
+  short: "SOURCEGUARD",
+  displayName: "中科固源 / SOURCEGUARD",
   homeHref: "/",
 };

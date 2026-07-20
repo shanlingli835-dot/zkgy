@@ -1,10 +1,6 @@
 import { useEffect, useState } from "react";
 
-import {
-  primaryCta,
-  primaryNav,
-  type NavGroup,
-} from "@/content/navigation";
+import { primaryCta, primaryNav, type NavGroup } from "@/content/navigation";
 
 /**
  * MobileMenu (Story 1.2)
@@ -50,20 +46,20 @@ export function MobileMenu({
       aria-label="移动端菜单"
       style={{
         position: "fixed",
-        inset: "72px 0 0 0",
+        inset: "var(--ds-size-header) 0 0 0",
         zIndex: 30,
-        backgroundColor: "rgba(21,24,28,0.32)",
+        backgroundColor: "var(--ds-color-overlay)",
       }}
       onClick={onClose}
     >
       <div
         onClick={(e) => e.stopPropagation()}
         style={{
-          backgroundColor: "var(--zksc-surface-raised)",
-          borderTop: "1px solid var(--zksc-border-subtle)",
-          maxHeight: "calc(100vh - 72px)",
+          backgroundColor: "var(--ds-color-surface-default)",
+          borderTop: "var(--ds-border-width-default) solid var(--ds-color-border-subtle)",
+          maxHeight: "calc(100vh - var(--ds-size-header))",
           overflowY: "auto",
-          padding: "var(--zksc-space-4) var(--zksc-gutter-mobile) var(--zksc-space-6)",
+          padding: "var(--ds-space-lg) var(--ds-gutter-mobile) var(--ds-space-2xl)",
         }}
       >
         <nav aria-label="移动端导航">
@@ -73,9 +69,7 @@ export function MobileMenu({
               group={group}
               pathname={pathname}
               expanded={expandedId === group.id}
-              onToggle={() =>
-                setExpandedId((cur) => (cur === group.id ? null : group.id))
-              }
+              onToggle={() => setExpandedId((cur) => (cur === group.id ? null : group.id))}
               onNavigate={onClose}
             />
           ))}
@@ -86,14 +80,15 @@ export function MobileMenu({
           onClick={onClose}
           style={{
             display: "block",
-            marginTop: "var(--zksc-space-5)",
-            padding: "14px 16px",
+            marginTop: "var(--ds-space-xl)",
+            minHeight: "var(--ds-size-control-min)",
+            padding: "var(--ds-space-md) var(--ds-space-lg)",
             textAlign: "center",
-            backgroundColor: "var(--zksc-primary)",
-            color: "var(--zksc-primary-foreground)",
-            borderRadius: "var(--zksc-radius-md)",
-            fontSize: "var(--zksc-font-size-body-md)",
-            fontWeight: 600,
+            backgroundColor: "var(--ds-color-action-primary)",
+            color: "var(--ds-color-action-primary-foreground)",
+            borderRadius: "var(--ds-radius-control)",
+            fontSize: "var(--ds-font-size-md)",
+            fontWeight: "var(--ds-font-weight-semibold)",
             textDecoration: "none",
           }}
         >
@@ -119,24 +114,23 @@ function MobileNavGroup({
 }) {
   const hasChildren = !!group.children?.length;
   const isActive =
-    (group.href && pathname === group.href) ||
-    !!group.children?.some((c) => pathname === c.href);
+    (group.href && pathname === group.href) || !!group.children?.some((c) => pathname === c.href);
 
   const rowStyle: React.CSSProperties = {
     display: "flex",
     alignItems: "center",
     justifyContent: "space-between",
     width: "100%",
-    padding: "14px 4px",
-    fontSize: "var(--zksc-font-size-body-lg)",
-    fontWeight: 600,
-    color: isActive ? "var(--zksc-primary)" : "var(--zksc-ink-primary)",
-    borderBottom: "1px solid var(--zksc-border-subtle)",
+    padding: "var(--ds-space-md) var(--ds-space-xs)",
+    fontSize: "var(--ds-font-size-lg)",
+    fontWeight: "var(--ds-font-weight-semibold)",
+    color: isActive ? "var(--ds-color-action-primary)" : "var(--ds-color-text-primary)",
     background: "transparent",
     border: "none",
     borderTop: "none",
     borderLeft: "none",
     borderRight: "none",
+    borderBottom: "var(--ds-border-width-default) solid var(--ds-color-border-subtle)",
     textAlign: "left",
     textDecoration: "none",
     cursor: hasChildren ? "pointer" : "default",
@@ -145,19 +139,14 @@ function MobileNavGroup({
   return (
     <div>
       {hasChildren ? (
-        <button
-          type="button"
-          aria-expanded={expanded}
-          onClick={onToggle}
-          style={rowStyle}
-        >
+        <button type="button" aria-expanded={expanded} onClick={onToggle} style={rowStyle}>
           <span>{group.label}</span>
           <span
             aria-hidden="true"
             style={{
-              transition: "transform 160ms ease",
+              transition: "transform var(--ds-duration-normal) var(--ds-ease-standard)",
               transform: expanded ? "rotate(180deg)" : "rotate(0)",
-              color: "var(--zksc-ink-secondary)",
+              color: "var(--ds-color-text-secondary)",
             }}
           >
             ▾
@@ -174,7 +163,7 @@ function MobileNavGroup({
           style={{
             listStyle: "none",
             margin: 0,
-            padding: "var(--zksc-space-2) 0 var(--zksc-space-3) var(--zksc-space-3)",
+            padding: "var(--ds-space-sm) 0 var(--ds-space-md) var(--ds-space-md)",
           }}
         >
           {group.children!.map((child) => {
@@ -187,11 +176,11 @@ function MobileNavGroup({
                   aria-current={active ? "page" : undefined}
                   style={{
                     display: "block",
-                    padding: "10px 4px",
-                    fontSize: "var(--zksc-font-size-body-md)",
+                    padding: "var(--ds-space-md) var(--ds-space-xs)",
+                    fontSize: "var(--ds-font-size-md)",
                     color: active
-                      ? "var(--zksc-primary)"
-                      : "var(--zksc-ink-secondary)",
+                      ? "var(--ds-color-action-primary)"
+                      : "var(--ds-color-text-secondary)",
                     textDecoration: "none",
                   }}
                 >

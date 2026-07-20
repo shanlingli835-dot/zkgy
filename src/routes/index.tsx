@@ -36,53 +36,57 @@ function HomeRoute() {
   return (
     <SiteShell header={<GlobalHeader />} footer={<GlobalFooter />}>
       <section
-        aria-labelledby="home-skeleton-title"
+        aria-labelledby="home-title"
+        className="home-intro"
         style={{
-          maxWidth: "var(--zksc-content-max-width)",
+          maxWidth: "var(--ds-container-page)",
           margin: "0 auto",
-          padding:
-            "var(--zksc-section-y-desktop) var(--zksc-gutter-desktop)",
+          padding: "var(--ds-section-y-desktop) var(--ds-gutter-desktop)",
         }}
       >
         <p
           style={{
-            fontSize: "var(--zksc-font-size-label)",
-            fontWeight: 600,
-            textTransform: "uppercase",
-            letterSpacing: "0.08em",
-            color: "var(--zksc-primary)",
+            fontSize: "var(--ds-font-size-sm)",
+            fontWeight: "var(--ds-font-weight-semibold)",
+            letterSpacing: "var(--ds-letter-spacing-default)",
+            color: "var(--ds-color-action-primary)",
             margin: 0,
           }}
         >
-          中科数测 · ZKSC
+          中科固源 · SOURCEGUARD
         </p>
         <h1
-          id="home-skeleton-title"
+          id="home-title"
           style={{
-            fontSize: "var(--zksc-font-size-display-lg)",
-            fontWeight: 650,
-            lineHeight: "var(--zksc-line-height-display)",
-            letterSpacing: "var(--zksc-letter-spacing)",
-            color: "var(--zksc-ink-primary)",
-            margin: "var(--zksc-space-4) 0 var(--zksc-space-5)",
+            fontSize: "var(--ds-font-size-4xl)",
+            fontWeight: "var(--ds-font-weight-semibold)",
+            lineHeight: "var(--ds-line-height-4xl)",
+            letterSpacing: "var(--ds-letter-spacing-default)",
+            color: "var(--ds-color-text-primary)",
+            margin: "var(--ds-space-lg) 0 var(--ds-space-xl)",
             maxWidth: "24ch",
           }}
         >
-          官网首页骨架已就绪
+          致力于成为全球领先的低空与商业航天网络安全方案提供商
         </h1>
         <p
           style={{
-            fontSize: "var(--zksc-font-size-body-lg)",
-            color: "var(--zksc-ink-secondary)",
+            fontSize: "var(--ds-font-size-lg)",
+            color: "var(--ds-color-text-secondary)",
             maxWidth: "60ch",
             margin: 0,
           }}
         >
-          Story 1.1：静态首页外壳、设计 tokens 和基础 SEO 已接入。
-          首屏、合作生态、核心安全能力、产品入口、行业解决方案、成功案例与底部 CTA
-          将由后续 Story（1.2 – 1.5）按源站盘点逐步落地。
+          {homePage.description}
         </p>
       </section>
+      <style>{`
+        @media (max-width: 767px) {
+          .home-intro {
+            padding: var(--ds-section-y-mobile) var(--ds-gutter-mobile) !important;
+          }
+        }
+      `}</style>
     </SiteShell>
   );
 }
