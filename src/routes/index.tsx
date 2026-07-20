@@ -36,8 +36,6 @@ export const Route = createFileRoute("/")({
 
 /* ---------- Layout primitives (tokens only) ---------- */
 
-const CARD_RADIUS = "2px";
-
 const containerStyle: CSSProperties = {
   maxWidth: "var(--ds-container-page)",
   marginInline: "auto",
@@ -140,11 +138,7 @@ function SectionHeading({
   );
 }
 
-/**
- * ClickableCard — reserved for independent, navigable, reusable entities only
- * (products, solutions). Flat surface, 2px radius, no shadow.
- */
-function ClickableCard({
+function CardTile({
   title,
   description,
   footer,
@@ -164,7 +158,7 @@ function ClickableCard({
         padding: "var(--ds-space-2xl)",
         backgroundColor: "var(--ds-color-surface-default)",
         border: "var(--ds-border-width-default) solid var(--ds-color-border-subtle)",
-        borderRadius: CARD_RADIUS,
+        borderRadius: "var(--ds-radius-surface)",
         height: "100%",
       }}
     >
@@ -172,11 +166,12 @@ function ClickableCard({
         <span
           style={{
             alignSelf: "flex-start",
+            padding: "var(--ds-space-xs) var(--ds-space-md)",
             fontSize: "var(--ds-font-size-xs)",
-            fontWeight: "var(--ds-font-weight-semibold)",
-            letterSpacing: "0.04em",
-            textTransform: "uppercase",
+            fontWeight: "var(--ds-font-weight-medium)",
             color: "var(--ds-color-action-primary)",
+            backgroundColor: "var(--ds-color-action-primary-subtle)",
+            borderRadius: "var(--ds-radius-round)",
           }}
         >
           {tag}
@@ -194,7 +189,7 @@ function ClickableCard({
         {title}
       </h3>
       {description ? (
-        <div
+        <p
           style={{
             margin: 0,
             fontSize: "var(--ds-font-size-md)",
@@ -204,7 +199,7 @@ function ClickableCard({
           }}
         >
           {description}
-        </div>
+        </p>
       ) : null}
       {footer ? <div>{footer}</div> : null}
     </article>
@@ -263,34 +258,24 @@ function HomeRoute() {
         </Link>
       </Section>
 
-      {/* Stats / 合作生态 — inline stat band, no cards */}
+      {/* Stats / 合作生态 */}
       <Section labelledBy="home-stats-title" surface="subtle">
         <SectionHeading id="home-stats-title" title={homeStats.title} />
-        <dl
-          className="home-stat-band"
-          style={{
-            margin: 0,
-            display: "grid",
-            gridTemplateColumns: "repeat(3, minmax(0, 1fr))",
-            borderTop:
-              "var(--ds-border-width-default) solid var(--ds-color-border-subtle)",
-            borderBottom:
-              "var(--ds-border-width-default) solid var(--ds-color-border-subtle)",
-          }}
-        >
-          {homeStats.items.map((s, i) => (
+        <div style={gridStyle("240px")}>
+          {homeStats.items.map((s) => (
             <div
               key={s.label}
               style={{
-                padding: "var(--ds-space-2xl) var(--ds-space-xl)",
-                borderInlineStart:
-                  i === 0
-                    ? "none"
-                    : "var(--ds-border-width-default) solid var(--ds-color-border-subtle)",
+                padding: "var(--ds-space-2xl)",
+                backgroundColor: "var(--ds-color-surface-default)",
+                border:
+                  "var(--ds-border-width-default) solid var(--ds-color-border-subtle)",
+                borderRadius: "var(--ds-radius-surface)",
               }}
             >
-              <dt
+              <p
                 style={{
+                  margin: 0,
                   fontSize: "var(--ds-font-size-4xl)",
                   lineHeight: "var(--ds-line-height-4xl)",
                   fontWeight: "var(--ds-font-weight-semibold)",
@@ -298,8 +283,8 @@ function HomeRoute() {
                 }}
               >
                 {s.value}
-              </dt>
-              <dd
+              </p>
+              <p
                 style={{
                   margin: "var(--ds-space-md) 0 0",
                   fontSize: "var(--ds-font-size-md)",
@@ -307,67 +292,28 @@ function HomeRoute() {
                 }}
               >
                 {s.label}
-              </dd>
+              </p>
             </div>
           ))}
-        </dl>
+        </div>
       </Section>
 
-      {/* 核心安全能力 — descriptive grid, no cards */}
+      {/* 核心安全能力 */}
       <Section labelledBy="home-capabilities-title">
         <SectionHeading id="home-capabilities-title" title={homeCapabilities.title} />
-        <ul
-          style={{
-            listStyle: "none",
-            margin: 0,
-            padding: 0,
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(min(280px, 100%), 1fr))",
-            columnGap: "var(--ds-space-3xl)",
-            rowGap: "var(--ds-space-2xl)",
-          }}
-        >
+        <div style={gridStyle("280px")}>
           {homeCapabilities.items.map((c) => (
-            <li
-              key={c.name}
-              style={{
-                paddingBlock: "var(--ds-space-lg)",
-                borderTop:
-                  "var(--ds-border-width-strong) solid var(--ds-color-text-primary)",
-              }}
-            >
-              <h3
-                style={{
-                  margin: "0 0 var(--ds-space-md)",
-                  fontSize: "var(--ds-font-size-lg)",
-                  lineHeight: "var(--ds-line-height-lg)",
-                  fontWeight: "var(--ds-font-weight-semibold)",
-                  color: "var(--ds-color-text-primary)",
-                }}
-              >
-                {c.name}
-              </h3>
-              <p
-                style={{
-                  margin: 0,
-                  fontSize: "var(--ds-font-size-md)",
-                  lineHeight: "var(--ds-line-height-md)",
-                  color: "var(--ds-color-text-secondary)",
-                }}
-              >
-                {c.description}
-              </p>
-            </li>
+            <CardTile key={c.name} title={c.name} description={c.description} />
           ))}
-        </ul>
+        </div>
       </Section>
 
-      {/* 核心产品介绍 — cards justified: each item is independently navigable */}
+      {/* 核心产品介绍 */}
       <Section labelledBy="home-products-title" surface="subtle">
         <SectionHeading id="home-products-title" title={homeProducts.title} />
         <div style={gridStyle("280px")}>
           {homeProducts.items.map((p) => (
-            <ClickableCard
+            <CardTile
               key={p.name}
               title={p.name}
               description={p.description}
@@ -381,12 +327,12 @@ function HomeRoute() {
         </div>
       </Section>
 
-      {/* 行业解决方案 — cards justified: independent navigable entities */}
+      {/* 行业解决方案 */}
       <Section labelledBy="home-solutions-title">
         <SectionHeading id="home-solutions-title" title={homeSolutions.title} />
         <div style={gridStyle("360px")}>
           {homeSolutions.items.map((s) => (
-            <ClickableCard
+            <CardTile
               key={s.name}
               tag={s.tag}
               title={s.name}
@@ -428,7 +374,7 @@ function HomeRoute() {
         </div>
       </Section>
 
-      {/* 关于中科固源 — inline stats grouped with body copy, no cards */}
+      {/* 关于中科固源 */}
       <Section labelledBy="home-about-title" surface="subtle">
         <SectionHeading
           id="home-about-title"
@@ -442,23 +388,14 @@ function HomeRoute() {
             gap: "var(--ds-space-2xl)",
             alignItems: "center",
             justifyContent: "space-between",
-            paddingTop: "var(--ds-space-2xl)",
-            borderTop:
-              "var(--ds-border-width-default) solid var(--ds-color-border-subtle)",
           }}
         >
-          <dl
-            style={{
-              margin: 0,
-              display: "flex",
-              flexWrap: "wrap",
-              gap: "var(--ds-space-4xl)",
-            }}
-          >
+          <div style={{ display: "flex", flexWrap: "wrap", gap: "var(--ds-space-3xl)" }}>
             {homeAbout.stats.map((s) => (
               <div key={s.label}>
-                <dt
+                <p
                   style={{
+                    margin: 0,
                     fontSize: "var(--ds-font-size-3xl)",
                     lineHeight: "var(--ds-line-height-3xl)",
                     fontWeight: "var(--ds-font-weight-semibold)",
@@ -466,8 +403,8 @@ function HomeRoute() {
                   }}
                 >
                   {s.value}
-                </dt>
-                <dd
+                </p>
+                <p
                   style={{
                     margin: "var(--ds-space-xs) 0 0",
                     fontSize: "var(--ds-font-size-sm)",
@@ -475,66 +412,24 @@ function HomeRoute() {
                   }}
                 >
                   {s.label}
-                </dd>
+                </p>
               </div>
             ))}
-          </dl>
+          </div>
           <Link to={homeAbout.cta.href} variant="standalone">
             {homeAbout.cta.label}
           </Link>
         </div>
       </Section>
 
-      {/* 成功案例 — divided list, no cards (items are not navigable) */}
+      {/* 成功案例 */}
       <Section labelledBy="home-cases-title">
         <SectionHeading id="home-cases-title" title={homeCases.title} />
-        <ul
-          style={{
-            listStyle: "none",
-            margin: 0,
-            padding: 0,
-            borderTop:
-              "var(--ds-border-width-default) solid var(--ds-color-border-subtle)",
-          }}
-        >
+        <div style={gridStyle("280px")}>
           {homeCases.items.map((c) => (
-            <li
-              key={c.title}
-              className="home-case-row"
-              style={{
-                display: "grid",
-                gridTemplateColumns: "180px 1fr",
-                gap: "var(--ds-space-2xl)",
-                alignItems: "baseline",
-                paddingBlock: "var(--ds-space-xl)",
-                borderBottom:
-                  "var(--ds-border-width-default) solid var(--ds-color-border-subtle)",
-              }}
-            >
-              <span
-                style={{
-                  fontSize: "var(--ds-font-size-sm)",
-                  fontWeight: "var(--ds-font-weight-semibold)",
-                  letterSpacing: "0.04em",
-                  textTransform: "uppercase",
-                  color: "var(--ds-color-action-primary)",
-                }}
-              >
-                {c.tag}
-              </span>
-              <p
-                style={{
-                  margin: 0,
-                  fontSize: "var(--ds-font-size-lg)",
-                  lineHeight: "var(--ds-line-height-lg)",
-                  color: "var(--ds-color-text-primary)",
-                }}
-              >
-                {c.title}
-              </p>
-            </li>
+            <CardTile key={c.title} tag={c.tag} title={c.title} />
           ))}
-        </ul>
+        </div>
       </Section>
 
       {/* Bottom CTA */}
@@ -574,20 +469,6 @@ function HomeRoute() {
           }
           .home-section > div {
             padding-inline: var(--ds-gutter-mobile) !important;
-          }
-          .home-stat-band {
-            grid-template-columns: 1fr !important;
-          }
-          .home-stat-band > div {
-            border-inline-start: none !important;
-            border-top: var(--ds-border-width-default) solid var(--ds-color-border-subtle);
-          }
-          .home-stat-band > div:first-child {
-            border-top: none;
-          }
-          .home-case-row {
-            grid-template-columns: 1fr !important;
-            gap: var(--ds-space-sm) !important;
           }
         }
         @media (min-width: 768px) and (max-width: 1023px) {
