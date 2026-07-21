@@ -2,12 +2,20 @@ import { useCallback, useEffect, useRef, useState } from "react";
 
 const SOURCE_HOME_PATH = "/source-site/index.html";
 
+type SourceHomeEmbedProps = {
+  /**
+   * Optional selectors to hide inside the source document when React owns that
+   * region during migration. The source file itself remains untouched.
+   */
+  hiddenSelectors?: string[];
+};
+
 /**
  * Keeps the approved local homepage byte-for-byte intact while it is brought into
  * the Lovable-connected project. The source page remains editable under
  * public/source-site and is rendered at the canonical root route.
  */
-export function SourceHomeEmbed() {
+export function SourceHomeEmbed({ hiddenSelectors = [] }: SourceHomeEmbedProps) {
   const frameRef = useRef<HTMLIFrameElement>(null);
   const observerRef = useRef<ResizeObserver | null>(null);
   const [height, setHeight] = useState("100vh");
@@ -20,6 +28,16 @@ export function SourceHomeEmbed() {
     document.querySelectorAll<HTMLAnchorElement>("a[href]").forEach((link) => {
       link.target = "_top";
     });
+
+    const existingMigrationStyle = document.getElementById("source-home-migration-style");
+    existingMigrationStyle?.remove();
+
+    if (hiddenSelectors.length > 0) {
+      const style = document.createElement("style");
+      style.id = "source-home-migration-style";
+      style.textContent = `${hiddenSelectors.join(",")} { display: none !important; }`;
+      document.head.appendChild(style);
+    }
 
     const nextHeight = Math.max(
       document.documentElement.scrollHeight,
@@ -38,7 +56,7 @@ export function SourceHomeEmbed() {
       setHeight(`${updatedHeight}px`);
     });
     observerRef.current.observe(document.documentElement);
-  }, []);
+  }, [hiddenSelectors]);
 
   useEffect(() => {
     const handleResize = () => syncFrame();
