@@ -11,14 +11,15 @@ export function HomeHero() {
   return (
     <section
       aria-labelledby="home-hero-title"
+      className="source-home-react-hero"
       style={{
         position: "relative",
         overflow: "hidden",
-        minHeight: "min(720px, 92vh)",
+        minHeight: "calc(100vh - var(--ds-size-header))",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        color: "#f5f7fb",
+        color: "var(--ds-color-text-inverse)",
         isolation: "isolate",
       }}
     >
@@ -27,7 +28,7 @@ export function HomeHero() {
       <div
         style={{
           position: "relative",
-          zIndex: 1,
+          zIndex: 4,
           maxWidth: "var(--ds-container-page, 1200px)",
           padding:
             "clamp(96px, 14vh, 160px) var(--ds-gutter-desktop, 24px) clamp(96px, 14vh, 160px)",
@@ -41,8 +42,8 @@ export function HomeHero() {
             fontSize: "clamp(32px, 5.2vw, 64px)",
             lineHeight: 1.15,
             fontWeight: 700,
-            letterSpacing: "-0.01em",
-            color: "#ffffff",
+            letterSpacing: "var(--ds-letter-spacing-default)",
+            color: "var(--ds-color-text-inverse)",
             textShadow: "0 2px 24px rgba(0, 229, 255, 0.25)",
           }}
         >
@@ -55,7 +56,7 @@ export function HomeHero() {
             maxWidth: 780,
             fontSize: "clamp(15px, 1.4vw, 18px)",
             lineHeight: 1.7,
-            color: "rgba(230, 240, 250, 0.82)",
+            color: "var(--ds-color-text-inverse-secondary)",
           }}
         >
           面向网联汽车、工业控制与特种领域，融合模糊测试、代码审计、供应链分析与 AI
@@ -79,14 +80,11 @@ export function HomeHero() {
               justifyContent: "center",
               minHeight: 48,
               padding: "0 28px",
-              borderRadius: 999,
+              borderRadius: "var(--ds-radius-control)",
               fontSize: 16,
               fontWeight: 600,
-              color: "#001018",
-              background:
-                "linear-gradient(180deg, #7ff0ff 0%, #00e5ff 60%, #00b8d4 100%)",
-              boxShadow:
-                "0 0 0 1px rgba(0, 229, 255, 0.5), 0 10px 30px rgba(0, 229, 255, 0.35)",
+              color: "var(--ds-color-action-primary-foreground)",
+              background: "var(--ds-color-action-primary)",
               textDecoration: "none",
             }}
           >

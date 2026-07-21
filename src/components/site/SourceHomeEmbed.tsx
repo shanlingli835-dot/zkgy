@@ -2,12 +2,20 @@ import { useCallback, useEffect, useRef, useState } from "react";
 
 const SOURCE_HOME_PATH = "/source-site/index.html";
 
+type SourceHomeEmbedProps = {
+  /**
+   * Optional selectors to hide inside the source document when React owns that
+   * region during migration. The source file itself remains untouched.
+   */
+  hiddenSelectors?: string[];
+};
+
 /**
  * Keeps the approved local homepage byte-for-byte intact while it is brought into
  * the Lovable-connected project. The source page remains editable under
  * public/source-site and is rendered at the canonical root route.
  */
-export function SourceHomeEmbed() {
+export function SourceHomeEmbed({ hiddenSelectors = [] }: SourceHomeEmbedProps) {
   const frameRef = useRef<HTMLIFrameElement>(null);
   const observerRef = useRef<ResizeObserver | null>(null);
   const [height, setHeight] = useState("100vh");
@@ -19,6 +27,20 @@ export function SourceHomeEmbed() {
 
     document.querySelectorAll<HTMLAnchorElement>("a[href]").forEach((link) => {
       link.target = "_top";
+    });
+
+    document.querySelectorAll<HTMLElement>("[data-source-home-hidden]").forEach((element) => {
+      element.hidden = false;
+      element.style.removeProperty("display");
+      element.removeAttribute("data-source-home-hidden");
+    });
+
+    hiddenSelectors.forEach((selector) => {
+      document.querySelectorAll<HTMLElement>(selector).forEach((element) => {
+        element.hidden = true;
+        element.style.setProperty("display", "none", "important");
+        element.setAttribute("data-source-home-hidden", "true");
+      });
     });
 
     const nextHeight = Math.max(
@@ -38,13 +60,27 @@ export function SourceHomeEmbed() {
       setHeight(`${updatedHeight}px`);
     });
     observerRef.current.observe(document.documentElement);
-  }, []);
+  }, [hiddenSelectors]);
 
   useEffect(() => {
+    const frame = frameRef.current;
     const handleResize = () => syncFrame();
+    const handleLoad = () => syncFrame();
+
+    frame?.addEventListener("load", handleLoad);
+    syncFrame();
+
+    const retryTimers = [
+      window.setTimeout(syncFrame, 100),
+      window.setTimeout(syncFrame, 500),
+      window.setTimeout(syncFrame, 1200),
+    ];
+
     window.addEventListener("resize", handleResize);
     return () => {
+      frame?.removeEventListener("load", handleLoad);
       window.removeEventListener("resize", handleResize);
+      retryTimers.forEach((timer) => window.clearTimeout(timer));
       observerRef.current?.disconnect();
     };
   }, [syncFrame]);
