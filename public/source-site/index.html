@@ -8261,10 +8261,30 @@ body.mega-open .nav-mega-scrim {
   letter-spacing: 0;
 }
 
-.sg-mega__item:hover span:last-child,
-.sg-mega__item:focus-visible span:last-child {
+.sg-mega__item:hover .sg-name,
+.sg-mega__item:focus-visible .sg-name {
   text-decoration: underline;
   text-underline-offset: 4px;
+}
+
+/* Product / nav label typography: keep CJK together, allow break only between semantic segments */
+.sg-name,
+.jasper-footer__link .sg-name,
+.mobile-menu .sg-name {
+  display: inline;
+  word-break: keep-all;
+  overflow-wrap: normal;
+  line-break: strict;
+  text-wrap: balance;
+}
+.sg-name__en,
+.sg-name__cn {
+  display: inline-block;
+  white-space: nowrap;
+}
+.sg-name__en + .sg-name__cn::before {
+  content: " ";
+  white-space: normal;
 }
 
 /* non-interactive light content text color normalization */
@@ -8435,12 +8455,12 @@ main > :not(.jasper-hero-shell):not(.solution-cta-bar) :where(h1, h2, h3, h4, h5
         </div>
         <div class="sg-mega__list" aria-label="安全测试工具">
           <p class="sg-mega__list-title">安全测试工具</p>
-          <a class="sg-mega__item" href="products/wisdom-fuzzing.html"><span class="sg-mega__icon">WF</span><span>Wisdom 模糊测试</span></a>
-          <a class="sg-mega__item" href="products/swift-ai.html"><span class="sg-mega__icon">AI</span><span>Swift AI 综合模型安全检测平台</span></a>
-          <a class="sg-mega__item" href="products/swift-sca.html"><span class="sg-mega__icon">SC</span><span>Swift SCA 软件成分分析</span></a>
-          <a class="sg-mega__item" href="products/wisdom-lens.html"><span class="sg-mega__icon">WL</span><span>Wisdom Lens 灰盒模糊测试</span></a>
-          <a class="sg-mega__item" href="products/swift-code.html"><span class="sg-mega__icon">CD</span><span>Swift Code 源代码审计</span></a>
-          <a class="sg-mega__item" href="products/swift-pentest.html"><span class="sg-mega__icon">PT</span><span>Swift Pentest 自动化渗透测试</span></a>
+          <a class="sg-mega__item" href="products/wisdom-fuzzing.html"><span class="sg-mega__icon">WF</span><span class="sg-name"><span class="sg-name__en">Wisdom</span><span class="sg-name__cn">模糊测试</span></span></a>
+          <a class="sg-mega__item" href="products/swift-ai.html"><span class="sg-mega__icon">AI</span><span class="sg-name"><span class="sg-name__en">Swift AI</span><span class="sg-name__cn">综合模型安全检测平台</span></span></a>
+          <a class="sg-mega__item" href="products/swift-sca.html"><span class="sg-mega__icon">SC</span><span class="sg-name"><span class="sg-name__en">Swift SCA</span><span class="sg-name__cn">软件成分分析</span></span></a>
+          <a class="sg-mega__item" href="products/wisdom-lens.html"><span class="sg-mega__icon">WL</span><span class="sg-name"><span class="sg-name__en">Wisdom Lens</span><span class="sg-name__cn">灰盒模糊测试</span></span></a>
+          <a class="sg-mega__item" href="products/swift-code.html"><span class="sg-mega__icon">CD</span><span class="sg-name"><span class="sg-name__en">Swift Code</span><span class="sg-name__cn">源代码审计</span></span></a>
+          <a class="sg-mega__item" href="products/swift-pentest.html"><span class="sg-mega__icon">PT</span><span class="sg-name"><span class="sg-name__en">Swift Pentest</span><span class="sg-name__cn">自动化渗透测试</span></span></a>
         </div>
       </div>
 
@@ -8504,12 +8524,12 @@ main > :not(.jasper-hero-shell):not(.solution-cta-bar) :where(h1, h2, h3, h4, h5
       <div class="mobile-menu-group">
         <button class="mobile-nav-trigger" type="button" aria-expanded="false">安全产品 <span>+</span></button>
         <div class="mobile-submenu" hidden>
-          <a href="products/wisdom-fuzzing.html">Wisdom 模糊测试</a>
-          <a href="products/swift-ai.html">Swift AI 综合模型安全检测平台</a>
-          <a href="products/swift-sca.html">Swift SCA 软件成分分析</a>
-          <a href="products/wisdom-lens.html">Wisdom Lens 灰盒模糊测试</a>
-          <a href="products/swift-code.html">Swift Code 源代码审计</a>
-          <a href="products/swift-pentest.html">Swift Pentest 自动化渗透测试</a>
+          <a href="products/wisdom-fuzzing.html"><span class="sg-name"><span class="sg-name__en">Wisdom</span><span class="sg-name__cn">模糊测试</span></span></a>
+          <a href="products/swift-ai.html"><span class="sg-name"><span class="sg-name__en">Swift AI</span><span class="sg-name__cn">综合模型安全检测平台</span></span></a>
+          <a href="products/swift-sca.html"><span class="sg-name"><span class="sg-name__en">Swift SCA</span><span class="sg-name__cn">软件成分分析</span></span></a>
+          <a href="products/wisdom-lens.html"><span class="sg-name"><span class="sg-name__en">Wisdom Lens</span><span class="sg-name__cn">灰盒模糊测试</span></span></a>
+          <a href="products/swift-code.html"><span class="sg-name"><span class="sg-name__en">Swift Code</span><span class="sg-name__cn">源代码审计</span></span></a>
+          <a href="products/swift-pentest.html"><span class="sg-name"><span class="sg-name__en">Swift Pentest</span><span class="sg-name__cn">自动化渗透测试</span></span></a>
         </div>
         <button class="mobile-nav-trigger" type="button" aria-expanded="false">解决方案 <span>+</span></button>
         <div class="mobile-submenu" hidden>
@@ -9090,12 +9110,12 @@ main > :not(.jasper-hero-shell):not(.solution-cta-bar) :where(h1, h2, h3, h4, h5
                 </svg>
               </a>
               <ul class="jasper-footer__sublist">
-                <li><a class="jasper-footer__link" href="products/wisdom-fuzzing.html">Wisdom 模糊测试</a></li>
-                <li><a class="jasper-footer__link" href="products/swift-ai.html">Swift AI 综合模型安全检测平台</a></li>
-                <li><a class="jasper-footer__link" href="products/swift-sca.html">Swift SCA 软件成分分析</a></li>
-                <li><a class="jasper-footer__link" href="products/wisdom-lens.html">Wisdom Lens 灰盒模糊测试</a></li>
-                <li><a class="jasper-footer__link" href="products/swift-code.html">Swift Code 源代码审计</a></li>
-                <li><a class="jasper-footer__link" href="products/swift-pentest.html">Swift Pentest 自动化渗透测试</a></li>
+                <li><a class="jasper-footer__link" href="products/wisdom-fuzzing.html"><span class="sg-name"><span class="sg-name__en">Wisdom</span><span class="sg-name__cn">模糊测试</span></span></a></li>
+                <li><a class="jasper-footer__link" href="products/swift-ai.html"><span class="sg-name"><span class="sg-name__en">Swift AI</span><span class="sg-name__cn">综合模型安全检测平台</span></span></a></li>
+                <li><a class="jasper-footer__link" href="products/swift-sca.html"><span class="sg-name"><span class="sg-name__en">Swift SCA</span><span class="sg-name__cn">软件成分分析</span></span></a></li>
+                <li><a class="jasper-footer__link" href="products/wisdom-lens.html"><span class="sg-name"><span class="sg-name__en">Wisdom Lens</span><span class="sg-name__cn">灰盒模糊测试</span></span></a></li>
+                <li><a class="jasper-footer__link" href="products/swift-code.html"><span class="sg-name"><span class="sg-name__en">Swift Code</span><span class="sg-name__cn">源代码审计</span></span></a></li>
+                <li><a class="jasper-footer__link" href="products/swift-pentest.html"><span class="sg-name"><span class="sg-name__en">Swift Pentest</span><span class="sg-name__cn">自动化渗透测试</span></span></a></li>
               </ul>
             </div>
           </section>
