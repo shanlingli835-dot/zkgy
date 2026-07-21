@@ -24,16 +24,17 @@ adapted before reuse in new public UI.
 | Button             | `src/components/ui/button.tsx`              | [`actions/button.md`](actions/button.md)                               | Implemented         |
 | Link               | `src/components/ui/link.tsx`                | [`actions/link.md`](actions/link.md)                                   | Implemented         |
 | Button group       | To be confirmed                             | Not created                                                            | Planned             |
-| Call to action     | To be confirmed                             | Not created                                                            | Planned             |
+| Call to action     | `src/components/ui/call-to-action.tsx`      | [`actions/call-to-action.md`](actions/call-to-action.md)               | Implemented         |
+| Marketing CTA band | `src/components/site/MarketingCtaBand.tsx`  | [`actions/marketing-cta-band.md`](actions/marketing-cta-band.md)       | Implemented         |
 | Card               | `src/components/ui/card.tsx`                | Not created                                                            | Existing unreviewed |
 | Surface            | To be confirmed                             | Not created                                                            | Planned             |
 | Navigation menu    | `src/components/ui/navigation-menu.tsx`     | Not created                                                            | Existing unreviewed |
 | Desktop navigation | `src/components/site/DesktopNavigation.tsx` | [`navigation/desktop-navigation.md`](navigation/desktop-navigation.md) | Implemented         |
-| Global header      | `src/components/site/GlobalHeader.tsx`      | Not created                                                            | Existing unreviewed |
+| Global header      | `src/components/site/GlobalHeader.tsx`      | [`navigation/global-header.md`](navigation/global-header.md)           | Implemented         |
 | Mobile menu        | `src/components/site/MobileMenu.tsx`        | [`navigation/mobile-menu.md`](navigation/mobile-menu.md)               | Implemented         |
-| Footer             | `src/components/site/GlobalFooter.tsx`      | Not created                                                            | Existing unreviewed |
+| Footer             | `src/components/site/GlobalFooter.tsx`      | [`navigation/footer.md`](navigation/footer.md)                         | Implemented         |
 | Breadcrumb         | `src/components/ui/breadcrumb.tsx`          | Not created                                                            | Existing unreviewed |
-| Skip link          | To be confirmed                             | Not created                                                            | Planned             |
+| Skip link          | `src/components/ui/skip-link.tsx`           | [`actions/skip-link.md`](actions/skip-link.md)                         | Implemented         |
 
 Only completed component specifications are linked. Unreviewed and Planned components remain
 unavailable so Lovable does not treat technical starter files as approved UI.

@@ -83,6 +83,52 @@ export const primaryCta: NavLink = {
 /** 页脚内部导航（复用主导航结构，扁平呈现） */
 export const footerNavGroups: NavGroup[] = primaryNav.filter((g) => g.id !== "contact");
 
+/** 首页视觉体系使用的页脚分组；目的地仍来自全站公开路由。 */
+export const footerHomepageNav: NavGroup[] = [
+  {
+    id: "footer-products",
+    label: "安全测试工具",
+    children: primaryNav
+      .find((group) => group.id === "products")
+      ?.children?.filter((item) => !item.legacyOnly),
+  },
+  {
+    id: "footer-solutions",
+    label: "行业场景",
+    children: primaryNav.find((group) => group.id === "solutions")?.children,
+  },
+  {
+    id: "footer-services",
+    label: "技术服务",
+    children: primaryNav
+      .find((group) => group.id === "services")
+      ?.children?.filter((item) => item.href !== "/integration.html"),
+  },
+  {
+    id: "footer-company",
+    label: "关于我们",
+    children: [
+      { label: "公司介绍", href: "/about.html" },
+      { label: "联系销售", href: "/contact.html" },
+      { label: "合作生态", href: "/" },
+    ],
+  },
+];
+
+export const footerAboutLinks: NavLink[] = [
+  { label: "公司介绍", href: "/about.html" },
+  { label: "客户案例", href: "/" },
+  { label: "联系我们", href: "/contact.html" },
+  { label: "加入我们", href: "/contact.html" },
+];
+
+export const footerUtilityLinks: NavLink[] = [
+  { label: "联系邮箱", href: "/contact.html" },
+  { label: "联系电话", href: "/contact.html" },
+  { label: "合作生态", href: "/" },
+  { label: "更多渠道", href: "/about.html" },
+];
+
 /** 页脚外部链接（源站页脚） */
 export const footerExternalLinks: NavLink[] = [
   { label: "CSDN", href: "https://blog.csdn.net/2501_91003657?spm=1011.2480.3001.5343" },
@@ -90,6 +136,9 @@ export const footerExternalLinks: NavLink[] = [
   { label: "安全客", href: "https://www.anquanke.com" },
   { label: "开源中国", href: "https://www.oschina.net" },
   { label: "Freebuf", href: "https://www.freebuf.com/" },
+  { label: "51CTO", href: "https://blog.51cto.com/" },
+  { label: "百家号", href: "https://baijiahao.baidu.com/builder/theme/bjh/login" },
+  { label: "今日头条", href: "https://www.toutiao.com/" },
 ];
 
 /** 备案信息（源站页脚） */

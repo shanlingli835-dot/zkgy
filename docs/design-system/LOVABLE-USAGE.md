@@ -90,6 +90,27 @@ and focus return. Do not create a route-level drawer, role="menu", plain anchors
 CTA style.
 ```
 
+## Global Header prompt
+
+```text
+For the site header, read docs/design-system/components/navigation/global-header.md and reuse
+src/components/site/GlobalHeader.tsx through the SiteShell header slot. Do not recreate the Logo,
+desktop navigation, mobile drawer, menu trigger, or responsive CSS in a route. Keep Free Trial as
+the canonical navigation destination defined by GlobalHeader; do not turn it into a route-level
+Button or improvised CTA.
+```
+
+## Canonical page ending prompt
+
+```text
+For the final action and footer, read
+docs/design-system/components/actions/marketing-cta-band.md,
+docs/design-system/components/navigation/footer.md, and
+docs/design-system/patterns/page-ending.md. Reuse MarketingCtaBand and GlobalFooter through
+SiteShell. Provide only source-approved CTA copy and one destination. Do not copy the gradient,
+footer markup, navigation data, or responsive CSS into a route.
+```
+
 ## New component prompt
 
 ```text

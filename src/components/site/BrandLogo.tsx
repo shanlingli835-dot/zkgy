@@ -1,3 +1,5 @@
+import type { CSSProperties } from "react";
+
 import logoColor from "@/assets/brand/logos/zkgy-logo-horizontal-color.svg";
 import logoReverse from "@/assets/brand/logos/zkgy-logo-horizontal-reverse.png";
 
@@ -15,11 +17,15 @@ export type BrandLogoVariant = "color" | "reverse";
 
 interface BrandLogoProps {
   variant: BrandLogoVariant;
-  height?: number;
+  height?: CSSProperties["height"];
   className?: string;
 }
 
-export function BrandLogo({ variant, height = 40, className }: BrandLogoProps) {
+export function BrandLogo({
+  variant,
+  height = "var(--ds-size-brand-logo-header)",
+  className,
+}: BrandLogoProps) {
   const src = variant === "color" ? logoColor : logoReverse;
   return (
     <img

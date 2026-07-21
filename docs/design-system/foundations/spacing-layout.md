@@ -57,6 +57,18 @@ Do not create temporary `10px`, `14px`, or oversized pill radii in routes.
 
 Do not add route-level z-index values or reuse the navigation accent as general decoration.
 
+## Site component sizes
+
+| Token                         | Value   | Purpose                                      |
+| ----------------------------- | ------- | -------------------------------------------- |
+| `--ds-size-header`            | `72px`  | Global Header bar and Mobile Menu top offset |
+| `--ds-size-brand-logo-header` | `40px`  | Approved Logo height on the light Header     |
+| `--ds-size-control-min`       | `44px`  | Minimum Button and navigation control height |
+| `--ds-size-menu-min`          | `256px` | Minimum desktop navigation panel width       |
+
+Header and Logo sizes are component contracts. Routes must not override them or pass one-off
+pixel heights to BrandLogo.
+
 ## Container and grid
 
 - Page content maximum width：`1280px` through `--ds-container-page`.

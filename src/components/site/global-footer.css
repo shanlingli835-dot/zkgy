@@ -1,0 +1,179 @@
+.global-footer {
+  color: var(--ds-color-text-inverse);
+  background: var(--ds-color-surface-inverse-soft);
+}
+
+.global-footer__inner {
+  width: 100%;
+  max-width: var(--ds-container-page);
+  margin-inline: auto;
+  padding: var(--ds-space-5xl) var(--ds-gutter-mobile) var(--ds-space-4xl);
+}
+
+.global-footer__brand-row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--ds-space-2xl);
+  padding-bottom: var(--ds-space-2xl);
+  border-bottom: var(--ds-border-width-default) solid var(--ds-color-border-inverse);
+}
+
+.global-footer__logo-link {
+  min-height: var(--ds-size-control-min);
+}
+
+.global-footer__utilities {
+  display: flex;
+  align-items: center;
+  gap: var(--ds-space-md);
+}
+
+.global-footer__utility-link {
+  min-width: var(--ds-space-xl);
+  min-height: var(--ds-size-control-min);
+  justify-content: center;
+  color: var(--ds-color-text-inverse-muted);
+}
+
+.global-footer__utility-link:hover,
+.global-footer__utility-link:focus-visible {
+  color: var(--ds-color-link-inverse-hover);
+}
+
+.global-footer__utility-link svg,
+.global-footer__language svg {
+  width: var(--ds-space-xl);
+  height: var(--ds-space-xl);
+  fill: currentColor;
+}
+
+.global-footer__navigation {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--ds-space-3xl) var(--ds-space-xl);
+  padding-top: var(--ds-space-3xl);
+}
+
+.global-footer__heading {
+  margin: var(--ds-space-0) var(--ds-space-0) var(--ds-space-xl);
+  color: var(--ds-color-text-inverse);
+  font-size: var(--ds-font-size-sm);
+  font-weight: var(--ds-font-weight-semibold);
+  line-height: var(--ds-line-height-sm);
+}
+
+.global-footer__link-list,
+.global-footer__about-links {
+  display: grid;
+  gap: var(--ds-space-sm);
+  margin: var(--ds-space-0);
+  padding: var(--ds-space-0);
+  list-style: none;
+}
+
+.global-footer__link-list a,
+.global-footer__about-links a {
+  font-size: var(--ds-font-size-sm);
+  line-height: var(--ds-line-height-sm);
+}
+
+.global-footer__link-list a {
+  color: var(--ds-color-text-inverse-secondary);
+}
+
+.global-footer__link-list a:hover,
+.global-footer__link-list a:focus-visible {
+  color: var(--ds-color-text-inverse);
+}
+
+.global-footer__about {
+  grid-column: 1 / -1;
+}
+
+.global-footer__about p {
+  max-width: var(--ds-container-summary);
+  margin: var(--ds-space-0);
+  color: var(--ds-color-text-inverse-secondary);
+  font-size: var(--ds-font-size-sm);
+  line-height: var(--ds-line-height-lg);
+}
+
+.global-footer__about-links {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: var(--ds-space-xl);
+}
+
+.global-footer__language {
+  display: flex;
+  align-items: center;
+  gap: var(--ds-space-md);
+  width: 100%;
+  max-width: var(--ds-container-summary);
+  min-height: var(--ds-size-control-min);
+  margin-top: var(--ds-space-xl);
+  padding-inline: var(--ds-space-lg);
+  border: var(--ds-border-width-default) solid var(--ds-color-border-inverse);
+  border-radius: var(--ds-radius-control);
+  color: var(--ds-color-text-inverse-secondary);
+  font-size: var(--ds-font-size-sm);
+}
+
+.global-footer__legal {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: var(--ds-space-md) var(--ds-space-xl);
+  width: 100%;
+  padding: var(--ds-space-2xl) var(--ds-gutter-mobile);
+  border-top: var(--ds-border-width-default) solid var(--ds-color-border-inverse);
+  color: var(--ds-color-text-inverse-muted);
+  background: var(--ds-color-surface-inverse);
+  font-size: var(--ds-font-size-sm);
+  line-height: var(--ds-line-height-sm);
+}
+
+@media (min-width: 48rem) {
+  .global-footer__inner {
+    padding-inline: var(--ds-gutter-tablet);
+  }
+
+  .global-footer__navigation {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .global-footer__about {
+    grid-column: span 2;
+  }
+
+  .global-footer__legal {
+    justify-content: flex-end;
+    padding-inline: var(--ds-gutter-tablet);
+  }
+}
+
+@media (min-width: 64rem) {
+  .global-footer__inner {
+    padding-inline: var(--ds-gutter-desktop);
+  }
+
+  .global-footer__navigation {
+    grid-template-columns: repeat(4, minmax(0, 1fr)) minmax(0, 2fr);
+  }
+
+  .global-footer__about {
+    grid-column: auto;
+  }
+
+  .global-footer__legal {
+    padding-inline: var(--ds-gutter-desktop);
+  }
+}
+
+@media (max-width: 30rem) {
+  .global-footer__brand-row {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}

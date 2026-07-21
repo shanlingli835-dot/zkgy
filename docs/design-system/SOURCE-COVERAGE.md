@@ -9,7 +9,7 @@ implementation APIs from being treated as local components.
 - Official elements：<https://ux.redhat.com/elements/>
 - Official repository：<https://github.com/RedHat-UX/red-hat-design-system>
 - Upstream color package：`@rhds/tokens@3.1.0`
-- Local design-system version：`0.8.0-mobile-menu`
+- Local design-system version：`1.0.0-product-detail`
 
 ## Local status terms
 
@@ -27,6 +27,13 @@ implementation APIs from being treated as local components.
 The inventory records the complete upstream source set. It does not claim that all items are
 needed for the SOURCEGUARD website.
 
+### Project-owned shared compositions
+
+| Composition        | Local status | Canonical path                               |
+| ------------------ | ------------ | -------------------------------------------- |
+| Marketing CTA band | Implemented  | `src/components/site/MarketingCtaBand.tsx`   |
+| Page ending        | Implemented  | `docs/design-system/patterns/page-ending.md` |
+
 ### Actions and links
 
 | Element        | Local status        | Priority |
@@ -34,10 +41,10 @@ needed for the SOURCEGUARD website.
 | Back to top    | Planned             | Phase 2  |
 | Button group   | Planned             | Phase 1  |
 | Button         | Implemented         | Phase 1  |
-| Call to action | Planned             | Phase 1  |
+| Call to action | Implemented         | Phase 1  |
 | Link           | Implemented         | Phase 1  |
 | Menu dropdown  | Existing unreviewed | Phase 1  |
-| Skip link      | Planned             | Phase 1  |
+| Skip link      | Implemented         | Phase 1  |
 
 ### Data and emphasis
 
@@ -66,12 +73,13 @@ needed for the SOURCEGUARD website.
 | Element              | Local status        | Priority  |
 | -------------------- | ------------------- | --------- |
 | Breadcrumb           | Existing unreviewed | Phase 1   |
-| Footer               | Existing unreviewed | Phase 1   |
+| Footer               | Implemented         | Phase 1   |
 | Jump links           | Planned             | Phase 2   |
 | Navigation link      | Existing unreviewed | Phase 1   |
-| Navigation primary   | Existing unreviewed | Phase 1   |
+| Navigation primary   | Implemented         | Phase 1   |
 | Desktop navigation   | Implemented         | Phase 1   |
 | Mobile menu          | Implemented         | Phase 1   |
+| Global header        | Implemented         | Phase 1   |
 | Navigation secondary | Planned             | Phase 2   |
 | Navigation vertical  | Planned             | As needed |
 | Pagination           | Existing unreviewed | Phase 2   |

@@ -1,5 +1,7 @@
 import type { ReactNode } from "react";
 
+import { SkipLink } from "@/components/ui/skip-link";
+
 /**
  * SiteShell (Story 1.1)
  *
@@ -23,46 +25,17 @@ export function SiteShell({
   children: ReactNode;
 }) {
   return (
-    <div
-      style={{
-        minHeight: "100vh",
-        display: "flex",
-        flexDirection: "column",
-        backgroundColor: "var(--ds-color-canvas)",
-        color: "var(--ds-color-text-primary)",
-        fontFamily: "var(--ds-font-family-sans)",
-        fontSize: "var(--ds-font-size-md)",
-        lineHeight: "var(--ds-line-height-md)",
-        letterSpacing: "var(--ds-letter-spacing-default)",
-        WebkitFontSmoothing: "antialiased",
-      }}
-    >
-      <a href="#site-main" className="site-skip-link">
-        跳到主要内容
-      </a>
+    <div className="flex min-h-screen flex-col bg-background font-sans text-foreground antialiased">
+      <SkipLink targetId="site-main">跳到主要内容</SkipLink>
 
-      <style>{`
-        .site-skip-link {
-          position: absolute;
-          left: var(--ds-space-lg);
-          top: var(--ds-space-lg);
-          z-index: 100;
-          transform: translateY(-200%);
-          padding: var(--ds-space-sm) var(--ds-space-md);
-          border: var(--ds-border-width-default) solid var(--ds-color-border-default);
-          border-radius: var(--ds-radius-control);
-          background: var(--ds-color-surface-default);
-          color: var(--ds-color-text-primary);
-          transition: transform var(--ds-duration-fast) var(--ds-ease-standard);
-        }
-        .site-skip-link:focus {
-          transform: translateY(0);
-        }
-      `}</style>
+      <header
+        data-site-slot="global-header"
+        className="sticky top-[var(--ds-space-0)] z-[var(--ds-z-navigation)]"
+      >
+        {header ?? null}
+      </header>
 
-      <header data-site-slot="global-header">{header ?? null}</header>
-
-      <main id="site-main" style={{ flex: 1 }}>
+      <main id="site-main" className="flex-1">
         {children}
       </main>
 

@@ -89,7 +89,23 @@
   --ds-color-action-disabled: var(--rh-color-gray-30);
   --ds-color-action-disabled-foreground: var(--rh-color-gray-50);
   --ds-color-action-disabled-border: var(--rh-color-gray-30);
+  --ds-color-action-band: var(--rh-color-blue-50);
+  --ds-color-action-band-hover: var(--rh-color-blue-60);
+  --ds-color-action-band-active: var(--rh-color-blue-70);
   --ds-color-focus: var(--rh-color-interactive-primary-focus-on-light);
+
+  /* Approved homepage marketing band */
+  --ds-color-marketing-band-start: #7a28b8;
+  --ds-color-marketing-band-middle: #b31d85;
+  --ds-color-marketing-band-action: #ee1d0f;
+  --ds-color-marketing-band-end: #ff5d55;
+  --ds-gradient-marketing-band: linear-gradient(
+    90deg,
+    var(--ds-color-marketing-band-start) 0%,
+    var(--ds-color-marketing-band-middle) 34%,
+    var(--ds-color-marketing-band-action) 72%,
+    var(--ds-color-marketing-band-end) 100%
+  );
 
   /* Links */
   --ds-color-link-default: var(--rh-color-interactive-primary-default-on-light);
@@ -162,6 +178,7 @@
   --ds-container-reading: 45rem;
   --ds-container-summary: 20rem;
   --ds-size-header: 4.5rem;
+  --ds-size-brand-logo-header: 2.5rem;
   --ds-size-control-min: 2.75rem;
   --ds-size-menu-min: 16rem;
   --ds-z-navigation: 50;

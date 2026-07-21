@@ -28,16 +28,17 @@ upstream names. Legacy `--zksc-*` and default shadcn theme values remain removed
 
 ## Semantic groups
 
-| Group               | Names                                       | Purpose                                                  |
-| ------------------- | ------------------------------------------- | -------------------------------------------------------- |
-| Canvas and surfaces | `--ds-color-canvas`, `--ds-color-surface-*` | Page and container layers                                |
-| Text                | `--ds-color-text-*`                         | Primary, secondary, muted, inverse, disabled             |
-| Borders             | `--ds-color-border-*`                       | Subtle, default, strong, disabled                        |
-| Actions             | `--ds-color-action-*`                       | Primary, hover, active, subtle, danger                   |
-| Links               | `--ds-color-link-*`                         | Default, visited, navigation, inverse, underline         |
-| Navigation          | `--ds-color-navigation-*`                   | Expanded and hover accent treatments                     |
-| Focus               | `--ds-color-focus`                          | Visible focus ring                                       |
-| Status              | `--ds-color-status-*`                       | Info, success, warning, danger foreground/surface/border |
+| Group               | Names                                                         | Purpose                                                  |
+| ------------------- | ------------------------------------------------------------- | -------------------------------------------------------- |
+| Canvas and surfaces | `--ds-color-canvas`, `--ds-color-surface-*`                   | Page and container layers                                |
+| Text                | `--ds-color-text-*`                                           | Primary, secondary, muted, inverse, disabled             |
+| Borders             | `--ds-color-border-*`                                         | Subtle, default, strong, disabled                        |
+| Actions             | `--ds-color-action-*`                                         | Primary, hover, active, subtle, danger, marketing band   |
+| Marketing band      | `--ds-color-marketing-band-*`, `--ds-gradient-marketing-band` | Approved homepage CTA gradient only                      |
+| Links               | `--ds-color-link-*`                                           | Default, visited, navigation, inverse, underline         |
+| Navigation          | `--ds-color-navigation-*`                                     | Expanded and hover accent treatments                     |
+| Focus               | `--ds-color-focus`                                            | Visible focus ring                                       |
+| Status              | `--ds-color-status-*`                                         | Info, success, warning, danger foreground/surface/border |
 
 The exact color values come directly from the approved Red Hat snapshot. Semantic selection and
 component usage remain controlled by the SOURCEGUARD `--ds-color-*` layer.
@@ -55,6 +56,11 @@ component usage remain controlled by the SOURCEGUARD `--ds-color-*` layer.
 
 The copied `on-dark` declarations remain available because the user requested the complete
 source palette. They do not activate a Dark theme.
+
+The four `--ds-color-marketing-band-*` stops are the sole approved exception to the upstream
+palette mapping. They preserve the existing public homepage CTA band and may only be consumed
+through `--ds-gradient-marketing-band`. `--ds-color-action-band-*` maps its action to the approved
+upstream blue action scale. This treatment is not a general-purpose decorative gradient.
 
 Link uses the upstream interactive default, hover, active, visited, and on-dark values through
 `--ds-color-link-*`. The on-dark mapping is limited to approved inverse surfaces such as the

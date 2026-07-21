@@ -33,6 +33,10 @@ last_updated: 2026-07-20
 
 ## 实现方式
 
+网站组件通过 `src/components/site/BrandLogo.tsx` 引用这些批准资产。浅色 Header 默认使用
+`--ds-size-brand-logo-header` 控制高度；不得在页面中传入一次性 Logo 高度、复制 SVG 源码或
+增加背景容器。
+
 在 React/Vite 项目中从资产目录导入，不要复制 SVG 源码到页面组件：
 
 ```tsx
