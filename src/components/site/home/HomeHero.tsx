@@ -15,12 +15,11 @@ export function HomeHero() {
       style={{
         position: "relative",
         overflow: "hidden",
-        minHeight: "calc(100vh - var(--ds-size-header))",
+        minHeight: "100vh",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
         color: "var(--ds-color-text-inverse)",
-        isolation: "isolate",
       }}
     >
       <CybercoreBackground beamCount={70} />
