@@ -6,7 +6,6 @@ import { SiteShell } from "@/components/site/SiteShell";
 import { GlobalHeader } from "@/components/site/GlobalHeader";
 import { GlobalFooter } from "@/components/site/GlobalFooter";
 import { HomeIntegrations } from "@/components/site/HomeIntegrations";
-import { CapabilitiesShaderCards } from "@/components/site/CapabilitiesShaderCards";
 import { CybercoreBackground } from "@/components/ui/cybercore-section-hero";
 
 import { Link } from "@/components/ui/link";
@@ -375,7 +374,11 @@ function HomeRoute() {
       {/* 核心安全能力 */}
       <Section labelledBy="home-capabilities-title">
         <SectionHeading id="home-capabilities-title" title={homeCapabilities.title} />
-        <CapabilitiesShaderCards items={homeCapabilities.items} />
+        <div style={gridStyle("280px")}>
+          {homeCapabilities.items.map((c) => (
+            <CardTile key={c.name} icon={c.icon} title={c.name} description={c.description} />
+          ))}
+        </div>
       </Section>
 
       {/* 核心产品介绍 */}
