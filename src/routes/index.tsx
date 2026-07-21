@@ -1,6 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 
-import { SourceHomeEmbed } from "@/components/site/SourceHomeEmbed";
+import { CybercoreHero } from "@/components/site/CybercoreHero";
+import { GlobalFooter } from "@/components/site/GlobalFooter";
+import { GlobalHeader } from "@/components/site/GlobalHeader";
+import { SiteShell } from "@/components/site/SiteShell";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -21,5 +24,9 @@ export const Route = createFileRoute("/")({
 });
 
 function HomeRoute() {
-  return <SourceHomeEmbed />;
+  return (
+    <SiteShell header={<GlobalHeader />} footer={<GlobalFooter />}>
+      <CybercoreHero />
+    </SiteShell>
+  );
 }
