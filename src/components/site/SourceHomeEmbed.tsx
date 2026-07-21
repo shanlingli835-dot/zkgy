@@ -93,8 +93,9 @@ export function SourceHomeEmbed({ hiddenSelectors = [], src = SOURCE_HOME_PATH, 
   return (
     <iframe
       ref={frameRef}
-      src={SOURCE_HOME_PATH}
-      title="中科固源官网首页"
+      src={src}
+      title={title}
+
       onLoad={syncFrame}
       style={{
         border: 0,
