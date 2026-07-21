@@ -9,10 +9,16 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as WisdomDothtmlRouteImport } from './routes/wisdom[.]html'
 import { Route as IndexDothtmlRouteImport } from './routes/index[.]html'
 import { Route as HomeReactPreviewRouteImport } from './routes/home-react-preview'
 import { Route as IndexRouteImport } from './routes/index'
 
+const WisdomDothtmlRoute = WisdomDothtmlRouteImport.update({
+  id: '/wisdom.html',
+  path: '/wisdom.html',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexDothtmlRoute = IndexDothtmlRouteImport.update({
   id: '/index.html',
   path: '/index.html',
@@ -33,34 +39,45 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/home-react-preview': typeof HomeReactPreviewRoute
   '/index.html': typeof IndexDothtmlRoute
+  '/wisdom.html': typeof WisdomDothtmlRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/home-react-preview': typeof HomeReactPreviewRoute
   '/index.html': typeof IndexDothtmlRoute
+  '/wisdom.html': typeof WisdomDothtmlRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/home-react-preview': typeof HomeReactPreviewRoute
   '/index.html': typeof IndexDothtmlRoute
+  '/wisdom.html': typeof WisdomDothtmlRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/home-react-preview' | '/index.html'
+  fullPaths: '/' | '/home-react-preview' | '/index.html' | '/wisdom.html'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/home-react-preview' | '/index.html'
-  id: '__root__' | '/' | '/home-react-preview' | '/index.html'
+  to: '/' | '/home-react-preview' | '/index.html' | '/wisdom.html'
+  id: '__root__' | '/' | '/home-react-preview' | '/index.html' | '/wisdom.html'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   HomeReactPreviewRoute: typeof HomeReactPreviewRoute
   IndexDothtmlRoute: typeof IndexDothtmlRoute
+  WisdomDothtmlRoute: typeof WisdomDothtmlRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/wisdom.html': {
+      id: '/wisdom.html'
+      path: '/wisdom.html'
+      fullPath: '/wisdom.html'
+      preLoaderRoute: typeof WisdomDothtmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/index.html': {
       id: '/index.html'
       path: '/index.html'
@@ -89,7 +106,18 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   HomeReactPreviewRoute: HomeReactPreviewRoute,
   IndexDothtmlRoute: IndexDothtmlRoute,
+  WisdomDothtmlRoute: WisdomDothtmlRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
