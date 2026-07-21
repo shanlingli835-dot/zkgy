@@ -29,15 +29,19 @@ export function SourceHomeEmbed({ hiddenSelectors = [] }: SourceHomeEmbedProps) 
       link.target = "_top";
     });
 
-    const existingMigrationStyle = document.getElementById("source-home-migration-style");
-    existingMigrationStyle?.remove();
+    document.querySelectorAll<HTMLElement>("[data-source-home-hidden]").forEach((element) => {
+      element.hidden = false;
+      element.style.removeProperty("display");
+      element.removeAttribute("data-source-home-hidden");
+    });
 
-    if (hiddenSelectors.length > 0) {
-      const style = document.createElement("style");
-      style.id = "source-home-migration-style";
-      style.textContent = `${hiddenSelectors.join(",")} { display: none !important; }`;
-      document.head.appendChild(style);
-    }
+    hiddenSelectors.forEach((selector) => {
+      document.querySelectorAll<HTMLElement>(selector).forEach((element) => {
+        element.hidden = true;
+        element.style.setProperty("display", "none", "important");
+        element.setAttribute("data-source-home-hidden", "true");
+      });
+    });
 
     const nextHeight = Math.max(
       document.documentElement.scrollHeight,
