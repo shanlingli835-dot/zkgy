@@ -10,11 +10,17 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexDothtmlRouteImport } from './routes/index[.]html'
+import { Route as HomeReactPreviewRouteImport } from './routes/home-react-preview'
 import { Route as IndexRouteImport } from './routes/index'
 
 const IndexDothtmlRoute = IndexDothtmlRouteImport.update({
   id: '/index.html',
   path: '/index.html',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HomeReactPreviewRoute = HomeReactPreviewRouteImport.update({
+  id: '/home-react-preview',
+  path: '/home-react-preview',
   getParentRoute: () => rootRouteImport,
 } as any)
 const IndexRoute = IndexRouteImport.update({
@@ -25,27 +31,31 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/home-react-preview': typeof HomeReactPreviewRoute
   '/index.html': typeof IndexDothtmlRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/home-react-preview': typeof HomeReactPreviewRoute
   '/index.html': typeof IndexDothtmlRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/home-react-preview': typeof HomeReactPreviewRoute
   '/index.html': typeof IndexDothtmlRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/index.html'
+  fullPaths: '/' | '/home-react-preview' | '/index.html'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/index.html'
-  id: '__root__' | '/' | '/index.html'
+  to: '/' | '/home-react-preview' | '/index.html'
+  id: '__root__' | '/' | '/home-react-preview' | '/index.html'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  HomeReactPreviewRoute: typeof HomeReactPreviewRoute
   IndexDothtmlRoute: typeof IndexDothtmlRoute
 }
 
@@ -56,6 +66,13 @@ declare module '@tanstack/react-router' {
       path: '/index.html'
       fullPath: '/index.html'
       preLoaderRoute: typeof IndexDothtmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/home-react-preview': {
+      id: '/home-react-preview'
+      path: '/home-react-preview'
+      fullPath: '/home-react-preview'
+      preLoaderRoute: typeof HomeReactPreviewRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/': {
@@ -70,6 +87,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  HomeReactPreviewRoute: HomeReactPreviewRoute,
   IndexDothtmlRoute: IndexDothtmlRoute,
 }
 export const routeTree = rootRouteImport
