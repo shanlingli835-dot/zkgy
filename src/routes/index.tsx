@@ -1,6 +1,14 @@
 import { createFileRoute } from "@tanstack/react-router";
 
+import { GlobalHeader } from "@/components/site/GlobalHeader";
 import { SourceHomeEmbed } from "@/components/site/SourceHomeEmbed";
+import { HomeHero } from "@/components/site/home/HomeHero";
+
+const SOURCE_HOME_REACT_OWNED_SELECTORS = [
+  ".site-header",
+  ".nav-mega-scrim",
+  "main > .jasper-hero-shell",
+];
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -21,5 +29,11 @@ export const Route = createFileRoute("/")({
 });
 
 function HomeRoute() {
-  return <SourceHomeEmbed />;
+  return (
+    <>
+      <GlobalHeader />
+      <HomeHero />
+      <SourceHomeEmbed hiddenSelectors={SOURCE_HOME_REACT_OWNED_SELECTORS} />
+    </>
+  );
 }
