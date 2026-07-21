@@ -1,4 +1,4 @@
-import React, { useState, useEffect, CSSProperties } from 'react'
+import React, { CSSProperties, useEffect, useState } from 'react'
 
 export interface CybercoreBackgroundProps {
   /** Number of animated light beams */
@@ -15,10 +15,10 @@ const CybercoreBackground: React.FC<CybercoreBackgroundProps> = ({
   >([])
 
   useEffect(() => {
-    const generated = Array.from({ length: beamCount }).map((_, i) => {
+    const generated: Array<{ id: number; type: 'primary' | 'secondary'; style: CSSProperties }> = Array.from({ length: beamCount }).map((_, i) => {
       const riseDur = Math.random() * 3 + 5   // 5–8s rise
       const fadeDur = riseDur                // sync fade
-      const type: 'primary' | 'secondary' = Math.random() < 0.15 ? 'secondary' : 'primary'
+      const type = Math.random() < 0.15 ? 'secondary' : 'primary'
       return {
         id: i,
         type,
@@ -34,11 +34,7 @@ const CybercoreBackground: React.FC<CybercoreBackgroundProps> = ({
   }, [beamCount])
 
   return (
-    <div
-      className="scene"
-      role="img"
-      aria-label="Animated cybercore grid background"
-    >
+    <div className="scene" role="img" aria-label="Animated cybercore grid background">
       <div className="floor" />
       <div className="main-column" />
       <div className="light-stream-container">
