@@ -1,4 +1,4 @@
-import React, { useState, useEffect, CSSProperties } from 'react'
+import React, { CSSProperties, useEffect, useState } from 'react'
 
 export interface CybercoreBackgroundProps {
   /** Number of animated light beams */
@@ -34,7 +34,7 @@ const CybercoreBackground: React.FC<CybercoreBackgroundProps> = ({
   }, [beamCount])
 
   return (
-    <div className="scene">
+    <div className="scene" role="img" aria-label="Animated cybercore grid background">
       <div className="floor" />
       <div className="main-column" />
       <div className="light-stream-container">
