@@ -15,7 +15,7 @@ const CybercoreBackground: React.FC<CybercoreBackgroundProps> = ({
   >([])
 
   useEffect(() => {
-    const generated = Array.from({ length: beamCount }).map((_, i) => {
+    const generated: Array<{ id: number; type: 'primary' | 'secondary'; style: CSSProperties }> = Array.from({ length: beamCount }).map((_, i) => {
       const riseDur = Math.random() * 3 + 5   // 5–8s rise
       const fadeDur = riseDur                // sync fade
       const type = Math.random() < 0.15 ? 'secondary' : 'primary'
