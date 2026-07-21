@@ -8,14 +8,19 @@ type SourceHomeEmbedProps = {
    * region during migration. The source file itself remains untouched.
    */
   hiddenSelectors?: string[];
+  /** Override the iframe source path (defaults to the approved homepage). */
+  src?: string;
+  /** Override the iframe accessible title. */
+  title?: string;
 };
+
 
 /**
  * Keeps the approved local homepage byte-for-byte intact while it is brought into
  * the Lovable-connected project. The source page remains editable under
  * public/source-site and is rendered at the canonical root route.
  */
-export function SourceHomeEmbed({ hiddenSelectors = [] }: SourceHomeEmbedProps) {
+export function SourceHomeEmbed({ hiddenSelectors = [], src = SOURCE_HOME_PATH, title = "中科固源官网首页" }: SourceHomeEmbedProps) {
   const frameRef = useRef<HTMLIFrameElement>(null);
   const observerRef = useRef<ResizeObserver | null>(null);
   const [height, setHeight] = useState("100vh");
@@ -88,8 +93,9 @@ export function SourceHomeEmbed({ hiddenSelectors = [] }: SourceHomeEmbedProps) 
   return (
     <iframe
       ref={frameRef}
-      src={SOURCE_HOME_PATH}
-      title="中科固源官网首页"
+      src={src}
+      title={title}
+
       onLoad={syncFrame}
       style={{
         border: 0,
