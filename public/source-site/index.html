@@ -8694,38 +8694,59 @@ main > :not(.jasper-hero-shell):not(.solution-cta-bar) :where(h1, h2, h3, h4, h5
       </div>
     </section>
 
-    <section class="security-flow-module" aria-labelledby="security-flow-title" data-security-flow>
-      <div class="security-flow__inner">
-        <header class="security-flow__header">
-          <h2 id="security-flow-title">从风险发现到交付闭环，规模化安全验证流程。</h2>
-          <p>把协议建模、代码审计、供应链复核、报告审批和交付系统协调到同一流程中，减少人工流转，让安全验证持续推进。</p>
+    <section class="integrations-three" aria-labelledby="integrations-three-title">
+      <style>
+        .integrations-three { padding: clamp(56px, 8vw, 96px) 24px; background: #F7F8F6; }
+        .integrations-three__inner { max-width: 1120px; margin: 0 auto; }
+        .integrations-three__header { text-align: center; max-width: 640px; margin: 0 auto 48px; }
+        .integrations-three__header h2 { font-size: clamp(28px, 3.4vw, 40px); line-height: 1.2; color: #121518; margin: 0 0 16px; font-weight: 700; }
+        .integrations-three__header p { font-size: 16px; line-height: 1.6; color: #4a5157; margin: 0; }
+        .integrations-three__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+        @media (max-width: 900px) { .integrations-three__grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 560px) { .integrations-three__grid { grid-template-columns: 1fr; } }
+        .integrations-three__card { display: flex; flex-direction: column; gap: 16px; padding: 28px; background: #FFFFFF; border: 1px solid rgba(18,21,24,0.08); border-radius: 14px; text-decoration: none; color: inherit; transition: border-color .2s ease, transform .2s ease, box-shadow .2s ease; }
+        .integrations-three__card:hover { border-color: #0E5A5A; transform: translateY(-2px); box-shadow: 0 10px 30px -12px rgba(14,90,90,0.18); }
+        .integrations-three__icon { width: 44px; height: 44px; display: inline-flex; align-items: center; justify-content: center; border-radius: 10px; background: rgba(14,90,90,0.08); color: #0E5A5A; }
+        .integrations-three__icon svg { width: 24px; height: 24px; }
+        .integrations-three__card h3 { font-size: 17px; font-weight: 600; color: #121518; margin: 0; }
+        .integrations-three__card p { font-size: 14px; line-height: 1.55; color: #4a5157; margin: 0; }
+      </style>
+      <div class="integrations-three__inner">
+        <header class="integrations-three__header">
+          <h2 id="integrations-three-title">Integrate with your favorite tools</h2>
+          <p>Connect seamlessly with popular platforms and services to enhance your workflow.</p>
         </header>
-
-        <div class="security-flow__tabs-shell">
-          <div class="security-flow__tabs" role="tablist" aria-label="安全验证流程阶段">
-            <button class="security-flow__tab" id="flow-tab-protocol" type="button" role="tab" aria-controls="security-flow-panel" aria-selected="true" data-security-flow-tab="protocol">协议安全</button>
-            <button class="security-flow__tab" id="flow-tab-ai" type="button" role="tab" aria-controls="security-flow-panel" aria-selected="false" data-security-flow-tab="ai">智能安全</button>
-            <button class="security-flow__tab" id="flow-tab-supply" type="button" role="tab" aria-controls="security-flow-panel" aria-selected="false" data-security-flow-tab="supply">供应链安全</button>
-            <button class="security-flow__tab" id="flow-tab-code" type="button" role="tab" aria-controls="security-flow-panel" aria-selected="false" data-security-flow-tab="code">代码安全</button>
-            <button class="security-flow__tab" id="flow-tab-app" type="button" role="tab" aria-controls="security-flow-panel" aria-selected="false" data-security-flow-tab="app">应用安全</button>
-            <button class="security-flow__tab" id="flow-tab-data" type="button" role="tab" aria-controls="security-flow-panel" aria-selected="false" data-security-flow-tab="data">数据安全</button>
-          </div>
-        </div>
-
-        <div class="security-flow__panel" id="security-flow-panel" role="tabpanel" aria-labelledby="flow-tab-protocol" data-security-flow-panel>
-          <div class="security-flow__visual" aria-hidden="true">
-            <img class="security-flow__visual-image" src="assets/security-flow-ai-acceleration.webp" alt="" loading="lazy" decoding="async">
-          </div>
-
-          <div class="security-flow__copy">
-            <h3 data-security-flow-copy-title>识别专用协议中的缺陷与异常通信风险。</h3>
-            <p data-security-flow-copy-body>面向车载、航天、低空通信和工业协议，发现解析缺陷、状态机异常和可达攻击路径。</p>
-            <ul data-security-flow-copy-list>
-              <li>支持私有协议建模与字段约束分析。</li>
-              <li>覆盖 DoS、中间人、重放等通信风险。</li>
-              <li>输出可复核的用例、日志和风险证据。</li>
-            </ul>
-          </div>
+        <div class="integrations-three__grid">
+          <a class="integrations-three__card" href="#" aria-label="Gemini">
+            <span class="integrations-three__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 14 10 22 12 14 14 12 22 10 14 2 12 10 10Z"/></svg></span>
+            <h3>Gemini</h3>
+            <p>Bring Gemini's multimodal reasoning into your workflow.</p>
+          </a>
+          <a class="integrations-three__card" href="#" aria-label="Replit">
+            <span class="integrations-three__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="8 6 2 12 8 18"/><polyline points="16 6 22 12 16 18"/></svg></span>
+            <h3>Replit</h3>
+            <p>Prototype and ship code from the browser to production.</p>
+          </a>
+          <a class="integrations-three__card" href="#" aria-label="Magic UI">
+            <span class="integrations-three__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 4 17 8 21 10 17 12 15 16 13 12 9 10 13 8Z"/><path d="M6 14 7 17 10 18 7 19 6 22 5 19 2 18 5 17Z"/></svg></span>
+            <h3>Magic UI</h3>
+            <p>Drop in polished, animated UI blocks in minutes.</p>
+          </a>
+          <a class="integrations-three__card" href="#" aria-label="VSCodium">
+            <span class="integrations-three__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/><line x1="14" y1="4" x2="10" y2="20"/></svg></span>
+            <h3>VSCodium</h3>
+            <p>Open-source builds of VS Code for a telemetry-free IDE.</p>
+          </a>
+          <a class="integrations-three__card" href="#" aria-label="MediaWiki">
+            <span class="integrations-three__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4v16h16V8l-4-4z"/><polyline points="14 4 14 8 20 8"/><line x1="8" y1="13" x2="16" y2="13"/><line x1="8" y1="17" x2="14" y2="17"/></svg></span>
+            <h3>MediaWiki</h3>
+            <p>Sync knowledge bases and documentation across teams.</p>
+          </a>
+          <a class="integrations-three__card" href="#" aria-label="Google PaLM">
+            <span class="integrations-three__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a14 14 0 0 1 0 18"/><path d="M12 3a14 14 0 0 0 0 18"/></svg></span>
+            <h3>Google PaLM</h3>
+            <p>Tap into Google's PaLM models for text and reasoning.</p>
+          </a>
         </div>
       </div>
     </section>
