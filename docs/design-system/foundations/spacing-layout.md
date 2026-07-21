@@ -48,12 +48,12 @@ Do not create temporary `10px`, `14px`, or oversized pill radii in routes.
 
 ## Borders and stacking
 
-| Token                       | Value | Purpose                                 |
-| --------------------------- | ----- | --------------------------------------- |
-| `--ds-border-width-default` | `1px` | Default component and surface boundary  |
-| `--ds-border-width-strong`  | `2px` | Focus and strong component boundary     |
-| `--ds-border-width-accent`  | `4px` | Expanded primary-navigation accent      |
-| `--ds-z-navigation`         | `50`  | Desktop navigation panel stacking layer |
+| Token                       | Value | Purpose                                  |
+| --------------------------- | ----- | ---------------------------------------- |
+| `--ds-border-width-default` | `1px` | Default component and surface boundary   |
+| `--ds-border-width-strong`  | `2px` | Focus and strong component boundary      |
+| `--ds-border-width-accent`  | `4px` | Expanded primary-navigation accent       |
+| `--ds-z-navigation`         | `50`  | Navigation panels and mobile modal layer |
 
 Do not add route-level z-index values or reuse the navigation accent as general decoration.
 

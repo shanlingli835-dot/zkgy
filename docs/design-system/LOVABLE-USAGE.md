@@ -79,6 +79,17 @@ dropdowns in GlobalHeader, add role="menu", change source-faithful destinations,
 desktop component as the mobile fallback.
 ```
 
+## Mobile Menu prompt
+
+```text
+For narrow-screen primary navigation, read
+docs/design-system/components/navigation/mobile-menu.md and reuse
+src/components/site/MobileMenu.tsx with src/content/navigation.ts. GlobalHeader owns the opening
+trigger; MobileMenu owns the modal layer, disclosure state, close control, focus trap, scroll lock,
+and focus return. Do not create a route-level drawer, role="menu", plain anchors, or an unapproved
+CTA style.
+```
+
 ## New component prompt
 
 ```text

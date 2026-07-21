@@ -9,7 +9,7 @@ implementation APIs from being treated as local components.
 - Official elements：<https://ux.redhat.com/elements/>
 - Official repository：<https://github.com/RedHat-UX/red-hat-design-system>
 - Upstream color package：`@rhds/tokens@3.1.0`
-- Local design-system version：`0.7.0-desktop-navigation`
+- Local design-system version：`0.8.0-mobile-menu`
 
 ## Local status terms
 
@@ -71,6 +71,7 @@ needed for the SOURCEGUARD website.
 | Navigation link      | Existing unreviewed | Phase 1   |
 | Navigation primary   | Existing unreviewed | Phase 1   |
 | Desktop navigation   | Implemented         | Phase 1   |
+| Mobile menu          | Implemented         | Phase 1   |
 | Navigation secondary | Planned             | Phase 2   |
 | Navigation vertical  | Planned             | As needed |
 | Pagination           | Existing unreviewed | Phase 2   |

@@ -1,12 +1,12 @@
 # SOURCEGUARD design system
 
-版本：`0.7.0-desktop-navigation`
+版本：`0.8.0-mobile-menu`
 
 正式品牌：`中科固源 / SOURCEGUARD`
 
 主题：Light only
 
-当前状态：完整 Red Hat 原始色板与本地语义映射已实现；Button、Link 与 Desktop Navigation 已完成 canonical component 合约，其他组件仍需逐项审核。
+当前状态：完整 Red Hat 原始色板与本地语义映射已实现；Button、Link、Desktop Navigation 与 Mobile Menu 已完成 canonical component 合约，其他组件仍需逐项审核。
 
 ## 目标
 
@@ -19,15 +19,15 @@ Red Hat Design System 是完整原始颜色 Token、组件层级、交互状态�
 
 ## 当前迁移状态
 
-| Layer           | Source of truth                            | Status      | Page usage                                             |
-| --------------- | ------------------------------------------ | ----------- | ------------------------------------------------------ |
-| Brand assets    | `docs/design-system/brand/brand-assets.md` | Implemented | Approved assets only                                   |
-| Foundations     | `docs/design-system/foundations/`          | Implemented | Required before related UI work                        |
-| Tokens          | `src/styles/tokens.css`                    | Implemented | Required for all visual values                         |
-| Upstream colors | `src/styles/red-hat-colors.css`            | Implemented | Mapping source only; no direct page use                |
-| UI primitives   | `src/components/ui/`                       | Mixed       | Button and Link implemented; review remaining items    |
-| Site components | `src/components/site/`                     | Mixed       | Desktop Navigation implemented; review remaining items |
-| Patterns        | `docs/design-system/patterns/`             | Planned     | Not yet approved for page generation                   |
+| Layer           | Source of truth                            | Status      | Page usage                                          |
+| --------------- | ------------------------------------------ | ----------- | --------------------------------------------------- |
+| Brand assets    | `docs/design-system/brand/brand-assets.md` | Implemented | Approved assets only                                |
+| Foundations     | `docs/design-system/foundations/`          | Implemented | Required before related UI work                     |
+| Tokens          | `src/styles/tokens.css`                    | Implemented | Required for all visual values                      |
+| Upstream colors | `src/styles/red-hat-colors.css`            | Implemented | Mapping source only; no direct page use             |
+| UI primitives   | `src/components/ui/`                       | Mixed       | Button and Link implemented; review remaining items |
+| Site components | `src/components/site/`                     | Mixed       | Desktop Navigation and Mobile Menu implemented      |
+| Patterns        | `docs/design-system/patterns/`             | Planned     | Not yet approved for page generation                |
 
 `Implemented` for Foundations and Tokens means their executable values are available now. It
 does not make an existing UI component canonical. Components remain unavailable to Lovable

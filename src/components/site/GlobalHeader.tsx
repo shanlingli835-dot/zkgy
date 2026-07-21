@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Link, useRouterState } from "@tanstack/react-router";
 
 import { brand, primaryCta, primaryNav } from "@/content/navigation";
@@ -20,16 +20,6 @@ import { MobileMenu } from "./MobileMenu";
 export function GlobalHeader() {
   const pathname = useRouterState({ select: (s) => s.location.pathname });
   const [mobileOpen, setMobileOpen] = useState(false);
-
-  useEffect(() => {
-    function onKey(e: KeyboardEvent) {
-      if (e.key === "Escape") {
-        setMobileOpen(false);
-      }
-    }
-    document.addEventListener("keydown", onKey);
-    return () => document.removeEventListener("keydown", onKey);
-  }, []);
 
   return (
     <div
@@ -123,8 +113,10 @@ export function GlobalHeader() {
 
       <MobileMenu
         id="site-mobile-menu"
+        items={primaryNav}
         open={mobileOpen}
         pathname={pathname}
+        primaryAction={primaryCta}
         onClose={() => setMobileOpen(false)}
       />
 
