@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2048 960" role="img" aria-labelledby="title desc">
+  <title id="title">Security Issues dashboard</title>
+  <desc id="desc">Security issue counts and stacked risk flow chart.</desc>
+  <rect width="2048" height="960" rx="0" fill="#ffffff"/>
+  <style>
+    .ink{fill:#151515;font-family:Inter,Arial,sans-serif;font-weight:760}.muted{fill:#4d4d4d;font-family:Inter,Arial,sans-serif;font-weight:700}.body{fill:#4d4d4d;font-family:Inter,Arial,sans-serif;font-weight:700}.line{stroke:#e0e0e0;stroke-width:2}.cell{fill:#fff}.tag{font-family:Inter,Arial,sans-serif;font-weight:700;font-size:26px}.label{font-family:Inter,Arial,sans-serif;font-weight:700;font-size:32px;fill:#4d4d4d}
+  </style>
+  <text x="48" y="118" class="ink" font-size="76">Security Issues</text>
+  <circle cx="1210" cy="88" r="15" fill="#e32920"/><text x="1238" y="103" class="muted" font-size="42">High: 52</text>
+  <circle cx="1480" cy="88" r="15" fill="#ff9200"/><text x="1508" y="103" class="muted" font-size="42">Medium: 136</text>
+  <circle cx="1818" cy="88" r="15" fill="#36b5e8"/><text x="1846" y="103" class="muted" font-size="42">Low: 94</text>
+  <rect x="48" y="164" width="1952" height="790" rx="22" fill="#fff" stroke="#e6e6e6" stroke-width="2"/>
+  <g>
+    <line x1="438" y1="164" x2="438" y2="376" class="line"/><line x1="828" y1="164" x2="828" y2="376" class="line"/><line x1="1218" y1="164" x2="1218" y2="376" class="line"/><line x1="1608" y1="164" x2="1608" y2="376" class="line"/><line x1="48" y1="376" x2="2000" y2="376" class="line"/>
+    <text x="72" y="258" class="ink" font-size="56">495</text><text x="72" y="328" class="label">All Issues</text>
+    <text x="464" y="258" fill="#ff3d12" font-family="Inter,Arial,sans-serif" font-size="56" font-weight="760">204</text>
+    <rect x="606" y="215" width="204" height="46" rx="10" fill="#fff0e3" stroke="#ffd5ad" stroke-width="2"/><text x="620" y="248" fill="#ff4a16" class="tag">Noise Removed</text>
+    <text x="464" y="328" class="label">False Positive Cut</text>
+    <text x="854" y="258" fill="#0b7d43" font-family="Inter,Arial,sans-serif" font-size="56" font-weight="760">282</text>
+    <rect x="992" y="215" width="188" height="46" rx="10" fill="#e5faec" stroke="#a4edbd" stroke-width="2"/><text x="1006" y="248" fill="#0b7d43" class="tag">True Positives</text>
+    <text x="854" y="328" class="label">Actual Security Issues</text>
+    <text x="1244" y="258" class="ink" font-size="56">05</text><text x="1244" y="328" class="label">EPSS &gt; 10%</text>
+    <text x="1634" y="258" class="ink" font-size="56">04</text><text x="1634" y="328" class="label">EPSS &gt; 50%</text>
+  </g>
+  <clipPath id="plot"><rect x="49" y="378" width="1950" height="574" rx="0"/></clipPath>
+  <g clip-path="url(#plot)">
+    <path d="M50 410 C210 420 330 492 470 520 C640 555 730 565 900 560 C1110 552 1210 600 1400 620 C1610 642 1780 634 1998 650 L1998 684 C1770 672 1578 664 1368 665 C1160 668 1000 660 812 660 C615 662 450 622 292 575 C170 538 100 524 50 528 Z" fill="#e6271f"/>
+    <path d="M50 528 C210 510 360 548 510 595 C650 638 800 644 960 628 C1144 609 1235 630 1375 652 C1585 684 1795 690 1998 670 L1998 705 C1820 716 1590 720 1370 724 C1170 728 982 732 805 730 C615 728 465 692 320 650 C190 612 98 610 50 612 Z" fill="#ff9200"/>
+    <path d="M50 798 C210 790 370 740 520 692 C665 648 820 640 980 648 C1128 656 1220 636 1364 620 C1550 600 1738 604 1998 650 L1998 690 C1740 690 1588 706 1392 726 C1180 748 1020 760 805 762 C610 764 448 804 300 850 C178 888 92 910 50 920 Z" fill="#37b8ea"/>
+    <rect x="328" y="420" width="306" height="46" rx="10" fill="#fff0e3" stroke="#ffd5ad" stroke-width="2"/><text x="341" y="453" fill="#ff4a16" class="tag">204 False Positive (41%)</text>
+    <rect x="670" y="678" width="332" height="46" rx="10" fill="#e5faec" stroke="#a4edbd" stroke-width="2"/><text x="683" y="711" fill="#0b7d43" class="tag">282 Actual Security Issues</text>
+  </g>
+  <text x="236" y="930" class="label">All Issues</text>
+  <text x="748" y="886" class="label">57%</text><text x="668" y="930" class="label">Security Issues</text>
+  <text x="1248" y="886" class="label">1%</text><text x="1185" y="930" class="label">EPSS &gt; 10%</text>
+  <text x="1744" y="886" class="label">1%</text><text x="1660" y="930" class="label">EPSS &gt; 50%</text>
+</svg>

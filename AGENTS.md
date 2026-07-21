@@ -46,6 +46,17 @@ Red Hat Design System is the approved upstream source for the complete original 
 Token snapshot plus component hierarchy, behavior, content guidance, responsive rules,
 and accessibility. It is not the public site brand.
 
+## Current Homepage Migration Source
+
+- The user-approved homepage source is `public/source-site/index.html`.
+- Its stylesheet, scripts, product pages, and image assets live under `public/source-site/`.
+- The canonical `/` route renders that source through `SourceHomeEmbed` so Lovable displays the
+  approved page without visually regenerating it.
+- When the user requests a homepage edit, modify the files under `public/source-site/` unless the
+  request explicitly asks to refactor the page into React components.
+- Do not restore the earlier generated homepage from git history or replace the approved source
+  with a new design direction.
+
 Before creating or modifying UI:
 
 1. Read `docs/design-system/README.md` and confirm the current adoption status.

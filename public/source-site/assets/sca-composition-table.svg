@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="900" height="440" viewBox="0 0 900 440" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Software Composition Analysis vulnerabilities table</title>
+  <desc id="desc">A software composition analysis dashboard with vulnerability, healthy package and dismissed tabs plus package severity table.</desc>
+  <rect width="900" height="440" rx="10" fill="#FFFFFF"/>
+  <text x="22" y="56" font-family="Inter, Arial, sans-serif" font-size="38" font-weight="760" fill="#111827">Software Composition Analysis</text>
+  <g filter="url(#buttonShadow)">
+    <rect x="720" y="28" width="156" height="40" rx="9" fill="#1F6FE5"/>
+    <path d="M745 47l8-8 8 8-8 8-8-8Z" fill="white"/>
+    <path d="M753 43l4 4-4 4-4-4 4-4Z" fill="#1F6FE5"/>
+    <text x="772" y="53" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="760" fill="white">Bulk Jira Action</text>
+  </g>
+  <rect x="22" y="86" width="856" height="46" rx="7" fill="#F4F4F4" stroke="#D6D6D6"/>
+  <rect x="22" y="86" width="280" height="46" rx="7" fill="#FFFFFF" stroke="#D6D6D6"/>
+  <text x="86" y="116" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="800" fill="#1F6FE5">Vulnerability (47)</text>
+  <text x="380" y="116" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="800" fill="#111827">Healthy Packages (358)</text>
+  <text x="670" y="116" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="800" fill="#111827">Dismissed (3)</text>
+
+  <rect x="22" y="148" width="856" height="268" rx="9" fill="#FFFFFF" stroke="#E0E0E0"/>
+  <path d="M22 198h856M22 238h856M22 278h856M22 318h856M22 358h856" stroke="#E7E7E7"/>
+  <path d="M264 148v268M780 148v268" stroke="#E7E7E7"/>
+  <text x="33" y="180" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="800" fill="#111827">Package</text>
+  <text x="274" y="180" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="800" fill="#111827">Description</text>
+  <text x="792" y="180" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="800" fill="#111827">Severity</text>
+
+  <g font-family="Inter, Arial, sans-serif" font-size="13" fill="#303640">
+    <text x="33" y="222">langchain-core@0.3</text>
+    <text x="274" y="222">LangChain serialization injection vulnerability enables secret extraction in dumps/loads APIs</text>
+    <text x="33" y="262">jsonwebtoken@0.4.0</text>
+    <text x="274" y="262">Verification Bypass in jsonwebtoken</text>
+    <text x="33" y="302">mongoose@5.13.23</text>
+    <text x="274" y="302">Mongoose search injection vulnerability</text>
+    <text x="33" y="342">marsdb@0.6.11</text>
+    <text x="274" y="342">Command Injection in marsdb</text>
+    <text x="33" y="382">starlette@0.27.0</text>
+    <text x="274" y="382">Starlette Denial of service (DoS) via multipart/form-data</text>
+    <text x="33" y="408">starlette@0.27.0</text>
+    <text x="274" y="408">Duplicate Advisory: Starlette Content-Type Header ReDoS</text>
+  </g>
+
+  <g font-family="Inter, Arial, sans-serif" font-size="14" font-weight="760">
+    <rect x="790" y="208" width="42" height="24" rx="12" fill="#FFF6F4" stroke="#FFC7C2"/>
+    <text x="811" y="225" text-anchor="middle" fill="#C9190B">High</text>
+    <rect x="790" y="248" width="42" height="24" rx="12" fill="#FFF6F4" stroke="#FFC7C2"/>
+    <text x="811" y="265" text-anchor="middle" fill="#C9190B">High</text>
+    <rect x="790" y="288" width="62" height="24" rx="12" fill="#FFF8EA" stroke="#FFD47A"/>
+    <text x="821" y="305" text-anchor="middle" fill="#B85C00">Medium</text>
+    <rect x="790" y="328" width="62" height="24" rx="12" fill="#FFF8EA" stroke="#FFD47A"/>
+    <text x="821" y="345" text-anchor="middle" fill="#B85C00">Medium</text>
+    <rect x="790" y="368" width="62" height="24" rx="12" fill="#FFF8EA" stroke="#FFD47A"/>
+    <text x="821" y="385" text-anchor="middle" fill="#B85C00">Medium</text>
+    <rect x="790" y="396" width="40" height="22" rx="11" fill="#EDF8FF" stroke="#A8DBFF"/>
+    <text x="810" y="412" text-anchor="middle" fill="#1764D1">Low</text>
+  </g>
+
+  <defs>
+    <filter id="buttonShadow" x="710" y="20" width="176" height="60" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#1F2937" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+</svg>
