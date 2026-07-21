@@ -5,12 +5,12 @@ import { HomeHero } from "@/components/site/home/HomeHero";
 /**
  * Preview route for the React homepage migration (Stage A).
  *
- * Only Hero is migrated so far. Visit /_home-react to review the
+ * Only Hero is migrated so far. Visit /home-react-preview to review the
  * <CybercoreBackground /> hero side-by-side with the live `/` (iframe
  * of public/source-site/index.html). Do not switch `/` until all
  * sections are migrated and reviewed.
  */
-export const Route = createFileRoute("/_home-react")({
+export const Route = createFileRoute("/home-react-preview")({
   head: () => ({
     meta: [
       { title: "首页迁移预览 · Stage A Hero" },
