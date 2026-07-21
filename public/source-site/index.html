@@ -8544,8 +8544,78 @@ main > :not(.jasper-hero-shell):not(.solution-cta-bar) :where(h1, h2, h3, h4, h5
   <div class="nav-mega-scrim" data-mega-scrim aria-hidden="true"></div>
 
   <main>
-    <section class="jasper-hero-shell" aria-labelledby="jasper-hero-title">
-      <canvas class="jasper-hero__ascii-texture" id="hero-ascii-texture" aria-hidden="true"></canvas>
+    <style>
+      /* Cybercore Hero override */
+      .jasper-hero-shell.cybercore {
+        --cc-bg: #030308;
+        --cc-ink: #ffffff;
+        --cc-muted: rgba(255,255,255,.72);
+        --cc-line: rgba(120,180,255,.18);
+        --cc-glow: #4aa3ff;
+        --cc-glow-2: #7cf0ff;
+        background: radial-gradient(ellipse at 50% 120%, #0b1a2e 0%, #030308 60%);
+        position: relative;
+        overflow: hidden;
+        isolation: isolate;
+      }
+      .jasper-hero-shell.cybercore::before,
+      .jasper-hero-shell.cybercore::after { display: none !important; }
+      .jasper-hero-shell.cybercore .jasper-hero__ascii-texture { display: none; }
+      .jasper-hero-shell.cybercore .jasper-hero__title,
+      .jasper-hero-shell.cybercore .jasper-hero__title span { color: var(--cc-ink); }
+      .jasper-hero-shell.cybercore .jasper-hero__copy { color: var(--cc-muted); }
+      .cybercore .cc-main-glow {
+        position: absolute; left: 50%; top: 55%;
+        width: 900px; height: 900px; transform: translate(-50%, -50%);
+        background: radial-gradient(circle, rgba(74,163,255,.35) 0%, rgba(74,163,255,0) 60%);
+        filter: blur(40px);
+        animation: ccMainGlow 6s ease-in-out infinite alternate;
+        pointer-events: none; z-index: 0;
+      }
+      .cybercore .cc-floor-glow {
+        position: absolute; left: 0; right: 0; bottom: 0; height: 40%;
+        background: radial-gradient(ellipse at 50% 100%, rgba(124,240,255,.28) 0%, transparent 70%);
+        animation: ccFloorGlow 4s ease-in-out infinite alternate;
+        pointer-events: none; z-index: 0;
+      }
+      .cybercore .cc-grid-floor {
+        position: absolute; left: 50%; bottom: 0;
+        width: 220%; height: 55%;
+        transform: translateX(-50%) perspective(600px) rotateX(60deg);
+        transform-origin: 50% 100%;
+        background-image:
+          linear-gradient(to right, var(--cc-line) 1px, transparent 1px),
+          linear-gradient(to bottom, var(--cc-line) 1px, transparent 1px);
+        background-size: 60px 60px;
+        animation: ccMoveGrid 8s linear infinite;
+        mask-image: linear-gradient(to top, black 20%, transparent 100%);
+        -webkit-mask-image: linear-gradient(to top, black 20%, transparent 100%);
+        pointer-events: none; z-index: 0;
+      }
+      .cybercore .cc-beams { position: absolute; inset: 0; pointer-events: none; z-index: 0; overflow: hidden; }
+      .cybercore .cc-beam {
+        position: absolute; bottom: 0;
+        width: 1px; height: 40vh;
+        background: linear-gradient(to top, var(--cc-glow-2), transparent);
+        opacity: 0;
+        animation: ccRise linear infinite, ccFade linear infinite;
+      }
+      .cybercore .jasper-hero { position: relative; z-index: 2; }
+      @keyframes ccRise { from { transform: translateY(0) } to { transform: translateY(-100vh) } }
+      @keyframes ccFade { 0%,100% { opacity: 0 } 20%,80% { opacity: .8 } }
+      @keyframes ccMainGlow { from { opacity: .6 } to { opacity: 1 } }
+      @keyframes ccFloorGlow { from { opacity: .5 } to { opacity: .9 } }
+      @keyframes ccMoveGrid { from { background-position: 0 0 } to { background-position: 0 60px } }
+      @media (prefers-reduced-motion: reduce) {
+        .cybercore .cc-main-glow, .cybercore .cc-floor-glow,
+        .cybercore .cc-grid-floor, .cybercore .cc-beam { animation: none !important; }
+      }
+    </style>
+    <section class="jasper-hero-shell cybercore" aria-labelledby="jasper-hero-title">
+      <div class="cc-main-glow" aria-hidden="true"></div>
+      <div class="cc-floor-glow" aria-hidden="true"></div>
+      <div class="cc-grid-floor" aria-hidden="true"></div>
+      <div class="cc-beams" id="cc-beams" aria-hidden="true"></div>
       <div class="jasper-hero">
         <div class="jasper-hero__content">
           <h1 class="jasper-hero__title" id="jasper-hero-title" aria-label="为关键软件与智能设备构建安全验证能力">
@@ -8561,6 +8631,26 @@ main > :not(.jasper-hero-shell):not(.solution-cta-bar) :where(h1, h2, h3, h4, h5
 
       </div>
     </section>
+    <script>
+      (function(){
+        var host = document.getElementById('cc-beams');
+        if(!host) return;
+        if(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+        var count = 70;
+        for(var i=0;i<count;i++){
+          var b = document.createElement('span');
+          b.className = 'cc-beam';
+          b.style.left = (Math.random()*100) + '%';
+          var dur = (3 + Math.random()*5).toFixed(2) + 's';
+          var delay = (-Math.random()*8).toFixed(2) + 's';
+          b.style.animationDuration = dur + ',' + dur;
+          b.style.animationDelay = delay + ',' + delay;
+          b.style.height = (30 + Math.random()*40) + 'vh';
+          b.style.opacity = (0.3 + Math.random()*0.7).toFixed(2);
+          host.appendChild(b);
+        }
+      })();
+    </script>
 
     <section class="jasper-logo-marquee" aria-labelledby="trusted-teams-title">
       <div class="jasper-logo-marquee__inner">
