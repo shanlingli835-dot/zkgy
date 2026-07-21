@@ -20,7 +20,7 @@ type SourceHomeEmbedProps = {
  * the Lovable-connected project. The source page remains editable under
  * public/source-site and is rendered at the canonical root route.
  */
-export function SourceHomeEmbed({ hiddenSelectors = [] }: SourceHomeEmbedProps) {
+export function SourceHomeEmbed({ hiddenSelectors = [], src = SOURCE_HOME_PATH, title = "中科固源官网首页" }: SourceHomeEmbedProps) {
   const frameRef = useRef<HTMLIFrameElement>(null);
   const observerRef = useRef<ResizeObserver | null>(null);
   const [height, setHeight] = useState("100vh");
