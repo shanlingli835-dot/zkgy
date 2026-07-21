@@ -21,7 +21,7 @@ const CybercoreBackground: React.FC<CybercoreBackgroundProps> = ({
       const type = Math.random() < 0.15 ? 'secondary' : 'primary'
       return {
         id: i,
-        type: type as 'primary' | 'secondary',
+        type,
         style: {
           left: `${Math.random() * 100}%`,
           width: `${Math.floor(Math.random() * 2) + 1}px`,
