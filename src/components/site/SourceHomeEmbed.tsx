@@ -8,7 +8,12 @@ type SourceHomeEmbedProps = {
    * region during migration. The source file itself remains untouched.
    */
   hiddenSelectors?: string[];
+  /** Override the iframe source path (defaults to the approved homepage). */
+  src?: string;
+  /** Override the iframe accessible title. */
+  title?: string;
 };
+
 
 /**
  * Keeps the approved local homepage byte-for-byte intact while it is brought into
