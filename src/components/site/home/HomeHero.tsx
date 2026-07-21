@@ -54,8 +54,8 @@ export function HomeHero() {
             id="home-hero-title"
             style={{
               margin: 0,
-              fontSize: "clamp(40px, 5vw, 50px)",
-              lineHeight: 1.1,
+              fontSize: "clamp(40px, 8vw, 88px)",
+              lineHeight: 1.05,
               fontWeight: 700,
               letterSpacing: "var(--ds-letter-spacing-default)",
               color: "var(--ds-color-text-inverse)",
