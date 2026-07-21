@@ -499,6 +499,9 @@ function HomeRoute() {
         </div>
       </Section>
 
+      {/* 集成生态 */}
+      <HomeIntegrations />
+
       {/* 成功案例 */}
       <Section labelledBy="home-cases-title">
         <SectionHeading id="home-cases-title" title={homeCases.title} />
