@@ -34,15 +34,18 @@ const CybercoreBackground: React.FC<CybercoreBackgroundProps> = ({
   }, [beamCount])
 
   return (
-    <div className="cybercore-bg" aria-hidden="true">
-      <div className="cybercore-main-glow" />
-      <div className="cybercore-floor-glow" />
-      <div className="cybercore-grid-floor" />
-      <div className="cybercore-beams">
+    <div
+      className="scene"
+      role="img"
+      aria-label="Animated cybercore grid background"
+    >
+      <div className="floor" />
+      <div className="main-column" />
+      <div className="light-stream-container">
         {beams.map((beam) => (
-          <span
+          <div
             key={beam.id}
-            className={`cybercore-beam cybercore-beam--${beam.type}`}
+            className={`light-beam ${beam.type}`}
             style={beam.style}
           />
         ))}

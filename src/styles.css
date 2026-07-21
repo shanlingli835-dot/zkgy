@@ -170,17 +170,39 @@
 }
 
 /* Cybercore background layer (21st.dev port) */
-.cybercore-bg {
+.scene {
   position: absolute;
   inset: 0;
   overflow: hidden;
   background-color: var(--bg-color);
   pointer-events: none;
+  perspective: 400px;
 }
-.cybercore-main-glow {
+
+.floor {
   position: absolute;
-  top: 50%; left: 50%;
-  width: 600px; height: 600px;
+  bottom: 0;
+  left: 50%;
+  width: 300%;
+  height: 50%;
+  transform: translateX(-50%) rotateX(60deg);
+  transform-origin: center bottom;
+  background-image:
+    linear-gradient(var(--light-color) 1px, transparent 1px),
+    linear-gradient(90deg, var(--light-color) 1px, transparent 1px);
+  background-size: 50px 50px;
+  animation: moveGrid 2s linear infinite;
+  opacity: 0.35;
+  mask-image: linear-gradient(to top, black 20%, transparent 80%);
+  -webkit-mask-image: linear-gradient(to top, black 20%, transparent 80%);
+}
+
+.main-column {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 600px;
+  height: 600px;
   transform: translate(-50%, -50%);
   background: radial-gradient(circle, var(--glow-color-1) 0%, var(--glow-color-2) 30%, transparent 70%);
   border-radius: 50%;
@@ -189,37 +211,14 @@
   mix-blend-mode: screen;
   z-index: 2;
 }
-.cybercore-floor-glow {
-  position: absolute;
-  bottom: -100px; left: 50%;
-  width: 150%; height: 200px;
-  transform: translateX(-50%);
-  background: radial-gradient(ellipse at center, var(--glow-color-1) 0%, transparent 60%);
-  filter: blur(30px);
-  animation: floorGlow 5s ease-in-out infinite;
-  z-index: 1;
-}
-.cybercore-grid-floor {
-  position: absolute;
-  bottom: 0; left: 50%;
-  width: 300%; height: 50%;
-  transform: translateX(-50%) perspective(400px) rotateX(60deg);
-  transform-origin: center bottom;
-  background-image:
-    linear-gradient(var(--light-color) 1px, transparent 1px),
-    linear-gradient(90deg, var(--light-color) 1px, transparent 1px);
-  background-size: 50px 50px;
-  animation: moveGrid 2s linear infinite;
-  opacity: 0.3;
-  mask-image: linear-gradient(to top, black 20%, transparent 80%);
-  -webkit-mask-image: linear-gradient(to top, black 20%, transparent 80%);
-}
-.cybercore-beams {
+
+.light-stream-container {
   position: absolute;
   inset: 0;
   z-index: 3;
 }
-.cybercore-beam {
+
+.light-beam {
   position: absolute;
   bottom: 0;
   height: 100%;
@@ -227,18 +226,21 @@
   animation-timing-function: linear, ease-in-out;
   animation-iteration-count: infinite, infinite;
 }
-.cybercore-beam--primary {
+
+.light-beam.primary {
   background: linear-gradient(to top, transparent, var(--light-color));
   box-shadow: 0 0 8px 1px var(--glow-color-1);
 }
-.cybercore-beam--secondary {
+
+.light-beam.secondary {
   background: linear-gradient(to top, transparent, var(--highlight-color));
   box-shadow: 0 0 12px 2px var(--highlight-glow);
 }
+
 @media (prefers-reduced-motion: reduce) {
-  .cybercore-main-glow,
-  .cybercore-floor-glow,
-  .cybercore-grid-floor,
-  .cybercore-beam { animation: none !important; }
+  .main-column,
+  .floor,
+  .light-beam { animation: none !important; }
 }
+
 
