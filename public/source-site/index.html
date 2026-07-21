@@ -8261,10 +8261,30 @@ body.mega-open .nav-mega-scrim {
   letter-spacing: 0;
 }
 
-.sg-mega__item:hover span:last-child,
-.sg-mega__item:focus-visible span:last-child {
+.sg-mega__item:hover .sg-name,
+.sg-mega__item:focus-visible .sg-name {
   text-decoration: underline;
   text-underline-offset: 4px;
+}
+
+/* Product / nav label typography: keep CJK together, allow break only between semantic segments */
+.sg-name,
+.jasper-footer__link .sg-name,
+.mobile-menu .sg-name {
+  display: inline;
+  word-break: keep-all;
+  overflow-wrap: normal;
+  line-break: strict;
+  text-wrap: balance;
+}
+.sg-name__en,
+.sg-name__cn {
+  display: inline-block;
+  white-space: nowrap;
+}
+.sg-name__en + .sg-name__cn::before {
+  content: " ";
+  white-space: normal;
 }
 
 /* non-interactive light content text color normalization */
