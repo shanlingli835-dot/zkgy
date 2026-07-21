@@ -374,11 +374,7 @@ function HomeRoute() {
       {/* 核心安全能力 */}
       <Section labelledBy="home-capabilities-title">
         <SectionHeading id="home-capabilities-title" title={homeCapabilities.title} />
-        <div style={gridStyle("280px")}>
-          {homeCapabilities.items.map((c) => (
-            <CardTile key={c.name} icon={c.icon} title={c.name} description={c.description} />
-          ))}
-        </div>
+        <CapabilitiesShaderCards items={homeCapabilities.items} />
       </Section>
 
       {/* 核心产品介绍 */}
