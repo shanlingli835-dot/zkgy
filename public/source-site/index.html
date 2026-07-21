@@ -9088,10 +9088,11 @@ main > :not(.jasper-hero-shell):not(.solution-cta-bar) :where(h1, h2, h3, h4, h5
     </section>
     <style>
       .floating-icons-hero {
+        --section-gap: 160px;
         position: relative;
         overflow: hidden;
         min-height: 560px;
-        padding: 96px 24px 256px 24px;
+        padding: 96px 24px calc(96px + var(--section-gap)) 24px;
         background: #ffffff;
         display: flex;
         align-items: center;
