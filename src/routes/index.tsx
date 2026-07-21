@@ -248,46 +248,86 @@ const gridStyle = (min: string): CSSProperties => ({
 function HomeRoute() {
   return (
     <SiteShell header={<GlobalHeader />} footer={<GlobalFooter />}>
-      {/* Hero */}
-      <Section labelledBy="home-hero-title">
-        <p
-          style={{
-            margin: 0,
-            fontSize: "var(--ds-font-size-sm)",
-            fontWeight: "var(--ds-font-weight-semibold)",
-            color: "var(--ds-color-action-primary)",
-          }}
-        >
-          {homeHero.eyebrow}
-        </p>
-        <h1
-          id="home-hero-title"
-          style={{
-            margin: "var(--ds-space-lg) 0 var(--ds-space-xl)",
-            fontSize: "var(--ds-font-size-4xl)",
-            lineHeight: "var(--ds-line-height-4xl)",
-            fontWeight: "var(--ds-font-weight-semibold)",
-            color: "var(--ds-color-text-primary)",
-            maxWidth: "22ch",
-          }}
-        >
-          {homeHero.title}
-        </h1>
-        <p
-          style={{
-            margin: "0 0 var(--ds-space-2xl)",
-            fontSize: "var(--ds-font-size-lg)",
-            lineHeight: "var(--ds-line-height-lg)",
-            color: "var(--ds-color-text-secondary)",
-            maxWidth: "60ch",
-          }}
-        >
-          {homeHero.description}
-        </p>
-        <Link to={homeHero.primaryCta.href} variant="standalone">
-          {homeHero.primaryCta.label}
-        </Link>
-      </Section>
+      {/* Hero — Cybercore animated backdrop */}
+      <section
+        aria-labelledby="home-hero-title"
+        className="home-section home-hero"
+        style={{
+          position: "relative",
+          overflow: "hidden",
+          isolation: "isolate",
+          color: "var(--ds-color-text-inverse)",
+          paddingBlock: "calc(var(--ds-section-y-desktop) * 1.4)",
+          minHeight: "min(88vh, 780px)",
+          display: "flex",
+          alignItems: "center",
+        }}
+      >
+        <CybercoreBackground />
+        <div style={{ ...containerStyle, position: "relative", zIndex: 1 }}>
+          <p
+            style={{
+              margin: 0,
+              fontSize: "var(--ds-font-size-sm)",
+              fontWeight: "var(--ds-font-weight-semibold)",
+              letterSpacing: "0.16em",
+              textTransform: "uppercase",
+              color: "var(--light-color)",
+              textShadow: "0 0 12px var(--glow-color-1)",
+            }}
+          >
+            {homeHero.eyebrow}
+          </p>
+          <h1
+            id="home-hero-title"
+            style={{
+              margin: "var(--ds-space-lg) 0 var(--ds-space-xl)",
+              fontSize: "clamp(2.25rem, 4.6vw, 3.75rem)",
+              lineHeight: 1.15,
+              fontWeight: "var(--ds-font-weight-semibold)",
+              color: "#ffffff",
+              maxWidth: "22ch",
+              textShadow: "0 2px 40px rgba(0, 229, 255, 0.35)",
+            }}
+          >
+            {homeHero.title}
+          </h1>
+          <p
+            style={{
+              margin: "0 0 var(--ds-space-2xl)",
+              fontSize: "var(--ds-font-size-lg)",
+              lineHeight: "var(--ds-line-height-lg)",
+              color: "rgba(230, 245, 255, 0.82)",
+              maxWidth: "60ch",
+            }}
+          >
+            {homeHero.description}
+          </p>
+          <a
+            href={homeHero.primaryCta.href}
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              gap: "var(--ds-space-sm)",
+              minHeight: "var(--ds-size-control-min)",
+              padding: "var(--ds-space-md) var(--ds-space-2xl)",
+              borderRadius: "var(--ds-radius-control)",
+              fontSize: "var(--ds-font-size-md)",
+              fontWeight: "var(--ds-font-weight-semibold)",
+              color: "var(--bg-color)",
+              backgroundColor: "var(--light-color)",
+              textDecoration: "none",
+              boxShadow:
+                "0 0 24px var(--glow-color-1), 0 0 60px var(--glow-color-2)",
+              transition: "transform 200ms ease, box-shadow 200ms ease",
+            }}
+          >
+            {homeHero.primaryCta.label}
+            <span aria-hidden="true">→</span>
+          </a>
+        </div>
+      </section>
+
 
       {/* Stats / 合作生态 */}
       <Section labelledBy="home-stats-title" surface="subtle">
