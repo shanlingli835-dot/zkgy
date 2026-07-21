@@ -59,10 +59,24 @@ export function SourceHomeEmbed({ hiddenSelectors = [] }: SourceHomeEmbedProps) 
   }, [hiddenSelectors]);
 
   useEffect(() => {
+    const frame = frameRef.current;
     const handleResize = () => syncFrame();
+    const handleLoad = () => syncFrame();
+
+    frame?.addEventListener("load", handleLoad);
+    syncFrame();
+
+    const retryTimers = [
+      window.setTimeout(syncFrame, 100),
+      window.setTimeout(syncFrame, 500),
+      window.setTimeout(syncFrame, 1200),
+    ];
+
     window.addEventListener("resize", handleResize);
     return () => {
+      frame?.removeEventListener("load", handleLoad);
       window.removeEventListener("resize", handleResize);
+      retryTimers.forEach((timer) => window.clearTimeout(timer));
       observerRef.current?.disconnect();
     };
   }, [syncFrame]);
