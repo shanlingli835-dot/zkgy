@@ -8696,20 +8696,20 @@ main > :not(.jasper-hero-shell):not(.solution-cta-bar) :where(h1, h2, h3, h4, h5
 
     <section class="integrations-three" aria-labelledby="integrations-three-title">
       <style>
-        .integrations-three { padding: clamp(56px, 8vw, 96px) 24px; background: #F7F8F6; }
-        .integrations-three__inner { max-width: 1120px; margin: 0 auto; }
-        .integrations-three__header { text-align: center; max-width: 640px; margin: 0 auto 48px; }
-        .integrations-three__header h2 { font-size: clamp(28px, 3.4vw, 40px); line-height: 1.2; color: #121518; margin: 0 0 16px; font-weight: 700; }
-        .integrations-three__header p { font-size: 16px; line-height: 1.6; color: #4a5157; margin: 0; }
+        .integrations-three { padding: clamp(56px, 8vw, 96px) 24px; background: #FFFFFF; }
+        .integrations-three__inner { max-width: 1200px; margin: 0 auto; }
+        .integrations-three__header { text-align: left; max-width: 720px; margin: 0 0 56px; }
+        .integrations-three__header h2 { font-size: clamp(28px, 3.2vw, 40px); line-height: 1.2; color: #0B0B0F; margin: 0 0 16px; font-weight: 700; letter-spacing: -0.01em; }
+        .integrations-three__header p { font-size: 16px; line-height: 1.6; color: #6B7078; margin: 0; }
         .integrations-three__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
         @media (max-width: 900px) { .integrations-three__grid { grid-template-columns: repeat(2, 1fr); } }
         @media (max-width: 560px) { .integrations-three__grid { grid-template-columns: 1fr; } }
-        .integrations-three__card { display: flex; flex-direction: column; gap: 16px; padding: 28px; background: #FFFFFF; border: 1px solid rgba(18,21,24,0.08); border-radius: 14px; text-decoration: none; color: inherit; transition: border-color .2s ease, transform .2s ease, box-shadow .2s ease; }
-        .integrations-three__card:hover { border-color: #0E5A5A; transform: translateY(-2px); box-shadow: 0 10px 30px -12px rgba(14,90,90,0.18); }
-        .integrations-three__icon { width: 44px; height: 44px; display: inline-flex; align-items: center; justify-content: center; border-radius: 10px; background: rgba(14,90,90,0.08); color: #0E5A5A; }
-        .integrations-three__icon svg { width: 24px; height: 24px; }
-        .integrations-three__card h3 { font-size: 17px; font-weight: 600; color: #121518; margin: 0; }
-        .integrations-three__card p { font-size: 14px; line-height: 1.55; color: #4a5157; margin: 0; }
+        .integrations-three__card { display: flex; flex-direction: column; padding: 28px; background: #F3F4F5; border-radius: 14px; text-decoration: none; color: inherit; min-height: 220px; transition: background-color .2s ease, transform .2s ease; }
+        .integrations-three__card:hover { background: #ECEEF0; transform: translateY(-2px); }
+        .integrations-three__logo { width: 44px; height: 44px; display: inline-flex; align-items: center; justify-content: center; }
+        .integrations-three__logo svg { width: 100%; height: 100%; display: block; }
+        .integrations-three__title { font-size: 18px; font-weight: 700; color: #0B0B0F; margin: 72px 0 12px; }
+        .integrations-three__desc { font-size: 15px; line-height: 1.55; color: #8A9099; margin: 0; }
       </style>
       <div class="integrations-three__inner">
         <header class="integrations-three__header">
@@ -8717,35 +8717,74 @@ main > :not(.jasper-hero-shell):not(.solution-cta-bar) :where(h1, h2, h3, h4, h5
           <p>Connect seamlessly with popular platforms and services to enhance your workflow.</p>
         </header>
         <div class="integrations-three__grid">
-          <a class="integrations-three__card" href="#" aria-label="Gemini">
-            <span class="integrations-three__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 14 10 22 12 14 14 12 22 10 14 2 12 10 10Z"/></svg></span>
-            <h3>Gemini</h3>
-            <p>Bring Gemini's multimodal reasoning into your workflow.</p>
+          <a class="integrations-three__card" href="#" aria-label="Google Gemini">
+            <span class="integrations-three__logo" aria-hidden="true">
+              <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <defs><linearGradient id="ig-gem" x1="6" y1="4" x2="26" y2="28" gradientUnits="userSpaceOnUse"><stop stop-color="#4F8EF7"/><stop offset="0.5" stop-color="#8AB4F8"/><stop offset="1" stop-color="#C9A8FF"/></linearGradient></defs>
+                <path d="M16 2 C 17 9 23 15 30 16 C 23 17 17 23 16 30 C 15 23 9 17 2 16 C 9 15 15 9 16 2 Z" fill="url(#ig-gem)"/>
+              </svg>
+            </span>
+            <h3 class="integrations-three__title">Google Gemini</h3>
+            <p class="integrations-three__desc">Amet praesentium deserunt ex commodi tempore fuga voluptate…</p>
           </a>
           <a class="integrations-three__card" href="#" aria-label="Replit">
-            <span class="integrations-three__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="8 6 2 12 8 18"/><polyline points="16 6 22 12 16 18"/></svg></span>
-            <h3>Replit</h3>
-            <p>Prototype and ship code from the browser to production.</p>
+            <span class="integrations-three__logo" aria-hidden="true">
+              <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                <rect x="4"  y="4"  width="11" height="11" rx="2" fill="#F26207"/>
+                <rect x="17" y="4"  width="11" height="11" rx="2" fill="#F26207"/>
+                <rect x="4"  y="17" width="11" height="11" rx="2" fill="#F26207"/>
+              </svg>
+            </span>
+            <h3 class="integrations-three__title">Replit</h3>
+            <p class="integrations-three__desc">Amet praesentium deserunt ex commodi tempore fuga voluptate…</p>
           </a>
           <a class="integrations-three__card" href="#" aria-label="Magic UI">
-            <span class="integrations-three__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 4 17 8 21 10 17 12 15 16 13 12 9 10 13 8Z"/><path d="M6 14 7 17 10 18 7 19 6 22 5 19 2 18 5 17Z"/></svg></span>
-            <h3>Magic UI</h3>
-            <p>Drop in polished, animated UI blocks in minutes.</p>
+            <span class="integrations-three__logo" aria-hidden="true">
+              <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                <defs><linearGradient id="ig-mui" x1="4" y1="4" x2="28" y2="28" gradientUnits="userSpaceOnUse"><stop stop-color="#B57BFF"/><stop offset="0.5" stop-color="#FF7EB3"/><stop offset="1" stop-color="#FFC46B"/></linearGradient></defs>
+                <circle cx="16" cy="16" r="14" fill="url(#ig-mui)"/>
+                <path d="M9 22 L9 11 L13 11 L16 17 L19 11 L23 11 L23 22 L20 22 L20 15 L17 21 L15 21 L12 15 L12 22 Z" fill="#FFFFFF"/>
+              </svg>
+            </span>
+            <h3 class="integrations-three__title">Magic UI</h3>
+            <p class="integrations-three__desc">Amet praesentium deserunt ex commodi tempore fuga voluptate…</p>
           </a>
           <a class="integrations-three__card" href="#" aria-label="VSCodium">
-            <span class="integrations-three__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/><line x1="14" y1="4" x2="10" y2="20"/></svg></span>
-            <h3>VSCodium</h3>
-            <p>Open-source builds of VS Code for a telemetry-free IDE.</p>
+            <span class="integrations-three__logo" aria-hidden="true">
+              <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#3A8EE6" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M8 28 C 8 20 10 16 12 12 C 13 10 12 7 10 5"/>
+                <path d="M14 28 C 14 22 16 18 18 14 C 20 11 19 8 17 6"/>
+                <path d="M20 28 C 20 24 22 21 24 18 C 26 15 25 12 23 10"/>
+              </svg>
+            </span>
+            <h3 class="integrations-three__title">VSCodium</h3>
+            <p class="integrations-three__desc">Amet praesentium deserunt ex commodi tempore fuga voluptate…</p>
           </a>
           <a class="integrations-three__card" href="#" aria-label="MediaWiki">
-            <span class="integrations-three__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4v16h16V8l-4-4z"/><polyline points="14 4 14 8 20 8"/><line x1="8" y1="13" x2="16" y2="13"/><line x1="8" y1="17" x2="14" y2="17"/></svg></span>
-            <h3>MediaWiki</h3>
-            <p>Sync knowledge bases and documentation across teams.</p>
+            <span class="integrations-three__logo" aria-hidden="true">
+              <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                <defs><radialGradient id="ig-mw" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#FFCF3F"/><stop offset="0.6" stop-color="#F27A2E"/><stop offset="1" stop-color="#D9264E"/></radialGradient></defs>
+                <g fill="url(#ig-mw)"><path d="M16 2 L18 12 L14 12 Z"/><path d="M16 30 L14 20 L18 20 Z"/><path d="M2 16 L12 14 L12 18 Z"/><path d="M30 16 L20 18 L20 14 Z"/><path d="M6 6 L14 12 L12 14 Z"/><path d="M26 26 L18 20 L20 18 Z"/><path d="M26 6 L20 14 L18 12 Z"/><path d="M6 26 L12 18 L14 20 Z"/></g>
+                <circle cx="16" cy="16" r="4" fill="#FFFFFF"/>
+              </svg>
+            </span>
+            <h3 class="integrations-three__title">MediaWiki</h3>
+            <p class="integrations-three__desc">Amet praesentium deserunt ex commodi tempore fuga voluptate…</p>
           </a>
           <a class="integrations-three__card" href="#" aria-label="Google PaLM">
-            <span class="integrations-three__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a14 14 0 0 1 0 18"/><path d="M12 3a14 14 0 0 0 0 18"/></svg></span>
-            <h3>Google PaLM</h3>
-            <p>Tap into Google's PaLM models for text and reasoning.</p>
+            <span class="integrations-three__logo" aria-hidden="true">
+              <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                <g transform="translate(16 16)">
+                  <path d="M0 0 C -2 -8 2 -14 8 -14 C 6 -8 4 -4 0 0 Z" fill="#F4B400"/>
+                  <path d="M0 0 C 8 -2 14 2 14 8 C 8 6 4 4 0 0 Z" fill="#DB4437"/>
+                  <path d="M0 0 C 2 8 -2 14 -8 14 C -6 8 -4 4 0 0 Z" fill="#0F9D58"/>
+                  <path d="M0 0 C -8 2 -14 -2 -14 -8 C -8 -6 -4 -4 0 0 Z" fill="#4285F4"/>
+                </g>
+                <circle cx="16" cy="16" r="2.5" fill="#FFFFFF"/>
+              </svg>
+            </span>
+            <h3 class="integrations-three__title">Google PaLM</h3>
+            <p class="integrations-three__desc">Amet praesentium deserunt ex commodi tempore fuga voluptate…</p>
           </a>
         </div>
       </div>
