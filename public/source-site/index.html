@@ -9078,6 +9078,150 @@ main > :not(.jasper-hero-shell):not(.solution-cta-bar) :where(h1, h2, h3, h4, h5
       </div>
     </section>
 
+    <section class="floating-icons-hero" aria-label="开放生态与技术伙伴">
+      <div class="floating-icons-hero__bg" aria-hidden="true" data-floating-icons></div>
+      <div class="floating-icons-hero__content">
+        <h2 class="floating-icons-hero__title">开放生态 · 广泛兼容</h2>
+        <p class="floating-icons-hero__subtitle">与主流研发、协作与云平台无缝对接，将安全能力嵌入你已有的工具链，让防护随业务同步演进。</p>
+        <a class="floating-icons-hero__cta" href="/contact.html">开启合作</a>
+      </div>
+    </section>
+    <style>
+      .floating-icons-hero {
+        position: relative;
+        overflow: hidden;
+        min-height: 560px;
+        padding: 96px 24px;
+        background: radial-gradient(ellipse at center, #f5f7fa 0%, #e9edf2 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .floating-icons-hero__bg {
+        position: absolute; inset: 0; pointer-events: none;
+      }
+      .floating-icons-hero__icon {
+        position: absolute;
+        width: 56px; height: 56px;
+        display: flex; align-items: center; justify-content: center;
+        background: #fff;
+        border-radius: 14px;
+        box-shadow: 0 6px 24px rgba(15, 23, 42, 0.08), 0 1px 2px rgba(15, 23, 42, 0.06);
+        transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+        will-change: transform;
+      }
+      .floating-icons-hero__icon > .fih-float {
+        width: 100%; height: 100%;
+        display: flex; align-items: center; justify-content: center;
+        animation: fihFloat 6s ease-in-out infinite;
+      }
+      .floating-icons-hero__icon svg { width: 32px; height: 32px; }
+      @keyframes fihFloat {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-10px); }
+      }
+      .floating-icons-hero__content {
+        position: relative; z-index: 2;
+        max-width: 720px; text-align: center;
+      }
+      .floating-icons-hero__title {
+        font-size: 48px; line-height: 1.2; font-weight: 700;
+        color: #0f172a; margin: 0 0 20px;
+        letter-spacing: -0.01em;
+      }
+      .floating-icons-hero__subtitle {
+        font-size: 18px; line-height: 1.7; color: #475569;
+        margin: 0 0 32px;
+      }
+      .floating-icons-hero__cta {
+        display: inline-flex; align-items: center; justify-content: center;
+        min-height: 48px; padding: 12px 28px;
+        background: #ee0000; color: #fff;
+        border-radius: 8px; font-size: 16px; font-weight: 600;
+        text-decoration: none;
+        transition: background 0.2s, transform 0.2s;
+      }
+      .floating-icons-hero__cta:hover { background: #c00; transform: translateY(-1px); }
+      @media (max-width: 768px) {
+        .floating-icons-hero { min-height: 480px; padding: 64px 20px; }
+        .floating-icons-hero__title { font-size: 32px; }
+        .floating-icons-hero__subtitle { font-size: 15px; }
+        .floating-icons-hero__icon { width: 44px; height: 44px; }
+        .floating-icons-hero__icon svg { width: 24px; height: 24px; }
+      }
+    </style>
+    <script>
+    (function () {
+      var host = document.querySelector('[data-floating-icons]');
+      if (!host) return;
+      var ICONS = {
+        google: '<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="#4285F4" d="M21.999 12.24c0-.747-.066-1.48-.193-2.187H12.333v4.107h5.62c-.22 1.187-.94 2.213-1.986 2.92v2.6h3.559c2.083-1.92 2.473-4.627 2.473-7.44Z"/><path fill="#34A853" d="M12.333 22c2.9 0 5.353-.947 7.193-2.32l-3.56-2.6c-.946.653-2.173 1.08-3.633 1.08-2.807 0-5.187-1.88-6.053-4.32H2.593v2.673A9.998 9.998 0 0 0 12.333 22Z"/><path fill="#FBBC05" d="M6.28 13.84A5.98 5.98 0 0 1 5.96 11.92c0-.66.113-1.307.32-1.92V7.327H2.593a10.02 10.02 0 0 0 0 9.187L6.28 13.84Z"/><path fill="#EA4335" d="M12.333 5.68c1.56 0 2.98.547 4.053 1.56L19.6 4.027C17.68 2.293 15.227 1.333 12.333 1.333A9.998 9.998 0 0 0 2.593 7.327L6.28 10c.867-2.44 3.247-4.32 6.053-4.32Z"/></svg>',
+        apple: '<svg viewBox="0 0 24 24" fill="#111" xmlns="http://www.w3.org/2000/svg"><path d="M16.365 12.86c-.02-2.14 1.744-3.17 1.822-3.222-.994-1.45-2.54-1.65-3.09-1.674-1.315-.132-2.567.775-3.235.775-.668 0-1.702-.755-2.796-.734-1.44.021-2.766.837-3.507 2.126-1.494 2.59-.382 6.418 1.076 8.522.712 1.03 1.56 2.19 2.673 2.15 1.073-.043 1.48-.696 2.777-.696 1.297 0 1.663.696 2.798.675 1.154-.02 1.887-1.05 2.594-2.084.815-1.196 1.152-2.354 1.172-2.414-.026-.012-2.253-.865-2.284-3.424ZM14.19 6.36c.594-.722.994-1.72.884-2.716-.855.036-1.89.57-2.503 1.29-.55.638-1.03 1.66-.902 2.633.954.074 1.928-.485 2.521-1.207Z"/></svg>',
+        microsoft: '<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="#F25022" d="M2 2h9.4v9.4H2z"/><path fill="#7FBA00" d="M12.6 2H22v9.4h-9.4z"/><path fill="#00A4EF" d="M2 12.6h9.4V22H2z"/><path fill="#FFB900" d="M12.6 12.6H22V22h-9.4z"/></svg>',
+        figma: '<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="#0ACF83" d="M12 12h4a4 4 0 1 1-4 4v-8Z"/><path fill="#A259FF" d="M8 12a4 4 0 0 1 4-4h4a4 4 0 0 1 0 8h-4a4 4 0 0 1-4-4Z"/><path fill="#F24E1E" d="M12 4h4a4 4 0 0 1 0 8h-4V4Z"/><path fill="#FF7262" d="M8 8a4 4 0 0 1 4-4v8H8a4 4 0 0 1 0-8Z" opacity=".6"/><path fill="#1ABCFE" d="M8 12a4 4 0 1 1 4 4v-4H8Z"/></svg>',
+        github: '<svg viewBox="0 0 24 24" fill="#181717" xmlns="http://www.w3.org/2000/svg"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>',
+        slack: '<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="#E01E5A" d="M6 15a2 2 0 1 1-2-2h2v2Zm1 0a2 2 0 1 1 4 0v5a2 2 0 1 1-4 0v-5Z"/><path fill="#36C5F0" d="M9 6a2 2 0 1 1 2-2v2H9Zm0 1a2 2 0 1 1 0 4H4a2 2 0 1 1 0-4h5Z"/><path fill="#2EB67D" d="M18 9a2 2 0 1 1 2 2h-2V9Zm-1 0a2 2 0 1 1-4 0V4a2 2 0 1 1 4 0v5Z"/><path fill="#ECB22E" d="M15 18a2 2 0 1 1-2 2v-2h2Zm0-1a2 2 0 1 1 0-4h5a2 2 0 1 1 0 4h-5Z"/></svg>',
+        notion: '<svg viewBox="0 0 24 24" fill="#111" xmlns="http://www.w3.org/2000/svg"><path d="M4.459 4.208c.746.606 1.026.56 2.428.466l13.215-.793c.28 0 .046-.28-.047-.326L17.86 1.964c-.42-.326-.981-.7-2.055-.606L3.01 2.303c-.466.046-.56.28-.374.466l1.823 1.44Zm.793 3.08v13.904c0 .747.373 1.027 1.214.98l14.523-.84c.841-.046.935-.559.935-1.166V6.354c0-.606-.233-.933-.748-.887l-15.177.887c-.56.047-.747.327-.747.933Zm14.336.745c.093.42 0 .84-.42.888l-.7.14v10.264c-.608.327-1.168.514-1.635.514-.748 0-.935-.234-1.495-.933l-4.577-7.186v6.952l1.448.327s0 .84-1.168.84l-3.222.187c-.093-.187 0-.653.327-.746l.84-.233V9.854l-1.167-.094c-.094-.42.14-1.026.793-1.073l3.456-.233 4.764 7.279V9.34l-1.214-.14c-.093-.514.28-.887.747-.933l3.223-.234Z"/></svg>',
+        vercel: '<svg viewBox="0 0 24 24" fill="#000" xmlns="http://www.w3.org/2000/svg"><path d="M12 2 2 22h20L12 2Z"/></svg>',
+        stripe: '<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" rx="4" fill="#635BFF"/><path fill="#fff" d="M13.05 9.36c0-.62.51-.86 1.35-.86 1.2 0 2.72.36 3.92 1.01V5.87c-1.31-.52-2.6-.72-3.92-.72-3.2 0-5.34 1.67-5.34 4.47 0 4.36 6 3.66 6 5.54 0 .74-.64.98-1.53.98-1.31 0-2.98-.54-4.3-1.27v3.72c1.46.63 2.94.9 4.3.9 3.29 0 5.55-1.62 5.55-4.46-.01-4.71-6.03-3.86-6.03-5.67Z"/></svg>',
+        discord: '<svg viewBox="0 0 24 24" fill="#5865F2" xmlns="http://www.w3.org/2000/svg"><path d="M20.317 4.369A19.79 19.79 0 0 0 16.885 3a.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.249a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.249.077.077 0 0 0-.079-.037A19.74 19.74 0 0 0 6.582 4.37a.07.07 0 0 0-.032.027C3.045 9.65 2.02 14.769 2.51 19.828a.082.082 0 0 0 .031.056 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.1 13.1 0 0 1-1.872-.892.077.077 0 0 1-.008-.128c.126-.094.252-.192.372-.291a.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.061 0a.074.074 0 0 1 .078.009c.12.099.246.198.373.292a.077.077 0 0 1-.006.128 12.3 12.3 0 0 1-1.873.891.077.077 0 0 0-.041.107c.36.699.772 1.363 1.225 1.993a.076.076 0 0 0 .084.028 19.84 19.84 0 0 0 6.002-3.03.077.077 0 0 0 .032-.055c.5-5.847-.838-10.925-3.549-15.432a.061.061 0 0 0-.031-.028ZM8.02 16.75c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.211 0 2.176 1.096 2.157 2.42 0 1.333-.955 2.418-2.157 2.418Zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418Z"/></svg>',
+        x: '<svg viewBox="0 0 24 24" fill="#000" xmlns="http://www.w3.org/2000/svg"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231L18.244 2.25Zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77Z"/></svg>',
+        spotify: '<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10" fill="#1DB954"/><path fill="#fff" d="M16.125 16.175a.626.626 0 0 1-.863.225c-2.437-1.5-5.5-1.725-9.15-1.012a.626.626 0 1 1-.275-1.25c3.937-.787 7.287-.525 9.975 1.125.3.187.412.562.313.912Zm1.013-2.7a.784.784 0 0 1-1.075.263c-2.7-1.65-6.825-2.1-9.975-1.162a.784.784 0 1 1-.463-1.5c3.6-1.075 8.15-.575 11.25 1.325.375.225.5.7.263 1.075Zm.113-2.887c-3.225-1.875-8.55-2.05-11.65-1.113a.938.938 0 1 1-.55-1.8c3.55-1.075 9.425-.87 13.125 1.313a.937.937 0 1 1-.925 1.6Z"/></svg>',
+        dropbox: '<svg viewBox="0 0 24 24" fill="#0061FF" xmlns="http://www.w3.org/2000/svg"><path d="M6 2 1 5.5 6 9l5-3.5L6 2Zm12 0-5 3.5L18 9l5-3.5L18 2ZM1 12.5 6 16l5-3.5L6 9l-5 3.5Zm17-3.5-5 3.5 5 3.5 5-3.5-5-3.5ZM6 17l5 3.5 5-3.5-5-3.5L6 17Z"/></svg>',
+        twitch: '<svg viewBox="0 0 24 24" fill="#9146FF" xmlns="http://www.w3.org/2000/svg"><path d="M2.149 0 .707 3.028v17.944h5.66V24h3.028l3.028-3.028h4.243l7.07-7.07V0H2.15Zm2.44 2.02h16.808v10.606l-4.041 4.041h-4.243l-3.028 3.028v-3.028H4.589V2.02Zm5.66 10.606h2.02V6.061h-2.02v6.565Zm5.66 0h2.02V6.061h-2.02v6.565Z"/></svg>',
+        linear: '<svg viewBox="0 0 24 24" fill="#5E6AD2" xmlns="http://www.w3.org/2000/svg"><path d="M2.148 13.084a10 10 0 0 0 8.768 8.768L2.148 13.084Zm0-4.1L15.017 21.85a10.06 10.06 0 0 0 2.44-.994L3.144 6.545a10.06 10.06 0 0 0-.996 2.44Zm2.34-5.29a10.05 10.05 0 0 0-1.53 1.985l16.363 16.363a10.05 10.05 0 0 0 1.986-1.53L4.488 3.694ZM12 2C6.478 2 2 6.478 2 12c0 .174.005.347.014.52L11.48 21.986c.173.009.346.014.52.014 5.522 0 10-4.478 10-10S17.522 2 12 2Z"/></svg>',
+        youtube: '<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="#FF0000" d="M23.498 6.186a3.02 3.02 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.02 3.02 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.02 3.02 0 0 0 2.122 2.136C4.495 20.455 12 20.455 12 20.455s7.505 0 9.377-.505a3.02 3.02 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814Z"/><path fill="#fff" d="M9.545 15.568V8.432L15.818 12l-6.273 3.568Z"/></svg>'
+      };
+      var LAYOUT = [
+        ['google','10%','','','10%'], ['apple','20%','','8%',''],
+        ['microsoft','','10%','','10%'], ['figma','','10%','10%',''],
+        ['github','5%','','','30%'], ['slack','5%','','30%',''],
+        ['vercel','','8%','','25%'], ['stripe','40%','','','15%'],
+        ['discord','75%','','25%',''], ['x','90%','','','70%'],
+        ['notion','50%','','5%',''], ['spotify','55%','','','5%'],
+        ['dropbox','5%','','','55%'], ['twitch','','5%','45%',''],
+        ['linear','25%','','20%',''], ['youtube','60%','','','30%']
+      ];
+      var frag = document.createDocumentFragment();
+      var nodes = [];
+      LAYOUT.forEach(function (row) {
+        var el = document.createElement('div');
+        el.className = 'floating-icons-hero__icon';
+        if (row[1]) el.style.top = row[1];
+        if (row[2]) el.style.bottom = row[2];
+        if (row[3]) el.style.right = row[3];
+        if (row[4]) el.style.left = row[4];
+        el.innerHTML = '<span class="fih-float" style="animation-delay:' + (Math.random() * 4).toFixed(2) + 's">' + (ICONS[row[0]] || '') + '</span>';
+        frag.appendChild(el);
+        nodes.push(el);
+      });
+      host.appendChild(frag);
+
+      var mx = 0, my = 0, raf = 0;
+      function update() {
+        raf = 0;
+        for (var i = 0; i < nodes.length; i++) {
+          var n = nodes[i];
+          var r = n.getBoundingClientRect();
+          var cx = r.left + r.width / 2, cy = r.top + r.height / 2;
+          var dx = mx - cx, dy = my - cy;
+          var dist = Math.sqrt(dx * dx + dy * dy);
+          if (dist < 150 && dist > 0) {
+            var force = (1 - dist / 150) * 50;
+            var ang = Math.atan2(dy, dx);
+            n.style.transform = 'translate(' + (-Math.cos(ang) * force).toFixed(1) + 'px,' + (-Math.sin(ang) * force).toFixed(1) + 'px)';
+          } else {
+            n.style.transform = 'translate(0,0)';
+          }
+        }
+      }
+      window.addEventListener('mousemove', function (e) {
+        mx = e.clientX; my = e.clientY;
+        if (!raf) raf = requestAnimationFrame(update);
+      }, { passive: true });
+    })();
+    </script>
+
     <section class="solution-cta-bar" aria-label="行业解决方案行动号召">
       <div class="solution-cta-bar__inner">
         <p class="solution-cta-bar__copy">为关键行业建立可验证、可交付、可复用的安全能力。</p>
