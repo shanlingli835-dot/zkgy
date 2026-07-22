@@ -32,6 +32,11 @@ export function SourceHomeEmbed({ hiddenSelectors = [], src = SOURCE_HOME_PATH, 
 
     document.querySelectorAll<HTMLAnchorElement>("a[href]").forEach((link) => {
       link.target = "_top";
+      // Normalize placeholder contact CTA to the canonical /contact.html route.
+      const href = link.getAttribute("href");
+      if (href === "mailto:contact@pathguard.example") {
+        link.setAttribute("href", "/contact.html");
+      }
     });
 
     document.querySelectorAll<HTMLElement>("[data-source-home-hidden]").forEach((element) => {
