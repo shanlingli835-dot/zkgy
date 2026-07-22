@@ -16,8 +16,23 @@ import {
 } from "lucide-react";
 
 import { GlobalHeader } from "@/components/site/GlobalHeader";
-import { GlobalFooter } from "@/components/site/GlobalFooter";
 import { SiteShell } from "@/components/site/SiteShell";
+import { SourceHomeEmbed } from "@/components/site/SourceHomeEmbed";
+
+/**
+ * 与首页保持一致的 CTA + 页脚区域。
+ * 复用 public/source-site/index.html，仅显示 .solution-cta-bar 与 .jasper-footer，
+ * 其余首页模块通过 hiddenSelectors 隐藏。
+ */
+const HOME_FOOTER_HIDDEN_SELECTORS = [
+  "header.site-header",
+  "main > .jasper-hero-shell",
+  "main > .jasper-logo-marquee",
+  "main > .integrations-three",
+  "main > .why-tabs",
+  "main > .platform-section",
+  "main > .floating-icons-hero",
+];
 
 /**
  * Wisdom 模糊测试产品详情页 (/wisdom.html)
@@ -59,13 +74,15 @@ const CTA_HREF = "/contact.html";
 
 function WisdomPage() {
   return (
-    <SiteShell header={<GlobalHeader />} footer={<GlobalFooter />}>
+    <SiteShell
+      header={<GlobalHeader />}
+      footer={<SourceHomeEmbed hiddenSelectors={HOME_FOOTER_HIDDEN_SELECTORS} title="页脚与行动号召" />}
+    >
       <Hero />
       <WhyFuzz />
       <Capabilities />
       <Advantages />
       <NoCustomization />
-      <BottomCta />
     </SiteShell>
   );
 }
@@ -563,53 +580,6 @@ function NoCustomization() {
         </div>
       </div>
     </Section>
-  );
-}
-
-function BottomCta() {
-  return (
-    <section
-      style={{
-        backgroundColor: "var(--ds-color-surface-subtle)",
-        padding: "var(--ds-section-y-desktop) var(--ds-gutter-desktop)",
-      }}
-    >
-      <div
-        style={{
-          maxWidth: "var(--ds-container-page)",
-          margin: "0 auto",
-          display: "flex",
-          flexWrap: "wrap",
-          alignItems: "center",
-          justifyContent: "space-between",
-          gap: "var(--ds-space-2xl)",
-        }}
-      >
-        <div>
-          <h2
-            style={{
-              fontSize: "clamp(1.5rem, 3vw, 2.25rem)",
-              fontWeight: "var(--ds-font-weight-semibold)",
-              lineHeight: 1.3,
-            }}
-          >
-            准备好为您的组织解锁{" "}
-            <span style={{ color: "var(--ds-color-action-primary)" }}>安全能力</span>{" "}
-            了吗?
-          </h2>
-          <p
-            style={{
-              marginTop: "var(--ds-space-md)",
-              color: "var(--ds-color-text-secondary)",
-              fontSize: "var(--ds-font-size-lg)",
-            }}
-          >
-            马上申请 30 天免费试用
-          </p>
-        </div>
-        <PrimaryCta href={CTA_HREF}>免费试用</PrimaryCta>
-      </div>
-    </section>
   );
 }
 
