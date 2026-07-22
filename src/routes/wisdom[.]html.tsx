@@ -16,8 +16,23 @@ import {
 } from "lucide-react";
 
 import { GlobalHeader } from "@/components/site/GlobalHeader";
-import { GlobalFooter } from "@/components/site/GlobalFooter";
 import { SiteShell } from "@/components/site/SiteShell";
+import { SourceHomeEmbed } from "@/components/site/SourceHomeEmbed";
+
+/**
+ * 与首页保持一致的 CTA + 页脚区域。
+ * 复用 public/source-site/index.html，仅显示 .solution-cta-bar 与 .jasper-footer，
+ * 其余首页模块通过 hiddenSelectors 隐藏。
+ */
+const HOME_FOOTER_HIDDEN_SELECTORS = [
+  "header.site-header",
+  "main > .jasper-hero-shell",
+  "main > .jasper-logo-marquee",
+  "main > .integrations-three",
+  "main > .why-tabs",
+  "main > .platform-section",
+  "main > .floating-icons-hero",
+];
 
 /**
  * Wisdom 模糊测试产品详情页 (/wisdom.html)
