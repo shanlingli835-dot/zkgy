@@ -74,13 +74,15 @@ const CTA_HREF = "/contact.html";
 
 function WisdomPage() {
   return (
-    <SiteShell header={<GlobalHeader />} footer={<GlobalFooter />}>
+    <SiteShell
+      header={<GlobalHeader />}
+      footer={<SourceHomeEmbed hiddenSelectors={HOME_FOOTER_HIDDEN_SELECTORS} title="页脚与行动号召" />}
+    >
       <Hero />
       <WhyFuzz />
       <Capabilities />
       <Advantages />
       <NoCustomization />
-      <BottomCta />
     </SiteShell>
   );
 }
