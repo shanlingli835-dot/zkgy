@@ -583,53 +583,6 @@ function NoCustomization() {
   );
 }
 
-function BottomCta() {
-  return (
-    <section
-      style={{
-        backgroundColor: "var(--ds-color-surface-subtle)",
-        padding: "var(--ds-section-y-desktop) var(--ds-gutter-desktop)",
-      }}
-    >
-      <div
-        style={{
-          maxWidth: "var(--ds-container-page)",
-          margin: "0 auto",
-          display: "flex",
-          flexWrap: "wrap",
-          alignItems: "center",
-          justifyContent: "space-between",
-          gap: "var(--ds-space-2xl)",
-        }}
-      >
-        <div>
-          <h2
-            style={{
-              fontSize: "clamp(1.5rem, 3vw, 2.25rem)",
-              fontWeight: "var(--ds-font-weight-semibold)",
-              lineHeight: 1.3,
-            }}
-          >
-            准备好为您的组织解锁{" "}
-            <span style={{ color: "var(--ds-color-action-primary)" }}>安全能力</span>{" "}
-            了吗?
-          </h2>
-          <p
-            style={{
-              marginTop: "var(--ds-space-md)",
-              color: "var(--ds-color-text-secondary)",
-              fontSize: "var(--ds-font-size-lg)",
-            }}
-          >
-            马上申请 30 天免费试用
-          </p>
-        </div>
-        <PrimaryCta href={CTA_HREF}>免费试用</PrimaryCta>
-      </div>
-    </section>
-  );
-}
-
 /* ---------------- Shared ---------------- */
 
 function Section({
