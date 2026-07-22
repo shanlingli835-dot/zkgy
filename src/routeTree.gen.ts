@@ -10,13 +10,57 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as WisdomDothtmlRouteImport } from './routes/wisdom[.]html'
+import { Route as SwiftpenstestDothtmlRouteImport } from './routes/swiftpenstest[.]html'
+import { Route as SwiftcodeDothtmlRouteImport } from './routes/swiftcode[.]html'
+import { Route as SolutionSpecialDothtmlRouteImport } from './routes/solution-special[.]html'
+import { Route as SolutionAutoDothtmlRouteImport } from './routes/solution-auto[.]html'
+import { Route as ServicePenstestDothtmlRouteImport } from './routes/service-penstest[.]html'
+import { Route as ScaDothtmlRouteImport } from './routes/sca[.]html'
+import { Route as LensDothtmlRouteImport } from './routes/lens[.]html'
 import { Route as IndexDothtmlRouteImport } from './routes/index[.]html'
 import { Route as HomeReactPreviewRouteImport } from './routes/home-react-preview'
+import { Route as AiDothtmlRouteImport } from './routes/ai[.]html'
+import { Route as AboutDothtmlRouteImport } from './routes/about[.]html'
 import { Route as IndexRouteImport } from './routes/index'
 
 const WisdomDothtmlRoute = WisdomDothtmlRouteImport.update({
   id: '/wisdom.html',
   path: '/wisdom.html',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SwiftpenstestDothtmlRoute = SwiftpenstestDothtmlRouteImport.update({
+  id: '/swiftpenstest.html',
+  path: '/swiftpenstest.html',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SwiftcodeDothtmlRoute = SwiftcodeDothtmlRouteImport.update({
+  id: '/swiftcode.html',
+  path: '/swiftcode.html',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SolutionSpecialDothtmlRoute = SolutionSpecialDothtmlRouteImport.update({
+  id: '/solution-special.html',
+  path: '/solution-special.html',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SolutionAutoDothtmlRoute = SolutionAutoDothtmlRouteImport.update({
+  id: '/solution-auto.html',
+  path: '/solution-auto.html',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicePenstestDothtmlRoute = ServicePenstestDothtmlRouteImport.update({
+  id: '/service-penstest.html',
+  path: '/service-penstest.html',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ScaDothtmlRoute = ScaDothtmlRouteImport.update({
+  id: '/sca.html',
+  path: '/sca.html',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LensDothtmlRoute = LensDothtmlRouteImport.update({
+  id: '/lens.html',
+  path: '/lens.html',
   getParentRoute: () => rootRouteImport,
 } as any)
 const IndexDothtmlRoute = IndexDothtmlRouteImport.update({
@@ -29,6 +73,16 @@ const HomeReactPreviewRoute = HomeReactPreviewRouteImport.update({
   path: '/home-react-preview',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AiDothtmlRoute = AiDothtmlRouteImport.update({
+  id: '/ai.html',
+  path: '/ai.html',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AboutDothtmlRoute = AboutDothtmlRouteImport.update({
+  id: '/about.html',
+  path: '/about.html',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -37,35 +91,111 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about.html': typeof AboutDothtmlRoute
+  '/ai.html': typeof AiDothtmlRoute
   '/home-react-preview': typeof HomeReactPreviewRoute
   '/index.html': typeof IndexDothtmlRoute
+  '/lens.html': typeof LensDothtmlRoute
+  '/sca.html': typeof ScaDothtmlRoute
+  '/service-penstest.html': typeof ServicePenstestDothtmlRoute
+  '/solution-auto.html': typeof SolutionAutoDothtmlRoute
+  '/solution-special.html': typeof SolutionSpecialDothtmlRoute
+  '/swiftcode.html': typeof SwiftcodeDothtmlRoute
+  '/swiftpenstest.html': typeof SwiftpenstestDothtmlRoute
   '/wisdom.html': typeof WisdomDothtmlRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about.html': typeof AboutDothtmlRoute
+  '/ai.html': typeof AiDothtmlRoute
   '/home-react-preview': typeof HomeReactPreviewRoute
   '/index.html': typeof IndexDothtmlRoute
+  '/lens.html': typeof LensDothtmlRoute
+  '/sca.html': typeof ScaDothtmlRoute
+  '/service-penstest.html': typeof ServicePenstestDothtmlRoute
+  '/solution-auto.html': typeof SolutionAutoDothtmlRoute
+  '/solution-special.html': typeof SolutionSpecialDothtmlRoute
+  '/swiftcode.html': typeof SwiftcodeDothtmlRoute
+  '/swiftpenstest.html': typeof SwiftpenstestDothtmlRoute
   '/wisdom.html': typeof WisdomDothtmlRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about.html': typeof AboutDothtmlRoute
+  '/ai.html': typeof AiDothtmlRoute
   '/home-react-preview': typeof HomeReactPreviewRoute
   '/index.html': typeof IndexDothtmlRoute
+  '/lens.html': typeof LensDothtmlRoute
+  '/sca.html': typeof ScaDothtmlRoute
+  '/service-penstest.html': typeof ServicePenstestDothtmlRoute
+  '/solution-auto.html': typeof SolutionAutoDothtmlRoute
+  '/solution-special.html': typeof SolutionSpecialDothtmlRoute
+  '/swiftcode.html': typeof SwiftcodeDothtmlRoute
+  '/swiftpenstest.html': typeof SwiftpenstestDothtmlRoute
   '/wisdom.html': typeof WisdomDothtmlRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/home-react-preview' | '/index.html' | '/wisdom.html'
+  fullPaths:
+    | '/'
+    | '/about.html'
+    | '/ai.html'
+    | '/home-react-preview'
+    | '/index.html'
+    | '/lens.html'
+    | '/sca.html'
+    | '/service-penstest.html'
+    | '/solution-auto.html'
+    | '/solution-special.html'
+    | '/swiftcode.html'
+    | '/swiftpenstest.html'
+    | '/wisdom.html'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/home-react-preview' | '/index.html' | '/wisdom.html'
-  id: '__root__' | '/' | '/home-react-preview' | '/index.html' | '/wisdom.html'
+  to:
+    | '/'
+    | '/about.html'
+    | '/ai.html'
+    | '/home-react-preview'
+    | '/index.html'
+    | '/lens.html'
+    | '/sca.html'
+    | '/service-penstest.html'
+    | '/solution-auto.html'
+    | '/solution-special.html'
+    | '/swiftcode.html'
+    | '/swiftpenstest.html'
+    | '/wisdom.html'
+  id:
+    | '__root__'
+    | '/'
+    | '/about.html'
+    | '/ai.html'
+    | '/home-react-preview'
+    | '/index.html'
+    | '/lens.html'
+    | '/sca.html'
+    | '/service-penstest.html'
+    | '/solution-auto.html'
+    | '/solution-special.html'
+    | '/swiftcode.html'
+    | '/swiftpenstest.html'
+    | '/wisdom.html'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutDothtmlRoute: typeof AboutDothtmlRoute
+  AiDothtmlRoute: typeof AiDothtmlRoute
   HomeReactPreviewRoute: typeof HomeReactPreviewRoute
   IndexDothtmlRoute: typeof IndexDothtmlRoute
+  LensDothtmlRoute: typeof LensDothtmlRoute
+  ScaDothtmlRoute: typeof ScaDothtmlRoute
+  ServicePenstestDothtmlRoute: typeof ServicePenstestDothtmlRoute
+  SolutionAutoDothtmlRoute: typeof SolutionAutoDothtmlRoute
+  SolutionSpecialDothtmlRoute: typeof SolutionSpecialDothtmlRoute
+  SwiftcodeDothtmlRoute: typeof SwiftcodeDothtmlRoute
+  SwiftpenstestDothtmlRoute: typeof SwiftpenstestDothtmlRoute
   WisdomDothtmlRoute: typeof WisdomDothtmlRoute
 }
 
@@ -76,6 +206,55 @@ declare module '@tanstack/react-router' {
       path: '/wisdom.html'
       fullPath: '/wisdom.html'
       preLoaderRoute: typeof WisdomDothtmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/swiftpenstest.html': {
+      id: '/swiftpenstest.html'
+      path: '/swiftpenstest.html'
+      fullPath: '/swiftpenstest.html'
+      preLoaderRoute: typeof SwiftpenstestDothtmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/swiftcode.html': {
+      id: '/swiftcode.html'
+      path: '/swiftcode.html'
+      fullPath: '/swiftcode.html'
+      preLoaderRoute: typeof SwiftcodeDothtmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/solution-special.html': {
+      id: '/solution-special.html'
+      path: '/solution-special.html'
+      fullPath: '/solution-special.html'
+      preLoaderRoute: typeof SolutionSpecialDothtmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/solution-auto.html': {
+      id: '/solution-auto.html'
+      path: '/solution-auto.html'
+      fullPath: '/solution-auto.html'
+      preLoaderRoute: typeof SolutionAutoDothtmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/service-penstest.html': {
+      id: '/service-penstest.html'
+      path: '/service-penstest.html'
+      fullPath: '/service-penstest.html'
+      preLoaderRoute: typeof ServicePenstestDothtmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sca.html': {
+      id: '/sca.html'
+      path: '/sca.html'
+      fullPath: '/sca.html'
+      preLoaderRoute: typeof ScaDothtmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/lens.html': {
+      id: '/lens.html'
+      path: '/lens.html'
+      fullPath: '/lens.html'
+      preLoaderRoute: typeof LensDothtmlRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/index.html': {
@@ -92,6 +271,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof HomeReactPreviewRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/ai.html': {
+      id: '/ai.html'
+      path: '/ai.html'
+      fullPath: '/ai.html'
+      preLoaderRoute: typeof AiDothtmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/about.html': {
+      id: '/about.html'
+      path: '/about.html'
+      fullPath: '/about.html'
+      preLoaderRoute: typeof AboutDothtmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -104,8 +297,17 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutDothtmlRoute: AboutDothtmlRoute,
+  AiDothtmlRoute: AiDothtmlRoute,
   HomeReactPreviewRoute: HomeReactPreviewRoute,
   IndexDothtmlRoute: IndexDothtmlRoute,
+  LensDothtmlRoute: LensDothtmlRoute,
+  ScaDothtmlRoute: ScaDothtmlRoute,
+  ServicePenstestDothtmlRoute: ServicePenstestDothtmlRoute,
+  SolutionAutoDothtmlRoute: SolutionAutoDothtmlRoute,
+  SolutionSpecialDothtmlRoute: SolutionSpecialDothtmlRoute,
+  SwiftcodeDothtmlRoute: SwiftcodeDothtmlRoute,
+  SwiftpenstestDothtmlRoute: SwiftpenstestDothtmlRoute,
   WisdomDothtmlRoute: WisdomDothtmlRoute,
 }
 export const routeTree = rootRouteImport

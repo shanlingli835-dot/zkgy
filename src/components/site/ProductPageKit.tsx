@@ -114,7 +114,7 @@ export function Section({
   intro?: string;
   surface?: "default" | "subtle" | "inverse";
   align?: "center" | "start";
-  children: ReactNode;
+  children?: ReactNode;
 }) {
   const bg =
     surface === "subtle"
