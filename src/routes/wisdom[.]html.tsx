@@ -16,6 +16,7 @@ import {
 } from "lucide-react";
 
 import { GlobalHeader } from "@/components/site/GlobalHeader";
+import { HomeAccordion } from "@/components/site/HomeAccordion";
 import { SiteShell } from "@/components/site/SiteShell";
 import { SourceHomeEmbed } from "@/components/site/SourceHomeEmbed";
 
@@ -373,78 +374,31 @@ function WhyFuzz() {
 function Capabilities() {
   const items = [
     {
-      icon: <Layers size={24} aria-hidden />,
+      icon: <Layers size={56} strokeWidth={1.25} aria-hidden />,
       title: "数百种协议模板",
       desc: "支持用户自行定义协议结构和字段变异策略,灵活适配各类专有协议场景。",
     },
     {
-      icon: <Sparkles size={24} aria-hidden />,
+      icon: <Sparkles size={56} strokeWidth={1.25} aria-hidden />,
       title: "先进的变异算法",
       desc: "基于自研的变异算法生成高覆盖率测试用例,模拟真实交互行为触发潜在缺陷。",
     },
     {
-      icon: <Activity size={24} aria-hidden />,
+      icon: <Activity size={56} strokeWidth={1.25} aria-hidden />,
       title: "实时监测目标",
       desc: "实时监测目标行为变化,自动判断崩溃、异常响应等缺陷迹象,并追踪缺陷来源。",
     },
     {
-      icon: <Repeat size={24} aria-hidden />,
+      icon: <Repeat size={56} strokeWidth={1.25} aria-hidden />,
       title: "快速复现漏洞",
       desc: "多种方式重放测试用例、回溯交互记录,辅助用户定位问题与验证修复。",
     },
   ];
   return (
-    <Section
-      id="wisdom-capabilities"
+    <HomeAccordion
       title="Wisdom 帮助组织快速发现并修复安全缺陷"
-    >
-      <div
-        className="wisdom-4col"
-        style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(4, minmax(0, 1fr))",
-          gap: "var(--ds-space-xl)",
-        }}
-      >
-        {items.map((it) => (
-          <div
-            key={it.title}
-            style={{
-              padding: "var(--ds-space-xl)",
-              borderTop:
-                "var(--ds-border-width-accent) solid var(--ds-color-action-primary)",
-              backgroundColor: "var(--ds-color-surface-default)",
-              borderRadius: "var(--ds-radius-surface)",
-              boxShadow: "var(--ds-shadow-sm)",
-              display: "flex",
-              flexDirection: "column",
-              gap: "var(--ds-space-md)",
-            }}
-          >
-            <div style={{ color: "var(--ds-color-action-primary)" }}>
-              {it.icon}
-            </div>
-            <h3
-              style={{
-                fontSize: "var(--ds-font-size-lg)",
-                fontWeight: "var(--ds-font-weight-semibold)",
-              }}
-            >
-              {it.title}
-            </h3>
-            <p
-              style={{
-                fontSize: "var(--ds-font-size-sm)",
-                color: "var(--ds-color-text-secondary)",
-                lineHeight: 1.65,
-              }}
-            >
-              {it.desc}
-            </p>
-          </div>
-        ))}
-      </div>
-    </Section>
+      items={items}
+    />
   );
 }
 
