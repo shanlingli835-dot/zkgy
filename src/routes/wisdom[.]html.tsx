@@ -8,11 +8,11 @@ import {
   Layers,
   Activity,
   Repeat,
-  BadgeCheck,
   Target,
   Radar,
-  FileText,
   Sparkles,
+  Fingerprint,
+  AlertTriangle,
 } from "lucide-react";
 
 import { GlobalHeader } from "@/components/site/GlobalHeader";
