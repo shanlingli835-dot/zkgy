@@ -16,6 +16,7 @@ import {
 } from "lucide-react";
 
 import { GlobalHeader } from "@/components/site/GlobalHeader";
+import { HomeAccordion } from "@/components/site/HomeAccordion";
 import { SiteShell } from "@/components/site/SiteShell";
 import { SourceHomeEmbed } from "@/components/site/SourceHomeEmbed";
 
