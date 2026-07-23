@@ -451,72 +451,79 @@ function Capabilities() {
 function Advantages() {
   const items = [
     {
-      icon: <BadgeCheck size={22} aria-hidden />,
+      icon: <Fingerprint size={56} strokeWidth={1.25} aria-hidden />,
       title: "国际标准认证",
       desc: "全球首款通过 ISO 21434 与 IEC 62443 国际安全标准认证的模糊测试工具,满足高等级安全需求行业的采购要求与合规标准。",
     },
     {
-      icon: <Zap size={22} aria-hidden />,
+      icon: <ShieldCheck size={56} strokeWidth={1.25} aria-hidden />,
       title: "高效发现漏洞",
       desc: "创新优选的变异算法,可以在相同时间内,通过更少的测试用例,精准发现更多的真实缺陷。",
     },
     {
-      icon: <Target size={22} aria-hidden />,
+      icon: <AlertTriangle size={56} strokeWidth={1.25} aria-hidden />,
       title: "全面的测试覆盖",
       desc: "覆盖多种变异策略与交互状态模拟,实现对协议测试场景的全覆盖与边界条件的极致探索,全面提升测试深度与广度。",
     },
-    {
-      icon: <FileText size={22} aria-hidden />,
-      title: "详细的测试报告",
-      desc: "每个漏洞都会附带详细证明,包括触发的测试用例、程序的异常监控信息、可复现漏洞的复现包,帮助开发者快速修复漏洞。",
-    },
   ];
   return (
-    <Section
-      title="Wisdom 协议模糊测试以自研智能引擎为核心,在性能、检测覆盖度、可扩展性方面全面领先同类产品"
-      surface="subtle"
+    <section
+      style={{
+        backgroundColor: "var(--ds-color-surface-subtle)",
+        padding: "var(--ds-section-y-desktop) var(--ds-gutter-desktop)",
+      }}
     >
       <div
-        className="wisdom-2col"
         style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(2, minmax(0, 1fr))",
-          gap: "var(--ds-space-xl)",
+          maxWidth: "var(--ds-container-page)",
+          margin: "0 auto",
+          textAlign: "center",
         }}
       >
-        {items.map((it) => (
-          <div
-            key={it.title}
-            style={{
-              display: "flex",
-              gap: "var(--ds-space-lg)",
-              padding: "var(--ds-space-2xl)",
-              backgroundColor: "var(--ds-color-surface-default)",
-              border:
-                "var(--ds-border-width-default) solid var(--ds-color-border-subtle)",
-              borderRadius: "var(--ds-radius-surface)",
-            }}
-          >
-            <div
-              style={{
-                flex: "0 0 auto",
-                width: 44,
-                height: 44,
-                display: "grid",
-                placeItems: "center",
-                borderRadius: "var(--ds-radius-round)",
-                backgroundColor: "var(--ds-color-action-primary-subtle)",
-                color: "var(--ds-color-action-primary)",
-              }}
-            >
-              {it.icon}
-            </div>
-            <div>
+        <h2
+          style={{
+            fontSize: "clamp(1.75rem, 3.4vw, 2.5rem)",
+            fontWeight: "var(--ds-font-weight-semibold)",
+            lineHeight: 1.25,
+            color: "var(--ds-color-text-primary)",
+            maxWidth: 960,
+            margin: "0 auto",
+          }}
+        >
+          以自研智能引擎为核心,全面领先同类产品
+        </h2>
+        <p
+          style={{
+            marginTop: "var(--ds-space-lg)",
+            maxWidth: 780,
+            marginInline: "auto",
+            color: "var(--ds-color-text-secondary)",
+            fontSize: "var(--ds-font-size-md)",
+            lineHeight: 1.6,
+          }}
+        >
+          Wisdom 协议模糊测试在性能、检测覆盖度与可扩展性方面全面领先,
+          通过国际认证与创新算法为组织提供高可信的安全检测能力。
+        </p>
+
+        <div
+          className="wisdom-adv-grid"
+          style={{
+            marginTop: "var(--ds-space-4xl)",
+            display: "grid",
+            gridTemplateColumns: "repeat(3, minmax(0, 1fr))",
+            gap: "var(--ds-space-4xl)",
+            textAlign: "left",
+          }}
+        >
+          {items.map((it) => (
+            <div key={it.title} style={{ display: "flex", flexDirection: "column", gap: "var(--ds-space-lg)" }}>
+              <div style={{ color: "var(--ds-color-text-primary)" }}>{it.icon}</div>
               <h3
                 style={{
-                  fontSize: "var(--ds-font-size-xl)",
+                  fontSize: "var(--ds-font-size-lg)",
                   fontWeight: "var(--ds-font-weight-semibold)",
-                  marginBottom: "var(--ds-space-sm)",
+                  color: "var(--ds-color-text-primary)",
                 }}
               >
                 {it.title}
@@ -531,10 +538,18 @@ function Advantages() {
                 {it.desc}
               </p>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
-    </Section>
+      <style>{`
+        @media (max-width: 1023px) {
+          .wisdom-adv-grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+        }
+        @media (max-width: 639px) {
+          .wisdom-adv-grid { grid-template-columns: 1fr !important; }
+        }
+      `}</style>
+    </section>
   );
 }
 
