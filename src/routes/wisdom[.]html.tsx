@@ -319,12 +319,38 @@ function WhyFuzz() {
   ];
 
   return (
-    <Section
-      title="为什么要使用模糊测试?"
-      intro="模糊测试通过持续投递异常输入,自动化触发被测目标的崩溃、超时与未知漏洞,是传统测试难以覆盖的深层缺陷发现手段。"
-      surface="subtle"
-      align="start"
+    <section
+      style={{
+        backgroundColor: "var(--ds-color-surface-subtle)",
+        padding: "var(--ds-section-y-desktop) var(--ds-gutter-desktop)",
+      }}
     >
+      <div style={{ maxWidth: "var(--ds-container-page)", margin: "0 auto" }}>
+        <header style={{ marginBottom: "var(--ds-space-3xl)", textAlign: "left" }}>
+          <h2
+            style={{
+              fontSize: "clamp(1.5rem, 3vw, 2.25rem)",
+              fontWeight: "var(--ds-font-weight-semibold)",
+              lineHeight: 1.3,
+              color: "var(--ds-color-text-primary)",
+              margin: 0,
+            }}
+          >
+            为什么要使用模糊测试?
+          </h2>
+          <p
+            style={{
+              marginTop: "var(--ds-space-md)",
+              fontSize: "var(--ds-font-size-md)",
+              color: "var(--ds-color-text-secondary)",
+              lineHeight: 1.65,
+              maxWidth: "72ch",
+            }}
+          >
+            模糊测试通过持续投递异常输入,自动化触发被测目标的崩溃、超时与未知漏洞,是传统测试难以覆盖的深层缺陷发现手段。
+          </p>
+        </header>
+
       <style>{`
         .wf-wrap { display: grid; gap: 20px; }
         .wf-hero {
