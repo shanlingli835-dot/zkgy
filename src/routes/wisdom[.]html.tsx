@@ -264,108 +264,224 @@ function HeroVisual() {
 }
 
 function WhyFuzz() {
-  const items = [
+  const cardStyle: React.CSSProperties = {
+    backgroundColor: "var(--ds-color-surface-default)",
+    border:
+      "var(--ds-border-width-default) solid var(--ds-color-border-subtle)",
+    borderRadius: "var(--ds-radius-surface)",
+  };
+  const iconBox: React.CSSProperties = {
+    width: 44,
+    height: 44,
+    display: "grid",
+    placeItems: "center",
+    borderRadius: "var(--ds-radius-control)",
+    backgroundColor: "var(--ds-color-action-primary-subtle)",
+    color: "var(--ds-color-action-primary)",
+    flexShrink: 0,
+  };
+  const smallCardTitle: React.CSSProperties = {
+    fontSize: "var(--ds-font-size-lg)",
+    fontWeight: "var(--ds-font-weight-semibold)",
+    color: "var(--ds-color-text-primary)",
+    lineHeight: 1.4,
+    margin: 0,
+  };
+  const smallCardDesc: React.CSSProperties = {
+    fontSize: "var(--ds-font-size-sm)",
+    color: "var(--ds-color-text-secondary)",
+    lineHeight: 1.65,
+    margin: 0,
+  };
+
+  const bottomCards = [
     {
-      tag: "早发现",
       icon: <Zap size={22} aria-hidden />,
-      title: "在程序开发时尽早发现漏洞",
-      desc: "集成到开发流程中,进行自动测试,在产品上市之前就发现漏洞和安全问题。",
+      title: "开发阶段提前发现",
+      desc: "集成到开发流程中进行自动测试,在产品上市之前就发现漏洞和安全问题。",
     },
     {
-      tag: "60%+",
-      icon: <Bug size={22} aria-hidden />,
-      title: "黑客挖掘漏洞的主要方式",
-      desc: "超过 60% 的软件漏洞利用源于零日缺陷,模糊测试可以在黑客攻击之前发现未知缺陷。",
-    },
-    {
-      tag: "高效",
       icon: <Gauge size={22} aria-hidden />,
-      title: "使用成本低见效快",
-      desc: "高度自动化,在没有人工干预的情况下持续运行,高效地发现程序中的错误。",
+      title: "自动运行,高效低成本",
+      desc: "高度自动化,在无人工干预的情况下持续运行,高效地发现程序中的错误。",
     },
     {
-      tag: "价值",
       icon: <Target size={22} aria-hidden />,
-      title: "发现其他测试方式无法发现的漏洞",
+      title: "补足传统测试盲区",
       desc: "黑盒模糊测试更接近系统的真实使用环境,能够发现常规测试方法无法发现的问题。",
     },
   ];
 
+  const flowSteps = [
+    { label: "异常输入生成", desc: "变异 / 生成海量测试用例" },
+    { label: "目标程序执行", desc: "驱动被测目标持续运行" },
+    { label: "崩溃 · 超时 · 漏洞", desc: "捕获异常并复现定位", accent: true },
+  ];
+
   return (
-    <Section title="为什么要使用模糊测试？" surface="subtle">
-      <div
-        className="wisdom-4col"
-        style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(4, minmax(0, 1fr))",
-          gap: "var(--ds-space-xl)",
-        }}
-      >
-        {items.map((it) => (
-          <article
-            key={it.title}
-            style={{
-              backgroundColor: "var(--ds-color-surface-default)",
-              border:
-                "var(--ds-border-width-default) solid var(--ds-color-border-subtle)",
-              borderRadius: "var(--ds-radius-surface)",
-              padding: "var(--ds-space-2xl)",
-              display: "flex",
-              flexDirection: "column",
-              gap: "var(--ds-space-md)",
-            }}
-          >
-            <div
-              style={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "space-between",
-              }}
-            >
-              <div
-                style={{
-                  width: 44,
-                  height: 44,
-                  display: "grid",
-                  placeItems: "center",
-                  borderRadius: "var(--ds-radius-control)",
-                  backgroundColor: "var(--ds-color-action-primary-subtle)",
-                  color: "var(--ds-color-action-primary)",
-                }}
-              >
-                {it.icon}
-              </div>
-              <span
-                style={{
-                  fontSize: "var(--ds-font-size-sm)",
-                  fontWeight: "var(--ds-font-weight-semibold)",
-                  color: "var(--ds-color-action-primary)",
-                }}
-              >
-                {it.tag}
-              </span>
-            </div>
+    <Section
+      title="为什么要使用模糊测试?"
+      intro="模糊测试通过持续投递异常输入,自动化触发被测目标的崩溃、超时与未知漏洞,是传统测试难以覆盖的深层缺陷发现手段。"
+      surface="subtle"
+      align="start"
+    >
+      <style>{`
+        .wf-wrap { display: grid; gap: 20px; }
+        .wf-hero {
+          display: grid;
+          grid-template-columns: 45fr 55fr;
+          min-height: 400px;
+        }
+        .wf-hero__left, .wf-hero__right {
+          padding: var(--ds-space-3xl);
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+        }
+        .wf-hero__right {
+          border-left: var(--ds-border-width-default) solid var(--ds-color-border-subtle);
+          background: var(--ds-color-surface-subtle);
+        }
+        .wf-stat {
+          font-size: clamp(64px, 8vw, 96px);
+          font-weight: var(--ds-font-weight-bold, 700);
+          color: var(--ds-color-action-primary);
+          line-height: 1;
+          letter-spacing: -0.02em;
+        }
+        .wf-flow { display: grid; gap: 14px; }
+        .wf-flow__step {
+          display: flex; align-items: flex-start; gap: 14px;
+          padding: 16px 18px;
+          background: var(--ds-color-surface-default);
+          border: var(--ds-border-width-default) solid var(--ds-color-border-subtle);
+          border-radius: var(--ds-radius-control);
+        }
+        .wf-flow__idx {
+          width: 28px; height: 28px; flex-shrink: 0;
+          display: grid; place-items: center;
+          border-radius: 9999px;
+          background: var(--ds-color-action-primary-subtle);
+          color: var(--ds-color-action-primary);
+          font-weight: var(--ds-font-weight-semibold);
+          font-size: 13px;
+        }
+        .wf-flow__step.is-accent { border-color: var(--ds-color-action-primary); }
+        .wf-arrow {
+          justify-self: start;
+          margin-left: 13px;
+          width: 2px; height: 14px;
+          background: var(--ds-color-border-subtle);
+        }
+        .wf-bottom {
+          display: grid;
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+          gap: 20px;
+        }
+        .wf-bottom__card {
+          min-height: 200px;
+          padding: var(--ds-space-2xl);
+          display: flex; flex-direction: column; gap: var(--ds-space-md);
+        }
+        @media (max-width: 1024px) {
+          .wf-hero { grid-template-columns: 1fr; min-height: 0; }
+          .wf-hero__right { border-left: 0; border-top: var(--ds-border-width-default) solid var(--ds-color-border-subtle); }
+          .wf-bottom { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+          .wf-bottom__card:last-child { grid-column: 1 / -1; }
+        }
+        @media (max-width: 640px) {
+          .wf-bottom { grid-template-columns: 1fr; }
+          .wf-bottom__card:last-child { grid-column: auto; }
+        }
+      `}</style>
+
+      <div className="wf-wrap">
+        <article className="wf-hero" style={cardStyle}>
+          <div className="wf-hero__left">
+            <div className="wf-stat">60%+</div>
             <h3
               style={{
-                fontSize: "var(--ds-font-size-lg)",
+                marginTop: "var(--ds-space-lg)",
+                fontSize: "var(--ds-font-size-xl)",
                 fontWeight: "var(--ds-font-weight-semibold)",
                 color: "var(--ds-color-text-primary)",
-                lineHeight: 1.4,
+                lineHeight: 1.35,
               }}
             >
-              {it.title}
+              黑客挖掘漏洞的主要方式
             </h3>
             <p
               style={{
-                fontSize: "var(--ds-font-size-sm)",
+                marginTop: "var(--ds-space-md)",
+                fontSize: "var(--ds-font-size-md)",
                 color: "var(--ds-color-text-secondary)",
-                lineHeight: 1.65,
+                lineHeight: 1.7,
+                maxWidth: "44ch",
               }}
             >
-              {it.desc}
+              超过 60% 的软件漏洞利用源于零日缺陷。模糊测试可以在攻击者之前,
+              自动化地暴露未知缺陷,构建主动防御能力。
             </p>
-          </article>
-        ))}
+          </div>
+          <div className="wf-hero__right">
+            <div
+              style={{
+                fontSize: "var(--ds-font-size-sm)",
+                fontWeight: "var(--ds-font-weight-semibold)",
+                color: "var(--ds-color-text-secondary)",
+                textTransform: "uppercase",
+                letterSpacing: "0.08em",
+                marginBottom: "var(--ds-space-lg)",
+              }}
+            >
+              模糊测试工作流
+            </div>
+            <div className="wf-flow">
+              {flowSteps.map((s, i) => (
+                <div key={s.label}>
+                  <div className={`wf-flow__step${s.accent ? " is-accent" : ""}`}>
+                    <div className="wf-flow__idx">{i + 1}</div>
+                    <div>
+                      <div
+                        style={{
+                          fontSize: "var(--ds-font-size-md)",
+                          fontWeight: "var(--ds-font-weight-semibold)",
+                          color: s.accent
+                            ? "var(--ds-color-action-primary)"
+                            : "var(--ds-color-text-primary)",
+                          lineHeight: 1.35,
+                        }}
+                      >
+                        {s.label}
+                      </div>
+                      <div
+                        style={{
+                          marginTop: 4,
+                          fontSize: "var(--ds-font-size-sm)",
+                          color: "var(--ds-color-text-secondary)",
+                          lineHeight: 1.55,
+                        }}
+                      >
+                        {s.desc}
+                      </div>
+                    </div>
+                  </div>
+                  {i < flowSteps.length - 1 && <div className="wf-arrow" />}
+                </div>
+              ))}
+            </div>
+          </div>
+        </article>
+
+        <div className="wf-bottom">
+          {bottomCards.map((c) => (
+            <article key={c.title} className="wf-bottom__card" style={cardStyle}>
+              <div style={iconBox}>{c.icon}</div>
+              <h3 style={smallCardTitle}>{c.title}</h3>
+              <p style={smallCardDesc}>{c.desc}</p>
+            </article>
+          ))}
+        </div>
       </div>
     </Section>
   );
