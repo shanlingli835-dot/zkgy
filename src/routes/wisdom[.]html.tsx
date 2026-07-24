@@ -508,6 +508,7 @@ function WhyFuzz() {
             </article>
           ))}
         </div>
+        </div>
       </div>
     </section>
   );
