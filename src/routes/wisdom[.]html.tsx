@@ -509,7 +509,7 @@ function WhyFuzz() {
           ))}
         </div>
       </div>
-    </Section>
+    </section>
   );
 }
 
