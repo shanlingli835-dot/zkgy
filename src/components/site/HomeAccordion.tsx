@@ -234,21 +234,7 @@ export function HomeAccordion({
             <h2 id={titleId}>{title}</h2>
             {description ? <p>{description}</p> : null}
             {cta ? (
-              <a
-                className="why-tabs__cta"
-                href={cta.href}
-                style={{
-                  display: "inline-flex",
-                  alignItems: "center",
-                  gap: "0.5rem",
-                  marginTop: "1.5rem",
-                  padding: "0.85rem 1.25rem",
-                  background: "var(--why-ink)",
-                  color: "#fff",
-                  fontWeight: 600,
-                  textDecoration: "none",
-                }}
-              >
+              <a className="why-tabs__cta" href={cta.href}>
                 {cta.label}
               </a>
             ) : null}
