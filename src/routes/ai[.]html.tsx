@@ -12,9 +12,8 @@ import {
 
 import { PlatformArchitecture } from "@/components/site/ai/PlatformArchitecture";
 import {
-
-  ArchitectureDiagram,
   CTA_HREF,
+
   CtaCard,
   FeatureGrid,
   ProductHero,
