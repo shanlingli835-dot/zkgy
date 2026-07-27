@@ -213,7 +213,7 @@ function AboutPage() {
                   display: "inline-flex",
                   alignItems: "center",
                   gap: "var(--ds-space-sm)",
-                  color: "var(--ds-color-action-primary)",
+                  color: "var(--ds-color-text-secondary)",
                   fontWeight: "var(--ds-font-weight-semibold)",
                 }}
               >
