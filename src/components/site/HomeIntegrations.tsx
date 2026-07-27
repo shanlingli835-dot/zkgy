@@ -145,7 +145,7 @@ function IntegrationTile({ tile }: { tile: Tile }) {
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    color: "var(--ds-color-text-primary)",
+    color: "var(--ds-color-action-primary)",
     boxShadow: tile.Icon
       ? "0 1px 2px rgba(15, 23, 42, 0.04)"
       : "none",

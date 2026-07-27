@@ -157,7 +157,7 @@ export function Section({
             {eyebrow && (
               <div
                 style={{
-                  color: "var(--ds-color-text-secondary)",
+                  color: "var(--ds-color-action-primary)",
                   fontSize: "var(--ds-font-size-sm)",
                   fontWeight: "var(--ds-font-weight-semibold)",
                   letterSpacing: "0.08em",
@@ -242,7 +242,7 @@ export function ProductHero({
           position: "absolute",
           inset: 0,
           background:
-            "radial-gradient(1000px 500px at 15% 20%, color-mix(in srgb, #1e40af 26%, transparent), transparent 60%), radial-gradient(800px 400px at 85% 80%, color-mix(in srgb, var(--ds-color-surface-inverse-soft) 60%, transparent), transparent 60%)",
+            "radial-gradient(1000px 500px at 15% 20%, color-mix(in srgb, var(--ds-color-action-primary) 28%, transparent), transparent 60%), radial-gradient(800px 400px at 85% 80%, color-mix(in srgb, #1e40af 30%, transparent), transparent 60%)",
           pointerEvents: "none",
         }}
       />
@@ -360,7 +360,7 @@ export function FeatureGrid({
                 : "var(--ds-border-width-default) solid var(--ds-color-border-subtle)",
             borderTop:
               variant === "topbar"
-                ? "var(--ds-border-width-accent) solid var(--ds-color-border-strong)"
+                ? "var(--ds-border-width-accent) solid var(--ds-color-action-primary)"
                 : undefined,
             borderRadius: "var(--ds-radius-surface)",
             padding: "var(--ds-space-2xl)",
@@ -387,8 +387,8 @@ export function FeatureGrid({
                     display: "grid",
                     placeItems: "center",
                     borderRadius: "var(--ds-radius-control)",
-                    backgroundColor: "var(--ds-color-surface-muted)",
-                    color: "var(--ds-color-text-primary)",
+                    backgroundColor: "var(--ds-color-action-primary-subtle)",
+                    color: "var(--ds-color-action-primary)",
                   }}
                 >
                   {it.icon}
@@ -399,7 +399,7 @@ export function FeatureGrid({
                   style={{
                     fontSize: "var(--ds-font-size-sm)",
                     fontWeight: "var(--ds-font-weight-semibold)",
-                    color: "var(--ds-color-text-secondary)",
+                    color: "var(--ds-color-action-primary)",
                   }}
                 >
                   {it.tag}
@@ -453,7 +453,7 @@ export function CtaCard({
           borderRadius: "var(--ds-radius-surface)",
           padding: "clamp(2rem, 6vw, 4.5rem)",
           background:
-            "linear-gradient(135deg, var(--ds-color-surface-inverse), var(--ds-color-surface-inverse-soft))",
+            "linear-gradient(135deg, var(--ds-color-surface-inverse), color-mix(in srgb, var(--ds-color-action-primary) 35%, var(--ds-color-surface-inverse)))",
           color: "var(--ds-color-text-inverse)",
           textAlign: "center",
         }}
@@ -558,7 +558,7 @@ export function StatRow({
             style={{
               fontSize: "clamp(1.75rem, 3vw, 2.25rem)",
               fontWeight: "var(--ds-font-weight-semibold)",
-              color: "var(--ds-color-text-primary)",
+              color: "var(--ds-color-action-primary)",
               lineHeight: 1.1,
             }}
           >
@@ -607,14 +607,14 @@ export function WorkflowStepper({
             position: "relative",
             padding: "var(--ds-space-xl)",
             borderTop:
-              "var(--ds-border-width-accent) solid var(--ds-color-border-strong)",
+              "var(--ds-border-width-accent) solid var(--ds-color-action-primary)",
             backgroundColor: "var(--ds-color-surface-default)",
           }}
         >
           <div
             style={{
               fontSize: "var(--ds-font-size-sm)",
-              color: "var(--ds-color-text-secondary)",
+              color: "var(--ds-color-action-primary)",
               fontWeight: "var(--ds-font-weight-semibold)",
               letterSpacing: "0.08em",
             }}
@@ -691,7 +691,7 @@ export function ArchitectureDiagram({
               borderRadius: "var(--ds-radius-control)",
               backgroundColor:
                 idx % 2 === 0
-                  ? "var(--ds-color-surface-subtle)"
+                  ? "var(--ds-color-action-primary-subtle)"
                   : "var(--ds-color-surface-default)",
               color: "var(--ds-color-text-primary)",
               fontWeight: "var(--ds-font-weight-semibold)",

@@ -237,14 +237,13 @@
       --jasper-dark-900: var(--rh-color-gray-80);
       --jasper-dark-900-faded: rgba(31, 31, 31, 0.2);
 
-      /* Decorative accent ramp: neutralized so the brand red stays under 5% of the page. */
-      --jasper-flame-100: var(--rh-color-gray-05, #fafafa);
-      --jasper-flame-200: var(--rh-color-gray-10);
-      --jasper-flame-300: var(--rh-color-gray-10);
-      --jasper-flame-400: var(--rh-color-gray-20);
-      --jasper-flame-500: var(--rh-color-gray-40);
-      --jasper-flame-600: var(--rh-color-gray-60);
-      --jasper-flame-700: var(--rh-color-gray-70);
+      --jasper-flame-100: var(--rh-color-red-5);
+      --jasper-flame-200: var(--rh-color-red-10);
+      --jasper-flame-300: var(--rh-color-red-orange-10);
+      --jasper-flame-400: var(--rh-color-red-orange-20);
+      --jasper-flame-500: var(--rh-color-red-orange-40);
+      --jasper-flame-600: var(--rh-color-brand-red);
+      --jasper-flame-700: var(--rh-color-red-60);
       --jasper-flame-800: var(--rh-color-red-70);
 
       --jasper-blue-200: var(--rh-color-blue-10);
@@ -271,7 +270,7 @@
       --jasper-yellow-800: var(--rh-color-yellow-70);
 
       --jasper-pink-300: var(--rh-color-red-5);
-      --jasper-pink-400: var(--rh-color-gray-10);
+      --jasper-pink-400: var(--rh-color-red-10);
       --jasper-pink-500: var(--rh-color-red-20);
       --jasper-pink-600: var(--rh-color-red-30);
       --jasper-pink-700: var(--rh-color-red-40);
@@ -1539,7 +1538,7 @@
       width: 53.571cqw;
       margin: 11.607cqw 0 0 auto;
       padding: clamp(12px, 2.679cqw, 24px);
-      border: 1px solid var(--rh-color-gray-20);
+      border: 1px solid var(--rh-color-red-20);
       border-radius: clamp(8px, 1.488cqw, 14px);
       background: var(--flow-paper);
     }
@@ -3005,7 +3004,7 @@
 
     .announcement-bar strong,
     .eyebrow {
-      color: var(--jasper-dark-700);
+      color: var(--jasper-primary);
     }
 
     .brand,
@@ -3459,7 +3458,7 @@
       height: 28px;
       border: 4px solid var(--platform-card-ink);
       border-radius: 999px;
-      background: var(--platform-card-ink);
+      background: var(--jasper-primary);
     }
 
     .pipelines-visual .p2 {

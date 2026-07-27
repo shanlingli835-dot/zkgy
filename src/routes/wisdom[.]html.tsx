@@ -108,7 +108,7 @@ function Hero() {
           position: "absolute",
           inset: 0,
           background:
-            "radial-gradient(1000px 500px at 15% 20%, color-mix(in srgb, #1e40af 26%, transparent), transparent 60%), radial-gradient(800px 400px at 85% 80%, color-mix(in srgb, var(--ds-color-surface-inverse-soft) 60%, transparent), transparent 60%)",
+            "radial-gradient(1000px 500px at 15% 20%, color-mix(in srgb, var(--ds-color-action-primary) 28%, transparent), transparent 60%), radial-gradient(800px 400px at 85% 80%, color-mix(in srgb, #1e40af 30%, transparent), transparent 60%)",
           pointerEvents: "none",
         }}
       />
@@ -209,7 +209,7 @@ function HeroVisual() {
         marginInline: "auto",
         borderRadius: "var(--ds-radius-round)",
         background:
-          "radial-gradient(circle at center, color-mix(in srgb, #1e40af 22%, transparent), transparent 65%)",
+          "radial-gradient(circle at center, color-mix(in srgb, var(--ds-color-action-primary) 24%, transparent), transparent 65%)",
         display: "grid",
         placeItems: "center",
       }}
@@ -227,7 +227,7 @@ function HeroVisual() {
             "color-mix(in srgb, var(--ds-color-surface-inverse) 60%, transparent)",
         }}
       >
-        <Bug size={64} color="var(--ds-color-text-inverse)" aria-hidden />
+        <Bug size={64} color="var(--ds-color-action-primary)" aria-hidden />
       </div>
       {rings.map((r, i) => {
         const angle = (i / rings.length) * Math.PI * 2 - Math.PI / 2;
@@ -277,8 +277,8 @@ function WhyFuzz() {
     display: "grid",
     placeItems: "center",
     borderRadius: "var(--ds-radius-control)",
-    backgroundColor: "var(--ds-color-surface-muted)",
-    color: "var(--ds-color-text-primary)",
+    backgroundColor: "var(--ds-color-action-primary-subtle)",
+    color: "var(--ds-color-action-primary)",
     flexShrink: 0,
   };
   const smallCardTitle: React.CSSProperties = {
@@ -372,7 +372,7 @@ function WhyFuzz() {
         .wf-stat {
           font-size: clamp(64px, 8vw, 96px);
           font-weight: var(--ds-font-weight-bold, 700);
-          color: var(--ds-color-text-primary);
+          color: var(--ds-color-action-primary);
           line-height: 1;
           letter-spacing: -0.02em;
         }
@@ -388,12 +388,12 @@ function WhyFuzz() {
           width: 28px; height: 28px; flex-shrink: 0;
           display: grid; place-items: center;
           border-radius: 9999px;
-          background: var(--ds-color-surface-muted);
-          color: var(--ds-color-text-primary);
+          background: var(--ds-color-action-primary-subtle);
+          color: var(--ds-color-action-primary);
           font-weight: var(--ds-font-weight-semibold);
           font-size: 13px;
         }
-        .wf-flow__step.is-accent { border-color: var(--ds-color-border-strong); }
+        .wf-flow__step.is-accent { border-color: var(--ds-color-action-primary); }
         .wf-arrow {
           justify-self: start;
           margin-left: 13px;
@@ -474,7 +474,7 @@ function WhyFuzz() {
                           fontSize: "var(--ds-font-size-md)",
                           fontWeight: "var(--ds-font-weight-semibold)",
                           color: s.accent
-                            ? "var(--ds-color-text-primary)"
+                            ? "var(--ds-color-action-primary)"
                             : "var(--ds-color-text-primary)",
                           lineHeight: 1.35,
                         }}
