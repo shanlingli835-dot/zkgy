@@ -40,8 +40,8 @@ export function PlatformArchitecture({
           border-radius: var(--ds-radius-surface);
           border: var(--ds-border-width-default) solid var(--ds-color-border-subtle);
           background:
-            radial-gradient(120% 90% at 8% 0%, color-mix(in oklab, var(--ds-color-action-primary) 16%, transparent) 0%, transparent 60%),
-            radial-gradient(110% 90% at 92% 8%, color-mix(in oklab, var(--ds-color-accent, var(--ds-color-action-primary)) 12%, transparent) 0%, transparent 62%),
+            radial-gradient(120% 90% at 8% 0%, color-mix(in oklab, #1e40af 14%, transparent) 0%, transparent 60%),
+            radial-gradient(110% 90% at 92% 8%, color-mix(in oklab, var(--ds-color-surface-muted) 90%, transparent) 0%, transparent 62%),
             var(--ds-color-surface-subtle);
           display: flex;
           flex-direction: column;
