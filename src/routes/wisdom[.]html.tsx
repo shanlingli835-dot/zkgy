@@ -15,6 +15,7 @@ import {
   AlertTriangle,
 } from "lucide-react";
 
+import protocolConsoleImage from "@/assets/saas-hero-1-16x9.png.asset.json";
 import { GlobalHeader } from "@/components/site/GlobalHeader";
 import { HomeAccordion } from "@/components/site/HomeAccordion";
 import { SiteShell } from "@/components/site/SiteShell";
