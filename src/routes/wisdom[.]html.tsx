@@ -653,23 +653,14 @@ function Advantages() {
 function NoCustomization() {
   return (
     <Section>
-      <div
-        style={{
-          borderRadius: "var(--ds-radius-surface)",
-          padding: "clamp(2rem, 6vw, 4.5rem)",
-          background:
-            "linear-gradient(135deg, var(--ds-color-surface-inverse), color-mix(in srgb, var(--ds-color-action-primary) 35%, var(--ds-color-surface-inverse)))",
-          color: "var(--ds-color-text-inverse)",
-          textAlign: "center",
-        }}
-      >
+      <div style={{ textAlign: "center", maxWidth: 900, margin: "0 auto" }}>
         <h2
           style={{
-            fontSize: "clamp(1.5rem, 3.2vw, 2.25rem)",
+            fontSize: "clamp(1.75rem, 3.6vw, 2.75rem)",
             fontWeight: "var(--ds-font-weight-semibold)",
-            lineHeight: 1.3,
-            maxWidth: 900,
-            margin: "0 auto",
+            lineHeight: 1.25,
+            color: "var(--ds-color-text-primary)",
+            margin: 0,
           }}
         >
           Wisdom 无需定制开发即可测试您的专有协议
@@ -679,7 +670,7 @@ function NoCustomization() {
             marginTop: "var(--ds-space-lg)",
             maxWidth: 780,
             marginInline: "auto",
-            color: "var(--ds-color-text-inverse-secondary)",
+            color: "var(--ds-color-text-secondary)",
             fontSize: "var(--ds-font-size-lg)",
             lineHeight: 1.6,
           }}
@@ -691,9 +682,28 @@ function NoCustomization() {
           <PrimaryCta href={CTA_HREF}>免费试用</PrimaryCta>
         </div>
       </div>
+
+      <div
+        style={{
+          marginTop: "clamp(2rem, 5vw, 4rem)",
+          borderRadius: "var(--ds-radius-surface)",
+          overflow: "hidden",
+          border: "1px solid var(--ds-color-border-subtle)",
+          backgroundColor: "var(--ds-color-surface-default)",
+          boxShadow: "0 24px 60px rgba(28, 30, 34, 0.12)",
+        }}
+      >
+        <img
+          src={protocolConsoleImage.url}
+          alt="Wisdom 专有协议建模与测试控制台界面"
+          loading="lazy"
+          style={{ display: "block", width: "100%", height: "auto" }}
+        />
+      </div>
     </Section>
   );
 }
+
 
 /* ---------------- Shared ---------------- */
 
