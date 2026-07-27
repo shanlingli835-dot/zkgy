@@ -10,7 +10,9 @@ import {
   BadgeCheck,
 } from "lucide-react";
 
+import { PlatformArchitecture } from "@/components/site/ai/PlatformArchitecture";
 import {
+
   ArchitectureDiagram,
   CTA_HREF,
   CtaCard,
