@@ -10,9 +10,10 @@ import {
   BadgeCheck,
 } from "lucide-react";
 
+import { PlatformArchitecture } from "@/components/site/ai/PlatformArchitecture";
 import {
-  ArchitectureDiagram,
   CTA_HREF,
+
   CtaCard,
   FeatureGrid,
   ProductHero,
@@ -118,27 +119,42 @@ function AiPage() {
         title="Swift AI 平台整体架构"
         intro="以统一评测引擎为核心，分层承载数据、模型、应用与合规能力，帮助团队按需组合部署。"
       >
-        <ArchitectureDiagram
-          layers={[
+        <PlatformArchitecture
+          productName="Swift AI 平台"
+          mainLayer={{
+            title: "统一评测引擎",
+            columns: [
+              {
+                title: "模型安全评估",
+                items: ["鲁棒性评测", "公平性与偏见", "隐私风险"],
+              },
+              {
+                title: "对抗攻击测试",
+                items: ["越狱与注入", "投毒与绕过", "对抗样本"],
+              },
+              {
+                title: "内容安全与合规",
+                items: ["输入输出审查", "有害内容识别", "合规规则匹配"],
+              },
+              {
+                title: "运行时防护",
+                items: ["Agent 护栏", "RAG 检索防护", "敏感数据防泄漏"],
+              },
+            ],
+          }}
+          bands={[
             {
-              label: "应用与场景",
-              items: ["智能问答", "AI 助手 / Agent", "RAG 检索", "内容生成"],
-            },
-            {
-              label: "安全能力层",
-              items: ["模型评测", "对抗测试", "内容审查", "运行时护栏"],
-            },
-            {
-              label: "评测与知识库",
+              title: "评测与知识库",
               items: ["测试用例库", "攻击样本", "合规规则", "风险知识图谱"],
             },
             {
-              label: "接入层",
+              title: "模型与应用接入",
               items: ["开源模型", "自研模型", "云端 API", "私有部署"],
             },
           ]}
         />
       </Section>
+
 
       <Section
         surface="subtle"
