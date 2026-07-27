@@ -34,6 +34,7 @@ export function PlatformArchitecture({
       <style>{`
         .sg-arch {
           position: relative;
+          margin-top: var(--ds-space-2xl);
           padding: var(--ds-space-2xl);
           padding-top: calc(var(--ds-space-2xl) + var(--ds-space-xl));
           border-radius: var(--ds-radius-surface);
