@@ -16,7 +16,6 @@ export function AdvantageTriad({ title, description, items }: AdvantageTriadProp
   return (
     <section
       style={{
-        backgroundColor: "var(--ds-color-surface-subtle)",
         padding: "var(--ds-section-y-desktop) var(--ds-gutter-desktop)",
       }}
     >
