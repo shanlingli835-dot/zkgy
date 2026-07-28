@@ -1,4 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Boxes, Brain, Layers, ShieldCheck } from "lucide-react";
+
+import { HomeAccordion } from "@/components/site/HomeAccordion";
+
 
 import {
   CTA_HREF,
@@ -68,32 +72,32 @@ function AiPage() {
         />
       </Section>
 
-      <Section
-        surface="subtle"
+      <HomeAccordion
         title="Swift AI 帮助组织全面了解其模型应用的安全状况，及时发现并修复潜在风险"
-      >
-        <FeatureGrid
-          columns={4}
-          items={[
-            {
-              title: "供应链风险追踪",
-              desc: "自动化检测AI组件、数据与模型资产，进行物料清单管理、溯源追踪、安全评估与防护，识别供应链风险，生成完整AI-BOM与安全追踪报告。",
-            },
-            {
-              title: "多模态对抗提升",
-              desc: "通过对抗样本、可解释性与公平性评估，开展视觉、文本、音频等多模态对抗测试与模型运行监控，提升AI模型鲁棒性与安全性。",
-            },
-            {
-              title: "LLM安全评测与防护",
-              desc: "基于LLM安全评测与防护体系，结合LLM防火墙、沙箱与RAG防护，实现大模型全链路安全监测与态势可视化管理。",
-            },
-            {
-              title: "开源大模型安全优化",
-              desc: "基于开源大模型安全优化框架，开展安全对齐与对抗训练、隐私保护微调及安全知识注入，实现模型韧性防护、持续学习安全与合规评估。",
-            },
-          ]}
-        />
-      </Section>
+        items={[
+          {
+            icon: <Boxes size={56} strokeWidth={1.25} aria-hidden />,
+            title: "供应链风险追踪",
+            desc: "自动化检测AI组件、数据与模型资产，进行物料清单管理、溯源追踪、安全评估与防护，识别供应链风险，生成完整AI-BOM与安全追踪报告。",
+          },
+          {
+            icon: <Layers size={56} strokeWidth={1.25} aria-hidden />,
+            title: "多模态对抗提升",
+            desc: "通过对抗样本、可解释性与公平性评估，开展视觉、文本、音频等多模态对抗测试与模型运行监控，提升AI模型鲁棒性与安全性。",
+          },
+          {
+            icon: <ShieldCheck size={56} strokeWidth={1.25} aria-hidden />,
+            title: "LLM安全评测与防护",
+            desc: "基于LLM安全评测与防护体系，结合LLM防火墙、沙箱与RAG防护，实现大模型全链路安全监测与态势可视化管理。",
+          },
+          {
+            icon: <Brain size={56} strokeWidth={1.25} aria-hidden />,
+            title: "开源大模型安全优化",
+            desc: "基于开源大模型安全优化框架，开展安全对齐与对抗训练、隐私保护微调及安全知识注入，实现模型韧性防护、持续学习安全与合规评估。",
+          },
+        ]}
+      />
+
 
       <Section
         title="评测覆盖热力图"
