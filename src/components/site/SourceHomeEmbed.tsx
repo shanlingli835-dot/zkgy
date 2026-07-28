@@ -12,6 +12,11 @@ type SourceHomeEmbedProps = {
   src?: string;
   /** Override the iframe accessible title. */
   title?: string;
+  /**
+   * When true, the iframe height tracks only the visible content height
+   * (no viewport-height floor). Used when the embed renders just the footer.
+   */
+  fitContent?: boolean;
 };
 
 
@@ -20,10 +25,10 @@ type SourceHomeEmbedProps = {
  * the Lovable-connected project. The source page remains editable under
  * public/source-site and is rendered at the canonical root route.
  */
-export function SourceHomeEmbed({ hiddenSelectors = [], src = SOURCE_HOME_PATH, title = "中科固源官网首页" }: SourceHomeEmbedProps) {
+export function SourceHomeEmbed({ hiddenSelectors = [], src = SOURCE_HOME_PATH, title = "中科固源官网首页", fitContent = false }: SourceHomeEmbedProps) {
   const frameRef = useRef<HTMLIFrameElement>(null);
   const observerRef = useRef<ResizeObserver | null>(null);
-  const [height, setHeight] = useState("100vh");
+  const [height, setHeight] = useState(fitContent ? "0px" : "100vh");
 
   const syncFrame = useCallback(() => {
     const frame = frameRef.current;
@@ -53,24 +58,39 @@ export function SourceHomeEmbed({ hiddenSelectors = [], src = SOURCE_HOME_PATH, 
       });
     });
 
-    const nextHeight = Math.max(
-      document.documentElement.scrollHeight,
-      document.body?.scrollHeight ?? 0,
-      window.innerHeight,
-    );
-    setHeight(`${nextHeight}px`);
-
-    observerRef.current?.disconnect();
-    observerRef.current = new ResizeObserver(() => {
-      const updatedHeight = Math.max(
+    const measure = () => {
+      if (fitContent) {
+        const body = document.body;
+        if (!body) return 0;
+        // Measure only the remaining visible content, ignoring any
+        // viewport-height floor from the source page layout.
+        const children = Array.from(body.children) as HTMLElement[];
+        const bottom = children.reduce((max, child) => {
+          if (child.hidden || getComputedStyle(child).display === "none") return max;
+          const rect = child.getBoundingClientRect();
+          return Math.max(max, rect.bottom + body.scrollTop);
+        }, 0);
+        return Math.ceil(bottom);
+      }
+      return Math.max(
         document.documentElement.scrollHeight,
         document.body?.scrollHeight ?? 0,
         window.innerHeight,
       );
-      setHeight(`${updatedHeight}px`);
-    });
+    };
+
+    const apply = () => {
+      const next = measure();
+      if (next > 0) setHeight(`${next}px`);
+    };
+
+    apply();
+
+    observerRef.current?.disconnect();
+    observerRef.current = new ResizeObserver(apply);
     observerRef.current.observe(document.documentElement);
-  }, [hiddenSelectors]);
+    if (document.body) observerRef.current.observe(document.body);
+  }, [hiddenSelectors, fitContent]);
 
   useEffect(() => {
     const frame = frameRef.current;
