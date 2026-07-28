@@ -10,7 +10,6 @@ import {
 
 import {
   CTA_HREF,
-  CtaCard,
   FeatureGrid,
   ProductHero,
   Section,
@@ -149,10 +148,6 @@ function SwiftCodePage() {
         />
       </Section>
 
-      <CtaCard
-        title="准备好为您的组织解锁 安全能力 了吗?"
-        description="马上申请 30 天免费试用，让 Swift Code 融入您的 DevSecOps 全流程。"
-      />
     </SitePageShell>
   );
 }

@@ -12,7 +12,6 @@ import {
 
 import {
   CTA_HREF,
-  CtaCard,
   FeatureGrid,
   ProductHero,
   Section,
@@ -171,11 +170,6 @@ function ServicePenPage() {
         />
       </Section>
 
-      <CtaCard
-        title="准备好为您的组织解锁 安全能力 了吗?"
-        description="马上联系我们，为您的整车及零部件构建可持续的安全验证与加固能力。"
-        primaryCta={{ label: "联系我们", href: CTA_HREF }}
-      />
     </SitePageShell>
   );
 }

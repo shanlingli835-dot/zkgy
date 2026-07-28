@@ -11,7 +11,6 @@ import {
 
 import {
   CTA_HREF,
-  CtaCard,
   FeatureGrid,
   ProductHero,
   Section,
@@ -139,10 +138,6 @@ function LensPage() {
         />
       </Section>
 
-      <CtaCard
-        title="准备好为您的组织解锁 安全能力 了吗?"
-        description="马上申请 30 天免费试用，让 Wisdom Lens 帮助团队高效发现深层未知漏洞。"
-      />
     </SitePageShell>
   );
 }

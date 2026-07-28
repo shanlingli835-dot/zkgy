@@ -14,7 +14,6 @@ import { PlatformArchitecture } from "@/components/site/ai/PlatformArchitecture"
 import {
   CTA_HREF,
 
-  CtaCard,
   FeatureGrid,
   ProductHero,
   Section,
@@ -199,10 +198,6 @@ function AiPage() {
         />
       </Section>
 
-      <CtaCard
-        title="准备好为您的组织解锁 AI 安全能力 了吗?"
-        description="马上申请 30 天免费试用，让 Swift AI 帮助您评估、加固并持续守护关键 AI 系统。"
-      />
     </SitePageShell>
   );
 }

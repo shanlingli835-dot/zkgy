@@ -13,7 +13,6 @@ import {
 import {
   ArchitectureDiagram,
   CTA_HREF,
-  CtaCard,
   FeatureGrid,
   ProductHero,
   Section,
@@ -218,11 +217,6 @@ function SolutionSpecialPage() {
         />
       </Section>
 
-      <CtaCard
-        title="准备好为您的组织解锁 安全能力 了吗?"
-        description="马上申请咨询，让专家为您的特种网络安全实验能力量身规划。"
-        primaryCta={{ label: "咨询方案", href: CTA_HREF }}
-      />
     </SitePageShell>
   );
 }
