@@ -12,10 +12,10 @@ import {
   Building2,
 } from "lucide-react";
 
+import { AdvantageTriad } from "@/components/site/AdvantageTriad";
 import { HomeAccordion } from "@/components/site/HomeAccordion";
 import {
   CTA_HREF,
-  FeatureGrid,
   PrimaryCta,
   ProductHero,
   Section,

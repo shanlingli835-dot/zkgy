@@ -1,14 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Gauge, Wrench, Bug, FileText, Sparkles, Repeat, Search } from "lucide-react";
 
+import { AdvantageTriad } from "@/components/site/AdvantageTriad";
 import { HomeAccordion } from "@/components/site/HomeAccordion";
-import {
-  CTA_HREF,
-  FeatureGrid,
-  ProductHero,
-  Section,
-  SitePageShell,
-} from "@/components/site/ProductPageKit";
+import { CTA_HREF, ProductHero, Section, SitePageShell } from "@/components/site/ProductPageKit";
 
 const SEO_DESCRIPTION =
   "Wisdom Lens专为发现二进制和源代码中的深层漏洞而设计。它通过插桩实时捕获代码覆盖情况，智能引导测试用例触发更多执行路径。结合强大的变异算法，可自动、持续地挖掘崩溃和内存破坏等关键安全缺陷，显著提升漏洞发现效率，是软件开发与安全测试环节中保障软件质量的利器。";
