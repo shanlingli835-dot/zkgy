@@ -9,11 +9,11 @@ import {
   FileBadge2,
 } from "lucide-react";
 
+import { AdvantageTriad } from "@/components/site/AdvantageTriad";
 import { HomeAccordion } from "@/components/site/HomeAccordion";
 import HeroPage from "@/components/ui/hero-page";
 import {
   CTA_HREF,
-  FeatureGrid,
   PrimaryCta,
   Section,
   SitePageShell,
