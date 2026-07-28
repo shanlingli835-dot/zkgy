@@ -1,45 +1,32 @@
 import { createFileRoute } from "@tanstack/react-router";
-import {
-  Microscope,
-  GitBranch,
-  Bug,
-  Gauge,
-  Layers,
-  Wrench,
-  ShieldCheck,
-} from "lucide-react";
+import { Gauge, Wrench, Bug, FileText, Sparkles, Repeat, Search } from "lucide-react";
 
+import { HomeAccordion } from "@/components/site/HomeAccordion";
 import {
   CTA_HREF,
   FeatureGrid,
   ProductHero,
   Section,
   SitePageShell,
-  StatRow,
 } from "@/components/site/ProductPageKit";
+
+const SEO_DESCRIPTION =
+  "Wisdom Lens专为发现二进制和源代码中的深层漏洞而设计。它通过插桩实时捕获代码覆盖情况，智能引导测试用例触发更多执行路径。结合强大的变异算法，可自动、持续地挖掘崩溃和内存破坏等关键安全缺陷，显著提升漏洞发现效率，是软件开发与安全测试环节中保障软件质量的利器。";
 
 export const Route = createFileRoute("/lens.html")({
   head: () => ({
     meta: [
-      { title: "Wisdom Lens 灰盒模糊测试 — 中科固源" },
-      {
-        name: "description",
-        content:
-          "Wisdom Lens 基于代码覆盖引导的灰盒模糊测试平台，深入被测系统内部路径，高效挖掘深层未知漏洞。",
-      },
+      { title: "Wisdom Lens 灰盒模糊测试 - 中科固源" },
+      { name: "description", content: SEO_DESCRIPTION },
       {
         name: "keywords",
-        content:
-          "灰盒模糊测试，Coverage-guided Fuzzing，AFL，代码覆盖，漏洞挖掘",
+        content: "模糊测试，灰盒模糊，二进制模糊，动态插桩，自动生存测试驱动",
       },
-      { property: "og:title", content: "Wisdom Lens 灰盒模糊测试 — 中科固源" },
-      {
-        property: "og:description",
-        content:
-          "覆盖引导型灰盒模糊测试平台，帮助团队在代码内部路径持续发现深层漏洞。",
-      },
-      { property: "og:type", content: "product" },
+      { property: "og:title", content: "Wisdom Lens 灰盒模糊测试 - 中科固源" },
+      { property: "og:description", content: SEO_DESCRIPTION },
+      { property: "og:type", content: "website" },
       { property: "og:url", content: "/lens.html" },
+      { name: "twitter:card", content: "summary" },
     ],
     links: [{ rel: "canonical", href: "/lens.html" }],
   }),
@@ -50,94 +37,60 @@ function LensPage() {
   return (
     <SitePageShell>
       <ProductHero
-        eyebrow="产品 · 灰盒模糊测试"
-        title={
-          <>
-            Wisdom Lens
-            <br />
-            灰盒模糊测试平台
-          </>
-        }
-        description="基于代码覆盖引导的灰盒模糊测试平台，深入被测程序内部执行路径，帮助研发与安全团队在上线前系统性挖掘深层未知漏洞。"
+        title="Wisdom Lens 灰盒模糊测试"
+        description="基于灰盒测试技术，嵌入DevSecOps流程，自动捕获零日缺陷。"
         primaryCta={{ label: "免费试用", href: CTA_HREF }}
-        secondaryCta={{ label: "联系我们", href: CTA_HREF }}
       />
 
-      <Section
-        eyebrow="为什么需要灰盒模糊测试"
-        title="从入口探索到路径深挖，覆盖黑盒难以触达的漏洞"
-        intro="灰盒模糊测试结合覆盖率反馈与智能变异，在真实运行环境中持续构造异常输入，暴露隐藏在深层分支中的漏洞。"
-      >
-        <StatRow
-          stats={[
-            { value: "覆盖引导", label: "利用运行时覆盖率指导用例进化" },
-            { value: "深路径", label: "触达黑盒难以覆盖的分支与状态" },
-            { value: "自动化", label: "持续运行，长期沉淀高价值语料" },
-            { value: "可复现", label: "崩溃自动最小化，支持一键复现" },
-          ]}
-        />
-      </Section>
+      <HomeAccordion
+        title="产品功能"
+        items={[
+          {
+            icon: <Gauge size={56} strokeWidth={1.25} aria-hidden />,
+            title: "覆盖率反馈和优化",
+            desc: "支持代码覆盖率反馈和智能优化，提升测试全面性。",
+          },
+          {
+            icon: <Wrench size={56} strokeWidth={1.25} aria-hidden />,
+            title: "测试驱动生成",
+            desc: "对被测对象进行静态分析，基于大模型自动生成测试驱动。",
+          },
+          {
+            icon: <Bug size={56} strokeWidth={1.25} aria-hidden />,
+            title: "缺陷挖掘与定位",
+            desc: "具备自动挖掘和精准定位缺陷的能力，帮助开发者提升代码质量。",
+          },
+          {
+            icon: <FileText size={56} strokeWidth={1.25} aria-hidden />,
+            title: "提供修复建议",
+            desc: "生成详细的测试报告，内容涵盖缺陷的类型和触发缺陷的用例；基于大语言模型提供修复建议并自动生成修复代码，提升修复效率。",
+          },
+        ]}
+      />
 
-      <Section
-        surface="subtle"
-        eyebrow="核心能力"
-        title="面向研发与安全的灰盒能力"
-      >
-        <FeatureGrid
-          columns={4}
-          items={[
-            {
-              icon: <Microscope size={22} />,
-              title: "覆盖率引导 Fuzzing",
-              desc: "通过插桩获取分支/边覆盖率，智能引导变异策略持续探索新路径。",
-            },
-            {
-              icon: <GitBranch size={22} />,
-              title: "多种变异策略",
-              desc: "结合位翻转、字典、结构化输入等多种变异，兼顾广度与深度。",
-            },
-            {
-              icon: <Bug size={22} />,
-              title: "崩溃分类与去重",
-              desc: "自动对崩溃进行归类、去重与最小化，减少人工分析成本。",
-            },
-            {
-              icon: <Gauge size={22} />,
-              title: "实时可视化",
-              desc: "覆盖率、路径数量、崩溃趋势实时可视化，支撑测试度量与决策。",
-            },
-          ]}
-        />
-      </Section>
-
-      <Section
-        eyebrow="接入范围"
-        title="支持多种目标形态与接入方式"
-        intro="覆盖服务、库、命令行工具与嵌入式程序等常见形态，可与 CI 与安全流水线协同工作。"
-      >
+      <Section surface="subtle" title="产品优势">
         <FeatureGrid
           columns={3}
           variant="topbar"
           items={[
             {
-              icon: <Layers size={22} />,
-              title: "多种目标形态",
-              desc: "支持 CLI 工具、库函数、服务端程序与嵌入式软件等多种被测形态。",
+              icon: <Sparkles size={22} />,
+              title: "智能化测试用例构建",
+              desc: "基于 AI 大模型自动生成高质量的测试用例，提升漏洞检测的覆盖率与准确性。",
             },
             {
-              icon: <Wrench size={22} />,
-              title: "工程化对接",
-              desc: "提供 SDK 与命令行工具，可与 CI/CD、缺陷跟踪系统无缝集成。",
+              icon: <Repeat size={22} />,
+              title: "漏洞自动复现与 PoC 生成",
+              desc: "自动生成最小化输入用例和 PoC 脚本，快速验证漏洞可行性，提升复现效率。",
             },
             {
-              icon: <ShieldCheck size={22} />,
-              title: "长期语料沉淀",
-              desc: "持续积累高价值样本与语料库，用于回归测试与安全基线。",
+              icon: <Search size={22} />,
+              title: "可视化报告与根因定位",
+              desc: "展示漏洞相关的函数、调用栈和源代码片段，直观定位问题。",
             },
           ]}
         />
       </Section>
-
     </SitePageShell>
   );
 }
