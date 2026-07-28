@@ -17,6 +17,7 @@ import {
 
 import protocolConsoleImage from "@/assets/saas-hero-1-16x9.png.asset.json";
 import { GlobalHeader } from "@/components/site/GlobalHeader";
+import { AdvantageTriad } from "@/components/site/AdvantageTriad";
 import { HomeAccordion } from "@/components/site/HomeAccordion";
 import { SiteShell } from "@/components/site/SiteShell";
 import { SourceHomeEmbed } from "@/components/site/SourceHomeEmbed";
@@ -548,107 +549,28 @@ function Capabilities() {
 }
 
 function Advantages() {
-  const items = [
-    {
-      icon: <Fingerprint size={56} strokeWidth={1.25} aria-hidden />,
-      title: "国际标准认证",
-      desc: "全球首款通过 ISO 21434 与 IEC 62443 国际安全标准认证的模糊测试工具,满足高等级安全需求行业的采购要求与合规标准。",
-    },
-    {
-      icon: <ShieldCheck size={56} strokeWidth={1.25} aria-hidden />,
-      title: "高效发现漏洞",
-      desc: "创新优选的变异算法,可以在相同时间内,通过更少的测试用例,精准发现更多的真实缺陷。",
-    },
-    {
-      icon: <AlertTriangle size={56} strokeWidth={1.25} aria-hidden />,
-      title: "全面的测试覆盖",
-      desc: "覆盖多种变异策略与交互状态模拟,实现对协议测试场景的全覆盖与边界条件的极致探索,全面提升测试深度与广度。",
-    },
-  ];
   return (
-    <section
-      style={{
-        backgroundColor: "var(--ds-color-surface-subtle)",
-        padding: "var(--ds-section-y-desktop) var(--ds-gutter-desktop)",
-      }}
-    >
-      <div
-        style={{
-          maxWidth: "var(--ds-container-page)",
-          margin: "0 auto",
-          textAlign: "center",
-        }}
-      >
-        <h2
-          style={{
-            fontSize: "clamp(1.75rem, 3.4vw, 2.5rem)",
-            fontWeight: "var(--ds-font-weight-semibold)",
-            lineHeight: 1.25,
-            color: "var(--ds-color-text-primary)",
-            maxWidth: 960,
-            margin: "0 auto",
-          }}
-        >
-          以自研智能引擎为核心,全面领先同类产品
-        </h2>
-        <p
-          style={{
-            marginTop: "var(--ds-space-lg)",
-            maxWidth: 780,
-            marginInline: "auto",
-            color: "var(--ds-color-text-secondary)",
-            fontSize: "var(--ds-font-size-md)",
-            lineHeight: 1.6,
-          }}
-        >
-          Wisdom 协议模糊测试在性能、检测覆盖度与可扩展性方面全面领先,
-          通过国际认证与创新算法为组织提供高可信的安全检测能力。
-        </p>
-
-        <div
-          className="wisdom-adv-grid"
-          style={{
-            marginTop: "var(--ds-space-4xl)",
-            display: "grid",
-            gridTemplateColumns: "repeat(3, minmax(0, 1fr))",
-            gap: "var(--ds-space-4xl)",
-            textAlign: "left",
-          }}
-        >
-          {items.map((it) => (
-            <div key={it.title} style={{ display: "flex", flexDirection: "column", gap: "var(--ds-space-lg)" }}>
-              <div style={{ color: "var(--ds-color-text-primary)" }}>{it.icon}</div>
-              <h3
-                style={{
-                  fontSize: "var(--ds-font-size-lg)",
-                  fontWeight: "var(--ds-font-weight-semibold)",
-                  color: "var(--ds-color-text-primary)",
-                }}
-              >
-                {it.title}
-              </h3>
-              <p
-                style={{
-                  fontSize: "var(--ds-font-size-md)",
-                  color: "var(--ds-color-text-secondary)",
-                  lineHeight: 1.7,
-                }}
-              >
-                {it.desc}
-              </p>
-            </div>
-          ))}
-        </div>
-      </div>
-      <style>{`
-        @media (max-width: 1023px) {
-          .wisdom-adv-grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
-        }
-        @media (max-width: 639px) {
-          .wisdom-adv-grid { grid-template-columns: 1fr !important; }
-        }
-      `}</style>
-    </section>
+    <AdvantageTriad
+      title="以自研智能引擎为核心,全面领先同类产品"
+      description="Wisdom 协议模糊测试在性能、检测覆盖度与可扩展性方面全面领先, 通过国际认证与创新算法为组织提供高可信的安全检测能力。"
+      items={[
+        {
+          icon: <Fingerprint size={56} strokeWidth={1.25} aria-hidden />,
+          title: "国际标准认证",
+          desc: "全球首款通过 ISO 21434 与 IEC 62443 国际安全标准认证的模糊测试工具,满足高等级安全需求行业的采购要求与合规标准。",
+        },
+        {
+          icon: <ShieldCheck size={56} strokeWidth={1.25} aria-hidden />,
+          title: "高效发现漏洞",
+          desc: "创新优选的变异算法,可以在相同时间内,通过更少的测试用例,精准发现更多的真实缺陷。",
+        },
+        {
+          icon: <AlertTriangle size={56} strokeWidth={1.25} aria-hidden />,
+          title: "全面的测试覆盖",
+          desc: "覆盖多种变异策略与交互状态模拟,实现对协议测试场景的全覆盖与边界条件的极致探索,全面提升测试深度与广度。",
+        },
+      ]}
+    />
   );
 }
 
