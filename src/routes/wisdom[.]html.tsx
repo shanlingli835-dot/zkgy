@@ -79,7 +79,7 @@ function WisdomPage() {
   return (
     <SiteShell
       header={<GlobalHeader />}
-      footer={<SourceHomeEmbed hiddenSelectors={HOME_FOOTER_HIDDEN_SELECTORS} title="页脚与行动号召" />}
+      footer={<SourceHomeEmbed hiddenSelectors={HOME_FOOTER_HIDDEN_SELECTORS} fitContent title="页脚与行动号召" />}
     >
       <Hero />
       <WhyFuzz />
