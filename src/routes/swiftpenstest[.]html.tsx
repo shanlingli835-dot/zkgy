@@ -11,7 +11,6 @@ import {
 
 import {
   CTA_HREF,
-  CtaCard,
   FeatureGrid,
   ProductHero,
   Section,
@@ -137,10 +136,6 @@ function SwiftPenPage() {
         />
       </Section>
 
-      <CtaCard
-        title="准备好为您的组织解锁 安全能力 了吗?"
-        description="马上申请 30 天免费试用，用 Swift Pentest 建立持续的攻防验证能力。"
-      />
     </SitePageShell>
   );
 }

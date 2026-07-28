@@ -13,7 +13,6 @@ import {
 
 import {
   CTA_HREF,
-  CtaCard,
   FeatureGrid,
   ProductHero,
   Section,
@@ -313,11 +312,6 @@ function AboutPage() {
         />
       </Section>
 
-      <CtaCard
-        title="准备好为您的组织解锁 安全能力 了吗?"
-        description="马上申请 30 天免费试用，或联系我们了解适合您的产品与解决方案。"
-        primaryCta={{ label: "联系我们", href: CTA_HREF }}
-      />
     </SitePageShell>
   );
 }

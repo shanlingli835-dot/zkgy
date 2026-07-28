@@ -11,7 +11,6 @@ import {
 
 import {
   CTA_HREF,
-  CtaCard,
   FeatureGrid,
   ProductHero,
   Section,
@@ -165,10 +164,6 @@ function ScaPage() {
         />
       </Section>
 
-      <CtaCard
-        title="准备好为您的组织解锁 安全能力 了吗?"
-        description="马上申请 30 天免费试用，用 Swift SCA 构建可持续演进的软件供应链安全能力。"
-      />
     </SitePageShell>
   );
 }
