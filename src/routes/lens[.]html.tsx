@@ -1,14 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Gauge, Wrench, Bug, FileText, Sparkles, Repeat, Search } from "lucide-react";
 
+import { AdvantageTriad } from "@/components/site/AdvantageTriad";
 import { HomeAccordion } from "@/components/site/HomeAccordion";
-import {
-  CTA_HREF,
-  FeatureGrid,
-  ProductHero,
-  Section,
-  SitePageShell,
-} from "@/components/site/ProductPageKit";
+import { CTA_HREF, ProductHero, Section, SitePageShell } from "@/components/site/ProductPageKit";
 
 const SEO_DESCRIPTION =
   "Wisdom Lens专为发现二进制和源代码中的深层漏洞而设计。它通过插桩实时捕获代码覆盖情况，智能引导测试用例触发更多执行路径。结合强大的变异算法，可自动、持续地挖掘崩溃和内存破坏等关键安全缺陷，显著提升漏洞发现效率，是软件开发与安全测试环节中保障软件质量的利器。";
@@ -68,29 +63,26 @@ function LensPage() {
         ]}
       />
 
-      <Section surface="subtle" title="产品优势">
-        <FeatureGrid
-          columns={3}
-          variant="topbar"
-          items={[
-            {
-              icon: <Sparkles size={22} />,
-              title: "智能化测试用例构建",
-              desc: "基于 AI 大模型自动生成高质量的测试用例，提升漏洞检测的覆盖率与准确性。",
-            },
-            {
-              icon: <Repeat size={22} />,
-              title: "漏洞自动复现与 PoC 生成",
-              desc: "自动生成最小化输入用例和 PoC 脚本，快速验证漏洞可行性，提升复现效率。",
-            },
-            {
-              icon: <Search size={22} />,
-              title: "可视化报告与根因定位",
-              desc: "展示漏洞相关的函数、调用栈和源代码片段，直观定位问题。",
-            },
-          ]}
-        />
-      </Section>
+      <AdvantageTriad
+        title="产品优势"
+        items={[
+          {
+            icon: <Sparkles size={22} />,
+            title: "智能化测试用例构建",
+            desc: "基于 AI 大模型自动生成高质量的测试用例，提升漏洞检测的覆盖率与准确性。",
+          },
+          {
+            icon: <Repeat size={22} />,
+            title: "漏洞自动复现与 PoC 生成",
+            desc: "自动生成最小化输入用例和 PoC 脚本，快速验证漏洞可行性，提升复现效率。",
+          },
+          {
+            icon: <Search size={22} />,
+            title: "可视化报告与根因定位",
+            desc: "展示漏洞相关的函数、调用栈和源代码片段，直观定位问题。",
+          },
+        ]}
+      />
     </SitePageShell>
   );
 }

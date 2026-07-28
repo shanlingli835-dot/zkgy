@@ -12,6 +12,7 @@ import {
   Building2,
 } from "lucide-react";
 
+import { AdvantageTriad } from "@/components/site/AdvantageTriad";
 import { HomeAccordion } from "@/components/site/HomeAccordion";
 import {
   CTA_HREF,
@@ -114,29 +115,26 @@ function SwiftPenPage() {
         ]}
       />
 
-      <Section surface="subtle" title="产品优势">
-        <FeatureGrid
-          columns={3}
-          variant="topbar"
-          items={[
-            {
-              icon: <Crosshair size={22} />,
-              title: "高精准",
-              desc: "内置漏洞验证与利用组件，确保漏洞经过充分验证并可深入利用进行风险检查。",
-            },
-            {
-              icon: <BellRing size={22} />,
-              title: "自预警",
-              desc: "通过攻击模拟与态势感知联动，主动检测并预警网络资产风险。",
-            },
-            {
-              icon: <Coins size={22} />,
-              title: "低成本",
-              desc: "以自动化为主的人机结合模式，降低安全验证的人力依赖与实施成本。",
-            },
-          ]}
-        />
-      </Section>
+      <AdvantageTriad
+        title="产品优势"
+        items={[
+          {
+            icon: <Crosshair size={22} />,
+            title: "高精准",
+            desc: "内置漏洞验证与利用组件，确保漏洞经过充分验证并可深入利用进行风险检查。",
+          },
+          {
+            icon: <BellRing size={22} />,
+            title: "自预警",
+            desc: "通过攻击模拟与态势感知联动，主动检测并预警网络资产风险。",
+          },
+          {
+            icon: <Coins size={22} />,
+            title: "低成本",
+            desc: "以自动化为主的人机结合模式，降低安全验证的人力依赖与实施成本。",
+          },
+        ]}
+      />
 
       <Section title="DevSecOps集成">
         <div style={{ display: "flex", justifyContent: "center" }}>
