@@ -15,6 +15,7 @@ export const HOME_FOOTER_HIDDEN_SELECTORS = [
   "main > .jasper-logo-marquee",
   "main > .integrations-three",
   "main > .why-tabs",
+  "main > .pt-section",
   "main > .platform-section",
   "main > .floating-icons-hero",
 ];
