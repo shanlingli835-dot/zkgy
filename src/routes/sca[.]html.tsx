@@ -9,37 +9,33 @@ import {
   FileBadge2,
 } from "lucide-react";
 
+import { HomeAccordion } from "@/components/site/HomeAccordion";
 import {
   CTA_HREF,
   FeatureGrid,
+  PrimaryCta,
   ProductHero,
   Section,
   SitePageShell,
   StatRow,
-  TagCloud,
 } from "@/components/site/ProductPageKit";
+
+const SEO_DESCRIPTION =
+  "固件漏洞挖掘工具是一款强大的二进制反汇编安全评估平台，旨在提供全面的IoT设备固件安全解决方案。我们自动进行二进制固件分析，提供项目数字孪生指纹工程、高度多属性检测引擎、特性自软件组成分析以及基于特征的智能漏洞过滤机制，全面保障您的软件供应链安全。我们支持20多种硬件架构和操作系统、60多种文件格式，能够精确地识别软件中的公开漏洞和潜在的二进制固件未知漏洞。";
 
 export const Route = createFileRoute("/sca.html")({
   head: () => ({
     meta: [
-      { title: "Swift SCA 软件成分分析 — 中科固源" },
-      {
-        name: "description",
-        content:
-          "Swift SCA 精准检测软件供应链的漏洞与风险，支持二进制与源代码分析，覆盖 20+ 硬件架构、60+ 文件格式，保障应用安全与合规。",
-      },
+      { title: "Swift SCA 软件成分分析 - 中科固源" },
+      { name: "description", content: SEO_DESCRIPTION },
       {
         name: "keywords",
         content:
-          "SCA，软件成分分析，二进制固件分析，SBOM，IoT 固件安全，供应链安全",
+          "二进制固件分析、固件漏洞扫描、IoT设备固件安全、二进制反汇编安全评估平台、SCA",
       },
-      { property: "og:title", content: "Swift SCA 软件成分分析 — 中科固源" },
-      {
-        property: "og:description",
-        content:
-          "覆盖源代码与二进制的软件成分分析平台，帮助企业管理 SBOM、漏洞与合规。",
-      },
-      { property: "og:type", content: "product" },
+      { property: "og:title", content: "Swift SCA 软件成分分析 - 中科固源" },
+      { property: "og:description", content: SEO_DESCRIPTION },
+      { property: "og:type", content: "website" },
       { property: "og:url", content: "/sca.html" },
     ],
     links: [{ rel: "canonical", href: "/sca.html" }],
@@ -52,90 +48,59 @@ function ScaPage() {
     <SitePageShell>
       <ProductHero
         eyebrow="产品 · 软件成分分析"
-        title={
-          <>
-            Swift SCA
-            <br />
-            软件成分分析平台
-          </>
-        }
-        description="面向源代码、二进制与固件的成分分析平台，帮助组织识别开源与第三方组件、生成高精度 SBOM，全面守护软件供应链安全与合规。"
+        title="Swift SCA 软件成分分析"
+        description="精准检测软件供应链的漏洞与风险，保障组织应用安全与合规。"
         primaryCta={{ label: "免费试用", href: CTA_HREF }}
-        secondaryCta={{ label: "联系我们", href: CTA_HREF }}
+        secondaryCta={{ label: "免费试用", href: CTA_HREF }}
       />
 
       <Section
-        eyebrow="OSS 全生命周期"
-        title="统一的开源治理策略，量化每一次决策"
-        intro="以统一的开源政策贯穿 SDL 全流程，帮助团队在提交、构建、发布、运营各阶段量化风险与收益。"
+        eyebrow="OSS"
+        title="OSS 在整个软件开发生命周期中采用统一的开源政策"
       >
         <StatRow
           stats={[
-            { value: "100%", label: "评估源代码与二进制中的全部依赖" },
-            { value: "90%+", label: "多数代码库超过 90% 的代码来自开源" },
-            { value: "50%", label: "预置策略自动筛除约 50% 漏洞与风险" },
-            { value: "70%", label: "安全审计平均耗时减少 70%" },
+            { value: "100%", label: "评估源代码和二进制文件中存在的所有依赖" },
+            { value: "90%+", label: "大多数代码库中超过90%的代码 来自开源软件" },
+            { value: "50%", label: "使用预构建的策略和最佳实践自动筛除 50%漏洞和风险" },
+            { value: "70%", label: "安全审计平均时间减少 70%" },
           ]}
         />
       </Section>
 
       <HomeAccordion
-        title="从 SBOM 生成到事件响应的一体化能力"
+        title="产品功能"
         items={[
           {
             icon: <Boxes size={56} strokeWidth={1.25} aria-hidden />,
-            title: "SBOM 与资产管理",
-            desc: "基于源代码、二进制与 SBOM 文件进行同源、相似度与许可证检测，生成高精度资产清单并支持审批流程。",
+            title: "SBOM与资产管理",
+            desc: "基于上传的二进制文件、源代码及SBOM文件，进行同源检测、相似性检测、许可证检测，生成高精度、完整的 SBOM 与资产清单。支持自动修复、验证及跨团队的审批流程管理。",
           },
           {
             icon: <ShieldAlert size={56} strokeWidth={1.25} aria-hidden />,
-            title: "漏洞与风险管理",
-            desc: "自动识别与分级产品风险、漏洞与代码缺陷，与威胁建模、渗透测试和模糊测试联动加速修复。",
+            title: "保障与漏洞管理",
+            desc: "基于风险数据系统，自动识别并划分产品风险、漏洞和代码缺陷；并将结果与威胁建模、渗透测试和模糊测试相结合，利用人工智能加速修复与缓解。",
           },
           {
             icon: <ClipboardCheck size={56} strokeWidth={1.25} aria-hidden />,
-            title: "合规与法规管理",
-            desc: "面向 FDA PMA、ISO 21434、CRA 及自定义策略框架，提供合规证据的自动化生成与集中管理。",
+            title: "网络合规性",
+            desc: "为 FDA PMA、ISO 21434、CRA 及组织自定义的政策框架，提供合规证据的管理与自动化生成。",
           },
           {
             icon: <AlarmClock size={56} strokeWidth={1.25} aria-hidden />,
             title: "安全事件响应",
-            desc: "持续监测多重威胁源，提供上下文相关的预警与调查支持，保障产品发布后的长期安全。",
+            desc: "持续监测多重威胁源，提供上下文相关的预警信息，并支持调查分析，以确保您的产品在发布后长期保持安全。",
           },
         ]}
       />
 
-
-      <Section
-        eyebrow="覆盖范围"
-        title="支持 20+ 硬件架构和操作系统、60+ 文件格式"
-        intro="从主流服务器到嵌入式设备，从源代码到已发布固件，均可被 Swift SCA 覆盖分析。"
-      >
-        <TagCloud
-          tags={[
-            "x86 / x86_64",
-            "ARM / ARM64",
-            "MIPS",
-            "PowerPC",
-            "RISC-V",
-            "Linux",
-            "Windows",
-            "RTOS",
-            "Android",
-            "ELF / PE / Mach-O",
-            "JAR / APK",
-            "Docker Image",
-            "固件镜像",
-            "源代码仓库",
-          ]}
-        />
+      <Section title="支持20多种硬件架构和操作系统、60多种文件格式">
+        <div style={{ display: "flex", justifyContent: "center" }}>
+          <PrimaryCta href={CTA_HREF}>免费试用</PrimaryCta>
+        </div>
       </Section>
 
-      <Section
-        surface="subtle"
-        eyebrow="产品优势"
-        title="为什么选择 Swift SCA"
-      >
+      <Section surface="subtle" title="产品优势">
         <FeatureGrid
           columns={3}
           variant="topbar"
@@ -143,22 +108,21 @@ function ScaPage() {
             {
               icon: <Sparkles size={22} />,
               title: "风险主动防御",
-              desc: "快速发现、优先级排序并高效缓解最关键的网络风险、合规违规与供应链威胁，覆盖所有产品线。",
+              desc: "快速发现、优先级排序并高效缓解最关键的网络风险、合规性违规及供应链威胁，覆盖您的所有产品线。",
             },
             {
               icon: <FileBadge2 size={22} />,
               title: "合规保障",
-              desc: "内置法规策略与安全评估深度结合，快速生成 ISO、FDA、UNECE 及 50+ 其他标准的合规报告。",
+              desc: "内置的法规策略与细致的安全评估深度结合，快速生成符合监管要求的报告，覆盖 ISO、FDA、UNECE 及 50+ 其他标准。",
             },
             {
               icon: <Database size={22} />,
               title: "海量知识库",
-              desc: "覆盖 GitHub / Sourceforge 等开源库、10 万+ 二进制/Jar 闭源库，以及 CVE/CNVD 私有漏洞库。",
+              desc: "GitHub/Sourceforge 等开源库；10万+ 二进制/Jar 等闭源库；CVE/CNVD私有漏洞库，支持 GIT、SVN 及文件夹导入。",
             },
           ]}
         />
       </Section>
-
     </SitePageShell>
   );
 }
