@@ -10,11 +10,11 @@ import {
 } from "lucide-react";
 
 import { HomeAccordion } from "@/components/site/HomeAccordion";
+import HeroPage from "@/components/ui/hero-page";
 import {
   CTA_HREF,
   FeatureGrid,
   PrimaryCta,
-  ProductHero,
   Section,
   SitePageShell,
   StatRow,
