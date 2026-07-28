@@ -75,29 +75,26 @@ function SwiftCodePage() {
         </div>
       </Section>
 
-      <Section surface="subtle" title="产品优势">
-        <FeatureGrid
-          columns={3}
-          variant="topbar"
-          items={[
-            {
-              icon: <Target size={22} />,
-              title: "精度与效率平衡",
-              desc: "采用了多项国际先进静态分析技术，能够进行路径敏感、上下文敏感、对象敏感分析，检测效率达到了平均每小时150万行。",
-            },
-            {
-              icon: <ListChecks size={22} />,
-              title: "检测类型全面",
-              desc: "兼顾了漏洞、缺陷及编码规则等全部类型的检测，全面发现代码中的各类问题。",
-            },
-            {
-              icon: <FileBadge2 size={22} />,
-              title: "专业标准符合度高",
-              desc: "支持 MISRA 系列、CERT系列、ISO17961、CN-CERT 、 GJB 5369 、GJB 8114 、航天921等质量及安全编码标准。",
-            },
-          ]}
-        />
-      </Section>
+      <AdvantageTriad
+        title="产品优势"
+        items={[
+          {
+            icon: <Target size={22} />,
+            title: "精度与效率平衡",
+            desc: "采用了多项国际先进静态分析技术，能够进行路径敏感、上下文敏感、对象敏感分析，检测效率达到了平均每小时150万行。",
+          },
+          {
+            icon: <ListChecks size={22} />,
+            title: "检测类型全面",
+            desc: "兼顾了漏洞、缺陷及编码规则等全部类型的检测，全面发现代码中的各类问题。",
+          },
+          {
+            icon: <FileBadge2 size={22} />,
+            title: "专业标准符合度高",
+            desc: "支持 MISRA 系列、CERT系列、ISO17961、CN-CERT 、 GJB 5369 、GJB 8114 、航天921等质量及安全编码标准。",
+          },
+        ]}
+      />
     </SitePageShell>
   );
 }
