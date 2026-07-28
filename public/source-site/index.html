@@ -8851,21 +8851,23 @@ main > :not(.jasper-hero-shell):not(.solution-cta-bar) :where(h1, h2, h3, h4, h5
       margin: clamp(32px, 4vw, 48px) auto 0;
       padding: 4px;
       background: var(--pt-surface);
-      border-radius: 999px;
+      border-radius: 6px;
     }
     .pt-tabs__tab {
       box-sizing: border-box;
-      padding: 12px 20px;
+      padding: 10px 16px;
       border: 0;
-      border-radius: 999px;
+      border-radius: 4px;
       background: transparent;
       color: var(--pt-ink);
       font-family: var(--font-sans);
-      font-size: 16px;
-      line-height: 1.2;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 20px;
       cursor: pointer;
       transition: background-color 140ms ease, color 140ms ease;
     }
+
     .pt-tabs__tab:hover { background: rgba(21, 21, 21, 0.06); }
     .pt-tabs__tab.is-active, .pt-tabs__tab[aria-selected="true"] { background: var(--pt-ink); color: #ffffff; }
     .pt-tabs__tab:focus-visible { outline: 2px solid var(--pt-ink); outline-offset: 2px; }
