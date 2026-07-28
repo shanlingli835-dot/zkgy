@@ -1,10 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Code2, Cpu, Gauge, Copy, Target, ListChecks, FileBadge2 } from "lucide-react";
 
+import { AdvantageTriad } from "@/components/site/AdvantageTriad";
 import { HomeAccordion } from "@/components/site/HomeAccordion";
 import {
   CTA_HREF,
-  FeatureGrid,
   PrimaryCta,
   ProductHero,
   Section,
