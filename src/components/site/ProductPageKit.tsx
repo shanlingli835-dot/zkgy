@@ -29,6 +29,7 @@ export function SitePageShell({ children }: { children: ReactNode }) {
       footer={
         <SourceHomeEmbed
           hiddenSelectors={HOME_FOOTER_HIDDEN_SELECTORS}
+          fitContent
           title="页脚与行动号召"
         />
       }
