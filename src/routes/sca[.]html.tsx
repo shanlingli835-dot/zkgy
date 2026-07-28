@@ -9,11 +9,11 @@ import {
   FileBadge2,
 } from "lucide-react";
 
+import { AdvantageTriad } from "@/components/site/AdvantageTriad";
 import { HomeAccordion } from "@/components/site/HomeAccordion";
 import HeroPage from "@/components/ui/hero-page";
 import {
   CTA_HREF,
-  FeatureGrid,
   PrimaryCta,
   Section,
   SitePageShell,
@@ -101,29 +101,27 @@ function ScaPage() {
         </div>
       </Section>
 
-      <Section surface="subtle" title="产品优势">
-        <FeatureGrid
-          columns={3}
-          variant="topbar"
-          items={[
-            {
-              icon: <Sparkles size={22} />,
-              title: "风险主动防御",
-              desc: "快速发现、优先级排序并高效缓解最关键的网络风险、合规性违规及供应链威胁，覆盖您的所有产品线。",
-            },
-            {
-              icon: <FileBadge2 size={22} />,
-              title: "合规保障",
-              desc: "内置的法规策略与细致的安全评估深度结合，快速生成符合监管要求的报告，覆盖 ISO、FDA、UNECE 及 50+ 其他标准。",
-            },
-            {
-              icon: <Database size={22} />,
-              title: "海量知识库",
-              desc: "GitHub/Sourceforge 等开源库；10万+ 二进制/Jar 等闭源库；CVE/CNVD私有漏洞库，支持 GIT、SVN 及文件夹导入。",
-            },
-          ]}
-        />
-      </Section>
+      <AdvantageTriad
+        title="产品优势"
+        items={[
+          {
+            icon: <Sparkles size={56} strokeWidth={1.25} aria-hidden />,
+            title: "风险主动防御",
+            desc: "快速发现、优先级排序并高效缓解最关键的网络风险、合规性违规及供应链威胁，覆盖您的所有产品线。",
+          },
+          {
+            icon: <FileBadge2 size={56} strokeWidth={1.25} aria-hidden />,
+            title: "合规保障",
+            desc: "内置的法规策略与细致的安全评估深度结合，快速生成符合监管要求的报告，覆盖 ISO、FDA、UNECE 及 50+ 其他标准。",
+          },
+          {
+            icon: <Database size={56} strokeWidth={1.25} aria-hidden />,
+            title: "海量知识库",
+            desc: "GitHub/Sourceforge 等开源库；10万+ 二进制/Jar 等闭源库；CVE/CNVD私有漏洞库，支持 GIT、SVN 及文件夹导入。",
+          },
+        ]}
+      />
+
     </SitePageShell>
   );
 }
