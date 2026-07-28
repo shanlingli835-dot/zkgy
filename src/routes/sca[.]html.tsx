@@ -79,37 +79,32 @@ function ScaPage() {
         />
       </Section>
 
-      <Section
-        surface="subtle"
-        eyebrow="产品功能"
+      <HomeAccordion
         title="从 SBOM 生成到事件响应的一体化能力"
-      >
-        <FeatureGrid
-          columns={4}
-          items={[
-            {
-              icon: <Boxes size={22} />,
-              title: "SBOM 与资产管理",
-              desc: "基于源代码、二进制与 SBOM 文件进行同源、相似度与许可证检测，生成高精度资产清单并支持审批流程。",
-            },
-            {
-              icon: <ShieldAlert size={22} />,
-              title: "漏洞与风险管理",
-              desc: "自动识别与分级产品风险、漏洞与代码缺陷，与威胁建模、渗透测试和模糊测试联动加速修复。",
-            },
-            {
-              icon: <ClipboardCheck size={22} />,
-              title: "合规与法规管理",
-              desc: "面向 FDA PMA、ISO 21434、CRA 及自定义策略框架，提供合规证据的自动化生成与集中管理。",
-            },
-            {
-              icon: <AlarmClock size={22} />,
-              title: "安全事件响应",
-              desc: "持续监测多重威胁源，提供上下文相关的预警与调查支持，保障产品发布后的长期安全。",
-            },
-          ]}
-        />
-      </Section>
+        items={[
+          {
+            icon: <Boxes size={56} strokeWidth={1.25} aria-hidden />,
+            title: "SBOM 与资产管理",
+            desc: "基于源代码、二进制与 SBOM 文件进行同源、相似度与许可证检测，生成高精度资产清单并支持审批流程。",
+          },
+          {
+            icon: <ShieldAlert size={56} strokeWidth={1.25} aria-hidden />,
+            title: "漏洞与风险管理",
+            desc: "自动识别与分级产品风险、漏洞与代码缺陷，与威胁建模、渗透测试和模糊测试联动加速修复。",
+          },
+          {
+            icon: <ClipboardCheck size={56} strokeWidth={1.25} aria-hidden />,
+            title: "合规与法规管理",
+            desc: "面向 FDA PMA、ISO 21434、CRA 及自定义策略框架，提供合规证据的自动化生成与集中管理。",
+          },
+          {
+            icon: <AlarmClock size={56} strokeWidth={1.25} aria-hidden />,
+            title: "安全事件响应",
+            desc: "持续监测多重威胁源，提供上下文相关的预警与调查支持，保障产品发布后的长期安全。",
+          },
+        ]}
+      />
+
 
       <Section
         eyebrow="覆盖范围"
