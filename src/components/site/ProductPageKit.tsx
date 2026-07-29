@@ -233,7 +233,7 @@ export function ProductHero({
       style={{
         position: "relative",
         overflow: "hidden",
-        backgroundColor: "var(--ds-color-surface-inverse)",
+        backgroundColor: "#151515",
         color: "var(--ds-color-text-inverse)",
         minHeight: 700,
         display: "flex",
@@ -241,16 +241,7 @@ export function ProductHero({
         padding: "var(--ds-section-y-desktop) var(--ds-gutter-desktop)",
       }}
     >
-      <div
-        aria-hidden
-        style={{
-          position: "absolute",
-          inset: 0,
-          background:
-            "radial-gradient(1000px 500px at 15% 20%, color-mix(in srgb, var(--ds-color-action-primary) 28%, transparent), transparent 60%), radial-gradient(800px 400px at 85% 80%, color-mix(in srgb, #1e40af 30%, transparent), transparent 60%)",
-          pointerEvents: "none",
-        }}
-      />
+
       <div
         className="ds-hero-grid"
         style={{
