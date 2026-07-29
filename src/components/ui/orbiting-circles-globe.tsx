@@ -1,63 +1,75 @@
 import { useEffect, useState } from "react";
-import {
-  Binary,
-  Cpu,
-  FileCode2,
-  FileArchive,
-  HardDrive,
-  Layers,
-  MemoryStick,
-  Package,
-  Terminal,
-} from "lucide-react";
 
 import ParticleSphereAnimation from "@/components/ui/orbiting-circles-globe-utils/particle-sphere";
 
-type OrbitIcon = {
-  icon: React.ReactNode;
-  alt: string;
-  angle: number;
-};
+type OrbitIcon = { src: string; alt: string; angle: number };
 
 type Orbit = {
   /** 轨道直径（px，桌面端） */
   size: number;
-  /** 一圈耗时（秒） */
   duration: number;
   icons: OrbitIcon[];
-  /** 手机端是否隐藏（最外层轨道） */
   hideOnMobile?: boolean;
 };
 
-const ICON_PROPS = { size: 22, strokeWidth: 1.6, "aria-hidden": true } as const;
-
 const orbits: Orbit[] = [
   {
-    size: 300,
-    duration: 40,
-    icons: [
-      { icon: <Cpu {...ICON_PROPS} />, alt: "硬件架构", angle: -60 },
-      { icon: <Binary {...ICON_PROPS} />, alt: "二进制", angle: 0 },
-      { icon: <Terminal {...ICON_PROPS} />, alt: "操作系统", angle: 60 },
-    ],
-  },
-  {
     size: 440,
-    duration: 52,
+    duration: 18,
     icons: [
-      { icon: <FileCode2 {...ICON_PROPS} />, alt: "源代码文件", angle: 0 },
-      { icon: <Package {...ICON_PROPS} />, alt: "软件包", angle: -90 },
-      { icon: <MemoryStick {...ICON_PROPS} />, alt: "固件", angle: 140 },
+      {
+        src: "https://images.shadcnspace.com/assets/svgs/supabase.svg",
+        alt: "Supabase",
+        angle: -60,
+      },
+      {
+        src: "https://images.shadcnspace.com/assets/svgs/gemini.svg",
+        alt: "gemini",
+        angle: 0,
+      },
+      {
+        src: "https://images.shadcnspace.com/assets/svgs/make.svg",
+        alt: "Make",
+        angle: 60,
+      },
     ],
   },
   {
-    size: 580,
-    duration: 68,
+    size: 560,
+    duration: 24,
+    icons: [
+      {
+        src: "https://images.shadcnspace.com/assets/svgs/figma.svg",
+        alt: "Figma",
+        angle: 0,
+      },
+      {
+        src: "https://images.shadcnspace.com/assets/svgs/slack.svg",
+        alt: "Slack",
+        angle: -90,
+      },
+    ],
+  },
+  {
+    size: 690,
+    duration: 30,
     hideOnMobile: true,
     icons: [
-      { icon: <Layers {...ICON_PROPS} />, alt: "镜像分层", angle: -60 },
-      { icon: <FileArchive {...ICON_PROPS} />, alt: "归档文件", angle: 0 },
-      { icon: <HardDrive {...ICON_PROPS} />, alt: "存储介质", angle: 60 },
+      {
+        src: "https://images.shadcnspace.com/assets/svgs/clude.svg",
+        alt: "Claude",
+        angle: -60,
+      },
+      {
+        src: "https://images.shadcnspace.com/assets/svgs/react.svg",
+        alt: "react",
+        angle: 0,
+      },
+      {
+        src: "https://images.shadcnspace.com/assets/svgs/python.svg",
+        alt: "python",
+        angle: 60,
+      },
     ],
   },
 ];
@@ -74,14 +86,14 @@ export function OrbitingCirclesGlobe() {
   }, []);
 
   return (
-    <div className="ocg-root" aria-hidden>
+    <div className="ocg-root">
       <div className="ocg-stage">
-        {/* 中心粒子地球 */}
+        {/* Center particle globe */}
         <div className="ocg-globe">
-          <ParticleSphereAnimation size={300} count={900} paused={reduced} />
+          <ParticleSphereAnimation size={520} count={2600} paused={reduced} />
         </div>
 
-        {/* 环形轨道 */}
+        {/* Orbiting rings */}
         {orbits.map((orbit, index) => {
           const isCW = index % 2 === 0;
           const orbitAnim = isCW ? "ocg-orbit-cw" : "ocg-orbit-ccw";
@@ -104,7 +116,7 @@ export function OrbitingCirclesGlobe() {
                 width: orbit.size,
                 height: orbit.size,
                 animationName: reduced ? "none" : orbitAnim,
-                animationDuration: `${orbit.duration}s`,
+                animationDuration: `${orbit.duration * 4}s`,
               }}
             >
               {allIcons.map((iconData) => (
@@ -118,13 +130,20 @@ export function OrbitingCirclesGlobe() {
                     style={{
                       ["--counter-offset" as string]: `${-iconData.angle}deg`,
                       animationName: reduced ? "none" : counterAnim,
-                      animationDuration: `${orbit.duration}s`,
+                      animationDuration: `${orbit.duration * 4}s`,
                       transform: reduced
                         ? `rotate(${-iconData.angle}deg)`
                         : undefined,
                     }}
                   >
-                    {iconData.icon}
+                    <img
+                      src={iconData.src}
+                      alt=""
+                      width={26}
+                      height={26}
+                      loading="lazy"
+                      decoding="async"
+                    />
                   </div>
                 </div>
               ))}
@@ -160,9 +179,9 @@ export function OrbitingCirclesGlobe() {
         .ocg-stage {
           position: absolute;
           left: 50%;
-          bottom: -150px;
-          width: 620px;
-          height: 620px;
+          bottom: -260px;
+          width: 700px;
+          height: 700px;
           transform: translateX(-50%);
           transform-origin: bottom center;
         }
@@ -178,41 +197,38 @@ export function OrbitingCirclesGlobe() {
           top: 50%;
           transform: translate(-50%, -50%);
           border-radius: var(--ds-radius-round);
-          border: var(--ds-border-width-default) solid var(--ds-color-border-subtle, rgba(0,0,0,0.08));
+          border: var(--ds-border-width-default) solid rgba(0, 0, 0, 0.08);
           animation-timing-function: linear;
           animation-iteration-count: infinite;
         }
-        .ocg-slot {
-          position: absolute;
-          inset: 0;
-        }
+        .ocg-slot { position: absolute; inset: 0; }
         .ocg-badge {
           position: absolute;
           top: 0;
           left: 50%;
-          margin-left: -24px;
-          margin-top: -24px;
-          width: 48px;
-          height: 48px;
+          margin-left: -26px;
+          margin-top: -26px;
+          width: 52px;
+          height: 52px;
           display: flex;
           align-items: center;
           justify-content: center;
           border-radius: var(--ds-radius-round);
           background: #ffffff;
-          border: var(--ds-border-width-default) solid rgba(0,0,0,0.08);
-          box-shadow: 0 2px 8px rgba(15, 23, 42, 0.08);
-          color: var(--ds-color-text-primary);
+          border: var(--ds-border-width-default) solid rgba(0, 0, 0, 0.07);
+          box-shadow: 0 2px 10px rgba(15, 23, 42, 0.08);
           animation-timing-function: linear;
           animation-iteration-count: infinite;
         }
+        .ocg-badge img { width: 26px; height: 26px; display: block; }
 
         @media (max-width: 1023px) {
           .ocg-root { height: 460px; }
-          .ocg-stage { transform: translateX(-50%) scale(0.82); bottom: -120px; }
+          .ocg-stage { transform: translateX(-50%) scale(0.8); bottom: -220px; }
         }
         @media (max-width: 639px) {
-          .ocg-root { height: 380px; }
-          .ocg-stage { transform: translateX(-50%) scale(0.7); bottom: -100px; }
+          .ocg-root { height: 360px; }
+          .ocg-stage { transform: translateX(-50%) scale(0.62); bottom: -190px; }
           .ocg-ring-outer { display: none; }
         }
         @media (prefers-reduced-motion: reduce) {
