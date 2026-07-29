@@ -12,6 +12,8 @@ import {
 import { AdvantageTriad } from "@/components/site/AdvantageTriad";
 import { HomeAccordion } from "@/components/site/HomeAccordion";
 import HeroPage from "@/components/ui/hero-page";
+import OrbitingCirclesGlobe from "@/components/ui/orbiting-circles-globe";
+
 import {
   CTA_HREF,
   PrimaryCta,
@@ -96,10 +98,12 @@ function ScaPage() {
       />
 
       <Section title="支持20多种硬件架构和操作系统、60多种文件格式">
+        <OrbitingCirclesGlobe />
         <div style={{ display: "flex", justifyContent: "center" }}>
           <PrimaryCta href={CTA_HREF}>免费试用</PrimaryCta>
         </div>
       </Section>
+
 
       <AdvantageTriad
         title="产品优势"
