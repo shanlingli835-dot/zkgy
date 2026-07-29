@@ -167,11 +167,10 @@ export { AnimatedGroup };
 
 /* ---------------- HeroPage ---------------- */
 
-const defaultImages = [
-  "https://pub-940ccf6255b54fa799a9b01050e6c227.r2.dev/ruixen_moon.png",
-  "https://pub-940ccf6255b54fa799a9b01050e6c227.r2.dev/ruixen_moon_2.png",
-  "https://pub-940ccf6255b54fa799a9b01050e6c227.r2.dev/ruixen_hero_gradient.jpg",
-];
+const defaultPreviewImage = {
+  src: "/source-site/assets/secops-dashboard-placeholder.svg",
+  alt: "Swift SCA 软件界面示意图",
+};
 
 export type HeroPageProps = {
   badge?: string;
@@ -181,7 +180,6 @@ export type HeroPageProps = {
   primaryCta?: { label: string; href: string };
   secondaryCta?: { label: string; href: string };
   previewImage?: { src: string; alt: string };
-  images?: string[];
   className?: string;
 };
 
@@ -204,79 +202,60 @@ export default function HeroPage({
   description,
   primaryCta,
   secondaryCta,
-  previewImage,
-  images = defaultImages,
+  previewImage = defaultPreviewImage,
   className,
 }: HeroPageProps) {
-  const [currentIndex, setCurrentIndex] = React.useState(0);
-
-  React.useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % images.length);
-    }, 3000);
-    return () => clearInterval(interval);
-  }, [images.length]);
-
   return (
     <section
       className={cn(
-        "relative isolate overflow-hidden bg-neutral-950 text-white",
+        "relative isolate flex min-h-[700px] items-center overflow-hidden text-[color:var(--ds-color-text-inverse)]",
         className,
       )}
+      style={{ backgroundColor: "var(--ds-color-surface-inverse)" }}
     >
       {/* Background */}
       <div className="pointer-events-none absolute inset-0 -z-10">
-        <AnimatePresence mode="sync">
-          <motion.img
-            key={images[currentIndex]}
-            src={images[currentIndex]}
-            alt=""
-            aria-hidden
-            initial={{ opacity: 0, scale: 1.08 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 1.4, ease: "easeInOut" }}
-            className="absolute inset-0 h-full w-full object-cover"
-          />
-        </AnimatePresence>
-        <div className="absolute inset-0 bg-neutral-950/70" />
-        <div className="absolute inset-0 bg-gradient-to-b from-neutral-950/60 via-neutral-950/40 to-neutral-950" />
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              "radial-gradient(1000px 500px at 15% 20%, color-mix(in srgb, var(--ds-color-action-primary) 28%, transparent), transparent 60%), radial-gradient(800px 400px at 85% 80%, color-mix(in srgb, var(--ds-color-action-primary) 18%, transparent), transparent 60%)",
+          }}
+        />
       </div>
 
       {/* Hero Content */}
-      <div className="mx-auto flex max-w-5xl flex-col items-center px-6 pt-28 pb-20 text-center sm:pt-36">
+      <div className="mx-auto grid w-full max-w-[var(--ds-container-page)] grid-cols-1 items-center gap-[var(--ds-space-4xl)] px-[var(--ds-gutter-mobile)] py-[var(--ds-section-y-desktop)] md:px-[var(--ds-gutter-tablet)] lg:grid-cols-[minmax(0,1fr)_minmax(0,600px)] lg:px-[var(--ds-gutter-desktop)]">
         <AnimatedGroup variants={transitionVariants} className="w-full">
           {badge ? (
-            <div className="mb-8 flex justify-center">
-              <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-xs font-medium tracking-wide text-white/90 backdrop-blur">
-                <span className="h-1.5 w-1.5 rounded-full bg-white/80" />
+            <div className="mb-[var(--ds-space-lg)] flex">
+              <span className="inline-flex items-center gap-[var(--ds-space-sm)] rounded-[var(--ds-radius-round)] border border-[color:var(--ds-color-border-inverse)] px-[var(--ds-space-md)] py-[var(--ds-space-xs)] text-sm text-[color:var(--ds-color-text-inverse-secondary)]">
+                <span className="h-1.5 w-1.5 rounded-[var(--ds-radius-round)] bg-[color:var(--ds-color-text-inverse-secondary)]" />
                 {badge}
               </span>
             </div>
           ) : null}
 
-          <h1 className="text-balance text-4xl font-semibold leading-tight tracking-tight sm:text-5xl md:text-6xl">
+          <h1 className="text-balance text-4xl font-semibold leading-tight sm:text-5xl md:text-6xl">
             {titleLeading}
             {titleTrailing ? (
               <>
                 {" "}
-                <span className="bg-gradient-to-r from-white via-white/80 to-white/50 bg-clip-text text-transparent">
-                  {titleTrailing}
-                </span>
+                <span>{titleTrailing}</span>
               </>
             ) : null}
           </h1>
 
-          <p className="mx-auto mt-6 max-w-2xl text-pretty text-base leading-relaxed text-white/70 sm:text-lg">
+          <p className="mt-[var(--ds-space-xl)] max-w-2xl text-pretty text-base leading-relaxed text-[color:var(--ds-color-text-inverse-secondary)] sm:text-lg">
             {description}
           </p>
 
           {primaryCta || secondaryCta ? (
-            <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
+            <div className="mt-[var(--ds-space-2xl)] flex flex-col gap-[var(--ds-space-md)] sm:flex-row">
               {primaryCta ? (
                 <a
                   href={primaryCta.href}
-                  className="inline-flex h-11 min-w-[9rem] items-center justify-center rounded-lg bg-white px-8 text-sm font-semibold text-neutral-950 transition-colors hover:bg-white/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+                  className="inline-flex min-h-[var(--ds-size-control-min)] items-center justify-center rounded-[var(--ds-radius-control)] bg-[color:var(--ds-color-action-primary)] px-[var(--ds-space-2xl)] py-[var(--ds-space-md)] text-sm font-semibold text-[color:var(--ds-color-action-primary-foreground)] transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[color:var(--ds-color-border-inverse)]"
                 >
                   {primaryCta.label}
                 </a>
@@ -284,27 +263,33 @@ export default function HeroPage({
               {secondaryCta ? (
                 <a
                   href={secondaryCta.href}
-                  className="inline-flex h-11 min-w-[9rem] items-center justify-center rounded-lg border border-white/25 bg-white/5 px-8 text-sm font-semibold text-white backdrop-blur transition-colors hover:bg-white/15 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+                  className="inline-flex min-h-[var(--ds-size-control-min)] items-center justify-center rounded-[var(--ds-radius-control)] border border-[color:var(--ds-color-border-inverse)] px-[var(--ds-space-2xl)] py-[var(--ds-space-md)] text-sm font-semibold text-[color:var(--ds-color-text-inverse)] transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[color:var(--ds-color-border-inverse)]"
                 >
                   {secondaryCta.label}
                 </a>
               ) : null}
             </div>
           ) : null}
-
-          {previewImage ? (
-            <div className="mt-16 w-full">
-              <div className="relative mx-auto max-w-4xl rounded-2xl border border-white/15 bg-white/5 p-2 shadow-2xl shadow-black/40 backdrop-blur">
-                <img
-                  src={previewImage.src}
-                  alt={previewImage.alt}
-                  loading="lazy"
-                  className="w-full rounded-xl object-cover"
-                />
-              </div>
-            </div>
-          ) : null}
         </AnimatedGroup>
+
+        {previewImage ? (
+          <motion.div
+            initial={{ opacity: 0, filter: "blur(12px)", y: 12 }}
+            animate={{ opacity: 1, filter: "blur(0px)", y: 0 }}
+            transition={{ type: "spring", bounce: 0.3, duration: 1.5, delay: 0.2 }}
+            className="w-full max-w-[600px] justify-self-end"
+            style={{ aspectRatio: "600 / 437.5" }}
+          >
+            <div className="h-full w-full overflow-hidden rounded-[var(--ds-radius-surface)] border border-[color:var(--ds-color-border-inverse)] bg-[color:var(--ds-color-surface-default)] p-[var(--ds-space-sm)]">
+              <img
+                src={previewImage.src}
+                alt={previewImage.alt}
+                loading="eager"
+                className="h-full w-full rounded-[var(--ds-radius-control)] object-cover"
+              />
+            </div>
+          </motion.div>
+        ) : null}
       </div>
     </section>
   );
