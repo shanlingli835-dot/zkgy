@@ -235,6 +235,9 @@ export function ProductHero({
         overflow: "hidden",
         backgroundColor: "var(--ds-color-surface-inverse)",
         color: "var(--ds-color-text-inverse)",
+        minHeight: 700,
+        display: "flex",
+        alignItems: "center",
         padding: "var(--ds-section-y-desktop) var(--ds-gutter-desktop)",
       }}
     >
@@ -252,16 +255,16 @@ export function ProductHero({
         className="ds-hero-grid"
         style={{
           position: "relative",
+          width: "100%",
           maxWidth: "var(--ds-container-page)",
           margin: "0 auto",
           display: "grid",
-          gridTemplateColumns: visual
-            ? "minmax(0, 1.2fr) minmax(0, 1fr)"
-            : "1fr",
+          gridTemplateColumns: "minmax(0, 1fr) minmax(0, 600px)",
           gap: "var(--ds-space-4xl)",
           alignItems: "center",
         }}
       >
+
         <div>
           {eyebrow && (
             <div
@@ -316,7 +319,31 @@ export function ProductHero({
             )}
           </div>
         </div>
-        {visual}
+        <div
+          className="ds-hero-visual"
+          style={{
+            width: "100%",
+            maxWidth: 600,
+            aspectRatio: "600 / 437.5",
+            justifySelf: "end",
+          }}
+        >
+          {visual ?? (
+            <div
+              aria-hidden
+              style={{
+                width: "100%",
+                height: "100%",
+                borderRadius: "var(--ds-radius-surface)",
+                border:
+                  "var(--ds-border-width-default) solid var(--ds-color-border-inverse)",
+                backgroundColor:
+                  "color-mix(in srgb, var(--ds-color-surface-default) 8%, transparent)",
+              }}
+            />
+          )}
+        </div>
+
       </div>
     </section>
   );

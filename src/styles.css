@@ -262,3 +262,14 @@
 }
 
 
+
+/* Product hero responsive layout */
+@media (max-width: 1024px) {
+  .ds-hero-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .ds-hero-visual {
+    justify-self: start !important;
+    max-width: 100% !important;
+  }
+}
