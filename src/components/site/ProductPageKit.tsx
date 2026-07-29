@@ -235,6 +235,9 @@ export function ProductHero({
         overflow: "hidden",
         backgroundColor: "var(--ds-color-surface-inverse)",
         color: "var(--ds-color-text-inverse)",
+        minHeight: 700,
+        display: "flex",
+        alignItems: "center",
         padding: "var(--ds-section-y-desktop) var(--ds-gutter-desktop)",
       }}
     >
@@ -252,16 +255,16 @@ export function ProductHero({
         className="ds-hero-grid"
         style={{
           position: "relative",
+          width: "100%",
           maxWidth: "var(--ds-container-page)",
           margin: "0 auto",
           display: "grid",
-          gridTemplateColumns: visual
-            ? "minmax(0, 1.2fr) minmax(0, 1fr)"
-            : "1fr",
+          gridTemplateColumns: "minmax(0, 1fr) minmax(0, 600px)",
           gap: "var(--ds-space-4xl)",
           alignItems: "center",
         }}
       >
+
         <div>
           {eyebrow && (
             <div
