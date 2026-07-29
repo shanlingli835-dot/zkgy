@@ -211,18 +211,9 @@ export default function HeroPage({
         "relative isolate flex min-h-[700px] items-center overflow-hidden text-[color:var(--ds-color-text-inverse)]",
         className,
       )}
-      style={{ backgroundColor: "var(--ds-color-surface-inverse)" }}
+      style={{ backgroundColor: "#151515" }}
     >
-      {/* Background */}
-      <div className="pointer-events-none absolute inset-0 -z-10">
-        <div
-          className="absolute inset-0"
-          style={{
-            background:
-              "radial-gradient(1000px 500px at 15% 20%, color-mix(in srgb, var(--ds-color-action-primary) 28%, transparent), transparent 60%), radial-gradient(800px 400px at 85% 80%, color-mix(in srgb, var(--ds-color-action-primary) 18%, transparent), transparent 60%)",
-          }}
-        />
-      </div>
+
 
       {/* Hero Content */}
       <div className="mx-auto grid w-full max-w-[var(--ds-container-page)] grid-cols-1 items-center gap-[var(--ds-space-4xl)] px-[var(--ds-gutter-mobile)] py-[var(--ds-section-y-desktop)] md:px-[var(--ds-gutter-tablet)] lg:grid-cols-[minmax(0,1fr)_minmax(0,600px)] lg:px-[var(--ds-gutter-desktop)]">
