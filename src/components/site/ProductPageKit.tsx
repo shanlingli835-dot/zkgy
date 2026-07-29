@@ -319,7 +319,31 @@ export function ProductHero({
             )}
           </div>
         </div>
-        {visual}
+        <div
+          className="ds-hero-visual"
+          style={{
+            width: "100%",
+            maxWidth: 600,
+            aspectRatio: "600 / 437.5",
+            justifySelf: "end",
+          }}
+        >
+          {visual ?? (
+            <div
+              aria-hidden
+              style={{
+                width: "100%",
+                height: "100%",
+                borderRadius: "var(--ds-radius-surface)",
+                border:
+                  "var(--ds-border-width-default) solid var(--ds-color-border-inverse)",
+                backgroundColor:
+                  "color-mix(in srgb, var(--ds-color-surface-default) 8%, transparent)",
+              }}
+            />
+          )}
+        </div>
+
       </div>
     </section>
   );
