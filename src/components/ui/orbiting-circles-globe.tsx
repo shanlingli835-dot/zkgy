@@ -173,13 +173,13 @@ export function OrbitingCirclesGlobe() {
         .ocg-root {
           position: relative;
           width: 100%;
-          height: 580px;
+          height: 640px;
           overflow: hidden;
         }
         .ocg-stage {
           position: absolute;
           left: 50%;
-          bottom: -260px;
+          bottom: -180px;
           width: 700px;
           height: 700px;
           transform: translateX(-50%);
@@ -223,12 +223,12 @@ export function OrbitingCirclesGlobe() {
         .ocg-badge img { width: 26px; height: 26px; display: block; }
 
         @media (max-width: 1023px) {
-          .ocg-root { height: 460px; }
-          .ocg-stage { transform: translateX(-50%) scale(0.8); bottom: -220px; }
+          .ocg-root { height: 520px; }
+          .ocg-stage { transform: translateX(-50%) scale(0.8); bottom: -150px; }
         }
         @media (max-width: 639px) {
-          .ocg-root { height: 360px; }
-          .ocg-stage { transform: translateX(-50%) scale(0.62); bottom: -190px; }
+          .ocg-root { height: 400px; }
+          .ocg-stage { transform: translateX(-50%) scale(0.62); bottom: -120px; }
           .ocg-ring-outer { display: none; }
         }
         @media (prefers-reduced-motion: reduce) {
