@@ -41,6 +41,32 @@ function SwiftCodePage() {
         title="Swift Code 源代码审计"
         description="利用多种技术自动识别语义缺陷、安全漏洞和编码规则等问题，适配国内编码标准和国产环境，支持灵活定制。"
         primaryCta={{ label: "免费试用", href: CTA_HREF }}
+        visual={
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="metadata"
+            aria-label="Swift Code 源代码审计产品演示"
+            poster="/source-site/assets/secops-dashboard-placeholder.svg"
+            style={{
+              width: "100%",
+              height: "100%",
+              objectFit: "cover",
+              borderRadius: "var(--ds-radius-surface)",
+              border:
+                "var(--ds-border-width-default) solid var(--ds-color-border-inverse)",
+              backgroundColor: "#0a0a0a",
+            }}
+          >
+            <source
+              src="https://www.getharvest.com/hubfs/Imported_Blog_Media/Harvest_HeroVideo_1700x1080_20s_Webm_EN.webm"
+              type="video/webm"
+            />
+            您的浏览器不支持视频播放。
+          </video>
+        }
       />
 
       <HomeAccordion
