@@ -17,6 +17,7 @@ import { HomeAccordion } from "@/components/site/HomeAccordion";
 import {
   CTA_HREF,
   FeatureGrid,
+  HeroVideo,
   PrimaryCta,
   ProductHero,
   Section,
@@ -54,6 +55,7 @@ function SwiftPenPage() {
         title="Swift Pentest 自动化渗透测试"
         description="结合AI与渗透攻防技术，自动化探析攻击链，优先定位高风险漏洞，化被动防御为主动应对。"
         primaryCta={{ label: "免费试用", href: CTA_HREF }}
+        visual={<HeroVideo label="Swift Pentest 自动化渗透测试产品演示" />}
       />
 
       <Section>
