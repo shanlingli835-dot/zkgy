@@ -11,12 +11,13 @@ import {
 
 import { AdvantageTriad } from "@/components/site/AdvantageTriad";
 import { HomeAccordion } from "@/components/site/HomeAccordion";
-import HeroPage from "@/components/ui/hero-page";
 import OrbitingCirclesGlobe from "@/components/ui/orbiting-circles-globe";
 
 import {
   CTA_HREF,
+  HeroVideo,
   PrimaryCta,
+  ProductHero,
   Section,
   SitePageShell,
   StatRow,
