@@ -48,13 +48,13 @@ export const Route = createFileRoute("/sca.html")({
 function ScaPage() {
   return (
     <SitePageShell>
-      <HeroPage
-        badge="产品 · 软件成分分析"
-        titleLeading="Swift SCA"
-        titleTrailing="软件成分分析"
+      <ProductHero
+        eyebrow="产品 · 软件成分分析"
+        title="Swift SCA 软件成分分析"
         description="精准检测软件供应链的漏洞与风险，保障组织应用安全与合规。"
         primaryCta={{ label: "免费试用", href: CTA_HREF }}
         secondaryCta={{ label: "免费试用", href: CTA_HREF }}
+        visual={<HeroVideo label="Swift SCA 软件成分分析产品演示" />}
       />
 
       <Section
