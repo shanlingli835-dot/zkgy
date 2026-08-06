@@ -213,6 +213,35 @@ export function Section({
 
 /* ---------------- Hero ---------------- */
 
+export const HERO_VIDEO_SRC =
+  "https://www.getharvest.com/hubfs/Imported_Blog_Media/Harvest_HeroVideo_1700x1080_20s_Webm_EN.webm";
+
+export function HeroVideo({ label }: { label: string }) {
+  return (
+    <video
+      autoPlay
+      muted
+      loop
+      playsInline
+      preload="metadata"
+      aria-label={label}
+      poster="/source-site/assets/secops-dashboard-placeholder.svg"
+      style={{
+        width: "100%",
+        height: "100%",
+        objectFit: "cover",
+        borderRadius: "var(--ds-radius-surface)",
+        border:
+          "var(--ds-border-width-default) solid var(--ds-color-border-inverse)",
+        backgroundColor: "#0a0a0a",
+      }}
+    >
+      <source src={HERO_VIDEO_SRC} type="video/webm" />
+      您的浏览器不支持视频播放。
+    </video>
+  );
+}
+
 export function ProductHero({
   eyebrow,
   title,
