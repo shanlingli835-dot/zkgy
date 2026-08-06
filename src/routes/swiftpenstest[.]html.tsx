@@ -17,6 +17,7 @@ import { HomeAccordion } from "@/components/site/HomeAccordion";
 import {
   CTA_HREF,
   FeatureGrid,
+  HeroVideo,
   PrimaryCta,
   ProductHero,
   Section,
