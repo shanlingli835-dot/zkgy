@@ -8,6 +8,7 @@ import {
 } from "lucide-react";
 
 import { SolutionShowcaseGrid } from "@/components/site/SolutionShowcaseGrid";
+import { AdvantageTriad } from "@/components/site/AdvantageTriad";
 import {
   ArchitectureDiagram,
   CTA_HREF,
