@@ -8,7 +8,10 @@ import {
   Rocket,
   Users,
   Coins,
+  ChevronRight,
 } from "lucide-react";
+
+import autoArchitecture from "@/assets/auto-arch.png.asset.json";
 
 import {
   ArchitectureDiagram,
