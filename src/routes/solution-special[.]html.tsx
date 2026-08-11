@@ -2,11 +2,8 @@ import { createFileRoute } from "@tanstack/react-router";
 import {
   ShieldCheck,
   Radar,
-  Cpu,
-  Server,
   FileBadge2,
   Rocket,
-  Lock,
   Coins,
 } from "lucide-react";
 
