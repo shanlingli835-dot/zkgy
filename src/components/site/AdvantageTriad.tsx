@@ -10,9 +10,10 @@ type AdvantageTriadProps = {
   title: string;
   description?: string;
   items: AdvantageTriadItem[];
+  columns?: 3 | 4;
 };
 
-export function AdvantageTriad({ title, description, items }: AdvantageTriadProps) {
+export function AdvantageTriad({ title, description, items, columns = 3 }: AdvantageTriadProps) {
   return (
     <section
       style={{
