@@ -71,24 +71,17 @@ function SolutionSpecialPage() {
         eyebrow="方案概述"
         title="面向特种领域的交钥匙级实验平台"
       >
-        <div
+        <img
+          src={specialArchitecture.url}
+          alt=""
           style={{
-            maxWidth: 1250,
-            aspectRatio: "1250 / 568",
+            display: "block",
             width: "100%",
-            marginInline: "auto",
-            backgroundColor: "var(--ds-color-surface-subtle)",
+            maxWidth: 1250,
+            height: "auto",
             borderRadius: "var(--ds-radius-surface)",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            color: "var(--ds-color-text-muted)",
-            fontSize: "var(--ds-font-size-lg)",
-            overflow: "hidden",
           }}
-        >
-          <span>方案示意图占位</span>
-        </div>
+        />
 
         <div
           style={{
