@@ -141,12 +141,16 @@ export function SolutionShowcaseGrid({ title, description, cards }: Props) {
         @media (max-width: 1279px) {
           .ds-showcase-row { flex-wrap: wrap; justify-content: center; }
           .ds-showcase-card { flex: 0 1 calc(50% - var(--ds-space-lg)); }
-          .ds-showcase-card:hover, .ds-showcase-card:focus-within { flex-grow: 0; }
+          .ds-showcase-row:hover .ds-showcase-card,
+          .ds-showcase-row:focus-within .ds-showcase-card,
+          .ds-showcase-row .ds-showcase-card:hover,
+          .ds-showcase-row .ds-showcase-card:focus-within { flex-grow: 0; }
         }
         @media (max-width: 767px) {
-          .ds-showcase-card { flex: 1 1 100%; }
+          .ds-showcase-card { flex: 0 1 100%; }
           .ds-showcase-media { height: 260px; }
         }
+
       `}</style>
     </section>
   );
