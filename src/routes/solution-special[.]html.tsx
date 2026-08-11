@@ -134,6 +134,7 @@ function SolutionSpecialPage() {
         ]}
       />
 
+      <AdvantageTriad
         columns={4}
         title="自主可控、工具即合规"
         items={[
