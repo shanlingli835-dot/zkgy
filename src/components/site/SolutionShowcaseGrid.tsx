@@ -200,14 +200,7 @@ function Card({ card, index }: { card: ShowcaseCard; index: number }) {
         aria-hidden
       />
 
-      <div
-        style={{
-          padding: "var(--ds-space-lg)",
-          display: "grid",
-          gap: "var(--ds-space-lg)",
-          alignContent: "start",
-        }}
-      >
+      <div className="ds-showcase-body">
         {card.items.map((item) => (
           <div key={item.title}>
             <p
