@@ -5,6 +5,7 @@ import {
   FileBadge2,
   Rocket,
   Coins,
+  ChevronRight,
 } from "lucide-react";
 
 import { SolutionShowcaseGrid } from "@/components/site/SolutionShowcaseGrid";
