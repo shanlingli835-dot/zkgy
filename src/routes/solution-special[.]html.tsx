@@ -11,9 +11,7 @@ import { SolutionShowcaseGrid } from "@/components/site/SolutionShowcaseGrid";
 import { AdvantageTriad } from "@/components/site/AdvantageTriad";
 import { ZigzagShowcase } from "@/components/site/ZigzagShowcase";
 import {
-  ArchitectureDiagram,
   CTA_HREF,
-  
   ProductHero,
   Section,
   SitePageShell,
@@ -135,28 +133,6 @@ function SolutionSpecialPage() {
           },
         ]}
       />
-
-      <Section
-        eyebrow="平台架构"
-        title="面向特种装备的分层实验能力"
-      >
-        <ArchitectureDiagram
-          layers={[
-            {
-              label: "评价与合规",
-              items: ["脆弱性指标", "渗透性指标", "生存性指标", "合规报告"],
-            },
-            {
-              label: "工具链层",
-              items: ["代码扫描", "固件清点", "协议模糊测试", "硬件安全测试"],
-            },
-            {
-              label: "目标层",
-              items: ["源代码", "固件 / 驱动", "总线协议", "整机系统"],
-            },
-          ]}
-        />
-      </Section>
 
       <AdvantageTriad
         columns={4}
