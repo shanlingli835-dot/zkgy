@@ -62,12 +62,13 @@ export function SolutionShowcaseGrid({ title, description, cards }: Props) {
           margin-top: var(--ds-space-4xl);
           display: flex;
           flex-wrap: nowrap;
-          gap: var(--ds-space-lg);
+          gap: 0;
           align-items: stretch;
+          width: 1534px;
+          margin-inline: auto;
         }
         .ds-showcase-card {
-          flex: 1 1 0;
-          min-width: 0;
+          flex: 0 0 294px;
           height: 566px;
           display: flex;
           flex-direction: column;
@@ -77,6 +78,10 @@ export function SolutionShowcaseGrid({ title, description, cards }: Props) {
           will-change: flex-grow;
           transition: flex-grow 420ms cubic-bezier(0.2, 0.7, 0.2, 1),
             background-color 260ms ease, box-shadow 260ms ease, color 260ms ease;
+          margin-right: 16px;
+        }
+        .ds-showcase-card:last-child {
+          margin-right: 0;
         }
         /* Neighbours shrink evenly so the row width stays fixed and nothing reflows. */
         .ds-showcase-row:hover .ds-showcase-card,
@@ -104,7 +109,7 @@ export function SolutionShowcaseGrid({ title, description, cards }: Props) {
         }
         .ds-showcase-media {
           margin: 0 var(--ds-space-lg);
-          height: 394px;
+          height: 280px;
           flex-shrink: 0;
           border-radius: var(--ds-radius-surface);
           overflow: hidden;
@@ -147,9 +152,17 @@ export function SolutionShowcaseGrid({ title, description, cards }: Props) {
         .ds-showcase-card:focus-within .ds-showcase-item-desc {
           color: var(--ds-color-text-inverse-secondary);
         }
-        @media (max-width: 1279px) {
-          .ds-showcase-row { flex-wrap: wrap; justify-content: center; }
-          .ds-showcase-card { flex: 0 1 calc(50% - var(--ds-space-lg)); }
+        @media (max-width: 1533px) {
+          .ds-showcase-row {
+            width: 100%;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: var(--ds-space-lg);
+          }
+          .ds-showcase-card {
+            flex: 0 1 294px;
+            margin-right: 0;
+          }
           .ds-showcase-row:hover .ds-showcase-card,
           .ds-showcase-row:focus-within .ds-showcase-card,
           .ds-showcase-row .ds-showcase-card:hover,
