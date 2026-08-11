@@ -2,14 +2,12 @@ import { createFileRoute } from "@tanstack/react-router";
 import {
   ShieldCheck,
   Radar,
-  Cpu,
-  Server,
   FileBadge2,
   Rocket,
-  Lock,
   Coins,
 } from "lucide-react";
 
+import { SolutionShowcaseGrid } from "@/components/site/SolutionShowcaseGrid";
 import {
   ArchitectureDiagram,
   CTA_HREF,
@@ -73,53 +71,68 @@ function SolutionSpecialPage() {
         intro="围绕特种领域网络安全实验评价体系，将国产代码静态扫描、固件漏洞挖掘、自主可控模糊测试、硬件侧信道分析等核心工具整合为“交钥匙”级实验平台，实现风险前置、整改闭环、合规举证全周期管控。"
       />
 
-      <Section
-        surface="subtle"
-        eyebrow="方案组成"
-        title="脆弱性、渗透性、生存性三位一体"
-      >
-        <FeatureGrid
-          columns={3}
-          items={[
-            {
-              icon: <Radar size={22} />,
-              tag: "脆弱性发现",
-              title: "多引擎代码扫描平台",
-              desc: "支持 20 余种语言，涵盖 C/C++、Java、汇编等，一站式静态分析，自动生成缺陷图谱与 GJB 代码合规报告。",
-            },
-            {
-              icon: <Server size={22} />,
-              tag: "脆弱性发现",
-              title: "国产固件清点平台",
-              desc: "一键拆解 BSP / 驱动 / FPGA 映像，输出 SBOM 与 CVE 映射，定位过期加密库与硬编码密钥。",
-            },
-            {
-              icon: <ShieldCheck size={22} />,
-              tag: "渗透性验证",
-              title: "Wisdom 协议模糊测试机",
-              desc: "覆盖 1553B、CAN-FD、以太网等装备总线，挖掘未知协议漏洞。",
-            },
-            {
-              icon: <Cpu size={22} />,
-              tag: "渗透性验证",
-              title: "硬件安全测试台",
-              desc: "侧信道分析、故障注入、JTAG / SWD 扫描，验证安全启动、密钥存储、防熔断机制能否被绕过。",
-            },
-            {
-              icon: <Rocket size={22} />,
-              tag: "生存性评估",
-              title: "半实物仿真机柜",
-              desc: "可注入掉电、强电磁、断链、异常报文洪流，记录装备在降级模式下的功能连续性与数据完整性。",
-            },
-            {
-              icon: <Lock size={22} />,
-              tag: "生存性评估",
-              title: "攻击后恢复验证",
-              desc: "模拟恶意更新、固件篡改、配置破坏，评估自恢复、日志留存与可信重启动机制。",
-            },
-          ]}
-        />
-      </Section>
+      <SolutionShowcaseGrid
+        title="方案组成"
+        description="脆弱性、渗透性、生存性与合规知识中枢四位一体，覆盖特种装备网络安全实验全流程。"
+        cards={[
+          {
+            icon: <Radar size={18} aria-hidden />,
+            category: "脆弱性发现",
+            items: [
+              {
+                title: "多引擎代码扫描平台",
+                desc: "二十多种语言包含 C/C++、JAVA、汇编一站式静态分析，自动生成缺陷图谱与 GJB 代码合规报告。",
+              },
+              {
+                title: "国产固件清点平台",
+                desc: "一键拆解 BSP/驱动/FPGA 映像，输出 SBOM 与 CVE 映射，定位过期加密库与硬编码密钥。",
+              },
+            ],
+          },
+          {
+            icon: <ShieldCheck size={18} aria-hidden />,
+            category: "渗透性验证",
+            items: [
+              {
+                title: "Wisdom 协议模糊测试机",
+                desc: "覆盖 1553B、CAN-FD、以太网等装备总线，挖掘未知漏洞。",
+              },
+              {
+                title: "硬件安全测试台",
+                desc: "侧信道分析、故障注入、JTAG/SWD 扫描，验证安全启动、密钥存储、防熔断机制能否被绕过。",
+              },
+            ],
+          },
+          {
+            icon: <Rocket size={18} aria-hidden />,
+            category: "生存性评估",
+            items: [
+              {
+                title: "实装半实物仿真机柜",
+                desc: "可注入掉电、强电磁、断链、异常报文洪流，记录装备系统在降级模式下的功能连续性与数据完整性。",
+              },
+              {
+                title: "攻击后恢复验证模块",
+                desc: "模拟恶意更新、固件篡改、配置破坏，自动判别自恢复、日志留存与可信重启动是否满足任务关键要求。",
+              },
+            ],
+          },
+          {
+            icon: <FileBadge2 size={18} aria-hidden />,
+            category: "合规与知识中枢",
+            items: [
+              {
+                title: "实验指标",
+                desc: "内置“脆弱性→渗透性→生存性”评价模板，自动关联测试项并生成原始记录与差距清单。",
+              },
+              {
+                title: "知识共享平台",
+                desc: "持续推送漏洞情报、补丁策略、用例脚本，支撑人员培训与审计追溯。",
+              },
+            ],
+          },
+        ]}
+      />
 
       <Section
         eyebrow="平台架构"
