@@ -5,6 +5,7 @@ import {
   FileBadge2,
   Rocket,
   Coins,
+  ChevronRight,
 } from "lucide-react";
 
 import { SolutionShowcaseGrid } from "@/components/site/SolutionShowcaseGrid";
@@ -68,8 +69,77 @@ function SolutionSpecialPage() {
       <Section
         eyebrow="方案概述"
         title="面向特种领域的交钥匙级实验平台"
-        intro="围绕特种领域网络安全实验评价体系，将国产代码静态扫描、固件漏洞挖掘、自主可控模糊测试、硬件侧信道分析等核心工具整合为“交钥匙”级实验平台，实现风险前置、整改闭环、合规举证全周期管控。"
-      />
+      >
+        <div
+          style={{
+            maxWidth: 1250,
+            aspectRatio: "1250 / 568",
+            width: "100%",
+            marginInline: "auto",
+            backgroundColor: "var(--ds-color-surface-subtle)",
+            borderRadius: "var(--ds-radius-surface)",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            color: "var(--ds-color-text-muted)",
+            fontSize: "var(--ds-font-size-lg)",
+            overflow: "hidden",
+          }}
+        >
+          <span>方案示意图占位</span>
+        </div>
+
+        <div
+          style={{
+            display: "flex",
+            alignItems: "flex-start",
+            justifyContent: "space-between",
+            gap: "var(--ds-space-4xl)",
+            marginTop: "var(--ds-space-3xl)",
+            flexWrap: "wrap",
+          }}
+        >
+          <div style={{ flex: "1 1 28rem", maxWidth: "50rem" }}>
+            <h3
+              style={{
+                fontSize: "var(--ds-font-size-2xl)",
+                fontWeight: "var(--ds-font-weight-semibold)",
+                lineHeight: 1.3,
+                marginBottom: "var(--ds-space-md)",
+                color: "var(--ds-color-text-primary)",
+              }}
+            >
+              面向特种领域的交钥匙级实验平台
+            </h3>
+            <p
+              style={{
+                fontSize: "var(--ds-font-size-lg)",
+                lineHeight: 1.65,
+                color: "var(--ds-color-text-secondary)",
+              }}
+            >
+              围绕特种领域网络安全实验评价体系，中科固源将自研国产代码静态扫描、固件漏洞挖掘、自主可控模糊测试、硬件侧信道分析等核心工具整合为“交钥匙”级实验平台。客户无需外购检测服务，即可在自有环境中完成从源码、固件、板卡到整机系统的脆弱性发现、渗透验证与生存性评估，实现“风险前置—整改闭环—合规举证”全周期管控。
+            </p>
+          </div>
+          <a
+            href="/solution-special.html"
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              gap: "var(--ds-space-sm)",
+              color: "var(--ds-color-link-default)",
+              fontSize: "var(--ds-font-size-md)",
+              fontWeight: "var(--ds-font-weight-semibold)",
+              textDecoration: "none",
+              flexShrink: 0,
+              marginTop: "var(--ds-space-xs)",
+            }}
+          >
+            了解更多
+            <ChevronRight size={18} aria-hidden />
+          </a>
+        </div>
+      </Section>
 
       <SolutionShowcaseGrid
         title="方案组成"
