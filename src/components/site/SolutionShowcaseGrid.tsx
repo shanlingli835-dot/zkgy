@@ -61,11 +61,12 @@ export function SolutionShowcaseGrid({ title, description, cards }: Props) {
         .ds-showcase-row {
           margin-top: var(--ds-space-4xl);
           display: flex;
+          flex-wrap: nowrap;
           gap: var(--ds-space-lg);
           align-items: stretch;
         }
         .ds-showcase-card {
-          flex: 0 1 294px;
+          flex: 1 1 0;
           min-width: 0;
           display: flex;
           flex-direction: column;
@@ -73,16 +74,28 @@ export function SolutionShowcaseGrid({ title, description, cards }: Props) {
           background-color: var(--ds-color-surface-subtle);
           border: var(--ds-border-width-default) solid var(--ds-color-border-subtle);
           overflow: hidden;
+          will-change: flex-grow;
           transition: flex-grow 420ms cubic-bezier(0.2, 0.7, 0.2, 1),
-            background-color 300ms ease, color 300ms ease, box-shadow 300ms ease;
+            background-color 260ms ease, border-color 260ms ease,
+            box-shadow 260ms ease, color 260ms ease;
         }
-        .ds-showcase-card:hover,
-        .ds-showcase-card:focus-within {
-          flex-grow: 1.15;
+        /* Neighbours shrink evenly so the row width stays fixed and nothing reflows. */
+        .ds-showcase-row:hover .ds-showcase-card,
+        .ds-showcase-row:focus-within .ds-showcase-card {
+          flex-grow: 0.86;
+        }
+        .ds-showcase-row .ds-showcase-card:hover,
+        .ds-showcase-row .ds-showcase-card:focus-within {
+          flex-grow: 1.42;
           background-color: var(--ds-color-surface-inverse);
           border-color: var(--ds-color-surface-inverse);
           box-shadow: var(--ds-shadow-md);
         }
+        @media (prefers-reduced-motion: reduce) {
+          .ds-showcase-card,
+          .ds-showcase-media img { transition-duration: 1ms; }
+        }
+
         .ds-showcase-head {
           height: 72px;
           display: flex;
@@ -128,12 +141,16 @@ export function SolutionShowcaseGrid({ title, description, cards }: Props) {
         @media (max-width: 1279px) {
           .ds-showcase-row { flex-wrap: wrap; justify-content: center; }
           .ds-showcase-card { flex: 0 1 calc(50% - var(--ds-space-lg)); }
-          .ds-showcase-card:hover, .ds-showcase-card:focus-within { flex-grow: 0; }
+          .ds-showcase-row:hover .ds-showcase-card,
+          .ds-showcase-row:focus-within .ds-showcase-card,
+          .ds-showcase-row .ds-showcase-card:hover,
+          .ds-showcase-row .ds-showcase-card:focus-within { flex-grow: 0; }
         }
         @media (max-width: 767px) {
-          .ds-showcase-card { flex: 1 1 100%; }
+          .ds-showcase-card { flex: 0 1 100%; }
           .ds-showcase-media { height: 260px; }
         }
+
       `}</style>
     </section>
   );
