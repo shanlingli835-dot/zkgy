@@ -10,6 +10,7 @@ import {
   Coins,
 } from "lucide-react";
 
+import { SolutionShowcaseGrid } from "@/components/site/SolutionShowcaseGrid";
 import {
   ArchitectureDiagram,
   CTA_HREF,
