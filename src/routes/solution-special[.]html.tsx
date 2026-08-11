@@ -8,6 +8,7 @@ import {
 } from "lucide-react";
 
 import { SolutionShowcaseGrid } from "@/components/site/SolutionShowcaseGrid";
+import { AdvantageTriad } from "@/components/site/AdvantageTriad";
 import {
   ArchitectureDiagram,
   CTA_HREF,
@@ -156,38 +157,33 @@ function SolutionSpecialPage() {
         />
       </Section>
 
-      <Section
-        surface="subtle"
-        eyebrow="价值优势"
+      <AdvantageTriad
+        columns={4}
         title="自主可控、工具即合规"
-      >
-        <FeatureGrid
-          columns={4}
-          variant="topbar"
-          items={[
-            {
-              icon: <FileBadge2 size={22} />,
-              title: "工具即合规",
-              desc: "所有工具通过相关比对验证，可直接生成具备评审效力的原始记录与报告。",
-            },
-            {
-              icon: <ShieldCheck size={22} />,
-              title: "自主可控",
-              desc: "核心模糊测试引擎与硬件分析模块完全国产化，支持源码级定制，保护核心知识产权。",
-            },
-            {
-              icon: <Rocket size={22} />,
-              title: "一键自动化",
-              desc: "从源码扫描、固件拆包到模糊测试、故障注入、报告输出全程脚本化，缩短 70% 实验周期。",
-            },
-            {
-              icon: <Coins size={22} />,
-              title: "总拥有成本低",
-              desc: "相比外购检测服务，3 年内可节省约 60% 实验支出，并支撑多型装备并行验证。",
-            },
-          ]}
-        />
-      </Section>
+        items={[
+          {
+            icon: <FileBadge2 size={36} strokeWidth={1.2} aria-hidden />,
+            title: "工具即合规",
+            desc: "所有工具通过相关比对验证，可直接生成具备评审效力的原始记录与报告。",
+          },
+          {
+            icon: <ShieldCheck size={36} strokeWidth={1.2} aria-hidden />,
+            title: "自主可控",
+            desc: "核心模糊测试引擎与硬件分析模块完全国产化，支持源码级定制，保护核心知识产权。",
+          },
+          {
+            icon: <Rocket size={36} strokeWidth={1.2} aria-hidden />,
+            title: "一键自动化",
+            desc: "从源码扫描、固件拆包到模糊测试、故障注入、报告输出全程脚本化，缩短 70% 实验周期。",
+          },
+          {
+            icon: <Coins size={36} strokeWidth={1.2} aria-hidden />,
+            title: "总拥有成本低",
+            desc: "相比外购检测服务，3 年内可节省约 60% 实验支出，并支撑多型装备并行验证。",
+          },
+        ]}
+      />
+
 
       <Section
         eyebrow="业务场景"

@@ -10,9 +10,10 @@ type AdvantageTriadProps = {
   title: string;
   description?: string;
   items: AdvantageTriadItem[];
+  columns?: 3 | 4;
 };
 
-export function AdvantageTriad({ title, description, items }: AdvantageTriadProps) {
+export function AdvantageTriad({ title, description, items, columns = 3 }: AdvantageTriadProps) {
   return (
     <section
       style={{
@@ -58,7 +59,7 @@ export function AdvantageTriad({ title, description, items }: AdvantageTriadProp
           style={{
             marginTop: "var(--ds-space-4xl)",
             display: "grid",
-            gridTemplateColumns: "repeat(3, minmax(0, 1fr))",
+            gridTemplateColumns: `repeat(${columns}, minmax(0, 1fr))`,
             gap: "var(--ds-space-4xl)",
             textAlign: "left",
           }}
