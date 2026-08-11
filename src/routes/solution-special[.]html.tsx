@@ -13,7 +13,7 @@ import { ZigzagShowcase } from "@/components/site/ZigzagShowcase";
 import {
   ArchitectureDiagram,
   CTA_HREF,
-  FeatureGrid,
+  
   ProductHero,
   Section,
   SitePageShell,
