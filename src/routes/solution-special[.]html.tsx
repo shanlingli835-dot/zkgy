@@ -8,6 +8,7 @@ import {
   ChevronRight,
 } from "lucide-react";
 
+import specialArchitecture from "@/assets/special_3.png.asset.json";
 import { SolutionShowcaseGrid } from "@/components/site/SolutionShowcaseGrid";
 import { AdvantageTriad } from "@/components/site/AdvantageTriad";
 import { ZigzagShowcase } from "@/components/site/ZigzagShowcase";
