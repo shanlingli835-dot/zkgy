@@ -68,16 +68,15 @@ export function SolutionShowcaseGrid({ title, description, cards }: Props) {
         .ds-showcase-card {
           flex: 1 1 0;
           min-width: 0;
+          height: 566px;
           display: flex;
           flex-direction: column;
           border-radius: var(--ds-radius-surface);
-          background-color: var(--ds-color-surface-subtle);
-          border: var(--ds-border-width-default) solid var(--ds-color-border-subtle);
+          background-color: #F4F4F4;
           overflow: hidden;
           will-change: flex-grow;
           transition: flex-grow 420ms cubic-bezier(0.2, 0.7, 0.2, 1),
-            background-color 260ms ease, border-color 260ms ease,
-            box-shadow 260ms ease, color 260ms ease;
+            background-color 260ms ease, box-shadow 260ms ease, color 260ms ease;
         }
         /* Neighbours shrink evenly so the row width stays fixed and nothing reflows. */
         .ds-showcase-row:hover .ds-showcase-card,
@@ -88,7 +87,6 @@ export function SolutionShowcaseGrid({ title, description, cards }: Props) {
         .ds-showcase-row .ds-showcase-card:focus-within {
           flex-grow: 1.42;
           background-color: var(--ds-color-surface-inverse);
-          border-color: var(--ds-color-surface-inverse);
           box-shadow: var(--ds-shadow-md);
         }
         @media (prefers-reduced-motion: reduce) {
