@@ -14,7 +14,6 @@ import {
 import autoArchitecture from "@/assets/auto-arch.png.asset.json";
 
 import {
-  ArchitectureDiagram,
   CTA_HREF,
   FeatureGrid,
   ProductHero,
@@ -22,6 +21,7 @@ import {
   SitePageShell,
 } from "@/components/site/ProductPageKit";
 import { SolutionShowcaseGrid } from "@/components/site/SolutionShowcaseGrid";
+import { AdvantageTriad } from "@/components/site/AdvantageTriad";
 
 export const Route = createFileRoute("/solution-auto.html")({
   head: () => ({
@@ -202,60 +202,33 @@ function SolutionAutoPage() {
       />
 
 
-      <Section
-        eyebrow="平台架构"
-        title="从威胁分析到全栈验证的一体化实验室"
-      >
-        <ArchitectureDiagram
-          layers={[
-            {
-              label: "合规与流程",
-              items: ["TARA 威胁建模", "GB 44495 用例", "R155 CSMS", "证据链管理"],
-            },
-            {
-              label: "测试与验证",
-              items: ["模糊测试", "渗透测试", "SCA / SBOM", "硬件安全测试"],
-            },
-            {
-              label: "目标层",
-              items: ["ECU / TCU", "整车网关", "OTA 服务", "车联云端"],
-            },
-          ]}
-        />
-      </Section>
-
-      <Section
-        surface="subtle"
-        eyebrow="价值优势"
+      <AdvantageTriad
+        columns={4}
         title="工具即合规，快速构建自主验证能力"
-      >
-        <FeatureGrid
-          columns={4}
-          variant="topbar"
-          items={[
-            {
-              icon: <FileBadge2 size={22} />,
-              title: "工具即合规",
-              desc: "所有工具均通过 CNAS 框架下的比对验证，可直接生成具备认证效力的原始记录与报告。",
-            },
-            {
-              icon: <Rocket size={22} />,
-              title: "一键自动化",
-              desc: "从固件拆包、SBOM 生成到模糊测试、报告输出全程脚本化，平均缩短 70% 检测周期。",
-            },
-            {
-              icon: <Users size={22} />,
-              title: "人才体系配套",
-              desc: "提供 R155、GB 44495 测试工程师带教培训路径，帮助信息安全实验室快速通过 CNAS 评审。",
-            },
-            {
-              icon: <Coins size={22} />,
-              title: "总拥有成本低",
-              desc: "相比外购检测服务，3 年内可为企业节省约 60% 合规支出，并支撑多车型并行验证。",
-            },
-          ]}
-        />
-      </Section>
+        items={[
+          {
+            icon: <FileBadge2 size={36} strokeWidth={1.2} aria-hidden />,
+            title: "工具即合规",
+            desc: "所有工具均通过 CNAS 框架下的比对验证，可直接生成具备认证效力的原始记录与报告。",
+          },
+          {
+            icon: <Rocket size={36} strokeWidth={1.2} aria-hidden />,
+            title: "一键自动化",
+            desc: "从固件拆包、SBOM 生成到模糊测试、报告输出全程脚本化，平均缩短 70% 检测周期。",
+          },
+          {
+            icon: <Users size={36} strokeWidth={1.2} aria-hidden />,
+            title: "人才体系配套",
+            desc: "提供 R155、GB 44495 测试工程师带教培训路径，帮助信息安全实验室快速通过 CNAS 评审。",
+          },
+          {
+            icon: <Coins size={36} strokeWidth={1.2} aria-hidden />,
+            title: "总拥有成本低",
+            desc: "相比外购检测服务，3 年内可为企业节省约 60% 合规支出，并支撑多车型并行验证。",
+          },
+        ]}
+      />
+
 
       <Section
         eyebrow="业务场景"
