@@ -18,6 +18,7 @@ import {
   Section,
   SitePageShell,
 } from "@/components/site/ProductPageKit";
+import { SolutionShowcaseGrid } from "@/components/site/SolutionShowcaseGrid";
 
 export const Route = createFileRoute("/solution-auto.html")({
   head: () => ({
