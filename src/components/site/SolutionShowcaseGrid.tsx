@@ -121,6 +121,15 @@ export function SolutionShowcaseGrid({ title, description, cards }: Props) {
         .ds-showcase-card:focus-within .ds-showcase-media img {
           transform: scale(1.04);
         }
+        .ds-showcase-body {
+          flex: 1 1 0;
+          min-height: 0;
+          padding: var(--ds-space-lg);
+          display: grid;
+          gap: var(--ds-space-lg);
+          align-content: start;
+          overflow: hidden;
+        }
         .ds-showcase-title,
         .ds-showcase-item-title {
           color: var(--ds-color-text-primary);
