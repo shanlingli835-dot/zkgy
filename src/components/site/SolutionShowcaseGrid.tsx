@@ -124,7 +124,7 @@ export function SolutionShowcaseGrid({ title, description, cards }: Props) {
         .ds-showcase-body {
           flex: 1 1 0;
           min-height: 0;
-          padding: 0.75rem;
+          padding: 0.75rem 0.75rem 0.375rem 0.75rem;
           display: grid;
           gap: 0.75rem;
           align-content: start;
