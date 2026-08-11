@@ -18,8 +18,6 @@ type Props = {
 };
 
 export function SolutionShowcaseGrid({ title, description, cards }: Props) {
-  const [featured, ...rest] = cards;
-
   return (
     <section
       style={{ padding: "var(--ds-section-y-desktop) var(--ds-gutter-desktop)" }}
@@ -52,61 +50,106 @@ export function SolutionShowcaseGrid({ title, description, cards }: Props) {
           ) : null}
         </div>
 
-        <div
-          className="ds-showcase-grid"
-          style={{
-            marginTop: "var(--ds-space-4xl)",
-            display: "grid",
-            gridTemplateColumns: "1.6fr repeat(3, 1fr)",
-            gap: "var(--ds-space-xl)",
-            alignItems: "stretch",
-          }}
-        >
-          {featured ? <Card card={featured} featured /> : null}
-          {rest.map((card) => (
-            <Card key={card.category} card={card} />
+        <div className="ds-showcase-row">
+          {cards.map((card, index) => (
+            <Card key={card.category} card={card} index={index} />
           ))}
         </div>
       </div>
 
       <style>{`
+        .ds-showcase-row {
+          margin-top: var(--ds-space-4xl);
+          display: flex;
+          gap: var(--ds-space-lg);
+          align-items: stretch;
+        }
+        .ds-showcase-card {
+          flex: 0 1 294px;
+          min-width: 0;
+          display: flex;
+          flex-direction: column;
+          border-radius: var(--ds-radius-surface);
+          background-color: var(--ds-color-surface-subtle);
+          border: var(--ds-border-width-default) solid var(--ds-color-border-subtle);
+          overflow: hidden;
+          transition: flex-grow 420ms cubic-bezier(0.2, 0.7, 0.2, 1),
+            background-color 300ms ease, color 300ms ease, box-shadow 300ms ease;
+        }
+        .ds-showcase-card:hover,
+        .ds-showcase-card:focus-within {
+          flex-grow: 1.15;
+          background-color: var(--ds-color-surface-inverse);
+          border-color: var(--ds-color-surface-inverse);
+          box-shadow: var(--ds-shadow-md);
+        }
+        .ds-showcase-head {
+          height: 72px;
+          display: flex;
+          align-items: center;
+          gap: var(--ds-space-md);
+          padding: 0 var(--ds-space-lg);
+        }
+        .ds-showcase-media {
+          margin: 0 var(--ds-space-lg);
+          height: 394px;
+          border-radius: var(--ds-radius-surface);
+          overflow: hidden;
+          position: relative;
+        }
+        .ds-showcase-media img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: block;
+          transition: transform 420ms cubic-bezier(0.2, 0.7, 0.2, 1);
+        }
+        .ds-showcase-card:hover .ds-showcase-media img,
+        .ds-showcase-card:focus-within .ds-showcase-media img {
+          transform: scale(1.04);
+        }
+        .ds-showcase-title,
+        .ds-showcase-item-title {
+          color: var(--ds-color-text-primary);
+        }
+        .ds-showcase-item-desc {
+          color: var(--ds-color-text-secondary);
+        }
+        .ds-showcase-card:hover .ds-showcase-title,
+        .ds-showcase-card:focus-within .ds-showcase-title,
+        .ds-showcase-card:hover .ds-showcase-item-title,
+        .ds-showcase-card:focus-within .ds-showcase-item-title {
+          color: var(--ds-color-text-inverse);
+        }
+        .ds-showcase-card:hover .ds-showcase-item-desc,
+        .ds-showcase-card:focus-within .ds-showcase-item-desc {
+          color: var(--ds-color-text-inverse-secondary);
+        }
         @media (max-width: 1279px) {
-          .ds-showcase-grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+          .ds-showcase-row { flex-wrap: wrap; justify-content: center; }
+          .ds-showcase-card { flex: 0 1 calc(50% - var(--ds-space-lg)); }
+          .ds-showcase-card:hover, .ds-showcase-card:focus-within { flex-grow: 0; }
         }
         @media (max-width: 767px) {
-          .ds-showcase-grid { grid-template-columns: 1fr !important; }
+          .ds-showcase-card { flex: 1 1 100%; }
+          .ds-showcase-media { height: 260px; }
         }
       `}</style>
     </section>
   );
 }
 
-function Card({ card, featured = false }: { card: ShowcaseCard; featured?: boolean }) {
-  const inverse = featured;
+const PLACEHOLDERS = [
+  "linear-gradient(160deg, #B23A2E 0%, #6E1F18 100%)",
+  "linear-gradient(160deg, #0E5A5A 0%, #093838 100%)",
+  "linear-gradient(160deg, #2B3A55 0%, #121518 100%)",
+  "linear-gradient(160deg, #C2703A 0%, #7A3E16 100%)",
+];
+
+function Card({ card, index }: { card: ShowcaseCard; index: number }) {
   return (
-    <article
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        borderRadius: "var(--ds-radius-surface)",
-        overflow: "hidden",
-        border: inverse
-          ? "var(--ds-border-width-default) solid var(--ds-color-surface-inverse)"
-          : "var(--ds-border-width-default) solid var(--ds-color-border-subtle)",
-        backgroundColor: inverse
-          ? "var(--ds-color-surface-inverse)"
-          : "var(--ds-color-surface-default)",
-        boxShadow: "var(--ds-shadow-sm)",
-      }}
-    >
-      <header
-        style={{
-          display: "flex",
-          alignItems: "center",
-          gap: "var(--ds-space-md)",
-          padding: "var(--ds-space-lg) var(--ds-space-xl)",
-        }}
-      >
+    <article className="ds-showcase-card" tabIndex={0}>
+      <header className="ds-showcase-head">
         <span
           aria-hidden
           style={{
@@ -124,10 +167,10 @@ function Card({ card, featured = false }: { card: ShowcaseCard; featured?: boole
           {card.icon}
         </span>
         <h3
+          className="ds-showcase-title"
           style={{
             fontSize: "var(--ds-font-size-md)",
             fontWeight: "var(--ds-font-weight-semibold)",
-            color: inverse ? "var(--ds-color-text-inverse)" : "var(--ds-color-text-primary)",
           }}
         >
           {card.category}
@@ -135,51 +178,36 @@ function Card({ card, featured = false }: { card: ShowcaseCard; featured?: boole
       </header>
 
       <div
+        className="ds-showcase-media"
+        style={{ background: PLACEHOLDERS[index % PLACEHOLDERS.length] }}
+        aria-hidden
+      />
+
+      <div
         style={{
-          margin: "0 var(--ds-space-lg)",
-          borderRadius: "var(--ds-radius-surface)",
-          backgroundColor: inverse
-            ? "var(--ds-color-surface-inverse-soft)"
-            : "var(--ds-color-surface-subtle)",
-          padding: "var(--ds-space-xl)",
+          padding: "var(--ds-space-lg)",
           display: "grid",
           gap: "var(--ds-space-lg)",
-          flex: 1,
-          gridTemplateColumns: featured ? "repeat(2, minmax(0, 1fr))" : "1fr",
           alignContent: "start",
         }}
       >
         {card.items.map((item) => (
-          <div
-            key={item.title}
-            style={{
-              borderRadius: "var(--ds-radius-control)",
-              backgroundColor: inverse
-                ? "var(--ds-color-surface-inverse)"
-                : "var(--ds-color-surface-default)",
-              border: inverse
-                ? "var(--ds-border-width-default) solid var(--ds-color-border-inverse)"
-                : "var(--ds-border-width-default) solid var(--ds-color-border-subtle)",
-              padding: "var(--ds-space-lg)",
-            }}
-          >
+          <div key={item.title}>
             <p
+              className="ds-showcase-item-title"
               style={{
                 fontSize: "var(--ds-font-size-sm)",
                 fontWeight: "var(--ds-font-weight-semibold)",
-                color: inverse ? "var(--ds-color-text-inverse)" : "var(--ds-color-text-primary)",
               }}
             >
               {item.title}
             </p>
             <p
+              className="ds-showcase-item-desc"
               style={{
                 marginTop: "var(--ds-space-sm)",
                 fontSize: "var(--ds-font-size-sm)",
                 lineHeight: 1.7,
-                color: inverse
-                  ? "var(--ds-color-text-inverse-secondary)"
-                  : "var(--ds-color-text-secondary)",
               }}
             >
               {item.desc}
@@ -187,19 +215,6 @@ function Card({ card, featured = false }: { card: ShowcaseCard; featured?: boole
           </div>
         ))}
       </div>
-
-      <footer style={{ padding: "var(--ds-space-lg) var(--ds-space-xl)" }}>
-        <p
-          style={{
-            fontSize: "var(--ds-font-size-sm)",
-            color: inverse
-              ? "var(--ds-color-text-inverse-secondary)"
-              : "var(--ds-color-text-secondary)",
-          }}
-        >
-          {card.items.length} 项能力
-        </p>
-      </footer>
     </article>
   );
 }
