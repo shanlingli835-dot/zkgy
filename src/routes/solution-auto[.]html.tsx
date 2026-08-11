@@ -14,7 +14,6 @@ import {
 import autoArchitecture from "@/assets/auto-arch.png.asset.json";
 
 import {
-  ArchitectureDiagram,
   CTA_HREF,
   FeatureGrid,
   ProductHero,
@@ -22,6 +21,7 @@ import {
   SitePageShell,
 } from "@/components/site/ProductPageKit";
 import { SolutionShowcaseGrid } from "@/components/site/SolutionShowcaseGrid";
+import { AdvantageTriad } from "@/components/site/AdvantageTriad";
 
 export const Route = createFileRoute("/solution-auto.html")({
   head: () => ({
