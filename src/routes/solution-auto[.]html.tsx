@@ -8,7 +8,10 @@ import {
   Rocket,
   Users,
   Coins,
+  ChevronRight,
 } from "lucide-react";
+
+import autoArchitecture from "@/assets/auto-arch.png.asset.json";
 
 import {
   ArchitectureDiagram,
@@ -71,8 +74,71 @@ function SolutionAutoPage() {
       <Section
         eyebrow="方案概述"
         title="围绕 GB 44495 与 R155 构建交钥匙实验室"
-        intro="将固件漏洞扫描平台、Wisdom 模糊测试工具等旗舰产品整合为交钥匙级实验室工具链。客户无需外购检测服务，即可在自有环境中完成从威胁分析（TARA）到固件、协议、整车、云端的全栈安全验证。"
-      />
+      >
+        <img
+          src={autoArchitecture.url}
+          alt=""
+          style={{
+            display: "block",
+            width: "100%",
+            maxWidth: 1250,
+            height: "auto",
+            borderRadius: "var(--ds-radius-surface)",
+          }}
+        />
+
+        <div
+          style={{
+            display: "flex",
+            alignItems: "flex-start",
+            justifyContent: "space-between",
+            gap: "var(--ds-space-4xl)",
+            marginTop: "var(--ds-space-3xl)",
+            flexWrap: "wrap",
+          }}
+        >
+          <div style={{ flex: "1 1 28rem", maxWidth: "50rem" }}>
+            <h3
+              style={{
+                fontSize: "var(--ds-font-size-2xl)",
+                fontWeight: "var(--ds-font-weight-semibold)",
+                lineHeight: 1.3,
+                marginBottom: "var(--ds-space-md)",
+                color: "var(--ds-color-text-primary)",
+              }}
+            >
+              围绕 GB 44495 与 R155 构建交钥匙实验室
+            </h3>
+            <p
+              style={{
+                fontSize: "var(--ds-font-size-lg)",
+                lineHeight: 1.65,
+                color: "var(--ds-color-text-secondary)",
+              }}
+            >
+              将固件漏洞扫描平台、Wisdom 模糊测试工具等旗舰产品整合为交钥匙级实验室工具链。客户无需外购检测服务，即可在自有环境中完成从威胁分析（TARA）到固件、协议、整车、云端的全栈安全验证。
+            </p>
+          </div>
+          <a
+            href="/solution-auto.html"
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              gap: "var(--ds-space-sm)",
+              color: "var(--ds-color-link-default)",
+              fontSize: "var(--ds-font-size-md)",
+              fontWeight: "var(--ds-font-weight-semibold)",
+              textDecoration: "none",
+              flexShrink: 0,
+              marginTop: "var(--ds-space-xs)",
+            }}
+          >
+            了解更多
+            <ChevronRight size={18} aria-hidden />
+          </a>
+        </div>
+      </Section>
+
 
       <SolutionShowcaseGrid
         title="方案组成"
