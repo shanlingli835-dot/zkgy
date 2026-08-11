@@ -59,7 +59,7 @@ export function AdvantageTriad({ title, description, items, columns = 3 }: Advan
           style={{
             marginTop: "var(--ds-space-4xl)",
             display: "grid",
-            gridTemplateColumns: "repeat(3, minmax(0, 1fr))",
+            gridTemplateColumns: `repeat(${columns}, minmax(0, 1fr))`,
             gap: "var(--ds-space-4xl)",
             textAlign: "left",
           }}
