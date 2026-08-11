@@ -104,7 +104,7 @@ export function SolutionShowcaseGrid({ title, description, cards }: Props) {
         }
         .ds-showcase-media {
           margin: 0 var(--ds-space-lg);
-          height: 294px;
+          height: 200px;
           flex-shrink: 0;
           border-radius: var(--ds-radius-surface);
           overflow: hidden;
