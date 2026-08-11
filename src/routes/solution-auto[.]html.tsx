@@ -73,47 +73,67 @@ function SolutionAutoPage() {
         intro="将固件漏洞扫描平台、Wisdom 模糊测试工具等旗舰产品整合为交钥匙级实验室工具链。客户无需外购检测服务，即可在自有环境中完成从威胁分析（TARA）到固件、协议、整车、云端的全栈安全验证。"
       />
 
-      <Section
-        surface="subtle"
-        eyebrow="方案组成"
-        title="覆盖全栈的网联汽车安全工具链"
-      >
-        <FeatureGrid
-          columns={3}
-          items={[
-            {
-              icon: <ShieldCheck size={22} />,
-              title: "OTA 与固件安全",
-              desc: "固件漏洞扫描平台：自动化拆解 ECU / TCU 固件，生成 SBOM，持续监测 CVE、许可证与加密合规。",
-            },
-            {
-              icon: <Wifi size={22} />,
-              title: "通信与协议安全",
-              desc: "Wisdom 系列模糊测试机：覆盖 CAN、以太网、Bluetooth、Wi-Fi、DoIP、SOME/IP 等车载协议，挖掘已知与未知漏洞。",
-            },
-            {
-              icon: <Cpu size={22} />,
-              title: "硬件与芯片安全",
-              desc: "侧信道分析台、故障注入台、JTAG / SWD 接口扫描器，满足 R155 对安全启动与密钥存储的验证要求。",
-            },
-            {
-              icon: <CarFront size={22} />,
-              title: "整车台架攻防区",
-              desc: "实车网关与域控制器接入机柜，一键切换实验室与道路场景；集成信号屏蔽、以太网回放与 OTA 沙箱。",
-            },
-            {
-              icon: <FileBadge2 size={22} />,
-              title: "数据与合规管理",
-              desc: "TARA 威胁分析：内置 GB 44495 与 R155 用例模板，支撑合规文档与证据链的自动化生成。",
-            },
-            {
-              icon: <Rocket size={22} />,
-              title: "云端与后台安全",
-              desc: "面向车联网云端服务与远程运维通道，提供接口测试、纵深防御与 API 安全验证。",
-            },
-          ]}
-        />
-      </Section>
+      <SolutionShowcaseGrid
+        title="方案组成"
+        description="覆盖全栈的网联汽车安全工具链"
+        cards={[
+          {
+            icon: <ShieldCheck size={18} aria-hidden />,
+            category: "OTA 与固件安全",
+            items: [
+              {
+                title: "固件漏洞扫描平台",
+                desc: "自动化拆解 ECU/TCU 固件，生成 SBOM，持续监测 CVE、许可证及加密合规。",
+              },
+            ],
+          },
+          {
+            icon: <Wifi size={18} aria-hidden />,
+            category: "通信与协议安全",
+            items: [
+              {
+                title: "Wisdom 系列模糊测试机",
+                desc: "覆盖 CAN/Ethernet/Bluetooth/Wi-Fi/DOIP/SOME IP 等全场景车载协议，支持协议已知漏洞和未知漏洞挖掘。",
+              },
+            ],
+          },
+          {
+            icon: <Cpu size={18} aria-hidden />,
+            category: "硬件与芯片安全",
+            items: [
+              {
+                title: "硬件安全验证台",
+                desc: "侧信道分析台、故障注入台、JTAG/SWD 接口扫描器，满足 R155 对硬件安全启动、密钥存储的验证要求。",
+              },
+            ],
+          },
+          {
+            icon: <CarFront size={18} aria-hidden />,
+            category: "整车台架攻防区",
+            items: [
+              {
+                title: "整车接入机柜",
+                desc: "实车网关、域控制器接入机柜，一键切换实验室与道路场景；集成无线信号屏蔽、车载以太网流量回放、OTA 升级沙箱。",
+              },
+            ],
+          },
+          {
+            icon: <FileBadge2 size={18} aria-hidden />,
+            category: "数据与合规管理",
+            items: [
+              {
+                title: "TARA 威胁分析",
+                desc: "内置 GB 44495 & R155 威胁库，自动输出风险评估报告与合规差距清单。",
+              },
+              {
+                title: "知识共享平台",
+                desc: "持续更新法规解读、攻击用例、补丁情报，支撑人员培训与审计追溯。",
+              },
+            ],
+          },
+        ]}
+      />
+
 
       <Section
         eyebrow="平台架构"

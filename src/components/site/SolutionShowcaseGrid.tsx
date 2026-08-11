@@ -170,6 +170,7 @@ const PLACEHOLDERS = [
   "linear-gradient(160deg, #0E5A5A 0%, #093838 100%)",
   "linear-gradient(160deg, #2B3A55 0%, #121518 100%)",
   "linear-gradient(160deg, #C2703A 0%, #7A3E16 100%)",
+  "linear-gradient(160deg, #4A4A52 0%, #1E1E22 100%)",
 ];
 
 function Card({ card, index }: { card: ShowcaseCard; index: number }) {
