@@ -151,6 +151,10 @@ export function TimelineTabs({ title, description, groups }: Props) {
           font-weight: var(--ds-font-weight-semibold);
           border-bottom-color: rgb(20, 115, 230);
         }
+        .ds-timeline-tab.is-year-2025.is-active {
+          color: var(--ds-color-text-inverse);
+          border-bottom-color: rgb(20, 115, 230);
+        }
         .ds-timeline-panel {
           display: grid;
           grid-template-columns: repeat(3, minmax(0, 1fr));
