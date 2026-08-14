@@ -71,7 +71,7 @@ export function TimelineTabs({ title, description, groups }: Props) {
             aria-selected={active === i}
             aria-controls={`timeline-panel-${i}`}
             onClick={() => setActive(i)}
-            className={`ds-timeline-tab${active === i ? " is-active" : ""}`}
+            className={`ds-timeline-tab${active === i ? " is-active" : ""}${group.label === "2025年" ? " is-year-2025" : ""}`}
           >
             {group.label}
           </button>
@@ -149,6 +149,10 @@ export function TimelineTabs({ title, description, groups }: Props) {
         .ds-timeline-tab.is-active {
           color: rgb(20, 115, 230);
           font-weight: var(--ds-font-weight-semibold);
+          border-bottom-color: rgb(20, 115, 230);
+        }
+        .ds-timeline-tab.is-year-2025.is-active {
+          color: var(--ds-color-text-inverse);
           border-bottom-color: rgb(20, 115, 230);
         }
         .ds-timeline-panel {
