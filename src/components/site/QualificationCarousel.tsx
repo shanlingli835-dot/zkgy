@@ -10,6 +10,7 @@ import {
 export type QualificationItem = {
   id: string;
   name: string;
+  image?: string;
 };
 
 type Props = {
@@ -72,7 +73,17 @@ export function QualificationCarousel({ title, items }: Props) {
                 <div className="ds-qual-grid">
                   {page.map((item) => (
                     <figure key={item.id} className="ds-qual-item">
-                      <div className="ds-qual-media" aria-hidden />
+                      {item.image ? (
+                        <img
+                          src={item.image}
+                          alt={item.name}
+                          loading="lazy"
+                          className="ds-qual-media ds-qual-image"
+                        />
+                      ) : (
+                        <div className="ds-qual-media" aria-hidden />
+                      )}
+
                       <figcaption className="ds-qual-caption">
                         {item.name}
                       </figcaption>
@@ -118,6 +129,10 @@ export function QualificationCarousel({ title, items }: Props) {
           aspect-ratio: 3 / 4;
           border-radius: var(--ds-radius-surface);
           background: #f4f4f4;
+        }
+        .ds-qual-image {
+          object-fit: contain;
+          display: block;
         }
         .ds-qual-caption {
           text-align: center;

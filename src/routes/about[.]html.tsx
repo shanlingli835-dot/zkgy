@@ -10,6 +10,16 @@ import { ZigzagShowcase } from "@/components/site/ZigzagShowcase";
 import companyOverviewImage from "@/assets/about-company-overview.jpg";
 import { TimelineTabs } from "@/components/site/TimelineTabs";
 import { QualificationCarousel } from "@/components/site/QualificationCarousel";
+import cert6 from "@/assets/qualifications/cert-6.png.asset.json";
+import cert7 from "@/assets/qualifications/cert-7.png.asset.json";
+import cert8 from "@/assets/qualifications/cert-8.png.asset.json";
+import cert9 from "@/assets/qualifications/cert-9.png.asset.json";
+import cert10 from "@/assets/qualifications/cert-10.png.asset.json";
+import cert11 from "@/assets/qualifications/cert-11.png.asset.json";
+import cert12 from "@/assets/qualifications/cert-12.png.asset.json";
+import cert13 from "@/assets/qualifications/cert-13.png.asset.json";
+import cert14 from "@/assets/qualifications/cert-14.png.asset.json";
+import cert15 from "@/assets/qualifications/cert-15.png.asset.json";
 
 const TIMELINE_GROUPS = [
   {
@@ -58,18 +68,36 @@ const TIMELINE_GROUPS = [
 ];
 
 const QUALIFICATIONS = [
-  { id: "iso9001", name: "ISO9001质量管理体系认证" },
-  { id: "iso27001", name: "ISO27001信息安全管理体系认证" },
-  { id: "high-tech", name: "国家高新技术企业" },
-  { id: "zgc", name: "中关村高新技术企业" },
-  { id: "tm-guyuan", name: "“固源科技”商标注册证" },
-  { id: "tm-swift", name: "“Swift Fuzzer”商标注册证" },
-  { id: "swift-fuzzer", name: "雨燕模糊测试工具系统软件著作权" },
-  { id: "wisdom", name: "Wisdom协议测试平台软件著作权" },
-  { id: "cybllum", name: "Cybllum固件安全检测软件著作权" },
-  { id: "swift-ai", name: "Swift AI安全对抗检测软件著作权" },
-  { id: "swift-app", name: "Swift APP漏洞扫描工具软件著作权" },
-  { id: "swift-sca", name: "Swift SCA软件成分分析软件著作权" },
+  { id: "cmmi5", name: "CMMI V2.0 成熟度五级证书", image: cert6.url },
+  { id: "iso9001", name: "质量管理体系认证证书（ISO9001）", image: cert7.url },
+  {
+    id: "iso20000",
+    name: "服务管理体系认证证书（ISO/IEC 20000-1）",
+    image: cert8.url,
+  },
+  {
+    id: "iso27001",
+    name: "信息安全管理体系认证证书（ISO/IEC 27001）",
+    image: cert9.url,
+  },
+  {
+    id: "iso27017",
+    name: "云服务信息安全管理体系认证证书（ISO/IEC 27017）",
+    image: cert10.url,
+  },
+  {
+    id: "iso27018",
+    name: "公有云中个人可识别信息保护管理体系认证证书（ISO/IEC 27018）",
+    image: cert11.url,
+  },
+  {
+    id: "iso27701",
+    name: "隐私信息管理体系认证证书（ISO/IEC 27701）",
+    image: cert12.url,
+  },
+  { id: "publication", name: "出版物经营许可证", image: cert13.url },
+  { id: "broadcast", name: "广播电视节目制作经营许可证", image: cert14.url },
+  { id: "high-tech", name: "高新技术企业证书", image: cert15.url },
 ];
 
 const MISSION_CARDS = [
