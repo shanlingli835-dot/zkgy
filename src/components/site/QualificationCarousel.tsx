@@ -73,7 +73,17 @@ export function QualificationCarousel({ title, items }: Props) {
                 <div className="ds-qual-grid">
                   {page.map((item) => (
                     <figure key={item.id} className="ds-qual-item">
-                      <div className="ds-qual-media" aria-hidden />
+                      {item.image ? (
+                        <img
+                          src={item.image}
+                          alt={item.name}
+                          loading="lazy"
+                          className="ds-qual-media ds-qual-image"
+                        />
+                      ) : (
+                        <div className="ds-qual-media" aria-hidden />
+                      )}
+
                       <figcaption className="ds-qual-caption">
                         {item.name}
                       </figcaption>
