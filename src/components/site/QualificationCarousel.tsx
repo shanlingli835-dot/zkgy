@@ -10,6 +10,7 @@ import {
 export type QualificationItem = {
   id: string;
   name: string;
+  image?: string;
 };
 
 type Props = {
