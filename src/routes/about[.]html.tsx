@@ -100,6 +100,14 @@ const QUALIFICATIONS = [
   { id: "publication", name: "出版物经营许可证", image: cert13.url },
   { id: "broadcast", name: "广播电视节目制作经营许可证", image: cert14.url },
   { id: "high-tech", name: "高新技术企业证书", image: cert15.url },
+  { id: "credit-aaa", name: "企业信用等级证书", image: cert16.url },
+  {
+    id: "dcmm",
+    name: "数据管理能力成熟度（DCMM）等级证书",
+    image: cert17.url,
+  },
+];
+
 const HONORS = [
   { id: "honor-1", name: "国家高新技术企业" },
   { id: "honor-2", name: "中关村高新技术企业" },
@@ -114,6 +122,7 @@ const HONORS = [
   { id: "honor-11", name: "车联网安全优秀实践案例" },
   { id: "honor-12", name: "工业互联网安全优秀案例" },
 ];
+
 
 
 const MISSION_CARDS = [
