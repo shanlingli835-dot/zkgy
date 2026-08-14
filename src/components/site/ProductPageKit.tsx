@@ -114,6 +114,7 @@ export function SitePageShell({ children }: { children: ReactNode }) {
         <>
           <CtaBanner
             title="为关键行业建立可验证、可交付、可复用的安全能力。"
+            description="了解中科固源如何为您的业务提供专业安全测试产品与技术服务。"
             primaryCta={{ label: "免费试用", href: CTA_HREF }}
             secondaryCta={{ label: "联系我们", href: CTA_HREF }}
           />
