@@ -1,12 +1,15 @@
 import type { CSSProperties, ReactNode } from "react";
 
+import { cn } from "@/lib/utils";
+import { buttonVariants } from "@/components/ui/button-variants";
 import { GlobalHeader } from "@/components/site/GlobalHeader";
 import { SiteShell } from "@/components/site/SiteShell";
 import { SourceHomeEmbed } from "@/components/site/SourceHomeEmbed";
 
 /**
  * 共享的产品/方案/服务/公司页脚 + CTA 区域。
- * 复用首页 public/source-site/index.html 的 .solution-cta-bar + .jasper-footer。
+ * 复用首页 public/source-site/index.html 的 .jasper-footer。
+ * 旧的 .solution-cta-bar 已由 React 版 CtaBanner 替代，因此隐藏。
  * 其他首页模块通过 hiddenSelectors 隐藏，保证视觉一致。
  */
 export const HOME_FOOTER_HIDDEN_SELECTORS = [
@@ -18,20 +21,109 @@ export const HOME_FOOTER_HIDDEN_SELECTORS = [
   "main > .pt-section",
   "main > .platform-section",
   "main > .floating-icons-hero",
+  ".solution-cta-bar",
 ];
 
 export const CTA_HREF = "/contact.html";
+
+/* ---------------- CTA Banner ---------------- */
+
+export function CtaBanner({
+  title,
+  description,
+  primaryCta = { label: "免费试用", href: CTA_HREF },
+  secondaryCta = { label: "联系我们", href: CTA_HREF },
+}: {
+  title: string;
+  description?: string;
+  primaryCta?: { label: string; href: string };
+  secondaryCta?: { label: string; href: string };
+}) {
+  return (
+    <section
+      style={{
+        backgroundColor: "var(--ds-color-surface-subtle)",
+        padding: "var(--ds-section-y-desktop) var(--ds-gutter-desktop)",
+      }}
+    >
+      <div
+        style={{
+          maxWidth: "var(--ds-container-page)",
+          margin: "0 auto",
+          textAlign: "center",
+        }}
+      >
+        <h2
+          style={{
+            fontSize: "clamp(1.5rem, 3.2vw, 2.25rem)",
+            fontWeight: "var(--ds-font-weight-semibold)",
+            lineHeight: 1.3,
+            color: "var(--ds-color-text-primary)",
+            maxWidth: 900,
+            margin: "0 auto",
+          }}
+        >
+          {title}
+        </h2>
+        {description && (
+          <p
+            style={{
+              marginTop: "var(--ds-space-lg)",
+              maxWidth: 780,
+              marginInline: "auto",
+              color: "var(--ds-color-text-secondary)",
+              fontSize: "var(--ds-font-size-lg)",
+              lineHeight: 1.6,
+            }}
+          >
+            {description}
+          </p>
+        )}
+        <div
+          style={{
+            marginTop: "var(--ds-space-2xl)",
+            display: "flex",
+            flexWrap: "wrap",
+            justifyContent: "center",
+            gap: "var(--ds-space-md)",
+          }}
+        >
+          <a
+            href={secondaryCta.href}
+            className={cn(buttonVariants({ variant: "secondary" }))}
+          >
+            {secondaryCta.label}
+          </a>
+          <a
+            href={primaryCta.href}
+            className={cn(buttonVariants({ variant: "primary" }))}
+          >
+            {primaryCta.label}
+          </a>
+        </div>
+      </div>
+    </section>
+  );
+}
 
 export function SitePageShell({ children }: { children: ReactNode }) {
   return (
     <SiteShell
       header={<GlobalHeader />}
       footer={
-        <SourceHomeEmbed
-          hiddenSelectors={HOME_FOOTER_HIDDEN_SELECTORS}
-          fitContent
-          title="页脚与行动号召"
-        />
+        <>
+          <CtaBanner
+            title="为关键行业建立可验证、可交付、可复用的安全能力。"
+            description="了解中科固源如何为您的业务提供专业安全测试产品与技术服务。"
+            primaryCta={{ label: "免费试用", href: CTA_HREF }}
+            secondaryCta={{ label: "联系我们", href: CTA_HREF }}
+          />
+          <SourceHomeEmbed
+            hiddenSelectors={HOME_FOOTER_HIDDEN_SELECTORS}
+            fitContent
+            title="页脚"
+          />
+        </>
       }
     >
       {children}
