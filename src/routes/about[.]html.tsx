@@ -30,6 +30,32 @@ const MISSION_CARDS = [
   },
 ];
 
+export const Route = createFileRoute("/about.html")({
+  head: () => ({
+    meta: [
+      { title: "公司介绍 — 中科固源" },
+      {
+        name: "description",
+        content:
+          "中科固源致力于成为全球领先的低空与商业航天网络安全方案提供商，构建覆盖检测、模糊测试与自动化验证的一体化安全能力。",
+      },
+      {
+        name: "keywords",
+        content: "中科固源，公司介绍，网络安全，低空经济，商业航天",
+      },
+      { property: "og:title", content: "公司介绍 — 中科固源" },
+      {
+        property: "og:description",
+        content:
+          "了解中科固源的定位、能力与团队，及其在低空与商业航天领域的网络安全战略。",
+      },
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: "/about.html" },
+    ],
+    links: [{ rel: "canonical", href: "/about.html" }],
+  }),
+  component: AboutPage,
+});
 
 function AboutPage() {
   return (
@@ -145,95 +171,6 @@ function AboutPage() {
           ]}
         />
       </Section>
-
-
-      <Section
-        surface="subtle"
-        eyebrow="公司分布"
-        title="公司分布地区"
-      >
-        <div
-          className="ds-grid-4"
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(4, minmax(0, 1fr))",
-            gap: "var(--ds-space-xl)",
-          }}
-        >
-          {OFFICES.map((o) => (
-            <article
-              key={o.city}
-              style={{
-                padding: "var(--ds-space-2xl)",
-                backgroundColor: "var(--ds-color-surface-default)",
-                border:
-                  "var(--ds-border-width-default) solid var(--ds-color-border-subtle)",
-                borderRadius: "var(--ds-radius-surface)",
-              }}
-            >
-              <div
-                style={{
-                  display: "inline-flex",
-                  alignItems: "center",
-                  gap: "var(--ds-space-sm)",
-                  color: "var(--ds-color-action-primary)",
-                  fontWeight: "var(--ds-font-weight-semibold)",
-                }}
-              >
-                <MapPin size={18} /> {o.city}
-              </div>
-              <p
-                style={{
-                  marginTop: "var(--ds-space-md)",
-                  color: "var(--ds-color-text-primary)",
-                  lineHeight: 1.6,
-                  fontSize: "var(--ds-font-size-md)",
-                }}
-              >
-                {o.address}
-              </p>
-              <p
-                style={{
-                  marginTop: "var(--ds-space-sm)",
-                  color: "var(--ds-color-text-secondary)",
-                  display: "inline-flex",
-                  alignItems: "center",
-                  gap: "var(--ds-space-xs)",
-                  fontSize: "var(--ds-font-size-sm)",
-                }}
-              >
-                <Phone size={16} /> {o.phone}
-              </p>
-            </article>
-          ))}
-        </div>
-      </Section>
-
-
-      <Section surface="subtle" eyebrow="资质与荣誉" title="持续被行业与客户认可">
-        <FeatureGrid
-          columns={3}
-          variant="topbar"
-          items={[
-            {
-              icon: <BadgeCheck size={22} />,
-              title: "国家高新技术企业",
-              desc: "具备国家高新技术企业资质，持续加大研发投入。",
-            },
-            {
-              icon: <Rocket size={22} />,
-              title: "省级专精特新企业",
-              desc: "获得省级专精特新企业认定，深耕安全细分方向。",
-            },
-            {
-              icon: <Users size={22} />,
-              title: "CNAS 认证实验室",
-              desc: "实验室通过 CNAS 认证，具备对外提供测评服务的能力。",
-            },
-          ]}
-        />
-      </Section>
-
     </SitePageShell>
   );
 }
