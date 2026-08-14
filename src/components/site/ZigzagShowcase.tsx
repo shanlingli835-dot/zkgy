@@ -1,7 +1,10 @@
 export type ZigzagItem = {
   title: string;
   paragraphs: string[];
+  image?: string;
+  imageAlt?: string;
 };
+
 
 type Props = {
   title: string;
