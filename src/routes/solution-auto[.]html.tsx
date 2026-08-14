@@ -22,6 +22,8 @@ import {
 } from "@/components/site/ProductPageKit";
 import { SolutionShowcaseGrid } from "@/components/site/SolutionShowcaseGrid";
 import { AdvantageTriad } from "@/components/site/AdvantageTriad";
+import { GalleryHoverCarousel } from "@/components/site/GalleryHoverCarousel";
+
 
 export const Route = createFileRoute("/solution-auto.html")({
   head: () => ({
