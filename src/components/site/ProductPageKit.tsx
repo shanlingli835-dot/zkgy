@@ -21,6 +21,8 @@ export const HOME_FOOTER_HIDDEN_SELECTORS = [
   "main > .pt-section",
   "main > .platform-section",
   "main > .floating-icons-hero",
+  "main > .floating-icons-hero-gap",
+  "main > .sg-faq",
   ".solution-cta-bar",
 ];
 
