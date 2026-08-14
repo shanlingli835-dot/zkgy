@@ -41,8 +41,6 @@ export const primaryNav: NavGroup[] = [
       { label: "Swift Code 源代码审计", href: "/swiftcode.html" },
       { label: "Wisdom Lens 灰盒模糊测试", href: "/lens.html" },
       { label: "Swift Pentest 自动化渗透测试", href: "/swiftpenstest.html" },
-      { label: "数据标准规范检查系统", href: "/datacheck.html", legacyOnly: true },
-      { label: "软件质量评估系统", href: "/softwareassess.html", legacyOnly: true },
     ],
   },
   {
