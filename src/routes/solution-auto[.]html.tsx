@@ -15,7 +15,7 @@ import autoArchitecture from "@/assets/auto-arch.png.asset.json";
 
 import {
   CTA_HREF,
-  FeatureGrid,
+  
   ProductHero,
   Section,
   SitePageShell,
