@@ -10,6 +10,16 @@ import { ZigzagShowcase } from "@/components/site/ZigzagShowcase";
 import companyOverviewImage from "@/assets/about-company-overview.jpg";
 import { TimelineTabs } from "@/components/site/TimelineTabs";
 import { QualificationCarousel } from "@/components/site/QualificationCarousel";
+import cert6 from "@/assets/qualifications/cert-6.png.asset.json";
+import cert7 from "@/assets/qualifications/cert-7.png.asset.json";
+import cert8 from "@/assets/qualifications/cert-8.png.asset.json";
+import cert9 from "@/assets/qualifications/cert-9.png.asset.json";
+import cert10 from "@/assets/qualifications/cert-10.png.asset.json";
+import cert11 from "@/assets/qualifications/cert-11.png.asset.json";
+import cert12 from "@/assets/qualifications/cert-12.png.asset.json";
+import cert13 from "@/assets/qualifications/cert-13.png.asset.json";
+import cert14 from "@/assets/qualifications/cert-14.png.asset.json";
+import cert15 from "@/assets/qualifications/cert-15.png.asset.json";
 
 const TIMELINE_GROUPS = [
   {
