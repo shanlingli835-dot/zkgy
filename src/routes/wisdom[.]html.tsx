@@ -16,27 +16,9 @@ import {
 } from "lucide-react";
 
 import protocolConsoleImage from "@/assets/saas-hero-1-16x9.png.asset.json";
-import { GlobalHeader } from "@/components/site/GlobalHeader";
 import { AdvantageTriad } from "@/components/site/AdvantageTriad";
 import { HomeAccordion } from "@/components/site/HomeAccordion";
-import { SiteShell } from "@/components/site/SiteShell";
-import { SourceHomeEmbed } from "@/components/site/SourceHomeEmbed";
-
-/**
- * 与首页保持一致的 CTA + 页脚区域。
- * 复用 public/source-site/index.html，仅显示 .solution-cta-bar 与 .jasper-footer，
- * 其余首页模块通过 hiddenSelectors 隐藏。
- */
-const HOME_FOOTER_HIDDEN_SELECTORS = [
-  "header.site-header",
-  "main > .jasper-hero-shell",
-  "main > .jasper-logo-marquee",
-  "main > .integrations-three",
-  "main > .why-tabs",
-  "main > .pt-section",
-  "main > .platform-section",
-  "main > .floating-icons-hero",
-];
+import { SitePageShell } from "@/components/site/ProductPageKit";
 
 /**
  * Wisdom 模糊测试产品详情页 (/wisdom.html)
@@ -78,16 +60,13 @@ const CTA_HREF = "/contact.html";
 
 function WisdomPage() {
   return (
-    <SiteShell
-      header={<GlobalHeader />}
-      footer={<SourceHomeEmbed hiddenSelectors={HOME_FOOTER_HIDDEN_SELECTORS} fitContent title="页脚与行动号召" />}
-    >
+    <SitePageShell>
       <Hero />
       <WhyFuzz />
       <Capabilities />
       <Advantages />
       <NoCustomization />
-    </SiteShell>
+    </SitePageShell>
   );
 }
 
