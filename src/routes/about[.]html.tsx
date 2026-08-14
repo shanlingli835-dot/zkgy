@@ -100,6 +100,31 @@ function AboutPage() {
 
       <Section
         surface="subtle"
+        eyebrow="使命与愿景"
+        title="驱动固源持续前行的价值主张"
+      >
+        <FeatureGrid
+          columns={3}
+          variant="topbar"
+          items={[
+            {
+              title: "固源的使命",
+              desc: "铸安全利器，御黑客攻击。",
+            },
+            {
+              title: "固源的愿景",
+              desc: "成为全球领先的模糊测试技术企业。",
+            },
+            {
+              title: "核心价值观",
+              desc: "价值源于客户，创新源于人才，实力源于技术。",
+            },
+          ]}
+        />
+      </Section>
+
+      <Section
+        surface="subtle"
         eyebrow="发展历程"
         title="从实验室认证到行业能力建设"
       >
