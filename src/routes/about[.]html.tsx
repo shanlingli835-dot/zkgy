@@ -129,6 +129,8 @@ const HONORS = [
   { id: "honor-25", name: "2023 DAMA 数据治理最佳实践奖", image: honor25.url },
   { id: "honor-26", name: "哈佛商业评论数字化创新奖", image: honor26.url },
   { id: "honor-27", name: "数字经济企业 TOP500", image: honor27.url },
+  { id: "honor-28", name: "北京民营企业百强", image: honor28.url },
+  { id: "honor-29", name: "广东省百强民营企业 2023", image: honor29.url },
 ];
 
 
