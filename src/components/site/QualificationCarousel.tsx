@@ -128,7 +128,8 @@ export function QualificationCarousel({ title, items }: Props) {
           width: 100%;
           aspect-ratio: 3 / 4;
           border-radius: var(--ds-radius-surface);
-          background: #f4f4f4;
+          background: #ffffff;
+          border: 1px solid #d9d9d9;
         }
         .ds-qual-image {
           object-fit: contain;
