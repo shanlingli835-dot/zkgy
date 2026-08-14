@@ -1,12 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import {
-  Rocket,
-  Users,
-  BadgeCheck,
-  Target,
-  Eye,
-  Heart,
-} from "lucide-react";
+import { Target, Eye, Heart } from "lucide-react";
 import {
   CTA_HREF,
   FeatureGrid,
@@ -34,56 +27,6 @@ const MISSION_CARDS = [
     iconColor: "var(--ds-color-status-info)",
     title: "核心价值观",
     statement: "价值源于客户，创新源于人才，实力源于技术。",
-  },
-];
-
-export const Route = createFileRoute("/about.html")({
-  head: () => ({
-    meta: [
-      { title: "公司介绍 — 中科固源" },
-      {
-        name: "description",
-        content:
-          "中科固源致力于成为全球领先的低空与商业航天网络安全方案提供商，构建覆盖检测、模糊测试与自动化验证的一体化安全能力。",
-      },
-      {
-        name: "keywords",
-        content: "中科固源，公司介绍，网络安全，低空经济，商业航天",
-      },
-      { property: "og:title", content: "公司介绍 — 中科固源" },
-      {
-        property: "og:description",
-        content:
-          "了解中科固源的定位、能力与团队，及其在低空与商业航天领域的网络安全战略。",
-      },
-      { property: "og:type", content: "website" },
-      { property: "og:url", content: "/about.html" },
-    ],
-    links: [{ rel: "canonical", href: "/about.html" }],
-  }),
-  component: AboutPage,
-});
-
-const OFFICES = [
-  {
-    city: "无锡总部",
-    address: "江苏省无锡市经开区雪浪小镇",
-    phone: "010-82923621",
-  },
-  {
-    city: "北京",
-    address: "北京市海淀区中关村壹号 F1 座 7 楼",
-    phone: "010-82923621",
-  },
-  {
-    city: "上海",
-    address: "上海市普陀区谈家渡路 28 号信息商务港 8 楼",
-    phone: "021-52919537",
-  },
-  {
-    city: "西安",
-    address: "陕西省西安市国家民用航天产业基地",
-    phone: "021-52919537",
   },
 ];
 
