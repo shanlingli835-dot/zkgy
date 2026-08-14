@@ -276,9 +276,8 @@ function AboutPage() {
 
       <QualificationCarousel title="企业资质" items={QUALIFICATIONS} />
 
-      <QualificationCarousel title="荣誉奖项" items={HONORS} />
-
       <QualificationCarousel title="荣誉奖项" items={[...HONORS, ...HONORS]} />
+
 
 
 
