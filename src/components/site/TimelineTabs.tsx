@@ -143,13 +143,13 @@ export function TimelineTabs({ title, description, groups }: Props) {
         }
         .ds-timeline-tab:hover { color: var(--ds-color-text-inverse); }
         .ds-timeline-tab:focus-visible {
-          outline: 2px solid var(--ds-color-link-inverse-focus);
+          outline: 2px solid rgb(20, 115, 230);
           outline-offset: 2px;
         }
         .ds-timeline-tab.is-active {
-          color: var(--ds-color-text-inverse);
+          color: rgb(20, 115, 230);
           font-weight: var(--ds-font-weight-semibold);
-          border-bottom-color: var(--ds-color-status-info);
+          border-bottom-color: rgb(20, 115, 230);
         }
         .ds-timeline-panel {
           display: grid;
