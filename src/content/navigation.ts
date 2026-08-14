@@ -55,9 +55,7 @@ export const primaryNav: NavGroup[] = [
     id: "services",
     label: "服务",
     children: [
-      { label: "三方测评", href: "/service-secas.html", legacyOnly: true },
       { label: "渗透测试", href: "/service-penstest.html" },
-      { label: "系统集成", href: "/integration.html", legacyOnly: true },
     ],
   },
   {
