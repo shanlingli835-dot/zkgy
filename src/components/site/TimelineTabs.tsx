@@ -71,7 +71,7 @@ export function TimelineTabs({ title, description, groups }: Props) {
             aria-selected={active === i}
             aria-controls={`timeline-panel-${i}`}
             onClick={() => setActive(i)}
-            className={`ds-timeline-tab${active === i ? " is-active" : ""}${group.label === "2025年" ? " is-year-2025" : ""}`}
+            className={`ds-timeline-tab${active === i ? " is-active" : ""}`}
           >
             {group.label}
           </button>
