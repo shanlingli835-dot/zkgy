@@ -1,12 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import {
-  Rocket,
-  Users,
-  BadgeCheck,
-  Target,
-  Eye,
-  Heart,
-} from "lucide-react";
+import { Target, Eye, Heart } from "lucide-react";
 import {
   CTA_HREF,
   FeatureGrid,
@@ -63,30 +56,6 @@ export const Route = createFileRoute("/about.html")({
   }),
   component: AboutPage,
 });
-
-const OFFICES = [
-  {
-    city: "无锡总部",
-    address: "江苏省无锡市经开区雪浪小镇",
-    phone: "010-82923621",
-  },
-  {
-    city: "北京",
-    address: "北京市海淀区中关村壹号 F1 座 7 楼",
-    phone: "010-82923621",
-  },
-  {
-    city: "上海",
-    address: "上海市普陀区谈家渡路 28 号信息商务港 8 楼",
-    phone: "021-52919537",
-  },
-  {
-    city: "西安",
-    address: "陕西省西安市国家民用航天产业基地",
-    phone: "021-52919537",
-  },
-];
-
 
 function AboutPage() {
   return (
@@ -202,95 +171,6 @@ function AboutPage() {
           ]}
         />
       </Section>
-
-
-      <Section
-        surface="subtle"
-        eyebrow="公司分布"
-        title="公司分布地区"
-      >
-        <div
-          className="ds-grid-4"
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(4, minmax(0, 1fr))",
-            gap: "var(--ds-space-xl)",
-          }}
-        >
-          {OFFICES.map((o) => (
-            <article
-              key={o.city}
-              style={{
-                padding: "var(--ds-space-2xl)",
-                backgroundColor: "var(--ds-color-surface-default)",
-                border:
-                  "var(--ds-border-width-default) solid var(--ds-color-border-subtle)",
-                borderRadius: "var(--ds-radius-surface)",
-              }}
-            >
-              <div
-                style={{
-                  display: "inline-flex",
-                  alignItems: "center",
-                  gap: "var(--ds-space-sm)",
-                  color: "var(--ds-color-action-primary)",
-                  fontWeight: "var(--ds-font-weight-semibold)",
-                }}
-              >
-                <MapPin size={18} /> {o.city}
-              </div>
-              <p
-                style={{
-                  marginTop: "var(--ds-space-md)",
-                  color: "var(--ds-color-text-primary)",
-                  lineHeight: 1.6,
-                  fontSize: "var(--ds-font-size-md)",
-                }}
-              >
-                {o.address}
-              </p>
-              <p
-                style={{
-                  marginTop: "var(--ds-space-sm)",
-                  color: "var(--ds-color-text-secondary)",
-                  display: "inline-flex",
-                  alignItems: "center",
-                  gap: "var(--ds-space-xs)",
-                  fontSize: "var(--ds-font-size-sm)",
-                }}
-              >
-                <Phone size={16} /> {o.phone}
-              </p>
-            </article>
-          ))}
-        </div>
-      </Section>
-
-
-      <Section surface="subtle" eyebrow="资质与荣誉" title="持续被行业与客户认可">
-        <FeatureGrid
-          columns={3}
-          variant="topbar"
-          items={[
-            {
-              icon: <BadgeCheck size={22} />,
-              title: "国家高新技术企业",
-              desc: "具备国家高新技术企业资质，持续加大研发投入。",
-            },
-            {
-              icon: <Rocket size={22} />,
-              title: "省级专精特新企业",
-              desc: "获得省级专精特新企业认定，深耕安全细分方向。",
-            },
-            {
-              icon: <Users size={22} />,
-              title: "CNAS 认证实验室",
-              desc: "实验室通过 CNAS 认证，具备对外提供测评服务的能力。",
-            },
-          ]}
-        />
-      </Section>
-
     </SitePageShell>
   );
 }
