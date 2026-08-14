@@ -20,6 +20,7 @@ import { Route as LensDothtmlRouteImport } from './routes/lens[.]html'
 import { Route as IndexDothtmlRouteImport } from './routes/index[.]html'
 import { Route as HomeReactPreviewRouteImport } from './routes/home-react-preview'
 import { Route as AiDothtmlRouteImport } from './routes/ai[.]html'
+import { Route as AboutDothtmlRouteImport } from './routes/about[.]html'
 import { Route as IndexRouteImport } from './routes/index'
 
 const WisdomDothtmlRoute = WisdomDothtmlRouteImport.update({
@@ -77,6 +78,11 @@ const AiDothtmlRoute = AiDothtmlRouteImport.update({
   path: '/ai.html',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AboutDothtmlRoute = AboutDothtmlRouteImport.update({
+  id: '/about.html',
+  path: '/about.html',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -85,6 +91,7 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about.html': typeof AboutDothtmlRoute
   '/ai.html': typeof AiDothtmlRoute
   '/home-react-preview': typeof HomeReactPreviewRoute
   '/index.html': typeof IndexDothtmlRoute
@@ -99,6 +106,7 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about.html': typeof AboutDothtmlRoute
   '/ai.html': typeof AiDothtmlRoute
   '/home-react-preview': typeof HomeReactPreviewRoute
   '/index.html': typeof IndexDothtmlRoute
@@ -114,6 +122,7 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about.html': typeof AboutDothtmlRoute
   '/ai.html': typeof AiDothtmlRoute
   '/home-react-preview': typeof HomeReactPreviewRoute
   '/index.html': typeof IndexDothtmlRoute
@@ -130,6 +139,7 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/about.html'
     | '/ai.html'
     | '/home-react-preview'
     | '/index.html'
@@ -144,6 +154,7 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/about.html'
     | '/ai.html'
     | '/home-react-preview'
     | '/index.html'
@@ -158,6 +169,7 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/about.html'
     | '/ai.html'
     | '/home-react-preview'
     | '/index.html'
@@ -173,6 +185,7 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutDothtmlRoute: typeof AboutDothtmlRoute
   AiDothtmlRoute: typeof AiDothtmlRoute
   HomeReactPreviewRoute: typeof HomeReactPreviewRoute
   IndexDothtmlRoute: typeof IndexDothtmlRoute
@@ -265,6 +278,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AiDothtmlRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/about.html': {
+      id: '/about.html'
+      path: '/about.html'
+      fullPath: '/about.html'
+      preLoaderRoute: typeof AboutDothtmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -277,6 +297,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutDothtmlRoute: AboutDothtmlRoute,
   AiDothtmlRoute: AiDothtmlRoute,
   HomeReactPreviewRoute: HomeReactPreviewRoute,
   IndexDothtmlRoute: IndexDothtmlRoute,
