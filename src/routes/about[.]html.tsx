@@ -123,28 +123,70 @@ function AboutPage() {
       />
 
       <Section
-        surface="subtle"
+        surface="default"
         eyebrow="使命与愿景"
         title="驱动固源持续前行的价值主张"
       >
-        <FeatureGrid
-          columns={3}
-          variant="topbar"
-          items={[
-            {
-              title: "固源的使命",
-              desc: "铸安全利器，御黑客攻击。",
-            },
-            {
-              title: "固源的愿景",
-              desc: "成为全球领先的模糊测试技术企业。",
-            },
-            {
-              title: "核心价值观",
-              desc: "价值源于客户，创新源于人才，实力源于技术。",
-            },
-          ]}
-        />
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(3, minmax(0, 1fr))",
+            gap: "var(--ds-space-xl)",
+          }}
+        >
+          {MISSION_CARDS.map((card) => (
+            <article
+              key={card.label}
+              style={{
+                padding: "var(--ds-space-2xl)",
+                backgroundColor: "var(--ds-color-surface-subtle)",
+                borderRadius: "var(--ds-radius-surface)",
+              }}
+            >
+              <div
+                style={{
+                  color: "var(--ds-color-action-primary)",
+                  marginBottom: "var(--ds-space-lg)",
+                }}
+              >
+                {card.icon}
+              </div>
+              <div
+                style={{
+                  fontSize: "var(--ds-font-size-xs)",
+                  fontWeight: "var(--ds-font-weight-semibold)",
+                  letterSpacing: "0.08em",
+                  textTransform: "uppercase",
+                  color: "var(--ds-color-text-muted)",
+                  marginBottom: "var(--ds-space-sm)",
+                }}
+              >
+                {card.label}
+              </div>
+              <h3
+                style={{
+                  fontSize: "var(--ds-font-size-lg)",
+                  fontWeight: "var(--ds-font-weight-semibold)",
+                  color: "var(--ds-color-text-primary)",
+                  marginBottom: "var(--ds-space-md)",
+                  lineHeight: 1.3,
+                }}
+              >
+                {card.title}
+              </h3>
+              <p
+                style={{
+                  fontSize: "var(--ds-font-size-xl)",
+                  fontWeight: "var(--ds-font-weight-semibold)",
+                  lineHeight: 1.4,
+                  color: "var(--ds-color-text-primary)",
+                }}
+              >
+                {card.statement}
+              </p>
+            </article>
+          ))}
+        </div>
       </Section>
 
       <Section
