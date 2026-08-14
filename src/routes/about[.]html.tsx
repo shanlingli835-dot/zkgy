@@ -145,7 +145,7 @@ function AboutPage() {
             >
               <div
                 style={{
-                  color: "var(--ds-color-text-primary)",
+                  color: card.iconColor,
                   marginBottom: "var(--ds-space-lg)",
                 }}
               >
