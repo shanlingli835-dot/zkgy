@@ -9,6 +9,7 @@ import {
 import { ZigzagShowcase } from "@/components/site/ZigzagShowcase";
 import companyOverviewImage from "@/assets/about-company-overview.jpg";
 import { TimelineTabs } from "@/components/site/TimelineTabs";
+import { QualificationCarousel } from "@/components/site/QualificationCarousel";
 
 const TIMELINE_GROUPS = [
   {
@@ -54,6 +55,21 @@ const TIMELINE_GROUPS = [
       "与西安电子科技大学联合成立“智能网联汽车通讯协议安全控制SoC芯片联合研发实验室”。",
     ],
   },
+];
+
+const QUALIFICATIONS = [
+  { id: "iso9001", name: "ISO9001质量管理体系认证" },
+  { id: "iso27001", name: "ISO27001信息安全管理体系认证" },
+  { id: "high-tech", name: "国家高新技术企业" },
+  { id: "zgc", name: "中关村高新技术企业" },
+  { id: "tm-guyuan", name: "“固源科技”商标注册证" },
+  { id: "tm-swift", name: "“Swift Fuzzer”商标注册证" },
+  { id: "swift-fuzzer", name: "雨燕模糊测试工具系统软件著作权" },
+  { id: "wisdom", name: "Wisdom协议测试平台软件著作权" },
+  { id: "cybllum", name: "Cybllum固件安全检测软件著作权" },
+  { id: "swift-ai", name: "Swift AI安全对抗检测软件著作权" },
+  { id: "swift-app", name: "Swift APP漏洞扫描工具软件著作权" },
+  { id: "swift-sca", name: "Swift SCA软件成分分析软件著作权" },
 ];
 
 const MISSION_CARDS = [
@@ -192,6 +208,8 @@ function AboutPage() {
         description="从公司成立与 Fuzzer 技术研究起步，逐步完成产品化、资质认证与行业联合实验室建设。"
         groups={TIMELINE_GROUPS}
       />
+
+      <QualificationCarousel title="企业资质" items={QUALIFICATIONS} />
 
     </SitePageShell>
   );
