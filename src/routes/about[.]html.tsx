@@ -12,8 +12,8 @@ import {
   ProductHero,
   Section,
   SitePageShell,
-  StatRow,
 } from "@/components/site/ProductPageKit";
+import { ZigzagShowcase } from "@/components/site/ZigzagShowcase";
 
 export const Route = createFileRoute("/about.html")({
   head: () => ({
@@ -82,20 +82,21 @@ function AboutPage() {
         primaryCta={{ label: "联系我们", href: CTA_HREF }}
       />
 
-      <Section
-        eyebrow="公司概况"
-        title="始终保持创新的研发型安全团队"
-        intro="依托中科星图集团“一体两翼”发展战略，整合集团在低空发展体系、商业航天发展体系与生态协同方面的资源优势，力争成为全球领先的低空及商业航天网络安全产品与解决方案提供商。"
-      >
-        <StatRow
-          stats={[
-            { value: "150+", label: "员工人数" },
-            { value: "20%+", label: "硕士及以上学历" },
-            { value: "60%+", label: "研发人员占比" },
-            { value: "20+", label: "专利与软件著作权" },
-          ]}
-        />
-      </Section>
+      <ZigzagShowcase
+        title="公司概况"
+        description="始终保持创新的研发型安全团队"
+        items={[
+          {
+            title: "中科固源",
+            paragraphs: [
+              "中科数测固源科技（安徽）有限公司成立于2022年8月，公司简称“中科固源”，是一家专注于网络安全测试与软件质量保障的高新技术企业。",
+              "公司围绕协议安全、软件安全、固件安全、人工智能安全及供应链安全等方向持续开展技术研发，形成了覆盖多类安全测试场景的产品体系，主要包括通讯协议模糊测试漏洞检测工具 Swift Fuzzer、通讯协议安全性与兼容性测试平台 Wisdom、二进制固件安全检测产品 Cybllum、AI 安全对抗检测产品 Swift AI、APP 漏洞扫描工具 Swift APP、软件成分分析工具 Swift SCA 等。",
+              "中科固源产品及解决方案已应用于智能网联汽车、工业控制、智能医疗、科研院所、检测机构等领域，凭借高效、稳定、精准的检测能力，为不同行业客户提供专业的网络安全测试产品与技术服务。",
+              "公司坚持技术创新与自主研发，持续完善网络安全测试产品与解决方案体系，致力于成为国内领先、具有国际竞争力的网络安全测试工具与技术服务提供商。",
+            ],
+          },
+        ]}
+      />
 
       <Section
         surface="subtle"
