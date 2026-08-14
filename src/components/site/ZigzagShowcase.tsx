@@ -108,6 +108,8 @@ export function ZigzagShowcase({ title, description, items }: Props) {
           height: 360px;
           max-width: 100%;
           background-color: #F4F4F4;
+          object-fit: cover;
+          display: block;
         }
         .ds-zigzag-text { max-width: 520px; }
         @media (max-width: 1023px) {
