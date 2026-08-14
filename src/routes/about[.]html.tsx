@@ -22,6 +22,16 @@ import cert14 from "@/assets/qualifications/cert-14.png.asset.json";
 import cert15 from "@/assets/qualifications/cert-15.png.asset.json";
 import cert16 from "@/assets/qualifications/cert-16.png.asset.json";
 import cert17 from "@/assets/qualifications/cert-17.png.asset.json";
+import honor18 from "@/assets/honors/honor-18.png.asset.json";
+import honor19 from "@/assets/honors/honor-19.png.asset.json";
+import honor20 from "@/assets/honors/honor-20.png.asset.json";
+import honor21 from "@/assets/honors/honor-21.png.asset.json";
+import honor22 from "@/assets/honors/honor-22.png.asset.json";
+import honor23 from "@/assets/honors/honor-23.png.asset.json";
+import honor24 from "@/assets/honors/honor-24.png.asset.json";
+import honor25 from "@/assets/honors/honor-25.png.asset.json";
+import honor26 from "@/assets/honors/honor-26.png.asset.json";
+import honor27 from "@/assets/honors/honor-27.png.asset.json";
 
 const TIMELINE_GROUPS = [
   {
@@ -109,18 +119,16 @@ const QUALIFICATIONS = [
 ];
 
 const HONORS = [
-  { id: "honor-1", name: "国家高新技术企业" },
-  { id: "honor-2", name: "中关村高新技术企业" },
-  { id: "honor-3", name: "安徽省专精特新中小企业" },
-  { id: "honor-4", name: "合肥市大数据企业" },
-  { id: "honor-5", name: "科技型中小企业" },
-  { id: "honor-6", name: "创新型中小企业" },
-  { id: "honor-7", name: "软件企业" },
-  { id: "honor-8", name: "软件产品" },
-  { id: "honor-9", name: "网络安全优秀创新成果" },
-  { id: "honor-10", name: "模糊测试技术创新奖" },
-  { id: "honor-11", name: "车联网安全优秀实践案例" },
-  { id: "honor-12", name: "工业互联网安全优秀案例" },
+  { id: "honor-18", name: "2024数字化转型十大贡献企业", image: honor18.url },
+  { id: "honor-19", name: "2024年度最佳数据赋能解决方案", image: honor19.url },
+  { id: "honor-20", name: "粤港澳大湾区上市公司品牌价值榜 TOP100", image: honor20.url },
+  { id: "honor-21", name: "2023新型实体企业 TOP100", image: honor21.url },
+  { id: "honor-22", name: "数字化转型标杆企业", image: honor22.url },
+  { id: "honor-23", name: "2023年上市公司社会责任评选奖项", image: honor23.url },
+  { id: "honor-24", name: "中国信息技术服务卓越奖", image: honor24.url },
+  { id: "honor-25", name: "2023 DAMA 数据治理最佳实践奖", image: honor25.url },
+  { id: "honor-26", name: "哈佛商业评论数字化创新奖", image: honor26.url },
+  { id: "honor-27", name: "数字经济企业 TOP500", image: honor27.url },
 ];
 
 
