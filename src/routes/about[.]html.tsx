@@ -32,6 +32,8 @@ import honor24 from "@/assets/honors/honor-24.png.asset.json";
 import honor25 from "@/assets/honors/honor-25.png.asset.json";
 import honor26 from "@/assets/honors/honor-26.png.asset.json";
 import honor27 from "@/assets/honors/honor-27.png.asset.json";
+import honor28 from "@/assets/honors/image-28.png.asset.json";
+import honor29 from "@/assets/honors/image-29.png.asset.json";
 
 const TIMELINE_GROUPS = [
   {
@@ -129,6 +131,8 @@ const HONORS = [
   { id: "honor-25", name: "2023 DAMA 数据治理最佳实践奖", image: honor25.url },
   { id: "honor-26", name: "哈佛商业评论数字化创新奖", image: honor26.url },
   { id: "honor-27", name: "数字经济企业 TOP500", image: honor27.url },
+  { id: "honor-28", name: "北京民营企业百强", image: honor28.url },
+  { id: "honor-29", name: "广东省百强民营企业 2023", image: honor29.url },
 ];
 
 
