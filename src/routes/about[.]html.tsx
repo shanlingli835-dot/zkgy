@@ -133,7 +133,7 @@ function AboutPage() {
         >
           {MISSION_CARDS.map((card) => (
             <article
-              key={card.label}
+              key={card.title}
               style={{
                 padding: "var(--ds-space-2xl)",
                 backgroundColor: "var(--ds-color-surface-subtle)",
@@ -142,23 +142,11 @@ function AboutPage() {
             >
               <div
                 style={{
-                  color: "var(--ds-color-action-primary)",
+                  color: "var(--ds-color-text-primary)",
                   marginBottom: "var(--ds-space-lg)",
                 }}
               >
                 {card.icon}
-              </div>
-              <div
-                style={{
-                  fontSize: "var(--ds-font-size-xs)",
-                  fontWeight: "var(--ds-font-weight-semibold)",
-                  letterSpacing: "0.08em",
-                  textTransform: "uppercase",
-                  color: "var(--ds-color-text-muted)",
-                  marginBottom: "var(--ds-space-sm)",
-                }}
-              >
-                {card.label}
               </div>
               <h3
                 style={{
