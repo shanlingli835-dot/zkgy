@@ -32,6 +32,8 @@ import honor24 from "@/assets/honors/honor-24.png.asset.json";
 import honor25 from "@/assets/honors/honor-25.png.asset.json";
 import honor26 from "@/assets/honors/honor-26.png.asset.json";
 import honor27 from "@/assets/honors/honor-27.png.asset.json";
+import honor28 from "@/assets/honors/image-28.png.asset.json";
+import honor29 from "@/assets/honors/image-29.png.asset.json";
 
 const TIMELINE_GROUPS = [
   {
