@@ -26,6 +26,8 @@ export const HOME_FOOTER_HIDDEN_SELECTORS = [
 
 export const CTA_HREF = "/contact.html";
 
+export function SitePageShell({ children }: { children: ReactNode });
+
 export function SitePageShell({ children }: { children: ReactNode }) {
   return (
     <SiteShell
