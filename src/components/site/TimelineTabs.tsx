@@ -147,12 +147,8 @@ export function TimelineTabs({ title, description, groups }: Props) {
           outline-offset: 2px;
         }
         .ds-timeline-tab.is-active {
-          color: rgb(20, 115, 230);
-          font-weight: var(--ds-font-weight-semibold);
-          border-bottom-color: rgb(20, 115, 230);
-        }
-        .ds-timeline-tab.is-year-2025.is-active {
           color: var(--ds-color-text-inverse);
+          font-weight: var(--ds-font-weight-semibold);
           border-bottom-color: rgb(20, 115, 230);
         }
         .ds-timeline-panel {
