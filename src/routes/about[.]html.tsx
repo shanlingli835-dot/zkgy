@@ -127,6 +127,8 @@ function AboutPage() {
         items={[
           {
             title: "中科固源",
+            image: companyOverviewImage,
+            imageAlt: "工程师在冷白光实验室环境中查看网络安全测试平台的检测结果",
             paragraphs: [
               "中科数测固源科技（安徽）有限公司成立于2022年8月，公司简称“中科固源”，是一家专注于网络安全测试与软件质量保障的高新技术企业。",
               "公司围绕协议安全、软件安全、固件安全、人工智能安全及供应链安全等方向持续开展技术研发，形成了覆盖多类安全测试场景的产品体系，主要包括通讯协议模糊测试漏洞检测工具 Swift Fuzzer、通讯协议安全性与兼容性测试平台 Wisdom、二进制固件安全检测产品 Cybllum、AI 安全对抗检测产品 Swift AI、APP 漏洞扫描工具 Swift APP、软件成分分析工具 Swift SCA 等。",
