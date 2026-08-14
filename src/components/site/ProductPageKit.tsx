@@ -21,6 +21,8 @@ export const HOME_FOOTER_HIDDEN_SELECTORS = [
   "main > .pt-section",
   "main > .platform-section",
   "main > .floating-icons-hero",
+  "main > .floating-icons-hero-gap",
+  "main > .sg-faq",
   ".solution-cta-bar",
 ];
 
@@ -43,7 +45,7 @@ export function CtaBanner({
     <section
       style={{
         backgroundColor: "var(--ds-color-surface-subtle)",
-        padding: "var(--ds-section-y-desktop) var(--ds-gutter-desktop)",
+        padding: "var(--ds-section-y-desktop) var(--ds-gutter-desktop) var(--ds-space-xl)",
       }}
     >
       <div
