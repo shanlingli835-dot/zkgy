@@ -8,7 +8,8 @@ import { SourceHomeEmbed } from "@/components/site/SourceHomeEmbed";
 
 /**
  * 共享的产品/方案/服务/公司页脚 + CTA 区域。
- * 复用首页 public/source-site/index.html 的 .solution-cta-bar + .jasper-footer。
+ * 复用首页 public/source-site/index.html 的 .jasper-footer。
+ * 旧的 .solution-cta-bar 已由 React 版 CtaBanner 替代，因此隐藏。
  * 其他首页模块通过 hiddenSelectors 隐藏，保证视觉一致。
  */
 export const HOME_FOOTER_HIDDEN_SELECTORS = [
@@ -20,6 +21,7 @@ export const HOME_FOOTER_HIDDEN_SELECTORS = [
   "main > .pt-section",
   "main > .platform-section",
   "main > .floating-icons-hero",
+  ".solution-cta-bar",
 ];
 
 export const CTA_HREF = "/contact.html";
@@ -29,11 +31,18 @@ export function SitePageShell({ children }: { children: ReactNode }) {
     <SiteShell
       header={<GlobalHeader />}
       footer={
-        <SourceHomeEmbed
-          hiddenSelectors={HOME_FOOTER_HIDDEN_SELECTORS}
-          fitContent
-          title="页脚与行动号召"
-        />
+        <>
+          <CtaBanner
+            title="为关键行业建立可验证、可交付、可复用的安全能力。"
+            primaryCta={{ label: "免费试用", href: CTA_HREF }}
+            secondaryCta={{ label: "联系我们", href: CTA_HREF }}
+          />
+          <SourceHomeEmbed
+            hiddenSelectors={HOME_FOOTER_HIDDEN_SELECTORS}
+            fitContent
+            title="页脚"
+          />
+        </>
       }
     >
       {children}
