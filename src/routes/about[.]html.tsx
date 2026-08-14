@@ -5,6 +5,9 @@ import {
   BadgeCheck,
   MapPin,
   Phone,
+  Target,
+  Eye,
+  Heart,
 } from "lucide-react";
 import {
   CTA_HREF,
@@ -14,6 +17,27 @@ import {
   SitePageShell,
 } from "@/components/site/ProductPageKit";
 import { ZigzagShowcase } from "@/components/site/ZigzagShowcase";
+
+const MISSION_CARDS = [
+  {
+    icon: <Target size={32} strokeWidth={1.5} aria-hidden />,
+    label: "Mission",
+    title: "固源的使命",
+    statement: "铸安全利器，御黑客攻击。",
+  },
+  {
+    icon: <Eye size={32} strokeWidth={1.5} aria-hidden />,
+    label: "Vision",
+    title: "固源的愿景",
+    statement: "成为全球领先的模糊测试技术企业。",
+  },
+  {
+    icon: <Heart size={32} strokeWidth={1.5} aria-hidden />,
+    label: "Values",
+    title: "核心价值观",
+    statement: "价值源于客户，创新源于人才，实力源于技术。",
+  },
+];
 
 export const Route = createFileRoute("/about.html")({
   head: () => ({
