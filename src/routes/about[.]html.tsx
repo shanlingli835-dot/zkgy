@@ -278,6 +278,9 @@ function AboutPage() {
 
       <QualificationCarousel title="荣誉奖项" items={HONORS} />
 
+      <QualificationCarousel title="荣誉奖项" items={[...HONORS, ...HONORS]} />
+
+
 
     </SitePageShell>
   );
