@@ -41,8 +41,6 @@ export const primaryNav: NavGroup[] = [
       { label: "Swift Code 源代码审计", href: "/swiftcode.html" },
       { label: "Wisdom Lens 灰盒模糊测试", href: "/lens.html" },
       { label: "Swift Pentest 自动化渗透测试", href: "/swiftpenstest.html" },
-      { label: "数据标准规范检查系统", href: "/datacheck.html", legacyOnly: true },
-      { label: "软件质量评估系统", href: "/softwareassess.html", legacyOnly: true },
     ],
   },
   {
@@ -57,9 +55,7 @@ export const primaryNav: NavGroup[] = [
     id: "services",
     label: "服务",
     children: [
-      { label: "三方测评", href: "/service-secas.html", legacyOnly: true },
       { label: "渗透测试", href: "/service-penstest.html" },
-      { label: "系统集成", href: "/integration.html", legacyOnly: true },
     ],
   },
   {
