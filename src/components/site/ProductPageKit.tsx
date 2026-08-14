@@ -26,7 +26,85 @@ export const HOME_FOOTER_HIDDEN_SELECTORS = [
 
 export const CTA_HREF = "/contact.html";
 
-export function SitePageShell({ children }: { children: ReactNode });
+/* ---------------- CTA Banner ---------------- */
+
+export function CtaBanner({
+  title,
+  description,
+  primaryCta = { label: "免费试用", href: CTA_HREF },
+  secondaryCta = { label: "联系我们", href: CTA_HREF },
+}: {
+  title: string;
+  description?: string;
+  primaryCta?: { label: string; href: string };
+  secondaryCta?: { label: string; href: string };
+}) {
+  return (
+    <section
+      style={{
+        backgroundColor: "var(--ds-color-surface-subtle)",
+        padding: "var(--ds-section-y-desktop) var(--ds-gutter-desktop)",
+      }}
+    >
+      <div
+        style={{
+          maxWidth: "var(--ds-container-page)",
+          margin: "0 auto",
+          textAlign: "center",
+        }}
+      >
+        <h2
+          style={{
+            fontSize: "clamp(1.5rem, 3.2vw, 2.25rem)",
+            fontWeight: "var(--ds-font-weight-semibold)",
+            lineHeight: 1.3,
+            color: "var(--ds-color-text-primary)",
+            maxWidth: 900,
+            margin: "0 auto",
+          }}
+        >
+          {title}
+        </h2>
+        {description && (
+          <p
+            style={{
+              marginTop: "var(--ds-space-lg)",
+              maxWidth: 780,
+              marginInline: "auto",
+              color: "var(--ds-color-text-secondary)",
+              fontSize: "var(--ds-font-size-lg)",
+              lineHeight: 1.6,
+            }}
+          >
+            {description}
+          </p>
+        )}
+        <div
+          style={{
+            marginTop: "var(--ds-space-2xl)",
+            display: "flex",
+            flexWrap: "wrap",
+            justifyContent: "center",
+            gap: "var(--ds-space-md)",
+          }}
+        >
+          <a
+            href={secondaryCta.href}
+            className={cn(buttonVariants({ variant: "secondary" }))}
+          >
+            {secondaryCta.label}
+          </a>
+          <a
+            href={primaryCta.href}
+            className={cn(buttonVariants({ variant: "primary" }))}
+          >
+            {primaryCta.label}
+          </a>
+        </div>
+      </div>
+    </section>
+  );
+}
 
 export function SitePageShell({ children }: { children: ReactNode }) {
   return (
