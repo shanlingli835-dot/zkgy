@@ -108,6 +108,23 @@ const QUALIFICATIONS = [
   },
 ];
 
+const HONORS = [
+  { id: "honor-1", name: "国家高新技术企业" },
+  { id: "honor-2", name: "中关村高新技术企业" },
+  { id: "honor-3", name: "安徽省专精特新中小企业" },
+  { id: "honor-4", name: "合肥市大数据企业" },
+  { id: "honor-5", name: "科技型中小企业" },
+  { id: "honor-6", name: "创新型中小企业" },
+  { id: "honor-7", name: "软件企业" },
+  { id: "honor-8", name: "软件产品" },
+  { id: "honor-9", name: "网络安全优秀创新成果" },
+  { id: "honor-10", name: "模糊测试技术创新奖" },
+  { id: "honor-11", name: "车联网安全优秀实践案例" },
+  { id: "honor-12", name: "工业互联网安全优秀案例" },
+];
+
+
+
 const MISSION_CARDS = [
   {
     icon: <Target size={32} strokeWidth={1.5} aria-hidden />,
@@ -246,6 +263,9 @@ function AboutPage() {
       />
 
       <QualificationCarousel title="企业资质" items={QUALIFICATIONS} />
+
+      <QualificationCarousel title="荣誉奖项" items={HONORS} />
+
 
     </SitePageShell>
   );

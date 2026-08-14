@@ -101,7 +101,7 @@ export function QualificationCarousel({ title, items }: Props) {
               <button
                 key={index}
                 type="button"
-                aria-label={`第 ${index + 1} 组企业资质`}
+                aria-label={`第 ${index + 1} 组${title}`}
                 aria-current={selected === index}
                 onClick={() => api?.scrollTo(index)}
                 className="ds-qual-dot"
