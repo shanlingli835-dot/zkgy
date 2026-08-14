@@ -1,7 +1,10 @@
 export type ZigzagItem = {
   title: string;
   paragraphs: string[];
+  image?: string;
+  imageAlt?: string;
 };
+
 
 type Props = {
   title: string;
@@ -43,7 +46,18 @@ export function ZigzagShowcase({ title, description, items }: Props) {
         <div className="ds-zigzag">
           {items.map((item, i) => (
             <div key={item.title} className={`ds-zigzag-row${i % 2 === 1 ? " is-reverse" : ""}`}>
-              <div className="ds-zigzag-media" aria-hidden />
+              {item.image ? (
+                <img
+                  className="ds-zigzag-media"
+                  src={item.image}
+                  alt={item.imageAlt ?? ""}
+                  loading="lazy"
+                  width={480}
+                  height={360}
+                />
+              ) : (
+                <div className="ds-zigzag-media" aria-hidden />
+              )}
               <div className="ds-zigzag-text">
                 <h3
                   style={{
@@ -94,6 +108,8 @@ export function ZigzagShowcase({ title, description, items }: Props) {
           height: 360px;
           max-width: 100%;
           background-color: #F4F4F4;
+          object-fit: cover;
+          display: block;
         }
         .ds-zigzag-text { max-width: 520px; }
         @media (max-width: 1023px) {
