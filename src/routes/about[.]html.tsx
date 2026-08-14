@@ -2,12 +2,58 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Target, Eye, Heart } from "lucide-react";
 import {
   CTA_HREF,
-  FeatureGrid,
   ProductHero,
   Section,
   SitePageShell,
 } from "@/components/site/ProductPageKit";
 import { ZigzagShowcase } from "@/components/site/ZigzagShowcase";
+import { TimelineTabs } from "@/components/site/TimelineTabs";
+
+const TIMELINE_GROUPS = [
+  {
+    label: "2025年",
+    events: ["公司成立，启动Fuzzer技术研究。"],
+  },
+  {
+    label: "2026年",
+    events: [
+      "第一代模糊漏洞挖掘产品《雨燕模糊测试工具系统V1.0》正式发布及商用销售。",
+    ],
+  },
+  {
+    label: "2020年",
+    events: [
+      "完成“固源科技”和“Swift Fuzzer”商标注册。",
+      "完成多家检测机构、汽车领域行业客户的产品交付。",
+      "获得国家高新技术认定。",
+      "获得中关村高新技术企业认定。",
+    ],
+  },
+  {
+    label: "2021年",
+    events: [
+      "通过ISO9001质量管理体系认证。",
+      "通过ISO27001信息安全管理体系认证。",
+      "第二代模糊测试框架开发平台发布。",
+      "基于第二代模糊测试框架开发的多款协议模糊产品发布并获得多家大型客户采购投入商用。",
+    ],
+  },
+  {
+    label: "2022年",
+    events: [
+      "中科数测固源科技（安徽）有限公司成立开启安全芯片研发。",
+      "公司自动化模糊测试产品交付客户突破50家。",
+    ],
+  },
+  {
+    label: "2023年",
+    events: [
+      "源代码安全审计工具软件V2.0正式发布，并交付客户商用。",
+      "与工信部五所质量安全检测中心联合成立“智能产品安全漏洞模糊测试技术应用研究联合实验室”。",
+      "与西安电子科技大学联合成立“智能网联汽车通讯协议安全控制SoC芯片联合研发实验室”。",
+    ],
+  },
+];
 
 const MISSION_CARDS = [
   {
@@ -29,6 +75,7 @@ const MISSION_CARDS = [
     statement: "价值源于客户，创新源于人才，实力源于技术。",
   },
 ];
+
 
 export const Route = createFileRoute("/about.html")({
   head: () => ({
@@ -144,33 +191,12 @@ function AboutPage() {
         </div>
       </Section>
 
-      <Section
-        surface="subtle"
-        eyebrow="发展历程"
-        title="从实验室认证到行业能力建设"
-      >
-        <FeatureGrid
-          columns={3}
-          variant="topbar"
-          items={[
-            {
-              tag: "2022",
-              title: "实验室建立",
-              desc: "实验室建立，通过 CNAS 认证，正式对外提供测评服务。",
-            },
-            {
-              tag: "2023",
-              title: "集团化协同",
-              desc: "融入中科星图测评体系，与集团业务协同深化行业能力建设。",
-            },
-            {
-              tag: "持续演进",
-              title: "产品与方案矩阵",
-              desc: "沉淀 Wisdom、Swift 系列产品与行业解决方案，服务低空、商业航天与网联汽车等场景。",
-            },
-          ]}
-        />
-      </Section>
+      <TimelineTabs
+        title="发展历程"
+        description="从公司成立与 Fuzzer 技术研究起步，逐步完成产品化、资质认证与行业联合实验室建设。"
+        groups={TIMELINE_GROUPS}
+      />
+
     </SitePageShell>
   );
 }
