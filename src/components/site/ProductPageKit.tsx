@@ -45,7 +45,7 @@ export function CtaBanner({
     <section
       style={{
         backgroundColor: "var(--ds-color-surface-subtle)",
-        padding: "var(--ds-section-y-desktop) var(--ds-gutter-desktop)",
+        padding: "var(--ds-section-y-desktop) var(--ds-gutter-desktop) var(--ds-space-xl)",
       }}
     >
       <div
