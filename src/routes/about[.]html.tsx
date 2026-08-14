@@ -100,13 +100,21 @@ const QUALIFICATIONS = [
   { id: "publication", name: "出版物经营许可证", image: cert13.url },
   { id: "broadcast", name: "广播电视节目制作经营许可证", image: cert14.url },
   { id: "high-tech", name: "高新技术企业证书", image: cert15.url },
-  { id: "credit-aaa", name: "企业信用等级证书", image: cert16.url },
-  {
-    id: "dcmm",
-    name: "数据管理能力成熟度（DCMM）等级证书",
-    image: cert17.url,
-  },
+const HONORS = [
+  { id: "honor-1", name: "国家高新技术企业" },
+  { id: "honor-2", name: "中关村高新技术企业" },
+  { id: "honor-3", name: "安徽省专精特新中小企业" },
+  { id: "honor-4", name: "合肥市大数据企业" },
+  { id: "honor-5", name: "科技型中小企业" },
+  { id: "honor-6", name: "创新型中小企业" },
+  { id: "honor-7", name: "软件企业" },
+  { id: "honor-8", name: "软件产品" },
+  { id: "honor-9", name: "网络安全优秀创新成果" },
+  { id: "honor-10", name: "模糊测试技术创新奖" },
+  { id: "honor-11", name: "车联网安全优秀实践案例" },
+  { id: "honor-12", name: "工业互联网安全优秀案例" },
 ];
+
 
 const MISSION_CARDS = [
   {
