@@ -144,33 +144,12 @@ function AboutPage() {
         </div>
       </Section>
 
-      <Section
-        surface="subtle"
-        eyebrow="发展历程"
-        title="从实验室认证到行业能力建设"
-      >
-        <FeatureGrid
-          columns={3}
-          variant="topbar"
-          items={[
-            {
-              tag: "2022",
-              title: "实验室建立",
-              desc: "实验室建立，通过 CNAS 认证，正式对外提供测评服务。",
-            },
-            {
-              tag: "2023",
-              title: "集团化协同",
-              desc: "融入中科星图测评体系，与集团业务协同深化行业能力建设。",
-            },
-            {
-              tag: "持续演进",
-              title: "产品与方案矩阵",
-              desc: "沉淀 Wisdom、Swift 系列产品与行业解决方案，服务低空、商业航天与网联汽车等场景。",
-            },
-          ]}
-        />
-      </Section>
+      <TimelineTabs
+        title="发展历程"
+        description="从公司成立与 Fuzzer 技术研究起步，逐步完成产品化、资质认证与行业联合实验室建设。"
+        groups={TIMELINE_GROUPS}
+      />
+
     </SitePageShell>
   );
 }
