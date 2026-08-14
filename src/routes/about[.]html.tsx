@@ -3,8 +3,6 @@ import {
   Rocket,
   Users,
   BadgeCheck,
-  MapPin,
-  Phone,
   Target,
   Eye,
   Heart,
