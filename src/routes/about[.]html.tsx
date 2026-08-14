@@ -5,11 +5,8 @@ import {
   BadgeCheck,
   MapPin,
   Phone,
-  Sparkles,
-  Heart,
-  Target,
-  HandshakeIcon,
 } from "lucide-react";
+
 
 import {
   CTA_HREF,
@@ -70,28 +67,6 @@ const OFFICES = [
   },
 ];
 
-const FAQ = [
-  {
-    q: "提供什么解决方案？",
-    a: "我们提供低空经济、商业航天、网联汽车、国防军工、工业控制、智能医疗、移动通讯等相关行业解决方案。",
-  },
-  {
-    q: "你们产品是怎么报价的？",
-    a: "请说明您想咨询的具体产品，我们提供 Wisdom 通讯协议安全及兼容性设计验证平台、Swift AI 综合模型安全检测平台、二进制固件安全检测等多条产品线的报价。咨询热线：021-52919537。",
-  },
-  {
-    q: "会提供免费试用吗？",
-    a: "是的，我们提供 30 天免费试用，帮助客户在真实环境中评估产品能力与价值。",
-  },
-  {
-    q: "Wisdom 能做什么？",
-    a: "Wisdom 提供协议漏洞挖掘、协议一致性与鲁棒性测试等能力，内置多年沉淀的独有测试用例，帮助客户在恶意黑客发现漏洞前提前捕获问题。",
-  },
-  {
-    q: "Swift AI 能做什么？",
-    a: "Swift AI 提供覆盖文本、图像、音频等多模态的 AI 安全防护，帮助客户检测和防御对抗攻击、内容风险与合规问题。",
-  },
-];
 
 function AboutPage() {
   return (
@@ -152,36 +127,6 @@ function AboutPage() {
         />
       </Section>
 
-      <Section
-        eyebrow="企业文化"
-        title="创新 · 融合 · 奋斗 · 幸福"
-      >
-        <FeatureGrid
-          columns={4}
-          items={[
-            {
-              icon: <Sparkles size={22} />,
-              title: "创新",
-              desc: "创新是星图发展的灵魂，我们持续投入研发，探索安全领域的前沿方向。",
-            },
-            {
-              icon: <HandshakeIcon size={22} />,
-              title: "融合",
-              desc: "融合是星图发展的动力，我们与集团及生态伙伴深度协同，构建更完整的能力。",
-            },
-            {
-              icon: <Target size={22} />,
-              title: "奋斗",
-              desc: "奋斗是星图发展的途径，我们以实战化的方式面对每一次挑战与项目。",
-            },
-            {
-              icon: <Heart size={22} />,
-              title: "幸福",
-              desc: "幸福是星图发展的归宿，我们相信共同成长的团队才能创造长期价值。",
-            },
-          ]}
-        />
-      </Section>
 
       <Section
         surface="subtle"
@@ -245,48 +190,6 @@ function AboutPage() {
         </div>
       </Section>
 
-      <Section
-        eyebrow="常见问题"
-        title="产品或服务常见问题解答"
-        intro="您也可以拨打咨询热线 021-52919537 与我们联系。"
-        align="start"
-      >
-        <div style={{ display: "grid", gap: "var(--ds-space-lg)" }}>
-          {FAQ.map((f) => (
-            <details
-              key={f.q}
-              style={{
-                padding: "var(--ds-space-xl)",
-                backgroundColor: "var(--ds-color-surface-default)",
-                border:
-                  "var(--ds-border-width-default) solid var(--ds-color-border-subtle)",
-                borderRadius: "var(--ds-radius-surface)",
-              }}
-            >
-              <summary
-                style={{
-                  cursor: "pointer",
-                  fontWeight: "var(--ds-font-weight-semibold)",
-                  fontSize: "var(--ds-font-size-lg)",
-                  color: "var(--ds-color-text-primary)",
-                  listStyle: "none",
-                }}
-              >
-                {f.q}
-              </summary>
-              <p
-                style={{
-                  marginTop: "var(--ds-space-md)",
-                  color: "var(--ds-color-text-secondary)",
-                  lineHeight: 1.7,
-                }}
-              >
-                {f.a}
-              </p>
-            </details>
-          ))}
-        </div>
-      </Section>
 
       <Section surface="subtle" eyebrow="资质与荣誉" title="持续被行业与客户认可">
         <FeatureGrid
