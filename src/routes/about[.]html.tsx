@@ -6,8 +6,6 @@ import {
   MapPin,
   Phone,
 } from "lucide-react";
-
-
 import {
   CTA_HREF,
   FeatureGrid,
