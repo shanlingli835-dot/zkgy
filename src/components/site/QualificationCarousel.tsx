@@ -130,6 +130,10 @@ export function QualificationCarousel({ title, items }: Props) {
           border-radius: var(--ds-radius-surface);
           background: #f4f4f4;
         }
+        .ds-qual-image {
+          object-fit: contain;
+          display: block;
+        }
         .ds-qual-caption {
           text-align: center;
           font-size: var(--ds-font-size-sm);
