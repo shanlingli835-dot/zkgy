@@ -20,6 +20,8 @@ import cert12 from "@/assets/qualifications/cert-12.png.asset.json";
 import cert13 from "@/assets/qualifications/cert-13.png.asset.json";
 import cert14 from "@/assets/qualifications/cert-14.png.asset.json";
 import cert15 from "@/assets/qualifications/cert-15.png.asset.json";
+import cert16 from "@/assets/qualifications/cert-16.png.asset.json";
+import cert17 from "@/assets/qualifications/cert-17.png.asset.json";
 
 const TIMELINE_GROUPS = [
   {
