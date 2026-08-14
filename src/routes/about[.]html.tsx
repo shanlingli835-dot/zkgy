@@ -7,6 +7,7 @@ import {
   SitePageShell,
 } from "@/components/site/ProductPageKit";
 import { ZigzagShowcase } from "@/components/site/ZigzagShowcase";
+import companyOverviewImage from "@/assets/about-company-overview.jpg";
 import { TimelineTabs } from "@/components/site/TimelineTabs";
 
 const TIMELINE_GROUPS = [
