@@ -22,6 +22,16 @@ import cert14 from "@/assets/qualifications/cert-14.png.asset.json";
 import cert15 from "@/assets/qualifications/cert-15.png.asset.json";
 import cert16 from "@/assets/qualifications/cert-16.png.asset.json";
 import cert17 from "@/assets/qualifications/cert-17.png.asset.json";
+import honor18 from "@/assets/honors/honor-18.png.asset.json";
+import honor19 from "@/assets/honors/honor-19.png.asset.json";
+import honor20 from "@/assets/honors/honor-20.png.asset.json";
+import honor21 from "@/assets/honors/honor-21.png.asset.json";
+import honor22 from "@/assets/honors/honor-22.png.asset.json";
+import honor23 from "@/assets/honors/honor-23.png.asset.json";
+import honor24 from "@/assets/honors/honor-24.png.asset.json";
+import honor25 from "@/assets/honors/honor-25.png.asset.json";
+import honor26 from "@/assets/honors/honor-26.png.asset.json";
+import honor27 from "@/assets/honors/honor-27.png.asset.json";
 
 const TIMELINE_GROUPS = [
   {
