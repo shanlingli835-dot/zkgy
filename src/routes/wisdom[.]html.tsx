@@ -2,14 +2,12 @@ import { createFileRoute } from "@tanstack/react-router";
 import type { CSSProperties, ReactNode } from "react";
 import {
   ShieldCheck,
-  Bug,
   Zap,
   Gauge,
   Layers,
   Activity,
   Repeat,
   Target,
-  Radar,
   Sparkles,
   Fingerprint,
   AlertTriangle,
@@ -18,7 +16,11 @@ import {
 import protocolConsoleImage from "@/assets/saas-hero-1-16x9.png.asset.json";
 import { AdvantageTriad } from "@/components/site/AdvantageTriad";
 import { HomeAccordion } from "@/components/site/HomeAccordion";
-import { SitePageShell } from "@/components/site/ProductPageKit";
+import {
+  HeroVideo,
+  ProductHero,
+  SitePageShell,
+} from "@/components/site/ProductPageKit";
 
 /**
  * Wisdom 模糊测试产品详情页 (/wisdom.html)
@@ -61,7 +63,20 @@ const CTA_HREF = "/contact.html";
 function WisdomPage() {
   return (
     <SitePageShell>
-      <Hero />
+      <ProductHero
+        eyebrow="协议安全 · Wisdom"
+        title={
+          <>
+            在黑客攻击之前发现漏洞
+            <br />
+            <span style={{ color: "var(--ds-color-action-primary)" }}>Wisdom</span>{" "}
+            守护您的协议安全
+          </>
+        }
+        description="无需任何协议或模糊测试相关知识，开箱即用。轻松识别协议中的缺陷和零日漏洞，增强被测对象的安全性、健壮性、稳定性。"
+        primaryCta={{ label: "免费试用", href: CTA_HREF }}
+        visual={<HeroVideo label="Wisdom 模糊测试产品演示" />}
+      />
       <WhyFuzz />
       <Capabilities />
       <Advantages />
@@ -72,178 +87,6 @@ function WisdomPage() {
 
 /* ---------------- Sections ---------------- */
 
-function Hero() {
-  return (
-    <section
-      style={{
-        position: "relative",
-        overflow: "hidden",
-        backgroundColor: "var(--ds-color-surface-inverse)",
-        color: "var(--ds-color-text-inverse)",
-        padding: "var(--ds-section-y-desktop) var(--ds-gutter-desktop)",
-      }}
-    >
-      <div
-        aria-hidden
-        style={{
-          position: "absolute",
-          inset: 0,
-          background:
-            "radial-gradient(1000px 500px at 15% 20%, color-mix(in srgb, var(--ds-color-action-primary) 28%, transparent), transparent 60%), radial-gradient(800px 400px at 85% 80%, color-mix(in srgb, #1e40af 30%, transparent), transparent 60%)",
-          pointerEvents: "none",
-        }}
-      />
-      <div
-        style={{
-          position: "relative",
-          maxWidth: "var(--ds-container-page)",
-          margin: "0 auto",
-          display: "grid",
-          gridTemplateColumns: "minmax(0, 1.2fr) minmax(0, 1fr)",
-          gap: "var(--ds-space-4xl)",
-          alignItems: "center",
-        }}
-        className="wisdom-hero-grid"
-      >
-        <div>
-          <div
-            style={{
-              display: "inline-flex",
-              alignItems: "center",
-              gap: "var(--ds-space-sm)",
-              padding: "var(--ds-space-xs) var(--ds-space-md)",
-              borderRadius: "var(--ds-radius-round)",
-              border:
-                "var(--ds-border-width-default) solid var(--ds-color-border-inverse)",
-              color: "var(--ds-color-text-inverse-secondary)",
-              fontSize: "var(--ds-font-size-sm)",
-            }}
-          >
-            <ShieldCheck size={14} aria-hidden />
-            协议安全 · Wisdom
-          </div>
-          <h1
-            style={{
-              marginTop: "var(--ds-space-lg)",
-              fontSize: "clamp(2rem, 4.5vw, 3.5rem)",
-              lineHeight: 1.15,
-              fontWeight: "var(--ds-font-weight-semibold)",
-              letterSpacing: "-0.01em",
-            }}
-          >
-            在黑客攻击之前发现漏洞
-            <br />
-            <span style={{ color: "var(--ds-color-action-primary)" }}>Wisdom</span>{" "}
-            守护您的协议安全
-          </h1>
-          <p
-            style={{
-              marginTop: "var(--ds-space-xl)",
-              maxWidth: 640,
-              color: "var(--ds-color-text-inverse-secondary)",
-              fontSize: "var(--ds-font-size-lg)",
-              lineHeight: 1.6,
-            }}
-          >
-            无需任何协议或模糊测试相关知识，开箱即用。轻松识别协议中的缺陷和零日漏洞，
-            增强被测对象的安全性、健壮性、稳定性。
-          </p>
-          <div
-            style={{
-              marginTop: "var(--ds-space-2xl)",
-              display: "flex",
-              flexWrap: "wrap",
-              gap: "var(--ds-space-md)",
-            }}
-          >
-            <PrimaryCta href={CTA_HREF}>免费试用</PrimaryCta>
-            <GhostCta href="#wisdom-capabilities">了解产品能力</GhostCta>
-          </div>
-        </div>
-
-        <HeroVisual />
-      </div>
-
-      <style>{`
-        @media (max-width: 1023px) {
-          .wisdom-hero-grid { grid-template-columns: 1fr !important; }
-        }
-      `}</style>
-    </section>
-  );
-}
-
-function HeroVisual() {
-  const rings = [
-    { label: "协议模板", icon: <Layers size={16} aria-hidden /> },
-    { label: "变异算法", icon: <Sparkles size={16} aria-hidden /> },
-    { label: "目标监测", icon: <Radar size={16} aria-hidden /> },
-    { label: "漏洞复现", icon: <Repeat size={16} aria-hidden /> },
-  ];
-  return (
-    <div
-      aria-hidden
-      style={{
-        position: "relative",
-        aspectRatio: "1 / 1",
-        maxWidth: 480,
-        marginInline: "auto",
-        borderRadius: "var(--ds-radius-round)",
-        background:
-          "radial-gradient(circle at center, color-mix(in srgb, var(--ds-color-action-primary) 24%, transparent), transparent 65%)",
-        display: "grid",
-        placeItems: "center",
-      }}
-    >
-      <div
-        style={{
-          width: "62%",
-          aspectRatio: "1 / 1",
-          borderRadius: "var(--ds-radius-round)",
-          border:
-            "var(--ds-border-width-default) solid var(--ds-color-border-inverse)",
-          display: "grid",
-          placeItems: "center",
-          background:
-            "color-mix(in srgb, var(--ds-color-surface-inverse) 60%, transparent)",
-        }}
-      >
-        <Bug size={64} color="var(--ds-color-action-primary)" aria-hidden />
-      </div>
-      {rings.map((r, i) => {
-        const angle = (i / rings.length) * Math.PI * 2 - Math.PI / 2;
-        const radius = 42;
-        const x = 50 + Math.cos(angle) * radius;
-        const y = 50 + Math.sin(angle) * radius;
-        return (
-          <div
-            key={r.label}
-            style={{
-              position: "absolute",
-              left: `${x}%`,
-              top: `${y}%`,
-              transform: "translate(-50%, -50%)",
-              display: "inline-flex",
-              alignItems: "center",
-              gap: "var(--ds-space-xs)",
-              padding: "var(--ds-space-xs) var(--ds-space-md)",
-              borderRadius: "var(--ds-radius-round)",
-              backgroundColor:
-                "color-mix(in srgb, var(--ds-color-surface-inverse) 70%, transparent)",
-              border:
-                "var(--ds-border-width-default) solid var(--ds-color-border-inverse)",
-              fontSize: "var(--ds-font-size-sm)",
-              color: "var(--ds-color-text-inverse)",
-            }}
-          >
-            {r.icon}
-            {r.label}
-          </div>
-        );
-      })}
-    </div>
-  );
-}
 
 function WhyFuzz() {
   const cardStyle: React.CSSProperties = {
@@ -706,10 +549,3 @@ function PrimaryCta({ href, children }: { href: string; children: ReactNode }) {
   );
 }
 
-function GhostCta({ href, children }: { href: string; children: ReactNode }) {
-  return (
-    <a href={href} style={ghostCtaStyle}>
-      {children}
-    </a>
-  );
-}
