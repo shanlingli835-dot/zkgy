@@ -18,6 +18,13 @@ import protocolImage from "@/assets/auto-solution-protocol.jpg";
 import chipImage from "@/assets/auto-solution-chip.jpg";
 import vehicleImage from "@/assets/auto-solution-vehicle.jpg";
 import complianceImage from "@/assets/auto-solution-compliance.jpg";
+import sceneConnectivityImage from "@/assets/auto-scene-connectivity.jpg";
+import sceneCommImage from "@/assets/auto-scene-comm.jpg";
+import sceneOtaImage from "@/assets/auto-scene-ota.jpg";
+import sceneDataImage from "@/assets/auto-scene-data.jpg";
+import sceneCsmsImage from "@/assets/auto-scene-csms.jpg";
+import sceneVtaImage from "@/assets/auto-scene-vta.jpg";
+import sceneSupplyImage from "@/assets/auto-scene-supply.jpg";
 
 import {
   CTA_HREF,
