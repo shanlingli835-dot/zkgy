@@ -242,6 +242,8 @@ function SolutionSpecialPage() {
         items={[
           {
             title: "装备脆弱性测试",
+            image: specialExpVulnerabilityImage,
+            imageAlt: "源码缺陷扫描与固件 SBOM 清点示意图",
             paragraphs: [
               "源码缺陷普查：对等关键软件进行一夜级扫描，定位缓冲区溢出、整数溢出、命令注入等高危缺陷。",
               "固件 SBOM 清点：自动提取装备的第三方组件与许可证，提前发现过期加密库、硬编码密钥。",
@@ -249,6 +251,8 @@ function SolutionSpecialPage() {
           },
           {
             title: "装备渗透性测试",
+            image: specialExpPenetrationImage,
+            imageAlt: "装备总线与无线通道渗透测试示意图",
             paragraphs: [
               "利用 Wisdom 模糊平台对 1553B、CAN-FD、以太网等装备总线进行测试，验证消息校验、重放保护、访问控制的有效性。",
               "针对数据链等无线通道实施信号层劫持、协议层重放与应用层伪造，考核加密通道与证书链的鲁棒性。",
@@ -256,6 +260,8 @@ function SolutionSpecialPage() {
           },
           {
             title: "装备生存性测试",
+            image: specialExpSurvivabilityImage,
+            imageAlt: "半实物仿真机柜承受掉电、异常复位与强电磁脉冲冲击示意图",
             paragraphs: [
               "通过半实物仿真机柜注入掉电、异常复位、强电磁脉冲，检验装备系统在降级模式下核心功能的连续可用与数据完整性。",
               "模拟恶意更新、固件篡改、配置破坏，评估系统自恢复、日志留存与可信重启动机制，确保任务关键数据不丢失、不泄露。",
