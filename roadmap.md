@@ -1,4 +1,5 @@
 # Roadmap
 
-- [ ] 核对并同步当前所有已修改路由页面到 GitHub `shanlingli835-dot/zkgy`
+- [x] 核对并同步当前所有已修改路由页面到 GitHub `shanlingli835-dot/zkgy`
+- [x] 首页核心产品介绍「Wisdom 模糊测试」面板文案改为中文（标题、描述、四个要点）
 - [ ] 修复全站页面底部长空白（已暂停，等待用户后续继续）
