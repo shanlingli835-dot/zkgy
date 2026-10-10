@@ -34,6 +34,15 @@ import honor26 from "@/assets/honors/honor-26.png.asset.json";
 import honor27 from "@/assets/honors/honor-27.png.asset.json";
 import honor28 from "@/assets/honors/image-28.png.asset.json";
 import honor29 from "@/assets/honors/image-29.png.asset.json";
+import honor30 from "@/assets/honors/honor-30.png.asset.json";
+import honor31 from "@/assets/honors/honor-31.png.asset.json";
+import honor32 from "@/assets/honors/honor-32.png.asset.json";
+import honor33 from "@/assets/honors/honor-33.png.asset.json";
+import honor34 from "@/assets/honors/honor-34.png.asset.json";
+import honor35 from "@/assets/honors/honor-35.png.asset.json";
+import honor36 from "@/assets/honors/honor-36.png.asset.json";
+import honor37 from "@/assets/honors/honor-37.png.asset.json";
+import honor38 from "@/assets/honors/honor-38.png.asset.json";
 
 const TIMELINE_GROUPS = [
   {
