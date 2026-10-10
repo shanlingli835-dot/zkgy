@@ -15,6 +15,9 @@ import specialSurvivabilityImage from "@/assets/special-solution-survivability.j
 import specialComplianceImage from "@/assets/special-solution-compliance.jpg";
 import { SolutionShowcaseGrid } from "@/components/site/SolutionShowcaseGrid";
 import { AdvantageTriad } from "@/components/site/AdvantageTriad";
+import specialExpVulnerabilityImage from "@/assets/special-experiment-vulnerability.jpg";
+import specialExpPenetrationImage from "@/assets/special-experiment-penetration.jpg";
+import specialExpSurvivabilityImage from "@/assets/special-experiment-survivability.jpg";
 import { ZigzagShowcase } from "@/components/site/ZigzagShowcase";
 import {
   CTA_HREF,
