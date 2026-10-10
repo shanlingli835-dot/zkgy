@@ -1,12 +1,3 @@
-import { useEffect, useState } from "react";
-
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  type CarouselApi,
-} from "@/components/ui/carousel";
-
 export type QualificationItem = {
   id: string;
   name: string;
@@ -18,33 +9,7 @@ type Props = {
   items: QualificationItem[];
 };
 
-const PAGE_SIZE = 12;
-
-function chunk(items: QualificationItem[], size: number) {
-  const pages: QualificationItem[][] = [];
-  for (let i = 0; i < items.length; i += size) {
-    pages.push(items.slice(i, i + size));
-  }
-  return pages;
-}
-
 export function QualificationCarousel({ title, items }: Props) {
-  const [api, setApi] = useState<CarouselApi>();
-  const [selected, setSelected] = useState(0);
-  const pages = chunk(items, PAGE_SIZE);
-
-  useEffect(() => {
-    if (!api) return;
-    const update = () => setSelected(api.selectedScrollSnap());
-    update();
-    api.on("select", update);
-    api.on("reInit", update);
-    return () => {
-      api.off("select", update);
-      api.off("reInit", update);
-    };
-  }, [api]);
-
   return (
     <section
       style={{
@@ -66,59 +31,42 @@ export function QualificationCarousel({ title, items }: Props) {
           {title}
         </h2>
 
-        <Carousel setApi={setApi} opts={{ align: "start" }}>
-          <CarouselContent>
-            {pages.map((page, pageIndex) => (
-              <CarouselItem key={pageIndex} className="basis-full">
-                <div className="ds-qual-grid">
-                  {page.map((item) => (
-                    <figure key={item.id} className="ds-qual-item">
-                      {item.image ? (
-                        <img
-                          src={item.image}
-                          alt={item.name}
-                          loading="lazy"
-                          className="ds-qual-media ds-qual-image"
-                        />
-                      ) : (
-                        <div className="ds-qual-media" aria-hidden />
-                      )}
+        <div className="ds-qual-grid">
+          {items.map((item) => (
+            <figure key={item.id} className="ds-qual-item">
+              {item.image ? (
+                <img
+                  src={item.image}
+                  alt={item.name}
+                  loading="lazy"
+                  className="ds-qual-media ds-qual-image"
+                />
+              ) : (
+                <div className="ds-qual-media" aria-hidden />
+              )}
 
-                      <figcaption className="ds-qual-caption">
-                        {item.name}
-                      </figcaption>
-                    </figure>
-                  ))}
-                </div>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-        </Carousel>
-
-        {pages.length > 1 ? (
-          <div className="ds-qual-dots">
-            {pages.map((_, index) => (
-              <button
-                key={index}
-                type="button"
-                aria-label={`第 ${index + 1} 组${title}`}
-                aria-current={selected === index}
-                onClick={() => api?.scrollTo(index)}
-                className="ds-qual-dot"
-                data-active={selected === index}
-              />
-            ))}
-          </div>
-        ) : null}
+              <figcaption className="ds-qual-caption">{item.name}</figcaption>
+            </figure>
+          ))}
+        </div>
       </div>
 
       <style>{`
         .ds-qual-grid {
-          display: grid;
-          grid-template-columns: repeat(6, minmax(0, 1fr));
-          gap: var(--ds-space-2xl) var(--ds-space-xl);
+          --ds-qual-columns: 6;
+          --ds-qual-gap-x: var(--ds-space-xl);
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: var(--ds-space-2xl) var(--ds-qual-gap-x);
         }
         .ds-qual-item {
+          flex: 0 1
+            calc(
+              (100% - (var(--ds-qual-columns) - 1) * var(--ds-qual-gap-x)) /
+                var(--ds-qual-columns)
+            );
+          min-width: 0;
           display: flex;
           flex-direction: column;
           align-items: center;
@@ -141,27 +89,11 @@ export function QualificationCarousel({ title, items }: Props) {
           line-height: 1.5;
           color: var(--ds-color-text-primary);
         }
-        .ds-qual-dots {
-          display: flex;
-          justify-content: center;
-          gap: var(--ds-space-sm);
-          margin-top: var(--ds-space-2xl);
-        }
-        .ds-qual-dot {
-          width: 8px;
-          height: 8px;
-          border-radius: var(--ds-radius-round);
-          border: none;
-          background: #d9d9d9;
-          cursor: pointer;
-        }
-        .ds-qual-dot[data-active="true"] { background: rgb(20, 115, 230); }
-        .ds-qual-dot:focus-visible { outline: 2px solid var(--ds-color-focus); outline-offset: 2px; }
         @media (max-width: 1024px) {
-          .ds-qual-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+          .ds-qual-grid { --ds-qual-columns: 3; }
         }
         @media (max-width: 640px) {
-          .ds-qual-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+          .ds-qual-grid { --ds-qual-columns: 2; }
         }
       `}</style>
     </section>

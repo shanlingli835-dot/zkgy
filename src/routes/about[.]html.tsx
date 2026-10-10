@@ -22,9 +22,6 @@ import qual09 from "@/assets/qualifications/qual-09.png.asset.json";
 import qual10 from "@/assets/qualifications/qual-10.png.asset.json";
 import qual11 from "@/assets/qualifications/qual-11.png.asset.json";
 import qual12 from "@/assets/qualifications/qual-12.png.asset.json";
-import honor27 from "@/assets/honors/honor-27.png.asset.json";
-import honor28 from "@/assets/honors/image-28.png.asset.json";
-import honor29 from "@/assets/honors/image-29.png.asset.json";
 import honor30 from "@/assets/honors/honor-30.png.asset.json";
 import honor31 from "@/assets/honors/honor-31.png.asset.json";
 import honor32 from "@/assets/honors/honor-32.png.asset.json";
@@ -150,9 +147,6 @@ const HONORS = [
     name: "全国人工智能应用场景创新挑战赛 全国总决赛 成长组 一等奖",
     image: honor38.url,
   },
-  { id: "honor-27", name: "数字经济企业 TOP500", image: honor27.url },
-  { id: "honor-28", name: "北京民营企业百强", image: honor28.url },
-  { id: "honor-29", name: "广东省百强民营企业 2023", image: honor29.url },
 ];
 
 
@@ -301,7 +295,7 @@ function AboutPage() {
 
       <QualificationCarousel
         title="行业荣誉与赛事成果"
-        items={[...HONORS, ...HONORS]}
+        items={HONORS}
       />
 
 
