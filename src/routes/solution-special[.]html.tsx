@@ -9,6 +9,10 @@ import {
 } from "lucide-react";
 
 import specialArchitecture from "@/assets/special_3.png.asset.json";
+import specialVulnerabilityImage from "@/assets/special-solution-vulnerability.jpg";
+import specialPenetrationImage from "@/assets/special-solution-penetration.jpg";
+import specialSurvivabilityImage from "@/assets/special-solution-survivability.jpg";
+import specialComplianceImage from "@/assets/special-solution-compliance.jpg";
 import { SolutionShowcaseGrid } from "@/components/site/SolutionShowcaseGrid";
 import { AdvantageTriad } from "@/components/site/AdvantageTriad";
 import { ZigzagShowcase } from "@/components/site/ZigzagShowcase";
@@ -142,6 +146,7 @@ function SolutionSpecialPage() {
           {
             icon: <Radar size={18} aria-hidden />,
             category: "脆弱性发现",
+            image: { src: specialVulnerabilityImage, alt: "冰蓝雷达环扫描银白代码分析面板与固件芯片的脆弱性发现示意图" },
             items: [
               {
                 title: "多引擎代码扫描平台",
