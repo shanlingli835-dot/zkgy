@@ -78,6 +78,20 @@ function SolutionAutoPage() {
         description="以“工具链 + 合规”双轮驱动，为汽车主机厂、检测机构、零部件厂商一站式交付覆盖 GB 44495 与 UNECE R155 全项检测所需的实验能力，快速构建自主可控的信息安全验证中心。"
         primaryCta={{ label: "咨询方案", href: CTA_HREF }}
         secondaryCta={{ label: "联系我们", href: CTA_HREF }}
+        visual={
+          <img
+            src={autoHeroVehicle.url}
+            alt="银白概念网联汽车置于实验台架上，周围环绕冰蓝与淡紫全息数据面板"
+            style={{
+              display: "block",
+              width: "100%",
+              height: "100%",
+              objectFit: "cover",
+              objectPosition: "center",
+              borderRadius: "var(--ds-radius-surface)",
+            }}
+          />
+        }
       />
 
       <Section
