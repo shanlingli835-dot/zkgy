@@ -12,6 +12,11 @@ import {
 } from "lucide-react";
 
 import autoArchitecture from "@/assets/auto-arch.png.asset.json";
+import firmwareImage from "@/assets/auto-solution-firmware.jpg";
+import protocolImage from "@/assets/auto-solution-protocol.jpg";
+import chipImage from "@/assets/auto-solution-chip.jpg";
+import vehicleImage from "@/assets/auto-solution-vehicle.jpg";
+import complianceImage from "@/assets/auto-solution-compliance.jpg";
 
 import {
   CTA_HREF,
@@ -49,6 +54,7 @@ export const Route = createFileRoute("/solution-auto.html")({
           "覆盖固件、协议、整车与云端的一站式网联汽车信息安全实验室解决方案。",
       },
       { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
       { property: "og:url", content: "/solution-auto.html" },
     ],
     links: [{ rel: "canonical", href: "/solution-auto.html" }],
@@ -149,6 +155,7 @@ function SolutionAutoPage() {
           {
             icon: <ShieldCheck size={18} aria-hidden />,
             category: "OTA 与固件安全",
+            image: { src: firmwareImage, alt: "冰蓝防护盾包覆银白车载固件模块的安全示意图" },
             items: [
               {
                 title: "固件漏洞扫描平台",
@@ -159,6 +166,7 @@ function SolutionAutoPage() {
           {
             icon: <Wifi size={18} aria-hidden />,
             category: "通信与协议安全",
+            image: { src: protocolImage, alt: "冰蓝信号连接银白车载通信接口的协议安全示意图" },
             items: [
               {
                 title: "Wisdom 系列模糊测试机",
@@ -169,6 +177,7 @@ function SolutionAutoPage() {
           {
             icon: <Cpu size={18} aria-hidden />,
             category: "硬件与芯片安全",
+            image: { src: chipImage, alt: "银白芯片与冰蓝电路基板的硬件安全示意图" },
             items: [
               {
                 title: "硬件安全验证台",
@@ -179,6 +188,7 @@ function SolutionAutoPage() {
           {
             icon: <CarFront size={18} aria-hidden />,
             category: "整车台架攻防区",
+            image: { src: vehicleImage, alt: "银白网联汽车置于实验台架上的整车安全测试示意图" },
             items: [
               {
                 title: "整车接入机柜",
@@ -189,6 +199,7 @@ function SolutionAutoPage() {
           {
             icon: <FileBadge2 size={18} aria-hidden />,
             category: "数据与合规管理",
+            image: { src: complianceImage, alt: "冰蓝合规文档与银白校验标记的数据治理示意图" },
             items: [
               {
                 title: "TARA 威胁分析",
