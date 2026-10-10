@@ -238,6 +238,7 @@ function SolutionSpecialPage() {
 
 
       <ZigzagShowcase
+        mediaClassName="ds-zigzag-media--rounded"
         title="从脆弱性到生存性的实验全景"
         items={[
           {

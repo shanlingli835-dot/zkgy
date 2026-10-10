@@ -31,11 +31,12 @@ as general layout spacing or replaced with route-level values.
 
 ## Radii
 
-| Token                 | Target value | Purpose                                 |
-| --------------------- | ------------ | --------------------------------------- |
-| `--ds-radius-control` | `6px`        | Buttons and inputs                      |
-| `--ds-radius-surface` | `8px`        | Cards, dialogs, and site modules        |
-| `--ds-radius-round`   | `9999px`     | Avatars and circular icon controls only |
+| Token                  | Target value | Purpose                                 |
+| ---------------------- | ------------ | --------------------------------------- |
+| `--ds-radius-media`    | `4px`        | Images and media frames inside modules  |
+| `--ds-radius-control`  | `6px`        | Buttons and inputs                      |
+| `--ds-radius-surface`  | `8px`        | Cards, dialogs, and site modules        |
+| `--ds-radius-round`    | `9999px`     | Avatars and circular icon controls only |
 
 Do not create temporary `10px`, `14px`, or oversized pill radii in routes.
 

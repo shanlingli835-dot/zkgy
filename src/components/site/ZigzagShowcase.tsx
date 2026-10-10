@@ -10,9 +10,15 @@ type Props = {
   title: string;
   description?: string;
   items: ZigzagItem[];
+  mediaClassName?: string;
 };
 
-export function ZigzagShowcase({ title, description, items }: Props) {
+export function ZigzagShowcase({
+  title,
+  description,
+  items,
+  mediaClassName,
+}: Props) {
   return (
     <section style={{ padding: "var(--ds-section-y-desktop) var(--ds-gutter-desktop)" }}>
       <div style={{ maxWidth: "var(--ds-container-page)", margin: "0 auto" }}>
@@ -48,7 +54,7 @@ export function ZigzagShowcase({ title, description, items }: Props) {
             <div key={item.title} className={`ds-zigzag-row${i % 2 === 1 ? " is-reverse" : ""}`}>
               {item.image ? (
                 <img
-                  className="ds-zigzag-media"
+                  className={`ds-zigzag-media${mediaClassName ? ` ${mediaClassName}` : ""}`}
                   src={item.image}
                   alt={item.imageAlt ?? ""}
                   loading="lazy"
@@ -56,7 +62,10 @@ export function ZigzagShowcase({ title, description, items }: Props) {
                   height={360}
                 />
               ) : (
-                <div className="ds-zigzag-media" aria-hidden />
+                <div
+                  className={`ds-zigzag-media${mediaClassName ? ` ${mediaClassName}` : ""}`}
+                  aria-hidden
+                />
               )}
               <div className="ds-zigzag-text">
                 <h3
@@ -110,6 +119,9 @@ export function ZigzagShowcase({ title, description, items }: Props) {
           background-color: #F4F4F4;
           object-fit: cover;
           display: block;
+        }
+        .ds-zigzag-media--rounded {
+          border-radius: var(--ds-radius-media);
         }
         .ds-zigzag-text { max-width: 520px; }
         @media (max-width: 1023px) {
