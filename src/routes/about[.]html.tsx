@@ -266,9 +266,15 @@ function AboutPage() {
         groups={TIMELINE_GROUPS}
       />
 
-      <QualificationCarousel title="企业资质" items={QUALIFICATIONS} />
+      <QualificationCarousel
+        title="企业资质与产品技术能力认证"
+        items={QUALIFICATIONS}
+      />
 
-      <QualificationCarousel title="荣誉奖项" items={[...HONORS, ...HONORS]} />
+      <QualificationCarousel
+        title="行业荣誉与赛事成果"
+        items={[...HONORS, ...HONORS]}
+      />
 
 
 
