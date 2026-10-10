@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 
 import autoArchitecture from "@/assets/auto-arch.png.asset.json";
+import autoHeroVehicle from "@/assets/auto-hero-vehicle.png.asset.json";
 import firmwareImage from "@/assets/auto-solution-firmware.jpg";
 import protocolImage from "@/assets/auto-solution-protocol.jpg";
 import chipImage from "@/assets/auto-solution-chip.jpg";
