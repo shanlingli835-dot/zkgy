@@ -22,15 +22,6 @@ import qual09 from "@/assets/qualifications/qual-09.png.asset.json";
 import qual10 from "@/assets/qualifications/qual-10.png.asset.json";
 import qual11 from "@/assets/qualifications/qual-11.png.asset.json";
 import qual12 from "@/assets/qualifications/qual-12.png.asset.json";
-import honor18 from "@/assets/honors/honor-18.png.asset.json";
-import honor19 from "@/assets/honors/honor-19.png.asset.json";
-import honor20 from "@/assets/honors/honor-20.png.asset.json";
-import honor21 from "@/assets/honors/honor-21.png.asset.json";
-import honor22 from "@/assets/honors/honor-22.png.asset.json";
-import honor23 from "@/assets/honors/honor-23.png.asset.json";
-import honor24 from "@/assets/honors/honor-24.png.asset.json";
-import honor25 from "@/assets/honors/honor-25.png.asset.json";
-import honor26 from "@/assets/honors/honor-26.png.asset.json";
 import honor27 from "@/assets/honors/honor-27.png.asset.json";
 import honor28 from "@/assets/honors/image-28.png.asset.json";
 import honor29 from "@/assets/honors/image-29.png.asset.json";
@@ -122,15 +113,43 @@ const QUALIFICATIONS = [
 ];
 
 const HONORS = [
-  { id: "honor-18", name: "2024数字化转型十大贡献企业", image: honor18.url },
-  { id: "honor-19", name: "2024年度最佳数据赋能解决方案", image: honor19.url },
-  { id: "honor-20", name: "粤港澳大湾区上市公司品牌价值榜 TOP100", image: honor20.url },
-  { id: "honor-21", name: "2023新型实体企业 TOP100", image: honor21.url },
-  { id: "honor-22", name: "数字化转型标杆企业", image: honor22.url },
-  { id: "honor-23", name: "2023年上市公司社会责任评选奖项", image: honor23.url },
-  { id: "honor-24", name: "中国信息技术服务卓越奖", image: honor24.url },
-  { id: "honor-25", name: "2023 DAMA 数据治理最佳实践奖", image: honor25.url },
-  { id: "honor-26", name: "哈佛商业评论数字化创新奖", image: honor26.url },
+  {
+    id: "honor-30",
+    name: "汽车网络安全行业10周年安全标杆企业",
+    image: honor30.url,
+  },
+  {
+    id: "honor-31",
+    name: "2023 AutoSec 安全之星 · 汽车网络安全突出贡献奖",
+    image: honor31.url,
+  },
+  { id: "honor-32", name: "数智未来创新案例奖", image: honor32.url },
+  {
+    id: "honor-33",
+    name: "2023–2024 联网科技创新数据与网络安全卓越奖",
+    image: honor33.url,
+  },
+  { id: "honor-34", name: "《信息安全技术 软件供应链》", image: honor34.url },
+  {
+    id: "honor-35",
+    name: "“铸网—2025”网络安全实网攻防演练——网安实战先锋团队",
+    image: honor35.url,
+  },
+  {
+    id: "honor-36",
+    name: "“铸网—2025”车联网网络安全演练——优秀白帽队伍",
+    image: honor36.url,
+  },
+  {
+    id: "honor-37",
+    name: "2025“招商铸盾”智能网联汽车攻防赛——一等奖",
+    image: honor37.url,
+  },
+  {
+    id: "honor-38",
+    name: "全国人工智能应用场景创新挑战赛 全国总决赛 成长组 一等奖",
+    image: honor38.url,
+  },
   { id: "honor-27", name: "数字经济企业 TOP500", image: honor27.url },
   { id: "honor-28", name: "北京民营企业百强", image: honor28.url },
   { id: "honor-29", name: "广东省百强民营企业 2023", image: honor29.url },
