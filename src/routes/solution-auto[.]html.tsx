@@ -74,7 +74,7 @@ function SolutionAutoPage() {
   return (
     <SitePageShell>
       <ProductHero
-        eyebrow="解决方案 · 网联汽车"
+
         title={
           <>
             网联汽车 信息安全实验室
