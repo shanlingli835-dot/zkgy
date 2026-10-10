@@ -61,7 +61,6 @@ function SolutionSpecialPage() {
   return (
     <SitePageShell>
       <ProductHero
-        eyebrow="解决方案 · 特种装备"
         title={
           <>
             特种领域 网络安全实验
