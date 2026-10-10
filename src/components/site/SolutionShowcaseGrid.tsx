@@ -9,6 +9,7 @@ export type ShowcaseCard = {
   icon: ReactNode;
   category: string;
   items: ShowcaseSubItem[];
+  image?: { src: string; alt: string };
 };
 
 type Props = {
@@ -206,9 +207,13 @@ function Card({ card, index }: { card: ShowcaseCard; index: number }) {
 
       <div
         className="ds-showcase-media"
-        style={{ background: PLACEHOLDERS[index % PLACEHOLDERS.length] }}
-        aria-hidden
-      />
+        style={card.image ? undefined : { background: PLACEHOLDERS[index % PLACEHOLDERS.length] }}
+        aria-hidden={card.image ? undefined : true}
+      >
+        {card.image ? (
+          <img src={card.image.src} alt={card.image.alt} loading="lazy" width={1024} height={1024} />
+        ) : null}
+      </div>
 
       <div className="ds-showcase-body">
         {card.items.map((item) => (

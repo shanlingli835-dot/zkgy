@@ -77,6 +77,20 @@ import logoHorizontalReverse from '@/assets/brand/logos/zkgy-logo-horizontal-rev
 4. 不得直接使用原始中文文件名或本地 Desktop 绝对路径。
 5. 如果现有两种变体不适用，报告缺失的资产变体，不得自行制作。
 
+## 网联汽车方案组成插图
+
+用户指定生成的语义插图，仅用于 `/solution-auto.html` 方案组成，不作为真实设备或界面证据，不用于 Logo。
+
+| 文件 | 对应语义 |
+|---|---|
+| `src/assets/auto-solution-firmware.jpg` | OTA 与固件安全 |
+| `src/assets/auto-solution-protocol.jpg` | 通信与协议安全 |
+| `src/assets/auto-solution-chip.jpg` | 硬件与芯片安全 |
+| `src/assets/auto-solution-vehicle.jpg` | 整车台架攻防区 |
+| `src/assets/auto-solution-compliance.jpg` | 数据与合规管理 |
+
+冰蓝、银白、浅灰、淡紫，柔光、低对比阴影与留白，不改变页面颜色 Token。原生生成图片直接导入；媒体合约见 `../components/solution-showcase-media.md`。
+
 ## 预览
 
 标准色版本：
