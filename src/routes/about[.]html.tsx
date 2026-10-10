@@ -10,16 +10,16 @@ import { ZigzagShowcase } from "@/components/site/ZigzagShowcase";
 import companyOverviewImage from "@/assets/about-company-overview.jpg";
 import { TimelineTabs } from "@/components/site/TimelineTabs";
 import { QualificationCarousel } from "@/components/site/QualificationCarousel";
-import cert6 from "@/assets/qualifications/cert-6.png.asset.json";
-import cert7 from "@/assets/qualifications/cert-7.png.asset.json";
-import cert8 from "@/assets/qualifications/cert-8.png.asset.json";
-import cert9 from "@/assets/qualifications/cert-9.png.asset.json";
-import cert10 from "@/assets/qualifications/cert-10.png.asset.json";
-import cert11 from "@/assets/qualifications/cert-11.png.asset.json";
-import cert12 from "@/assets/qualifications/cert-12.png.asset.json";
-import cert13 from "@/assets/qualifications/cert-13.png.asset.json";
-import cert14 from "@/assets/qualifications/cert-14.png.asset.json";
-import cert15 from "@/assets/qualifications/cert-15.png.asset.json";
+import qual01 from "@/assets/qualifications/qual-01.png.asset.json";
+import qual02 from "@/assets/qualifications/qual-02.png.asset.json";
+import qual03 from "@/assets/qualifications/qual-03.png.asset.json";
+import qual04 from "@/assets/qualifications/qual-04.png.asset.json";
+import qual05 from "@/assets/qualifications/qual-05.png.asset.json";
+import qual06 from "@/assets/qualifications/qual-06.png.asset.json";
+import qual07 from "@/assets/qualifications/qual-07.webp.asset.json";
+import qual08 from "@/assets/qualifications/qual-08.png.asset.json";
+import qual09 from "@/assets/qualifications/qual-09.png.asset.json";
+import qual10 from "@/assets/qualifications/qual-10.png.asset.json";
 import cert16 from "@/assets/qualifications/cert-16.png.asset.json";
 import cert17 from "@/assets/qualifications/cert-17.png.asset.json";
 import honor18 from "@/assets/honors/honor-18.png.asset.json";
@@ -82,36 +82,24 @@ const TIMELINE_GROUPS = [
 ];
 
 const QUALIFICATIONS = [
-  { id: "cmmi5", name: "CMMI V2.0 成熟度五级证书", image: cert6.url },
-  { id: "iso9001", name: "质量管理体系认证证书（ISO9001）", image: cert7.url },
+  { id: "iso27001", name: "信息安全管理体系认证证书", image: qual01.url },
+  { id: "high-tech", name: "高新技术企业证书", image: qual02.url },
+  { id: "invention-patent", name: "发明专利证书", image: qual03.url },
+  { id: "mgmt-system", name: "管理体系认证证书", image: qual04.url },
+  { id: "iso9001", name: "质量管理体系认证证书", image: qual05.url },
+  { id: "tuv-rheinland", name: "莱茵认证证书", image: qual06.url },
+  { id: "tech-sme", name: "国家级科技型中小企业", image: qual07.url },
   {
-    id: "iso20000",
-    name: "服务管理体系认证证书（ISO/IEC 20000-1）",
-    image: cert8.url,
+    id: "auto-security-provider",
+    name: "汽车安全产品提供商",
+    image: qual08.url,
   },
+  { id: "autosec-2023", name: "AutoSec2023", image: qual09.url },
   {
-    id: "iso27001",
-    name: "信息安全管理体系认证证书（ISO/IEC 27001）",
-    image: cert9.url,
+    id: "vehicle-cloud-fuzzing",
+    name: "车路云一体化智汇创新fuzzing",
+    image: qual10.url,
   },
-  {
-    id: "iso27017",
-    name: "云服务信息安全管理体系认证证书（ISO/IEC 27017）",
-    image: cert10.url,
-  },
-  {
-    id: "iso27018",
-    name: "公有云中个人可识别信息保护管理体系认证证书（ISO/IEC 27018）",
-    image: cert11.url,
-  },
-  {
-    id: "iso27701",
-    name: "隐私信息管理体系认证证书（ISO/IEC 27701）",
-    image: cert12.url,
-  },
-  { id: "publication", name: "出版物经营许可证", image: cert13.url },
-  { id: "broadcast", name: "广播电视节目制作经营许可证", image: cert14.url },
-  { id: "high-tech", name: "高新技术企业证书", image: cert15.url },
   { id: "credit-aaa", name: "企业信用等级证书", image: cert16.url },
   {
     id: "dcmm",
