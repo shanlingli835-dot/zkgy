@@ -161,6 +161,7 @@ function SolutionSpecialPage() {
           {
             icon: <ShieldCheck size={18} aria-hidden />,
             category: "渗透性验证",
+            image: { src: specialPenetrationImage, alt: "银白测试探针接触电路板并激发冰蓝信号波形的渗透性验证示意图" },
             items: [
               {
                 title: "Wisdom 协议模糊测试机",
@@ -175,6 +176,7 @@ function SolutionSpecialPage() {
           {
             icon: <Rocket size={18} aria-hidden />,
             category: "生存性评估",
+            image: { src: specialSurvivabilityImage, alt: "银白仿真机柜置于半透明防护罩内承受电磁冲击的生存性评估示意图" },
             items: [
               {
                 title: "实装半实物仿真机柜",
@@ -189,6 +191,7 @@ function SolutionSpecialPage() {
           {
             icon: <FileBadge2 size={18} aria-hidden />,
             category: "合规与知识中枢",
+            image: { src: specialComplianceImage, alt: "冰蓝合规印章悬浮于玻璃文档与知识中枢球体上方的合规示意图" },
             items: [
               {
                 title: "实验指标",
