@@ -9,6 +9,10 @@ import {
 } from "lucide-react";
 
 import specialArchitecture from "@/assets/special_3.png.asset.json";
+import specialVulnerabilityImage from "@/assets/special-solution-vulnerability.jpg";
+import specialPenetrationImage from "@/assets/special-solution-penetration.jpg";
+import specialSurvivabilityImage from "@/assets/special-solution-survivability.jpg";
+import specialComplianceImage from "@/assets/special-solution-compliance.jpg";
 import { SolutionShowcaseGrid } from "@/components/site/SolutionShowcaseGrid";
 import { AdvantageTriad } from "@/components/site/AdvantageTriad";
 import { ZigzagShowcase } from "@/components/site/ZigzagShowcase";
@@ -142,6 +146,7 @@ function SolutionSpecialPage() {
           {
             icon: <Radar size={18} aria-hidden />,
             category: "脆弱性发现",
+            image: { src: specialVulnerabilityImage, alt: "冰蓝雷达环扫描银白代码分析面板与固件芯片的脆弱性发现示意图" },
             items: [
               {
                 title: "多引擎代码扫描平台",
@@ -156,6 +161,7 @@ function SolutionSpecialPage() {
           {
             icon: <ShieldCheck size={18} aria-hidden />,
             category: "渗透性验证",
+            image: { src: specialPenetrationImage, alt: "银白测试探针接触电路板并激发冰蓝信号波形的渗透性验证示意图" },
             items: [
               {
                 title: "Wisdom 协议模糊测试机",
@@ -170,6 +176,7 @@ function SolutionSpecialPage() {
           {
             icon: <Rocket size={18} aria-hidden />,
             category: "生存性评估",
+            image: { src: specialSurvivabilityImage, alt: "银白仿真机柜置于半透明防护罩内承受电磁冲击的生存性评估示意图" },
             items: [
               {
                 title: "实装半实物仿真机柜",
@@ -184,6 +191,7 @@ function SolutionSpecialPage() {
           {
             icon: <FileBadge2 size={18} aria-hidden />,
             category: "合规与知识中枢",
+            image: { src: specialComplianceImage, alt: "冰蓝合规印章悬浮于玻璃文档与知识中枢球体上方的合规示意图" },
             items: [
               {
                 title: "实验指标",
