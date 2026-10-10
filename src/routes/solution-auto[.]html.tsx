@@ -18,6 +18,13 @@ import protocolImage from "@/assets/auto-solution-protocol.jpg";
 import chipImage from "@/assets/auto-solution-chip.jpg";
 import vehicleImage from "@/assets/auto-solution-vehicle.jpg";
 import complianceImage from "@/assets/auto-solution-compliance.jpg";
+import sceneConnectivityImage from "@/assets/auto-scene-connectivity.jpg";
+import sceneCommImage from "@/assets/auto-scene-comm.jpg";
+import sceneOtaImage from "@/assets/auto-scene-ota.jpg";
+import sceneDataImage from "@/assets/auto-scene-data.jpg";
+import sceneCsmsImage from "@/assets/auto-scene-csms.jpg";
+import sceneVtaImage from "@/assets/auto-scene-vta.jpg";
+import sceneSupplyImage from "@/assets/auto-scene-supply.jpg";
 
 import {
   CTA_HREF,
@@ -266,6 +273,7 @@ function SolutionAutoPage() {
             id: "gb-external",
             tag: "GB 44495",
             title: "外部连接安全要求",
+            image: sceneConnectivityImage,
             summary:
               "蜂窝、蓝牙、Wi-Fi、NFC 等多模入口统一接入，支持信号层、协议层、应用层三步入侵检测，提前发现越权接入、中间人与重放攻击路径。",
           },
@@ -273,6 +281,7 @@ function SolutionAutoPage() {
             id: "gb-comm",
             tag: "GB 44495",
             title: "通信安全要求",
+            image: sceneCommImage,
             summary:
               "覆盖车内总线与车外网络，提供加密一致性、证书有效性与握手鲁棒性验证，确保控车指令、远程诊断与 V2X 消息完整可信。",
           },
@@ -280,6 +289,7 @@ function SolutionAutoPage() {
             id: "gb-ota",
             tag: "GB 44495",
             title: "软件升级安全要求",
+            image: sceneOtaImage,
             summary:
               "针对 OTA 包、差分包、回滚包进行签名验证、防篡改校验与异常中断恢复测试，保障升级链路不可抵赖、不可降级。",
           },
@@ -287,6 +297,7 @@ function SolutionAutoPage() {
             id: "gb-data",
             tag: "GB 44495",
             title: "数据安全要求",
+            image: sceneDataImage,
             summary:
               "对车端敏感数据的全生命周期进行加密强度、销毁深度与匿名化效果评估，防止个人信息、密钥素材及行驶数据被逆向还原。",
           },
@@ -294,6 +305,7 @@ function SolutionAutoPage() {
             id: "r155-csms",
             tag: "R155",
             title: "CSMS 技术验证",
+            image: sceneCsmsImage,
             summary:
               "以 Wisdom 模糊测试平台对整车及零部件进行持续渗透测试，为主机厂 CSMS 审核提供技术证据。",
           },
@@ -301,6 +313,7 @@ function SolutionAutoPage() {
             id: "r155-vta",
             tag: "R155",
             title: "VTA 型式认证抽样",
+            image: sceneVtaImage,
             summary:
               "针对 TARA 高风险项（如网关、T-box）进行重点复测，生成认证机构认可的测试报告。",
           },
@@ -308,6 +321,7 @@ function SolutionAutoPage() {
             id: "r155-supply",
             tag: "R155",
             title: "供应链安全审查",
+            image: sceneSupplyImage,
             summary:
               "利用固件分析技术对第三方固件进行 SBOM 与漏洞比对，帮助 OEM 向审核员展示供应链风险管理过程。",
           },
