@@ -56,6 +56,7 @@ and accessibility. It is not the public site brand.
   request explicitly asks to refactor the page into React components.
 - Do not restore the earlier generated homepage from git history or replace the approved source
   with a new design direction.
+- Keep homepage product panels in one overlapping grid track, with inactive panels invisible and inert, so the tallest content reserves responsive space without moving the page on tab changes.
 
 Before creating or modifying UI:
 

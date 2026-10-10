@@ -8876,15 +8876,23 @@ main > :not(.jasper-hero-shell):not(.solution-cta-bar) :where(h1, h2, h3, h4, h5
     .pt-tabs__tab.is-active, .pt-tabs__tab[aria-selected="true"] { background: var(--pt-ink); color: #ffffff; }
     .pt-tabs__tab:focus-visible { outline: 2px solid var(--pt-ink); outline-offset: 2px; }
 
+    /* Reserve the tallest panel's space at every viewport width. */
+    .pt-panels { display: grid; }
     .pt-panel {
       display: grid;
+      grid-area: 1 / 1;
+      align-self: start;
       grid-template-columns: minmax(0, 773fr) minmax(0, 553fr);
       align-items: start;
       column-gap: clamp(40px, 5vw, 88px);
       row-gap: 32px;
       margin-top: clamp(36px, 4vw, 56px);
     }
-    .pt-panel[hidden] { display: none; }
+    .pt-panel[hidden] {
+      display: grid;
+      visibility: hidden;
+      pointer-events: none;
+    }
     .pt-panel__media {
       position: relative;
       width: 100%;
@@ -8961,6 +8969,7 @@ main > :not(.jasper-hero-shell):not(.solution-cta-bar) :where(h1, h2, h3, h4, h5
           <button class="pt-tabs__tab" type="button" role="tab" id="pt-tab-5" aria-controls="pt-panel-5" aria-selected="false" data-pt-tab="5">Swift Code 源代码审计</button>
           <button class="pt-tabs__tab" type="button" role="tab" id="pt-tab-6" aria-controls="pt-panel-6" aria-selected="false" data-pt-tab="6">Swift Pentest 自动化渗透测试</button>
         </div>
+        <div class="pt-panels">
         <div class="pt-panel is-active" role="tabpanel" id="pt-panel-1" aria-labelledby="pt-tab-1" data-pt-panel="1">
           <div class="pt-panel__media">
             <div class="wisdom-demo" aria-label="Wisdom 模糊测试界面动效">
@@ -9233,6 +9242,7 @@ main > :not(.jasper-hero-shell):not(.solution-cta-bar) :where(h1, h2, h3, h4, h5
             </div>
           </div>
         </div>
+        </div>
       </div>
     </section>
     <script>
@@ -9241,6 +9251,10 @@ main > :not(.jasper-hero-shell):not(.solution-cta-bar) :where(h1, h2, h3, h4, h5
         if (!section) return;
         var tabs = section.querySelectorAll('[data-pt-tab]');
         var panels = section.querySelectorAll('[data-pt-panel]');
+        panels.forEach(function (panel) {
+          panel.inert = panel.hidden;
+          panel.setAttribute('aria-hidden', panel.hidden ? 'true' : 'false');
+        });
         tabs.forEach(function (tab) {
           tab.addEventListener('click', function () {
             var id = tab.getAttribute('data-pt-tab');
@@ -9252,6 +9266,8 @@ main > :not(.jasper-hero-shell):not(.solution-cta-bar) :where(h1, h2, h3, h4, h5
             panels.forEach(function (p) {
               var on = p.getAttribute('data-pt-panel') === id;
               p.classList.toggle('is-active', on);
+              p.inert = !on;
+              p.setAttribute('aria-hidden', on ? 'false' : 'true');
               if (on) { p.removeAttribute('hidden'); } else { p.setAttribute('hidden', ''); }
             });
           });
