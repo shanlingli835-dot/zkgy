@@ -11,7 +11,7 @@ import {
   ChevronRight,
 } from "lucide-react";
 
-import autoArchitecture from "@/assets/auto-arch.png.asset.json";
+import autoNetworkArchitecture from "@/assets/auto-network-architecture.jpg";
 import autoHeroVehicle from "@/assets/auto-hero-vehicle.png.asset.json";
 import firmwareImage from "@/assets/auto-solution-firmware.jpg";
 import protocolImage from "@/assets/auto-solution-protocol.jpg";
@@ -106,8 +106,11 @@ function SolutionAutoPage() {
         title="围绕 GB 44495 与 R155 构建交钥匙实验室"
       >
         <img
-          src={autoArchitecture.url}
-          alt=""
+          src={autoNetworkArchitecture}
+          alt="网联汽车整车网络架构与车云通信示意图"
+          loading="lazy"
+          width={1920}
+          height={1088}
           style={{
             display: "block",
             width: "100%",
