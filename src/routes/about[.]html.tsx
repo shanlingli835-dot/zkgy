@@ -20,8 +20,8 @@ import qual07 from "@/assets/qualifications/qual-07.webp.asset.json";
 import qual08 from "@/assets/qualifications/qual-08.png.asset.json";
 import qual09 from "@/assets/qualifications/qual-09.png.asset.json";
 import qual10 from "@/assets/qualifications/qual-10.png.asset.json";
-import cert16 from "@/assets/qualifications/cert-16.png.asset.json";
-import cert17 from "@/assets/qualifications/cert-17.png.asset.json";
+import qual11 from "@/assets/qualifications/qual-11.png.asset.json";
+import qual12 from "@/assets/qualifications/qual-12.png.asset.json";
 import honor18 from "@/assets/honors/honor-18.png.asset.json";
 import honor19 from "@/assets/honors/honor-19.png.asset.json";
 import honor20 from "@/assets/honors/honor-20.png.asset.json";
@@ -100,11 +100,15 @@ const QUALIFICATIONS = [
     name: "车路云一体化智汇创新fuzzing",
     image: qual10.url,
   },
-  { id: "credit-aaa", name: "企业信用等级证书", image: cert16.url },
   {
-    id: "dcmm",
-    name: "数据管理能力成熟度（DCMM）等级证书",
-    image: cert17.url,
+    id: "fuzzing-provider-2024",
+    name: "2024年度优秀模糊测试产品提供商",
+    image: qual11.url,
+  },
+  {
+    id: "atc-gold-award",
+    name: "2024第三届ATC汽车软件与安全“金辕奖”行业贡献奖",
+    image: qual12.url,
   },
 ];
 
