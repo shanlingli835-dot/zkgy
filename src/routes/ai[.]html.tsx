@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Boxes, Brain, Layers, ShieldCheck } from "lucide-react";
 
 import { HomeAccordion } from "@/components/site/HomeAccordion";
-import aiLlmFirewall from "@/assets/ai-llm-firewall.png.asset.json";
+import aiLlmFirewall from "@/assets/ai-llm-firewall.png";
 
 
 import {
@@ -91,7 +91,7 @@ function AiPage() {
             title: "LLM安全评测与防护",
             desc: "基于LLM安全评测与防护体系，结合LLM防火墙、沙箱与RAG防护，实现大模型全链路安全监测与态势可视化管理。",
             image: {
-              src: aiLlmFirewall.url,
+              src: aiLlmFirewall,
               alt: "LLM 防火墙控制台界面，展示防火墙状态、拦截统计、规则类型统计，以及包含命中规则与处理结果的拦截日志列表",
             },
           },
