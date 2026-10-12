@@ -6,7 +6,7 @@ import aiLlmFirewall from "@/assets/ai-llm-firewall.png";
 import aiMultimodalAdversarial from "@/assets/ai-multimodal-adversarial.png";
 import aiSupplyChainBom from "@/assets/ai-supply-chain-bom.png";
 import aiOpenSourceOverview from "@/assets/ai-open-source-overview.png";
-import aiHeroHolographic from "@/assets/swift-ai-hero-holographic.jpg";
+import aiHeroCore from "@/assets/swift-ai-hero-core.jpg";
 
 
 import {
@@ -54,10 +54,10 @@ function AiPage() {
         primaryCta={{ label: "免费试用", href: CTA_HREF }}
         visual={
           <img
-            src={aiHeroHolographic}
-            alt="Swift AI 全息玻璃安全核心，连接传统模型对抗测评、LLM 安全测评与防火墙、自动化红队及 AI BOM 供应链分析"
-            width={1648}
-            height={1200}
+            src={aiHeroCore}
+            alt="Swift AI 全息玻璃安全核心：透明玻璃分层架构托管模型与数据资产，外围轨道环绕数据分析、智能体、对话交互与模型资产四个发光徽记"
+            width={1291}
+            height={941}
             className="h-full w-full rounded-[var(--ds-radius-surface)] object-cover"
             fetchPriority="high"
           />
