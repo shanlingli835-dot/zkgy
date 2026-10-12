@@ -19,7 +19,7 @@
 
 ## Anatomy and variants
 
-卡片依次为：配图（必需，4:3，圆角裁切，1px 细边框）、标签（可选，小号半粗体）、标题（必需）、
+卡片依次为：配图（必需，4:3，圆角裁切，无边框）、标签（可选，小号半粗体）、标题（必需）、
 描述（必需）。列数默认取条目数，可用 `columns` 指定 2/3/4。桌面等宽网格，卡片不额外套背景。
 
 ## Behavior and states
@@ -43,7 +43,7 @@ Expanded、Disabled 对静态内容不适用。
 - Canonical path：`src/components/ui/feature-cards.tsx` 与 `feature-cards.css`
 - Public API：`items: { image: { src, alt }, tag?, title, desc }[]`、`columns?: 2 | 3 | 4`、`className?`
 - 只使用语义 Token：`--ds-space-*`、`--ds-color-text-*`、`--ds-color-surface-subtle`、
-  `--ds-color-border-subtle`、`--ds-radius-surface`、`--ds-font-size-*`、`--ds-font-weight-*`
+  `--ds-radius-surface`、`--ds-font-size-*`、`--ds-font-weight-*`
 - 参考代码中的 Poppins 字体注入、`* { font-family }` 全局覆盖、外部 CDN 示例图与 slate 色值一律不采用
 
 ## Asset exclusions
