@@ -330,7 +330,10 @@ export function HeroVideo({ label, src }: { label: string; src?: string }) {
         backgroundColor: "#0a0a0a",
       }}
     >
-      <source src={src ?? HERO_VIDEO_SRC} type={src ? "video/mp4" : "video/webm"} />
+      <source
+        src={src ?? HERO_VIDEO_SRC}
+        type={(src ?? HERO_VIDEO_SRC).endsWith(".mp4") ? "video/mp4" : "video/webm"}
+      />
       您的浏览器不支持视频播放。
     </video>
   );

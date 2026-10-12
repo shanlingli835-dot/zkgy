@@ -18,7 +18,7 @@ import protocolTemplatesImage from "@/assets/wisdom-protocol-templates.png";
 import mutationAlgorithmsImage from "@/assets/wisdom-mutation-algorithm.png";
 import targetMonitorImage from "@/assets/wisdom-target-monitor.png";
 import vulnReplayImage from "@/assets/wisdom-vuln-replay.png";
-import wisdomHeroLoop from "@/assets/wisdom-hero-loop.mp4.asset.json";
+import wisdomHeroLoop from "@/assets/wisdom-hero-loop.webm.asset.json";
 import { AdvantageTriad } from "@/components/site/AdvantageTriad";
 import { HomeAccordion } from "@/components/site/HomeAccordion";
 import {
