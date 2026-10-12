@@ -1,6 +1,6 @@
 # Typography
 
-Evidence metrics use `--ds-font-size-display` (6rem) on desktop and `--ds-font-size-4xl` on mobile, without viewport-scaled type.
+Evidence metrics use `--ds-font-size-display` (6rem) without viewport-scaled type. The suffix uses `--ds-font-size-4xl` on desktop and `--ds-font-size-3xl` on mobile.
 
 状态：Implemented.
 

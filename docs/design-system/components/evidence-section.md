@@ -32,5 +32,5 @@ No Red Hat assets, web components, direct upstream tokens or raw visual values.
 
 ## Acceptance checklist
 - [x] Purpose, states, semantics and responsive behavior specified.
-- [ ] Desktop and mobile appearance verified.
+- [x] Desktop and mobile appearance verified at 1280px, 390px and 320px; CTA and SEO unchanged.
 - [x] Catalog updated; canonical implementation uses semantic tokens.
