@@ -215,7 +215,7 @@ export function HomeAccordion({
   const titleId = `why-tabs-title-${uid}`;
 
   const renderVisual = (item: HomeAccordionItem) => (
-    <div className="ha-visual">
+    <div className={`ha-visual${item.image ? " ha-visual--media" : ""}`}>
       {item.image ? (
         <img
           className="ha-visual__media"
