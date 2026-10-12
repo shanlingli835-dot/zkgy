@@ -6,6 +6,7 @@ import aiLlmFirewall from "@/assets/ai-llm-firewall.png";
 import aiMultimodalAdversarial from "@/assets/ai-multimodal-adversarial.png";
 import aiSupplyChainBom from "@/assets/ai-supply-chain-bom.png";
 import aiOpenSourceOverview from "@/assets/ai-open-source-overview.png";
+import protocolConsoleImage from "@/assets/wisdom-custom-protocol.png";
 import aiHeroCore from "@/assets/swift-ai-hero-core-light.jpg";
 import aiFeatureLifecycle from "@/assets/ai-feature-lifecycle.jpg";
 import aiFeatureMultimodal from "@/assets/ai-feature-multimodal.jpg";
@@ -151,6 +152,24 @@ function AiPage() {
       >
         <div style={{ display: "flex", justifyContent: "center" }}>
           <PrimaryCta href={CTA_HREF}>免费试用</PrimaryCta>
+        </div>
+
+        <div
+          style={{
+            marginTop: "clamp(2rem, 5vw, 4rem)",
+            borderRadius: "var(--ds-radius-surface)",
+            overflow: "hidden",
+            border: "1px solid var(--ds-color-border-subtle)",
+            backgroundColor: "var(--ds-color-surface-default)",
+            boxShadow: "0 24px 60px rgba(28, 30, 34, 0.12)",
+          }}
+        >
+          <img
+            src={protocolConsoleImage}
+            alt="协议模型设计界面，展示左侧消息树、中间模型元素字段层级与右侧元素属性面板"
+            loading="lazy"
+            style={{ display: "block", width: "100%", height: "auto" }}
+          />
         </div>
       </Section>
     </SitePageShell>
