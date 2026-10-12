@@ -9,6 +9,10 @@ import {
   FileBadge2,
 } from "lucide-react";
 
+import scaOssAuditImage from "@/assets/sca-oss-audit.jpg";
+import scaOssDepsImage from "@/assets/sca-oss-deps.jpg";
+import scaOssFilterImage from "@/assets/sca-oss-filter.jpg";
+import scaOssShareImage from "@/assets/sca-oss-share.jpg";
 import { AdvantageTriad } from "@/components/site/AdvantageTriad";
 import { GalleryHoverCarousel } from "@/components/site/GalleryHoverCarousel";
 import { HomeAccordion } from "@/components/site/HomeAccordion";
@@ -65,24 +69,28 @@ function ScaPage() {
             id: "oss-deps",
             tag: "100%",
             title: "全量依赖评估",
+            image: scaOssDepsImage,
             summary: "评估源代码和二进制文件中存在的所有依赖。",
           },
           {
             id: "oss-share",
             tag: "90%+",
             title: "开源代码占比",
+            image: scaOssShareImage,
             summary: "大多数代码库中超过90%的代码 来自开源软件。",
           },
           {
             id: "oss-filter",
             tag: "50%",
             title: "风险自动筛除",
+            image: scaOssFilterImage,
             summary: "使用预构建的策略和最佳实践自动筛除 50%漏洞和风险。",
           },
           {
             id: "oss-audit",
             tag: "70%",
             title: "审计效率提升",
+            image: scaOssAuditImage,
             summary: "安全审计平均时间减少 70%。",
           },
         ]}
