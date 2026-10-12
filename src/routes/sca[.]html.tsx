@@ -14,6 +14,7 @@ import scaOssDepsImage from "@/assets/sca-oss-deps.jpg";
 import scaOssFilterImage from "@/assets/sca-oss-filter.jpg";
 import scaOssShareImage from "@/assets/sca-oss-share.jpg";
 import scaSbomComponentsImage from "@/assets/sca-sbom-components.png";
+import scaVulnManagementImage from "@/assets/sca-vuln-management.png";
 import scaHeroGlassShield from "@/assets/sca-hero-glass-shield.jpg";
 import { AdvantageTriad } from "@/components/site/AdvantageTriad";
 import { GalleryHoverCarousel } from "@/components/site/GalleryHoverCarousel";
@@ -122,6 +123,10 @@ function ScaPage() {
             icon: <ShieldAlert size={56} strokeWidth={1.25} aria-hidden />,
             title: "保障与漏洞管理",
             desc: "基于风险数据系统，自动识别并划分产品风险、漏洞和代码缺陷；并将结果与威胁建模、渗透测试和模糊测试相结合，利用人工智能加速修复与缓解。",
+            image: {
+              src: scaVulnManagementImage,
+              alt: "Swift SCA 产品界面截图：漏洞管理页的漏洞列表，共 78 条分析结果，展示名称、风险分数、项目名称、版本与漏洞数量列，漏洞管理页签处于选中状态",
+            },
           },
           {
             icon: <ClipboardCheck size={56} strokeWidth={1.25} aria-hidden />,
