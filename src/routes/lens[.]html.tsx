@@ -44,8 +44,8 @@ function LensPage() {
           <img
             src={lensHeroFuzzPipeline}
             alt="灰盒模糊测试概念图：深色空间中的分层代码屏幕与中央红色漏洞靶标，左侧代码、构建、配置、版本四类输入模块经光轨汇入，右侧告警、统计、防护三类结果卡片输出，底部 Dev、Build、Test、Security、Deploy 流程条中 Test 高亮"
-            width={1500}
-            height={1094}
+            width={561}
+            height={409}
             className="h-full w-full rounded-[var(--ds-radius-surface)] object-cover"
             fetchPriority="high"
           />
