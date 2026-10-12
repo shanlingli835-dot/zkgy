@@ -10,6 +10,7 @@ import {
 } from "lucide-react";
 
 import { AdvantageTriad } from "@/components/site/AdvantageTriad";
+import { GalleryHoverCarousel } from "@/components/site/GalleryHoverCarousel";
 import { HomeAccordion } from "@/components/site/HomeAccordion";
 import OrbitingCirclesGlobe from "@/components/ui/orbiting-circles-globe";
 
@@ -57,19 +58,36 @@ function ScaPage() {
         visual={<HeroVideo label="Swift SCA 软件成分分析产品演示" />}
       />
 
-      <Section
+      <GalleryHoverCarousel
         eyebrow="OSS"
-        title="OSS 在整个软件开发生命周期中采用统一的开源政策"
-      >
-        <StatRow
-          stats={[
-            { value: "100%", label: "评估源代码和二进制文件中存在的所有依赖" },
-            { value: "90%+", label: "大多数代码库中超过90%的代码 来自开源软件" },
-            { value: "50%", label: "使用预构建的策略和最佳实践自动筛除 50%漏洞和风险" },
-            { value: "70%", label: "安全审计平均时间减少 70%" },
-          ]}
-        />
-      </Section>
+        heading="OSS 在整个软件开发生命周期中采用统一的开源政策"
+        items={[
+          {
+            id: "oss-deps",
+            tag: "100%",
+            title: "全量依赖评估",
+            summary: "评估源代码和二进制文件中存在的所有依赖。",
+          },
+          {
+            id: "oss-share",
+            tag: "90%+",
+            title: "开源代码占比",
+            summary: "大多数代码库中超过90%的代码 来自开源软件。",
+          },
+          {
+            id: "oss-filter",
+            tag: "50%",
+            title: "风险自动筛除",
+            summary: "使用预构建的策略和最佳实践自动筛除 50%漏洞和风险。",
+          },
+          {
+            id: "oss-audit",
+            tag: "70%",
+            title: "审计效率提升",
+            summary: "安全审计平均时间减少 70%。",
+          },
+        ]}
+      />
 
       <HomeAccordion
         title="产品功能"
