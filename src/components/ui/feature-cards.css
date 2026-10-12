@@ -14,7 +14,7 @@
 }
 
 .ds-feature-card {
-  transition: transform var(--ds-duration-fast, 200ms) ease-out;
+  transition: transform var(--ds-duration-slow) var(--ds-ease-standard);
 }
 
 @media (hover: hover) and (pointer: fine) {

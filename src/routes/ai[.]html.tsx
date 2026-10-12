@@ -68,23 +68,35 @@ function AiPage() {
       />
 
       <Section title="为什么选择Swift AI？">
-        <FeatureGrid
+        <FeatureCards
           columns={3}
           items={[
             {
               tag: "全周期",
               title: "全生命周期模型安全检测",
               desc: "覆盖训练前、上线前、运行阶段的全链路安全检测体系。",
+              image: {
+                src: aiFeatureLifecycle,
+                alt: "透明玻璃立方体、透镜与发光圆环由一条光线依次串联，表示模型从训练、上线到运行阶段的全链路检测",
+              },
             },
             {
               tag: "多模态",
               title: "多模态统一风险检测引擎",
               desc: "统一标准的多模态风险检测引擎，支持文本、图像、音频、视频与大模型。",
+              image: {
+                src: aiFeatureMultimodal,
+                alt: "对话气泡、图片、声波与视频四个玻璃图标汇入一枚透明棱镜，合并为单束光线，表示多模态统一检测",
+              },
             },
             {
               tag: "合规",
               title: "对齐监管标准的合规评估体系",
               desc: "自动生成AI-BOM、风险报告与审计材料，覆盖国内外21+监管规范。",
+              image: {
+                src: aiFeatureCompliance,
+                alt: "一叠玻璃报告与数据清单面板，上方悬浮带勾选标记的防护盾徽记，表示自动生成合规材料并通过评估",
+              },
             },
           ]}
         />
