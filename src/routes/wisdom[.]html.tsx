@@ -14,7 +14,7 @@ import {
 } from "lucide-react";
 
 import protocolConsoleImage from "@/assets/saas-hero-1-16x9.png.asset.json";
-import protocolTemplatesImage from "@/assets/wisdom-protocol-templates.png.asset.json";
+import protocolTemplatesImage from "@/assets/wisdom-protocol-templates.png";
 import { AdvantageTriad } from "@/components/site/AdvantageTriad";
 import { HomeAccordion } from "@/components/site/HomeAccordion";
 import {
@@ -347,7 +347,7 @@ function Capabilities() {
       title: "数百种协议模板",
       desc: "支持用户自行定义协议结构和字段变异策略,灵活适配各类专有协议场景。",
       image: {
-        src: protocolTemplatesImage.url,
+        src: protocolTemplatesImage,
         alt: "Wisdom 协议模糊模块的协议模板库界面，按无线、网络、文件、工业控制等分类展示数百个协议测试套件卡片",
       },
     },

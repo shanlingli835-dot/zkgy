@@ -15,14 +15,15 @@ only actual product interfaces may be supplied here.
 `HomeAccordionItem.image?: { src: string; alt: string }` supplies optional route-owned media.
 When present, `renderVisual()` renders a single `<img class="ha-visual__media">` inside the existing
 `.ha-visual` box instead of the neutral icon, title, and description; omission preserves the
-existing placeholder on unrelated pages. Media arrives as a `.asset.json` CDN pointer URL. No
+existing placeholder on unrelated pages. Media arrives as a route-owned image or CDN pointer. No
 duplicated route styling and no new tokens.
 
 ## Behavior and states
 
-Lazy-loaded `object-fit: contain` media keeps its own aspect ratio inside the existing panel
-(maximum 100 percent of width and height), so it is never cropped and the panel keeps its current
-900/610 frame and 1.62/1 inner card. Theme border, progress bar, autoplay, hover and focus pause,
+Lazy-loaded media uses `object-fit: cover` and `object-position: center`, so it fills the existing
+panel edge to edge; route-owned screenshots are pre-cropped to the panel's measured 1.62/1 aspect so
+the real interface reaches all four edges and no page background of its own shows. The panel keeps
+its current 900/610 frame and 1.62/1 inner card. Theme border, progress bar, autoplay, hover and focus pause,
 mobile stacking, and reduced-motion handling are unchanged. No new actions or loading, error,
 disabled, selected or expanded-control states.
 
