@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Gauge, Wrench, Bug, Sparkles, Repeat, Search } from "lucide-react";
+import { Gauge, Bug, Sparkles, Repeat, Search } from "lucide-react";
 import lensFixSuggestions from "@/assets/lens-fix-suggestions.png";
+import lensTestDriver from "@/assets/lens-test-driver.png";
 
 import { AdvantageTriad } from "@/components/site/AdvantageTriad";
 import { HomeAccordion } from "@/components/site/HomeAccordion";
@@ -47,7 +48,10 @@ function LensPage() {
             desc: "支持代码覆盖率反馈和智能优化，提升测试全面性。",
           },
           {
-            icon: <Wrench size={56} strokeWidth={1.25} aria-hidden />,
+            image: {
+              src: lensTestDriver,
+              alt: "添加项目弹窗，含上传方式、上传文件、编译环境与配置测试驱动选项（自动生成驱动、自定义上传驱动）",
+            },
             title: "测试驱动生成",
             desc: "对被测对象进行静态分析，基于大模型自动生成测试驱动。",
           },
