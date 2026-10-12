@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Code2, Cpu, Gauge, Copy, Target, ListChecks, FileBadge2 } from "lucide-react";
 
+import swiftCodeHeroPlanes from "@/assets/swiftcode-hero-code-planes.jpg";
 import { AdvantageTriad } from "@/components/site/AdvantageTriad";
 import { HomeAccordion } from "@/components/site/HomeAccordion";
 import {
@@ -42,30 +43,14 @@ function SwiftCodePage() {
         description="利用多种技术自动识别语义缺陷、安全漏洞和编码规则等问题，适配国内编码标准和国产环境，支持灵活定制。"
         primaryCta={{ label: "免费试用", href: CTA_HREF }}
         visual={
-          <video
-            autoPlay
-            muted
-            loop
-            playsInline
-            preload="metadata"
-            aria-label="Swift Code 源代码审计产品演示"
-            poster="/source-site/assets/secops-dashboard-placeholder.svg"
-            style={{
-              width: "100%",
-              height: "100%",
-              objectFit: "cover",
-              borderRadius: "var(--ds-radius-surface)",
-              border:
-                "var(--ds-border-width-default) solid var(--ds-color-border-inverse)",
-              backgroundColor: "#0a0a0a",
-            }}
-          >
-            <source
-              src="https://www.getharvest.com/hubfs/Imported_Blog_Media/Harvest_HeroVideo_1700x1080_20s_Webm_EN.webm"
-              type="video/webm"
-            />
-            您的浏览器不支持视频播放。
-          </video>
+          <img
+            src={swiftCodeHeroPlanes}
+            alt="源代码审计概念图：明亮空间中的上下两层透明玻璃代码面板，由中央数据光束连接，面板上铺满代码与检测数据"
+            width={1291}
+            height={941}
+            className="h-full w-full rounded-[var(--ds-radius-surface)] object-cover"
+            fetchPriority="high"
+          />
         }
       />
 
