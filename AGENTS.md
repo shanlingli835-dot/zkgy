@@ -57,7 +57,7 @@ and accessibility. It is not the public site brand.
 - Do not restore the earlier generated homepage from git history or replace the approved source
   with a new design direction.
 - Keep homepage product panels in one overlapping grid track, with inactive panels invisible and inert, so the tallest content reserves responsive space without moving the page on tab changes.
-- Pass showcase images as optional card data; preserve fallbacks so unrelated pages stay unchanged.
+- Keep image fallbacks; use canonical EvidenceSection to separate data and layout.
 
 Before creating or modifying UI:
 

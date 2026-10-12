@@ -19,6 +19,7 @@ import mutationAlgorithmsImage from "@/assets/wisdom-mutation-algorithm.png";
 import targetMonitorImage from "@/assets/wisdom-target-monitor.png";
 import vulnReplayImage from "@/assets/wisdom-vuln-replay.png";
 import wisdomHeroLoop from "@/assets/wisdom-hero-loop.webm.asset.json";
+import { EvidenceSection } from "@/components/ui/evidence-section";
 import { AdvantageTriad } from "@/components/site/AdvantageTriad";
 import { HomeAccordion } from "@/components/site/HomeAccordion";
 import {
@@ -95,207 +96,40 @@ function WisdomPage() {
 
 
 function WhyFuzz() {
-  const flowSteps = [
-    { label: "异常输入生成", desc: "变异 / 生成海量测试用例" },
-    { label: "目标程序执行", desc: "驱动被测目标持续运行" },
-    { label: "崩溃 · 超时 · 漏洞", desc: "捕获异常并复现定位", accent: true },
-  ];
-
-  const points = [
-    {
-      icon: <Zap size={44} strokeWidth={1.25} aria-hidden />,
-      title: "开发阶段提前发现",
-      desc: "集成到开发流程中进行自动测试,在产品上市之前就发现漏洞和安全问题。",
-    },
-    {
-      icon: <Gauge size={44} strokeWidth={1.25} aria-hidden />,
-      title: "自动运行,高效低成本",
-      desc: "高度自动化,在无人工干预的情况下持续运行,高效地发现程序中的错误。",
-    },
-    {
-      icon: <Target size={44} strokeWidth={1.25} aria-hidden />,
-      title: "补足传统测试盲区",
-      desc: "黑盒模糊测试更接近系统的真实使用环境,能够发现常规测试方法无法发现的问题。",
-    },
-  ];
-
   return (
-    <section
-      style={{
-        padding: "var(--ds-section-y-desktop) var(--ds-gutter-desktop)",
+    <EvidenceSection
+      id="why-fuzz"
+      title="为什么要使用模糊测试?"
+      description="模糊测试通过持续投递异常输入,自动化触发被测目标的崩溃、超时与未知漏洞,是传统测试难以覆盖的深层缺陷发现手段。"
+      metric={{
+        value: "60",
+        suffix: "%+",
+        title: "黑客挖掘漏洞的主要方式",
+        description: "超过 60% 的软件漏洞利用源于零日缺陷。模糊测试可以在攻击者之前, 自动化地暴露未知缺陷,构建主动防御能力。",
       }}
-    >
-      <div style={{ maxWidth: "var(--ds-container-page)", margin: "0 auto" }}>
-        <header
-          style={{
-            textAlign: "center",
-            maxWidth: 820,
-            margin: "0 auto",
-          }}
-        >
-          <h2
-            style={{
-              fontSize: "clamp(1.75rem, 3.4vw, 2.5rem)",
-              fontWeight: "var(--ds-font-weight-semibold)",
-              lineHeight: 1.25,
-              color: "var(--ds-color-text-primary)",
-              margin: 0,
-            }}
-          >
-            为什么要使用模糊测试?
-          </h2>
-          <p
-            style={{
-              marginTop: "var(--ds-space-lg)",
-              fontSize: "var(--ds-font-size-md)",
-              color: "var(--ds-color-text-secondary)",
-              lineHeight: 1.7,
-              marginInline: "auto",
-            }}
-          >
-            模糊测试通过持续投递异常输入,自动化触发被测目标的崩溃、超时与未知漏洞,是传统测试难以覆盖的深层缺陷发现手段。
-          </p>
-        </header>
-
-        <div className="wf-stat-row">
-          <div className="wf-stat">60%+</div>
-          <div className="wf-stat__body">
-            <h3>黑客挖掘漏洞的主要方式</h3>
-            <p>
-              超过 60% 的软件漏洞利用源于零日缺陷。模糊测试可以在攻击者之前,
-              自动化地暴露未知缺陷,构建主动防御能力。
-            </p>
-          </div>
-        </div>
-
-        <div className="wf-flow">
-          {flowSteps.map((s, i) => (
-            <div key={s.label} className="wf-flow__step">
-              <span className="wf-flow__idx">{String(i + 1).padStart(2, "0")}</span>
-              <div>
-                <div
-                  className="wf-flow__label"
-                  style={
-                    s.accent ? { color: "var(--ds-color-action-primary)" } : undefined
-                  }
-                >
-                  {s.label}
-                </div>
-                <div className="wf-flow__desc">{s.desc}</div>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        <div className="wf-points">
-          {points.map((p) => (
-            <div key={p.title} className="wf-points__item">
-              <div className="wf-points__icon">{p.icon}</div>
-              <h3 className="wf-points__title">{p.title}</h3>
-              <p className="wf-points__desc">{p.desc}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      <style>{`
-        .wf-stat-row {
-          margin-top: var(--ds-space-4xl);
-          display: grid;
-          grid-template-columns: auto minmax(0, 1fr);
-          gap: var(--ds-space-3xl);
-          align-items: center;
-        }
-        .wf-stat {
-          font-size: clamp(56px, 8vw, 96px);
-          font-weight: var(--ds-font-weight-bold, 700);
-          color: var(--ds-color-action-primary);
-          line-height: 1;
-          letter-spacing: -0.02em;
-          white-space: nowrap;
-        }
-        .wf-stat__body h3 {
-          margin: 0;
-          font-size: var(--ds-font-size-xl);
-          font-weight: var(--ds-font-weight-semibold);
-          color: var(--ds-color-text-primary);
-          line-height: 1.35;
-        }
-        .wf-stat__body p {
-          margin: var(--ds-space-md) 0 0;
-          font-size: var(--ds-font-size-md);
-          color: var(--ds-color-text-secondary);
-          line-height: 1.7;
-          max-width: 62ch;
-        }
-        .wf-flow {
-          margin-top: var(--ds-space-4xl);
-          display: grid;
-          grid-template-columns: repeat(3, minmax(0, 1fr));
-          gap: var(--ds-space-2xl);
-        }
-        .wf-flow__step {
-          border-top: var(--ds-border-width-default) solid var(--ds-color-border-subtle);
-          padding-top: var(--ds-space-lg);
-          display: flex;
-          align-items: flex-start;
-          gap: var(--ds-space-md);
-        }
-        .wf-flow__idx {
-          font-size: var(--ds-font-size-sm);
-          font-weight: var(--ds-font-weight-semibold);
-          color: var(--ds-color-text-secondary);
-          letter-spacing: 0.08em;
-          line-height: 1.7;
-        }
-        .wf-flow__label {
-          font-size: var(--ds-font-size-md);
-          font-weight: var(--ds-font-weight-semibold);
-          color: var(--ds-color-text-primary);
-          line-height: 1.4;
-        }
-        .wf-flow__desc {
-          margin-top: 4px;
-          font-size: var(--ds-font-size-sm);
-          color: var(--ds-color-text-secondary);
-          line-height: 1.6;
-        }
-        .wf-points {
-          margin-top: var(--ds-space-4xl);
-          display: grid;
-          grid-template-columns: repeat(3, minmax(0, 1fr));
-          gap: var(--ds-space-4xl);
-        }
-        .wf-points__item {
-          display: flex;
-          flex-direction: column;
-          gap: var(--ds-space-md);
-        }
-        .wf-points__icon {
-          color: var(--ds-color-text-primary);
-        }
-        .wf-points__title {
-          margin: 0;
-          font-size: var(--ds-font-size-lg);
-          font-weight: var(--ds-font-weight-semibold);
-          color: var(--ds-color-text-primary);
-        }
-        .wf-points__desc {
-          margin: 0;
-          font-size: var(--ds-font-size-md);
-          color: var(--ds-color-text-secondary);
-          line-height: 1.7;
-        }
-        @media (max-width: 1023px) {
-          .wf-flow { grid-template-columns: 1fr; gap: var(--ds-space-lg); }
-          .wf-points { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--ds-space-2xl); }
-        }
-        @media (max-width: 639px) {
-          .wf-stat-row { grid-template-columns: 1fr; gap: var(--ds-space-lg); align-items: start; }
-          .wf-points { grid-template-columns: 1fr; gap: var(--ds-space-lg); }
-        }
-      `}</style>
-    </section>
+      steps={[
+        { title: "异常输入生成", description: "变异 / 生成海量测试用例" },
+        { title: "目标程序执行", description: "驱动被测目标持续运行" },
+        { title: "崩溃 · 超时 · 漏洞", description: "捕获异常并复现定位" },
+      ]}
+      benefits={[
+        {
+          icon: <Zap size={24} strokeWidth={1.25} aria-hidden />,
+          title: "开发阶段提前发现",
+          description: "集成到开发流程中进行自动测试,在产品上市之前就发现漏洞和安全问题。",
+        },
+        {
+          icon: <Gauge size={24} strokeWidth={1.25} aria-hidden />,
+          title: "自动运行,高效低成本",
+          description: "高度自动化,在无人工干预的情况下持续运行,高效地发现程序中的错误。",
+        },
+        {
+          icon: <Target size={24} strokeWidth={1.25} aria-hidden />,
+          title: "补足传统测试盲区",
+          description: "黑盒模糊测试更接近系统的真实使用环境,能够发现常规测试方法无法发现的问题。",
+        },
+      ]}
+    />
   );
 }
 

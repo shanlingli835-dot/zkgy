@@ -1,5 +1,9 @@
 # Component catalog and routing
 
+## Local content compositions
+
+- Evidence Section: Implemented; spec `evidence-section.md`; canonical `src/components/ui/evidence-section.tsx`.
+
 The repository currently contains many shadcn/Radix-based files under `src/components/ui/`.
 They are technical primitives, not automatically approved SOURCEGUARD components.
 
