@@ -111,6 +111,13 @@ import logoHorizontalReverse from '@/assets/brand/logos/zkgy-logo-horizontal-rev
 | `src/assets/ai-feature-multimodal.jpg` | 多模态统一风险检测引擎 |
 | `src/assets/ai-feature-compliance.jpg` | 对齐监管标准的合规评估体系 |
 
+### Swift SCA 首屏概念配图
+
+- 文件：`src/assets/sca-hero-glass-shield.jpg`，仅用于 `/sca.html` 首屏右侧，替换原占位视频。
+- 1376 × 1008（匹配首屏图片框 600 / 437.5 比例），高光调白灰环境中的透明玻璃防护盾，环绕冰蓝扫描光环；开源代码模块沿光束流入防护盾，旁侧玻璃漏斗筛分出淡紫色风险模块。
+- 语义：软件供应链漏洞与风险检测、开源依赖评估、风险自动筛除；不作为真实产品界面证据。
+- 直接导入项目资产，沿用原有首屏图片框与圆角，不改变页面颜色 Token。
+
 1024 × 768，高光调白灰环境、透明玻璃与亚克力折射、电光青蓝与淡紫柔光、低对比阴影与大面积留白；不改变页面颜色 Token。原生生成图片直接导入，媒体合约见 `../components/feature-cards.md`。
 
 标准色版本：

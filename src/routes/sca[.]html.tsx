@@ -13,6 +13,7 @@ import scaOssAuditImage from "@/assets/sca-oss-audit.jpg";
 import scaOssDepsImage from "@/assets/sca-oss-deps.jpg";
 import scaOssFilterImage from "@/assets/sca-oss-filter.jpg";
 import scaOssShareImage from "@/assets/sca-oss-share.jpg";
+import scaHeroGlassShield from "@/assets/sca-hero-glass-shield.jpg";
 import { AdvantageTriad } from "@/components/site/AdvantageTriad";
 import { GalleryHoverCarousel } from "@/components/site/GalleryHoverCarousel";
 import { HomeAccordion } from "@/components/site/HomeAccordion";
@@ -20,8 +21,7 @@ import OrbitingCirclesGlobe from "@/components/ui/orbiting-circles-globe";
 
 import {
   CTA_HREF,
-  HeroVideo,
-  
+
   ProductHero,
   Section,
   SitePageShell,
@@ -58,7 +58,16 @@ function ScaPage() {
         description="精准检测软件供应链的漏洞与风险，保障组织应用安全与合规。"
         primaryCta={{ label: "免费试用", href: CTA_HREF }}
         secondaryCta={{ label: "免费试用", href: CTA_HREF }}
-        visual={<HeroVideo label="Swift SCA 软件成分分析产品演示" />}
+        visual={
+          <img
+            src={scaHeroGlassShield}
+            alt="Swift SCA 软件成分分析概念图：明亮银白空间中的透明玻璃防护盾环绕扫描光环，开源代码模块流经光束汇入防护盾，旁侧玻璃漏斗筛分出淡紫色风险模块"
+            width={1376}
+            height={1008}
+            className="h-full w-full rounded-[var(--ds-radius-surface)] object-cover"
+            fetchPriority="high"
+          />
+        }
       />
 
       <GalleryHoverCarousel
