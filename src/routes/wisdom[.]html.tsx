@@ -95,74 +95,49 @@ function WisdomPage() {
 
 
 function WhyFuzz() {
-  const cardStyle: React.CSSProperties = {
-    backgroundColor: "var(--ds-color-surface-default)",
-    border:
-      "var(--ds-border-width-default) solid var(--ds-color-border-subtle)",
-    borderRadius: "var(--ds-radius-surface)",
-  };
-  const iconBox: React.CSSProperties = {
-    width: 44,
-    height: 44,
-    display: "grid",
-    placeItems: "center",
-    borderRadius: "var(--ds-radius-control)",
-    backgroundColor: "var(--ds-color-action-primary-subtle)",
-    color: "var(--ds-color-action-primary)",
-    flexShrink: 0,
-  };
-  const smallCardTitle: React.CSSProperties = {
-    fontSize: "var(--ds-font-size-lg)",
-    fontWeight: "var(--ds-font-weight-semibold)",
-    color: "var(--ds-color-text-primary)",
-    lineHeight: 1.4,
-    margin: 0,
-  };
-  const smallCardDesc: React.CSSProperties = {
-    fontSize: "var(--ds-font-size-sm)",
-    color: "var(--ds-color-text-secondary)",
-    lineHeight: 1.65,
-    margin: 0,
-  };
-
-  const bottomCards = [
-    {
-      icon: <Zap size={22} aria-hidden />,
-      title: "开发阶段提前发现",
-      desc: "集成到开发流程中进行自动测试,在产品上市之前就发现漏洞和安全问题。",
-    },
-    {
-      icon: <Gauge size={22} aria-hidden />,
-      title: "自动运行,高效低成本",
-      desc: "高度自动化,在无人工干预的情况下持续运行,高效地发现程序中的错误。",
-    },
-    {
-      icon: <Target size={22} aria-hidden />,
-      title: "补足传统测试盲区",
-      desc: "黑盒模糊测试更接近系统的真实使用环境,能够发现常规测试方法无法发现的问题。",
-    },
-  ];
-
   const flowSteps = [
     { label: "异常输入生成", desc: "变异 / 生成海量测试用例" },
     { label: "目标程序执行", desc: "驱动被测目标持续运行" },
     { label: "崩溃 · 超时 · 漏洞", desc: "捕获异常并复现定位", accent: true },
   ];
 
+  const points = [
+    {
+      icon: <Zap size={44} strokeWidth={1.25} aria-hidden />,
+      title: "开发阶段提前发现",
+      desc: "集成到开发流程中进行自动测试,在产品上市之前就发现漏洞和安全问题。",
+    },
+    {
+      icon: <Gauge size={44} strokeWidth={1.25} aria-hidden />,
+      title: "自动运行,高效低成本",
+      desc: "高度自动化,在无人工干预的情况下持续运行,高效地发现程序中的错误。",
+    },
+    {
+      icon: <Target size={44} strokeWidth={1.25} aria-hidden />,
+      title: "补足传统测试盲区",
+      desc: "黑盒模糊测试更接近系统的真实使用环境,能够发现常规测试方法无法发现的问题。",
+    },
+  ];
+
   return (
     <section
       style={{
-        backgroundColor: "var(--ds-color-surface-subtle)",
         padding: "var(--ds-section-y-desktop) var(--ds-gutter-desktop)",
       }}
     >
       <div style={{ maxWidth: "var(--ds-container-page)", margin: "0 auto" }}>
-        <header style={{ marginBottom: "var(--ds-space-3xl)", textAlign: "left" }}>
+        <header
+          style={{
+            textAlign: "center",
+            maxWidth: 820,
+            margin: "0 auto",
+          }}
+        >
           <h2
             style={{
-              fontSize: "clamp(1.5rem, 3vw, 2.25rem)",
+              fontSize: "clamp(1.75rem, 3.4vw, 2.5rem)",
               fontWeight: "var(--ds-font-weight-semibold)",
-              lineHeight: 1.3,
+              lineHeight: 1.25,
               color: "var(--ds-color-text-primary)",
               margin: 0,
             }}
@@ -171,176 +146,155 @@ function WhyFuzz() {
           </h2>
           <p
             style={{
-              marginTop: "var(--ds-space-md)",
+              marginTop: "var(--ds-space-lg)",
               fontSize: "var(--ds-font-size-md)",
               color: "var(--ds-color-text-secondary)",
-              lineHeight: 1.65,
-              maxWidth: "72ch",
+              lineHeight: 1.7,
+              marginInline: "auto",
             }}
           >
             模糊测试通过持续投递异常输入,自动化触发被测目标的崩溃、超时与未知漏洞,是传统测试难以覆盖的深层缺陷发现手段。
           </p>
         </header>
 
-      <style>{`
-        .wf-wrap { display: grid; gap: 20px; }
-        .wf-hero {
-          display: grid;
-          grid-template-columns: 45fr 55fr;
-          min-height: 400px;
-        }
-        .wf-hero__left, .wf-hero__right {
-          padding: var(--ds-space-3xl);
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-        }
-        .wf-hero__right {
-          border-left: var(--ds-border-width-default) solid var(--ds-color-border-subtle);
-          background: var(--ds-color-surface-subtle);
-        }
-        .wf-stat {
-          font-size: clamp(64px, 8vw, 96px);
-          font-weight: var(--ds-font-weight-bold, 700);
-          color: var(--ds-color-action-primary);
-          line-height: 1;
-          letter-spacing: -0.02em;
-        }
-        .wf-flow { display: grid; gap: 14px; }
-        .wf-flow__step {
-          display: flex; align-items: flex-start; gap: 14px;
-          padding: 16px 18px;
-          background: var(--ds-color-surface-default);
-          border: var(--ds-border-width-default) solid var(--ds-color-border-subtle);
-          border-radius: var(--ds-radius-control);
-        }
-        .wf-flow__idx {
-          width: 28px; height: 28px; flex-shrink: 0;
-          display: grid; place-items: center;
-          border-radius: 9999px;
-          background: var(--ds-color-action-primary-subtle);
-          color: var(--ds-color-action-primary);
-          font-weight: var(--ds-font-weight-semibold);
-          font-size: 13px;
-        }
-        .wf-flow__step.is-accent { border-color: var(--ds-color-action-primary); }
-        .wf-arrow {
-          justify-self: start;
-          margin-left: 13px;
-          width: 2px; height: 14px;
-          background: var(--ds-color-border-subtle);
-        }
-        .wf-bottom {
-          display: grid;
-          grid-template-columns: repeat(3, minmax(0, 1fr));
-          gap: 20px;
-        }
-        .wf-bottom__card {
-          min-height: 200px;
-          padding: var(--ds-space-2xl);
-          display: flex; flex-direction: column; gap: var(--ds-space-md);
-        }
-        @media (max-width: 1024px) {
-          .wf-hero { grid-template-columns: 1fr; min-height: 0; }
-          .wf-hero__right { border-left: 0; border-top: var(--ds-border-width-default) solid var(--ds-color-border-subtle); }
-          .wf-bottom { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-          .wf-bottom__card:last-child { grid-column: 1 / -1; }
-        }
-        @media (max-width: 640px) {
-          .wf-bottom { grid-template-columns: 1fr; }
-          .wf-bottom__card:last-child { grid-column: auto; }
-        }
-      `}</style>
-
-      <div className="wf-wrap">
-        <article className="wf-hero" style={cardStyle}>
-          <div className="wf-hero__left">
-            <div className="wf-stat">60%+</div>
-            <h3
-              style={{
-                marginTop: "var(--ds-space-lg)",
-                fontSize: "var(--ds-font-size-xl)",
-                fontWeight: "var(--ds-font-weight-semibold)",
-                color: "var(--ds-color-text-primary)",
-                lineHeight: 1.35,
-              }}
-            >
-              黑客挖掘漏洞的主要方式
-            </h3>
-            <p
-              style={{
-                marginTop: "var(--ds-space-md)",
-                fontSize: "var(--ds-font-size-md)",
-                color: "var(--ds-color-text-secondary)",
-                lineHeight: 1.7,
-                maxWidth: "44ch",
-              }}
-            >
+        <div className="wf-stat-row">
+          <div className="wf-stat">60%+</div>
+          <div className="wf-stat__body">
+            <h3>黑客挖掘漏洞的主要方式</h3>
+            <p>
               超过 60% 的软件漏洞利用源于零日缺陷。模糊测试可以在攻击者之前,
               自动化地暴露未知缺陷,构建主动防御能力。
             </p>
           </div>
-          <div className="wf-hero__right">
-            <div
-              style={{
-                fontSize: "var(--ds-font-size-sm)",
-                fontWeight: "var(--ds-font-weight-semibold)",
-                color: "var(--ds-color-text-secondary)",
-                textTransform: "uppercase",
-                letterSpacing: "0.08em",
-                marginBottom: "var(--ds-space-lg)",
-              }}
-            >
-              模糊测试工作流
-            </div>
-            <div className="wf-flow">
-              {flowSteps.map((s, i) => (
-                <div key={s.label}>
-                  <div className={`wf-flow__step${s.accent ? " is-accent" : ""}`}>
-                    <div className="wf-flow__idx">{i + 1}</div>
-                    <div>
-                      <div
-                        style={{
-                          fontSize: "var(--ds-font-size-md)",
-                          fontWeight: "var(--ds-font-weight-semibold)",
-                          color: s.accent
-                            ? "var(--ds-color-action-primary)"
-                            : "var(--ds-color-text-primary)",
-                          lineHeight: 1.35,
-                        }}
-                      >
-                        {s.label}
-                      </div>
-                      <div
-                        style={{
-                          marginTop: 4,
-                          fontSize: "var(--ds-font-size-sm)",
-                          color: "var(--ds-color-text-secondary)",
-                          lineHeight: 1.55,
-                        }}
-                      >
-                        {s.desc}
-                      </div>
-                    </div>
-                  </div>
-                  {i < flowSteps.length - 1 && <div className="wf-arrow" />}
-                </div>
-              ))}
-            </div>
-          </div>
-        </article>
+        </div>
 
-        <div className="wf-bottom">
-          {bottomCards.map((c) => (
-            <article key={c.title} className="wf-bottom__card" style={cardStyle}>
-              <div style={iconBox}>{c.icon}</div>
-              <h3 style={smallCardTitle}>{c.title}</h3>
-              <p style={smallCardDesc}>{c.desc}</p>
-            </article>
+        <div className="wf-flow">
+          {flowSteps.map((s, i) => (
+            <div key={s.label} className="wf-flow__step">
+              <span className="wf-flow__idx">{String(i + 1).padStart(2, "0")}</span>
+              <div>
+                <div
+                  className="wf-flow__label"
+                  style={
+                    s.accent ? { color: "var(--ds-color-action-primary)" } : undefined
+                  }
+                >
+                  {s.label}
+                </div>
+                <div className="wf-flow__desc">{s.desc}</div>
+              </div>
+            </div>
           ))}
         </div>
+
+        <div className="wf-points">
+          {points.map((p) => (
+            <div key={p.title} className="wf-points__item">
+              <div className="wf-points__icon">{p.icon}</div>
+              <h3 className="wf-points__title">{p.title}</h3>
+              <p className="wf-points__desc">{p.desc}</p>
+            </div>
+          ))}
         </div>
       </div>
+
+      <style>{`
+        .wf-stat-row {
+          margin-top: var(--ds-space-4xl);
+          display: grid;
+          grid-template-columns: auto minmax(0, 1fr);
+          gap: var(--ds-space-3xl);
+          align-items: center;
+        }
+        .wf-stat {
+          font-size: clamp(56px, 8vw, 96px);
+          font-weight: var(--ds-font-weight-bold, 700);
+          color: var(--ds-color-action-primary);
+          line-height: 1;
+          letter-spacing: -0.02em;
+          white-space: nowrap;
+        }
+        .wf-stat__body h3 {
+          margin: 0;
+          font-size: var(--ds-font-size-xl);
+          font-weight: var(--ds-font-weight-semibold);
+          color: var(--ds-color-text-primary);
+          line-height: 1.35;
+        }
+        .wf-stat__body p {
+          margin: var(--ds-space-md) 0 0;
+          font-size: var(--ds-font-size-md);
+          color: var(--ds-color-text-secondary);
+          line-height: 1.7;
+          max-width: 62ch;
+        }
+        .wf-flow {
+          margin-top: var(--ds-space-4xl);
+          display: grid;
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+          gap: var(--ds-space-2xl);
+        }
+        .wf-flow__step {
+          border-top: var(--ds-border-width-default) solid var(--ds-color-border-subtle);
+          padding-top: var(--ds-space-lg);
+          display: flex;
+          align-items: flex-start;
+          gap: var(--ds-space-md);
+        }
+        .wf-flow__idx {
+          font-size: var(--ds-font-size-sm);
+          font-weight: var(--ds-font-weight-semibold);
+          color: var(--ds-color-text-secondary);
+          letter-spacing: 0.08em;
+          line-height: 1.7;
+        }
+        .wf-flow__label {
+          font-size: var(--ds-font-size-md);
+          font-weight: var(--ds-font-weight-semibold);
+          color: var(--ds-color-text-primary);
+          line-height: 1.4;
+        }
+        .wf-flow__desc {
+          margin-top: 4px;
+          font-size: var(--ds-font-size-sm);
+          color: var(--ds-color-text-secondary);
+          line-height: 1.6;
+        }
+        .wf-points {
+          margin-top: var(--ds-space-4xl);
+          display: grid;
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+          gap: var(--ds-space-4xl);
+        }
+        .wf-points__item {
+          display: flex;
+          flex-direction: column;
+          gap: var(--ds-space-md);
+        }
+        .wf-points__icon {
+          color: var(--ds-color-text-primary);
+        }
+        .wf-points__title {
+          margin: 0;
+          font-size: var(--ds-font-size-lg);
+          font-weight: var(--ds-font-weight-semibold);
+          color: var(--ds-color-text-primary);
+        }
+        .wf-points__desc {
+          margin: 0;
+          font-size: var(--ds-font-size-md);
+          color: var(--ds-color-text-secondary);
+          line-height: 1.7;
+        }
+        @media (max-width: 1023px) {
+          .wf-flow { grid-template-columns: 1fr; gap: var(--ds-space-lg); }
+          .wf-points { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--ds-space-2xl); }
+        }
+        @media (max-width: 639px) {
+          .wf-stat-row { grid-template-columns: 1fr; gap: var(--ds-space-lg); align-items: start; }
+          .wf-points { grid-template-columns: 1fr; gap: var(--ds-space-lg); }
+        }
+      `}</style>
     </section>
   );
 }
