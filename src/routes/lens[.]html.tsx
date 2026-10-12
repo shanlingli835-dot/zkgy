@@ -4,6 +4,7 @@ import lensFixSuggestions from "@/assets/lens-fix-suggestions.png";
 import lensTestDriver from "@/assets/lens-test-driver.png";
 import lensVulnLocate from "@/assets/lens-vuln-locate.png";
 import lensCoverageFeedback from "@/assets/lens-coverage-feedback.png";
+import lensHeroFuzzPipeline from "@/assets/lens-hero-fuzz-pipeline.png";
 
 import { AdvantageTriad } from "@/components/site/AdvantageTriad";
 import { HomeAccordion } from "@/components/site/HomeAccordion";
@@ -39,6 +40,16 @@ function LensPage() {
         title="Wisdom Lens 灰盒模糊测试"
         description="基于灰盒测试技术，嵌入DevSecOps流程，自动捕获零日缺陷。"
         primaryCta={{ label: "免费试用", href: CTA_HREF }}
+        visual={
+          <img
+            src={lensHeroFuzzPipeline}
+            alt="灰盒模糊测试概念图：深色空间中的分层代码屏幕与中央红色漏洞靶标，左侧代码、构建、配置、版本四类输入模块经光轨汇入，右侧告警、统计、防护三类结果卡片输出，底部 Dev、Build、Test、Security、Deploy 流程条中 Test 高亮"
+            width={1500}
+            height={1094}
+            className="h-full w-full rounded-[var(--ds-radius-surface)] object-cover"
+            fetchPriority="high"
+          />
+        }
       />
 
       <HomeAccordion
