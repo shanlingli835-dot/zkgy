@@ -6,7 +6,7 @@ import aiLlmFirewall from "@/assets/ai-llm-firewall.png";
 import aiMultimodalAdversarial from "@/assets/ai-multimodal-adversarial.png";
 import aiSupplyChainBom from "@/assets/ai-supply-chain-bom.png";
 import aiOpenSourceOverview from "@/assets/ai-open-source-overview.png";
-import protocolConsoleImage from "@/assets/wisdom-custom-protocol.png";
+import aiEvalCoverageHeatmap from "@/assets/ai-eval-coverage-heatmap.png";
 import aiHeroCore from "@/assets/swift-ai-hero-core-light.jpg";
 import aiFeatureLifecycle from "@/assets/ai-feature-lifecycle.jpg";
 import aiFeatureMultimodal from "@/assets/ai-feature-multimodal.jpg";
@@ -165,8 +165,8 @@ function AiPage() {
           }}
         >
           <img
-            src={protocolConsoleImage}
-            alt="协议模型设计界面，展示左侧消息树、中间模型元素字段层级与右侧元素属性面板"
+            src={aiEvalCoverageHeatmap}
+            alt="评测覆盖热力图：左侧为内容安全、技术安全、攻击防护、合规性、可解释性等十八项评估维度，上方为语言、视觉、多模态、音频、代码、科学、推荐、决策八个能力域，色块深浅表示各交叉项的评估覆盖程度"
             loading="lazy"
             style={{ display: "block", width: "100%", height: "auto" }}
           />
