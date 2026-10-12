@@ -93,6 +93,13 @@ import logoHorizontalReverse from '@/assets/brand/logos/zkgy-logo-horizontal-rev
 
 ## 预览
 
+### Swift AI 首屏概念配图
+
+- 文件：`src/assets/swift-ai-hero-holographic.jpg`，仅用于 `/ai.html` 首屏右侧。
+- 用户指定的概念插图：半透明玻璃与亚克力折射、多层结构、全息交互；深蓝基底、电光青蓝、霓虹紫粉、白色高光。
+- 语义：传统模型对抗测评、LLM 安全测评与防火墙、自动化红队、AI BOM；不作为真实产品界面证据。
+- 直接导入项目资产，沿用原有首屏图片框与圆角，不改变页面配色 Token。
+
 标准色版本：
 
 ![中科固源中英文横版标准色 Logo](../../../src/assets/brand/logos/zkgy-logo-horizontal-color.svg)
