@@ -1,7 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Gauge, Bug, Sparkles, Repeat, Search } from "lucide-react";
+import { Gauge, Sparkles, Repeat, Search } from "lucide-react";
 import lensFixSuggestions from "@/assets/lens-fix-suggestions.png";
 import lensTestDriver from "@/assets/lens-test-driver.png";
+import lensVulnLocate from "@/assets/lens-vuln-locate.png";
 
 import { AdvantageTriad } from "@/components/site/AdvantageTriad";
 import { HomeAccordion } from "@/components/site/HomeAccordion";
@@ -56,7 +57,10 @@ function LensPage() {
             desc: "对被测对象进行静态分析，基于大模型自动生成测试驱动。",
           },
           {
-            icon: <Bug size={56} strokeWidth={1.25} aria-hidden />,
+            image: {
+              src: lensVulnLocate,
+              alt: "缺陷分析详情页的异常用例与源码锚点卡片，含崩溃信号、来源、已执行次数、代码位置与所属函数",
+            },
             title: "缺陷挖掘与定位",
             desc: "具备自动挖掘和精准定位缺陷的能力，帮助开发者提升代码质量。",
           },
