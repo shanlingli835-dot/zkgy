@@ -13,7 +13,7 @@ import {
   AlertTriangle,
 } from "lucide-react";
 
-import protocolConsoleImage from "@/assets/saas-hero-1-16x9.png.asset.json";
+import protocolConsoleImage from "@/assets/wisdom-custom-protocol.png";
 import protocolTemplatesImage from "@/assets/wisdom-protocol-templates.png";
 import mutationAlgorithmsImage from "@/assets/wisdom-mutation-algorithm.png";
 import targetMonitorImage from "@/assets/wisdom-target-monitor.png";
@@ -459,8 +459,8 @@ function NoCustomization() {
         }}
       >
         <img
-          src={protocolConsoleImage.url}
-          alt="Wisdom 专有协议建模与测试控制台界面"
+          src={protocolConsoleImage}
+          alt="Wisdom 协议模型设计界面，展示左侧消息树、中间模型元素字段层级与右侧元素属性面板"
           loading="lazy"
           style={{ display: "block", width: "100%", height: "auto" }}
         />
