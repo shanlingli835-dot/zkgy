@@ -135,3 +135,11 @@ import logoHorizontalReverse from '@/assets/brand/logos/zkgy-logo-horizontal-rev
 - `src/assets/sca-oss-filter.jpg`（1024×768）：玻璃漏斗筛分立方体流，对应「50% 风险自动筛除」。
 - `src/assets/sca-oss-audit.jpg`（1024×768）：玻璃秒表 + 报告堆叠，对应「70% 审计效率提升」。
 - 风格与 solution-auto「业务场景」一致：银白亮底、磨砂玻璃、冰蓝光线、淡紫高光、大量留白。
+
+## Swift SCA「产品功能」SBOM 面板截图
+
+- 文件：`src/assets/sca-sbom-components.png`（1084 × 669，仅用于 `/sca.html`「产品功能」第一个 Tab「SBOM与资产管理」的右侧配图框）。
+- 用户上传的真实产品界面截图（SBOM 探索页组件列表）裁切而成：原图 1672 × 941，裁切窗口 (38, 179, 1122, 848)，宽高比 1.6203 与配图框 1.62 一致，`object-fit: cover` 不再额外切掉内容。
+- 裁切边界对齐界面元素：左为侧栏卡片外缘，上为筛选栏，右为 CPE 与 PURL 列分隔线，下为第十行数据行分隔线；截图自带的浅灰画布留白已全部去除，四边不露底。
+- 侧栏「组件 1,028 / 许可证 86」、页签、筛选控件、卡片标题、工具栏与 10 行组件数据完整可读；PURL、许可证与操作列、分页条在画面外，读作页面延续。
+- 通过 `HomeAccordionItem.image` 接入，配图框尺寸、圆角、主题边框、自动切换与暂停行为均不变；alt 为中文描述。
