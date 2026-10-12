@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Boxes, Brain, Layers, ShieldCheck } from "lucide-react";
 
 import { HomeAccordion } from "@/components/site/HomeAccordion";
+import aiLlmFirewall from "@/assets/ai-llm-firewall.png.asset.json";
 
 
 import {
