@@ -262,13 +262,13 @@
   width: 72px; height: 72px;
   color: var(--why-toolkit-accent);
 }
-/* 右侧配图：等比例完整放入现有容器，不裁切、不改容器尺寸 */
+/* 右侧配图：铺满现有容器，四周不留白色边框，只按等比例裁切 */
+.ha-visual--media { padding: 0; }
 .ha-visual__media {
   display: block;
-  width: auto; height: auto;
-  max-width: 100%; max-height: 100%;
-  object-fit: contain;
-  margin: auto;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 .ha-visual__title {
   margin: 0;
