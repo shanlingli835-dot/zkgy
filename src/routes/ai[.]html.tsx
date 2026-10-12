@@ -159,7 +159,6 @@ function AiPage() {
             marginTop: "clamp(2rem, 5vw, 4rem)",
             borderRadius: "var(--ds-radius-surface)",
             overflow: "hidden",
-            border: "1px solid var(--ds-color-border-subtle)",
             backgroundColor: "var(--ds-color-surface-default)",
             boxShadow: "0 24px 60px rgba(28, 30, 34, 0.12)",
           }}
