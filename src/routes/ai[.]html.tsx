@@ -7,11 +7,14 @@ import aiMultimodalAdversarial from "@/assets/ai-multimodal-adversarial.png";
 import aiSupplyChainBom from "@/assets/ai-supply-chain-bom.png";
 import aiOpenSourceOverview from "@/assets/ai-open-source-overview.png";
 import aiHeroCore from "@/assets/swift-ai-hero-core-light.jpg";
+import aiFeatureLifecycle from "@/assets/ai-feature-lifecycle.jpg";
+import aiFeatureMultimodal from "@/assets/ai-feature-multimodal.jpg";
+import aiFeatureCompliance from "@/assets/ai-feature-compliance.jpg";
+import { FeatureCards } from "@/components/ui/feature-cards";
 
 
 import {
   CTA_HREF,
-  FeatureGrid,
   PrimaryCta,
   ProductHero,
   Section,
