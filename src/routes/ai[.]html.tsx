@@ -3,6 +3,7 @@ import { Boxes, Brain, Layers, ShieldCheck } from "lucide-react";
 
 import { HomeAccordion } from "@/components/site/HomeAccordion";
 import aiLlmFirewall from "@/assets/ai-llm-firewall.png";
+import aiMultimodalAdversarial from "@/assets/ai-multimodal-adversarial.png";
 import aiSupplyChainBom from "@/assets/ai-supply-chain-bom.png";
 
 
@@ -90,6 +91,10 @@ function AiPage() {
             icon: <Layers size={56} strokeWidth={1.25} aria-hidden />,
             title: "多模态对抗提升",
             desc: "通过对抗样本、可解释性与公平性评估，开展视觉、文本、音频等多模态对抗测试与模型运行监控，提升AI模型鲁棒性与安全性。",
+            image: {
+              src: aiMultimodalAdversarial,
+              alt: "AI 安全平台深伪检测系统界面，展示图像、视频、音频与文本四类检测入口、文件上传区，以及算法选择与配置列表",
+            },
           },
           {
             icon: <ShieldCheck size={56} strokeWidth={1.25} aria-hidden />,
