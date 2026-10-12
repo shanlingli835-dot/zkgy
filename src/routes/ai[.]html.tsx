@@ -6,6 +6,7 @@ import aiLlmFirewall from "@/assets/ai-llm-firewall.png";
 import aiMultimodalAdversarial from "@/assets/ai-multimodal-adversarial.png";
 import aiSupplyChainBom from "@/assets/ai-supply-chain-bom.png";
 import aiOpenSourceOverview from "@/assets/ai-open-source-overview.png";
+import aiHeroHolographic from "@/assets/swift-ai-hero-holographic.jpg";
 
 
 import {
@@ -51,6 +52,16 @@ function AiPage() {
         title="Swift AI 综合模型安全检测平台"
         description="专为智能应用设计的全方位模型安全检测平台，为组织提供模型应用全生命周期的安全保护。"
         primaryCta={{ label: "免费试用", href: CTA_HREF }}
+        visual={
+          <img
+            src={aiHeroHolographic}
+            alt="Swift AI 全息玻璃安全核心，连接传统模型对抗测评、LLM 安全测评与防火墙、自动化红队及 AI BOM 供应链分析"
+            width={1536}
+            height={1024}
+            className="h-full w-full rounded-[var(--ds-radius-surface)] object-cover"
+            fetchPriority="high"
+          />
+        }
       />
 
       <Section title="为什么选择Swift AI？">
