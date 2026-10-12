@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Gauge, Wrench, Bug, Sparkles, Repeat, Search } from "lucide-react";
+import { Gauge, Bug, Sparkles, Repeat, Search } from "lucide-react";
 import lensFixSuggestions from "@/assets/lens-fix-suggestions.png";
 import lensTestDriver from "@/assets/lens-test-driver.png";
 
