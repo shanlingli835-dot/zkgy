@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Gauge, Wrench, Bug, FileText, Sparkles, Repeat, Search } from "lucide-react";
+import { Gauge, Wrench, Bug, Sparkles, Repeat, Search } from "lucide-react";
+import lensFixSuggestions from "@/assets/lens-fix-suggestions.png";
 
 import { AdvantageTriad } from "@/components/site/AdvantageTriad";
 import { HomeAccordion } from "@/components/site/HomeAccordion";
@@ -56,7 +57,10 @@ function LensPage() {
             desc: "具备自动挖掘和精准定位缺陷的能力，帮助开发者提升代码质量。",
           },
           {
-            icon: <FileText size={56} strokeWidth={1.25} aria-hidden />,
+            image: {
+              src: lensFixSuggestions,
+              alt: "缺陷分析详情页的示例与修复建议面板，含漏洞影响描述、伪代码与分阶段修复建议列表",
+            },
             title: "提供修复建议",
             desc: "生成详细的测试报告，内容涵盖缺陷的类型和触发缺陷的用例；基于大语言模型提供修复建议并自动生成修复代码，提升修复效率。",
           },
