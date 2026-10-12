@@ -6,6 +6,8 @@ export type HomeAccordionItem = {
   desc: string;
   icon?: ReactNode;
   theme?: "flame" | "blue" | "pink" | "green" | "yellow";
+  /** 可选的右侧配图：提供时替换默认的中性图标与文字占位，等比例完整显示。 */
+  image?: { src: string; alt: string };
 };
 
 export type HomeAccordionProps = {
@@ -214,9 +216,20 @@ export function HomeAccordion({
 
   const renderVisual = (item: HomeAccordionItem) => (
     <div className="ha-visual">
-      {item.icon ? <div className="ha-visual__icon">{item.icon}</div> : null}
-      <h3 className="ha-visual__title">{item.title}</h3>
-      <p className="ha-visual__desc">{item.desc}</p>
+      {item.image ? (
+        <img
+          className="ha-visual__media"
+          src={item.image.src}
+          alt={item.image.alt}
+          loading="lazy"
+        />
+      ) : (
+        <>
+          {item.icon ? <div className="ha-visual__icon">{item.icon}</div> : null}
+          <h3 className="ha-visual__title">{item.title}</h3>
+          <p className="ha-visual__desc">{item.desc}</p>
+        </>
+      )}
     </div>
   );
 
