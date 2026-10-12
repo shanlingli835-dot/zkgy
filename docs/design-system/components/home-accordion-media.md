@@ -45,6 +45,7 @@ third panel, and the vulnerability replay dialog screenshot in the fourth panel,
 order; every panel on that page now carries route-owned media. On the Swift AI page the supply
 chain risk tracking panel carries the AI-BOM asset list screenshot, the multimodal adversarial
 panel carries the deepfake detection console screenshot, and the LLM evaluation and protection
-panel carries the firewall console screenshot, while the remaining panel keeps the neutral
-placeholder. Desktop and mobile preserve copy, dimensions, focus and no
+panel carries the firewall console screenshot, and the open-source model security optimization
+panel carries the AI security platform core data overview screenshot. All four Swift AI panels
+now carry route-owned media. Desktop and mobile preserve copy, dimensions, focus and no
 horizontal overflow.
