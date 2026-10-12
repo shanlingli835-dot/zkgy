@@ -22,7 +22,9 @@ duplicated route styling and no new tokens.
 
 Lazy-loaded media uses `object-fit: cover` and `object-position: center`, so it fills the existing
 panel edge to edge; route-owned screenshots are pre-cropped to the panel's measured 1.62/1 aspect so
-the real interface reaches all four edges and no page background of its own shows. The panel keeps
+the real interface reaches all four edges and no page background of its own shows. Where removing the
+screenshot's own title bar would leave a white strip on another edge, that title bar stays as the
+flush top edge. The panel keeps
 its current 900/610 frame and 1.62/1 inner card. Theme border, progress bar, autoplay, hover and focus pause,
 mobile stacking, and reduced-motion handling are unchanged. No new actions or loading, error,
 disabled, selected or expanded-control states.
@@ -36,6 +38,7 @@ reading order are unchanged. No Red Hat imagery, logos, fonts or components.
 
 ## Acceptance
 
-The Wisdom page shows the protocol template library screenshot in the first panel in category
-order; the remaining panels and all other pages retain their existing appearance. Desktop and
-mobile preserve copy, dimensions, focus and no horizontal overflow.
+The Wisdom page shows the protocol template library screenshot in the first panel and the mutator
+list screenshot in the second panel, in category order; the remaining panels and all other pages
+retain their existing appearance. Desktop and mobile preserve copy, dimensions, focus and no
+horizontal overflow.
