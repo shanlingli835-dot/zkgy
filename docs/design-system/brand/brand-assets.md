@@ -101,6 +101,18 @@ import logoHorizontalReverse from '@/assets/brand/logos/zkgy-logo-horizontal-rev
 - 语义：传统模型对抗测评、LLM 安全测评与防火墙、自动化红队、AI BOM；不作为真实产品界面证据。
 - 直接导入项目资产，沿用原有首屏图片框与圆角，不改变页面配色 Token。
 
+### Swift AI「为什么选择」能力卡片插图
+
+用户指定生成的语义插图，仅用于 `/ai.html`「为什么选择Swift AI？」卡片配图，不作为真实产品界面证据，不用于 Logo。
+
+| 文件 | 对应语义 |
+|---|---|
+| `src/assets/ai-feature-lifecycle.jpg` | 全生命周期模型安全检测 |
+| `src/assets/ai-feature-multimodal.jpg` | 多模态统一风险检测引擎 |
+| `src/assets/ai-feature-compliance.jpg` | 对齐监管标准的合规评估体系 |
+
+1024 × 768，高光调白灰环境、透明玻璃与亚克力折射、电光青蓝与淡紫柔光、低对比阴影与大面积留白；不改变页面颜色 Token。原生生成图片直接导入，媒体合约见 `../components/feature-cards.md`。
+
 标准色版本：
 
 ![中科固源中英文横版标准色 Logo](../../../src/assets/brand/logos/zkgy-logo-horizontal-color.svg)

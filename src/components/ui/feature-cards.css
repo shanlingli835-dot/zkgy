@@ -1,0 +1,84 @@
+/* Feature Cards —— 图文卡片行（规范组件） */
+
+.ds-feature-cards {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(
+    var(--ds-feature-cards-columns, 3),
+    minmax(0, 1fr)
+  );
+  gap: var(--ds-space-2xl);
+  align-items: start;
+}
+
+.ds-feature-card {
+  transition: transform var(--ds-duration-slow) var(--ds-ease-standard);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .ds-feature-card:hover {
+    transform: translateY(-2px);
+  }
+}
+
+.ds-feature-card__media {
+  border-radius: var(--ds-radius-surface);
+  border: var(--ds-border-width-default) solid var(--ds-color-border-subtle);
+  background-color: var(--ds-color-surface-subtle);
+  overflow: hidden;
+}
+
+.ds-feature-card__media img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.ds-feature-card__tag {
+  margin: var(--ds-space-xl) 0 0;
+  font-size: var(--ds-font-size-sm);
+  font-weight: var(--ds-font-weight-semibold);
+  letter-spacing: 0.08em;
+  color: var(--ds-color-text-secondary);
+}
+
+.ds-feature-card__title {
+  margin: var(--ds-space-sm) 0 0;
+  font-size: var(--ds-font-size-xl);
+  font-weight: var(--ds-font-weight-semibold);
+  line-height: 1.35;
+  color: var(--ds-color-text-primary);
+}
+
+.ds-feature-card__desc {
+  margin: var(--ds-space-sm) 0 0;
+  font-size: var(--ds-font-size-md);
+  line-height: 1.65;
+  color: var(--ds-color-text-secondary);
+}
+
+@media (max-width: 1023px) {
+  .ds-feature-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 639px) {
+  .ds-feature-cards {
+    grid-template-columns: 1fr;
+    gap: var(--ds-space-xl);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ds-feature-card {
+    transition: none;
+  }
+  .ds-feature-card:hover {
+    transform: none;
+  }
+}
