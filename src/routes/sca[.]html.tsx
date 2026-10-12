@@ -21,7 +21,6 @@ import {
   ProductHero,
   Section,
   SitePageShell,
-  StatRow,
 } from "@/components/site/ProductPageKit";
 
 const SEO_DESCRIPTION =
