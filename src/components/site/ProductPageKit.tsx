@@ -337,14 +337,12 @@ export function HeroVideo({ label }: { label: string }) {
 }
 
 export function ProductHero({
-  eyebrow,
   title,
   description,
   primaryCta = { label: "免费试用", href: CTA_HREF },
   secondaryCta,
   visual,
 }: {
-  eyebrow?: string;
   title: ReactNode;
   description: string;
   primaryCta?: { label: string; href: string };
