@@ -17,6 +17,7 @@ import protocolConsoleImage from "@/assets/saas-hero-1-16x9.png.asset.json";
 import protocolTemplatesImage from "@/assets/wisdom-protocol-templates.png";
 import mutationAlgorithmsImage from "@/assets/wisdom-mutation-algorithm.png";
 import targetMonitorImage from "@/assets/wisdom-target-monitor.png";
+import vulnReplayImage from "@/assets/wisdom-vuln-replay.png";
 import { AdvantageTriad } from "@/components/site/AdvantageTriad";
 import { HomeAccordion } from "@/components/site/HomeAccordion";
 import {
@@ -374,6 +375,10 @@ function Capabilities() {
       icon: <Repeat size={56} strokeWidth={1.25} aria-hidden />,
       title: "快速复现漏洞",
       desc: "多种方式重放测试用例、回溯交互记录,辅助用户定位问题与验证修复。",
+      image: {
+        src: vulnReplayImage,
+        alt: "Wisdom 漏洞重现弹窗界面，展示当前用例编号、起始执行条数、链接发送次数与数据包发送次数，以及取消与确认按钮",
+      },
     },
   ];
   return (

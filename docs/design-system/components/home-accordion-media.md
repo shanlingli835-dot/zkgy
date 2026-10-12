@@ -39,7 +39,7 @@ reading order are unchanged. No Red Hat imagery, logos, fonts or components.
 ## Acceptance
 
 The Wisdom page shows the protocol template library screenshot in the first panel, the mutator
-list screenshot in the second panel, and the vulnerability detail and test target screenshot in
-the third panel, in category order; the remaining panel and all other pages
-retain their existing appearance. Desktop and mobile preserve copy, dimensions, focus and no
-horizontal overflow.
+list screenshot in the second panel, the vulnerability detail and test target screenshot in the
+third panel, and the vulnerability replay dialog screenshot in the fourth panel, in category
+order; every panel on that page now carries route-owned media and no other page is affected.
+Desktop and mobile preserve copy, dimensions, focus and no horizontal overflow.
