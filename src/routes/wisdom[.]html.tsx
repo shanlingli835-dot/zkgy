@@ -18,6 +18,7 @@ import protocolTemplatesImage from "@/assets/wisdom-protocol-templates.png";
 import mutationAlgorithmsImage from "@/assets/wisdom-mutation-algorithm.png";
 import targetMonitorImage from "@/assets/wisdom-target-monitor.png";
 import vulnReplayImage from "@/assets/wisdom-vuln-replay.png";
+import wisdomHeroLoop from "@/assets/wisdom-hero-loop.webm.asset.json";
 import { AdvantageTriad } from "@/components/site/AdvantageTriad";
 import { HomeAccordion } from "@/components/site/HomeAccordion";
 import {
@@ -78,7 +79,9 @@ function WisdomPage() {
         }
         description="无需任何协议或模糊测试相关知识，开箱即用。轻松识别协议中的缺陷和零日漏洞，增强被测对象的安全性、健壮性、稳定性。"
         primaryCta={{ label: "免费试用", href: CTA_HREF }}
-        visual={<HeroVideo label="Wisdom 模糊测试产品演示" />}
+        visual={
+          <HeroVideo label="Wisdom 模糊测试产品演示" src={wisdomHeroLoop.url} />
+        }
       />
       <WhyFuzz />
       <Capabilities />
