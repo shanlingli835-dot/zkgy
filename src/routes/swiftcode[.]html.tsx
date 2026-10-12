@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Code2, Cpu, Gauge, Copy, Target, ListChecks, FileBadge2 } from "lucide-react";
 
+import swiftCodeHeroPlanes from "@/assets/swiftcode-hero-code-planes.jpg";
 import { AdvantageTriad } from "@/components/site/AdvantageTriad";
 import { HomeAccordion } from "@/components/site/HomeAccordion";
 import {
