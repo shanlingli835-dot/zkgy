@@ -1,8 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Gauge, Sparkles, Repeat, Search } from "lucide-react";
+import { Sparkles, Repeat, Search } from "lucide-react";
 import lensFixSuggestions from "@/assets/lens-fix-suggestions.png";
 import lensTestDriver from "@/assets/lens-test-driver.png";
 import lensVulnLocate from "@/assets/lens-vuln-locate.png";
+import lensCoverageFeedback from "@/assets/lens-coverage-feedback.png";
 
 import { AdvantageTriad } from "@/components/site/AdvantageTriad";
 import { HomeAccordion } from "@/components/site/HomeAccordion";
@@ -44,7 +45,10 @@ function LensPage() {
         title="产品功能"
         items={[
           {
-            icon: <Gauge size={56} strokeWidth={1.25} aria-hidden />,
+            image: {
+              src: lensCoverageFeedback,
+              alt: "测试记录详情的数据统计图页签，含覆盖率曲线、执行速率趋势与新路径发现趋势卡片",
+            },
             title: "覆盖率反馈和优化",
             desc: "支持代码覆盖率反馈和智能优化，提升测试全面性。",
           },
