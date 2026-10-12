@@ -13,6 +13,7 @@ import scaOssAuditImage from "@/assets/sca-oss-audit.jpg";
 import scaOssDepsImage from "@/assets/sca-oss-deps.jpg";
 import scaOssFilterImage from "@/assets/sca-oss-filter.jpg";
 import scaOssShareImage from "@/assets/sca-oss-share.jpg";
+import scaSbomComponentsImage from "@/assets/sca-sbom-components.png";
 import scaHeroGlassShield from "@/assets/sca-hero-glass-shield.jpg";
 import { AdvantageTriad } from "@/components/site/AdvantageTriad";
 import { GalleryHoverCarousel } from "@/components/site/GalleryHoverCarousel";
@@ -112,6 +113,10 @@ function ScaPage() {
             icon: <Boxes size={56} strokeWidth={1.25} aria-hidden />,
             title: "SBOM与资产管理",
             desc: "基于上传的二进制文件、源代码及SBOM文件，进行同源检测、相似性检测、许可证检测，生成高精度、完整的 SBOM 与资产清单。支持自动修复、验证及跨团队的审批流程管理。",
+            image: {
+              src: scaSbomComponentsImage,
+              alt: "Swift SCA 产品界面截图：SBOM 探索页的组件列表，展示 1,028 个组件的名称、版本、CPE、PURL 与许可证信息",
+            },
           },
           {
             icon: <ShieldAlert size={56} strokeWidth={1.25} aria-hidden />,
