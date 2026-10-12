@@ -6,7 +6,7 @@ import aiLlmFirewall from "@/assets/ai-llm-firewall.png";
 import aiMultimodalAdversarial from "@/assets/ai-multimodal-adversarial.png";
 import aiSupplyChainBom from "@/assets/ai-supply-chain-bom.png";
 import aiOpenSourceOverview from "@/assets/ai-open-source-overview.png";
-import aiHeroCore from "@/assets/swift-ai-hero-core.jpg";
+import aiHeroCore from "@/assets/swift-ai-hero-core-light.jpg";
 
 
 import {
@@ -55,7 +55,7 @@ function AiPage() {
         visual={
           <img
             src={aiHeroCore}
-            alt="Swift AI 全息玻璃安全核心：透明玻璃分层架构托管模型与数据资产，外围轨道环绕数据分析、智能体、对话交互与模型资产四个发光徽记"
+            alt="Swift AI 全息玻璃安全核心：明亮空间中的透明玻璃分层架构托管模型与数据资产，外围轨道环绕数据分析、智能体、对话交互与模型资产四个发光徽记"
             width={1291}
             height={941}
             className="h-full w-full rounded-[var(--ds-radius-surface)] object-cover"
