@@ -46,8 +46,8 @@ function SwiftCodePage() {
           <img
             src={swiftCodeHeroPlanes}
             alt="源代码审计概念图：明亮空间中的上下两层透明玻璃代码面板，由中央数据光束连接，面板上铺满代码与检测数据"
-            width={1672}
-            height={1219}
+            width={1291}
+            height={941}
             className="h-full w-full rounded-[var(--ds-radius-surface)] object-cover"
             fetchPriority="high"
           />
