@@ -120,3 +120,11 @@ import logoHorizontalReverse from '@/assets/brand/logos/zkgy-logo-horizontal-rev
 反白版本具有透明背景，应在深色表面中检查：
 
 ![中科固源中英文横版反白 Logo](../../../src/assets/brand/logos/zkgy-logo-horizontal-reverse.png)
+
+## Swift SCA「OSS 统一开源政策」卡片插图
+
+- `src/assets/sca-oss-deps.jpg`（1024×768）：玻璃碎片球体 + 冰蓝扫描光环，对应「100% 全量依赖评估」。
+- `src/assets/sca-oss-share.jpg`（1024×768）：玻璃量筒装满发光代码块，对应「90%+ 开源代码占比」。
+- `src/assets/sca-oss-filter.jpg`（1024×768）：玻璃漏斗筛分立方体流，对应「50% 风险自动筛除」。
+- `src/assets/sca-oss-audit.jpg`（1024×768）：玻璃秒表 + 报告堆叠，对应「70% 审计效率提升」。
+- 风格与 solution-auto「业务场景」一致：银白亮底、磨砂玻璃、冰蓝光线、淡紫高光、大量留白。
