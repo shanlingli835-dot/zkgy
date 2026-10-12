@@ -38,7 +38,8 @@ reading order are unchanged. No Red Hat imagery, logos, fonts or components.
 
 ## Acceptance
 
-The Wisdom page shows the protocol template library screenshot in the first panel and the mutator
-list screenshot in the second panel, in category order; the remaining panels and all other pages
+The Wisdom page shows the protocol template library screenshot in the first panel, the mutator
+list screenshot in the second panel, and the vulnerability detail and test target screenshot in
+the third panel, in category order; the remaining panel and all other pages
 retain their existing appearance. Desktop and mobile preserve copy, dimensions, focus and no
 horizontal overflow.
