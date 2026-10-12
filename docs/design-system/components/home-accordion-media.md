@@ -42,7 +42,8 @@ reading order are unchanged. No Red Hat imagery, logos, fonts or components.
 The Wisdom page shows the protocol template library screenshot in the first panel, the mutator
 list screenshot in the second panel, the vulnerability detail and test target screenshot in the
 third panel, and the vulnerability replay dialog screenshot in the fourth panel, in category
-order; every panel on that page now carries route-owned media. On the Swift AI page the LLM
-evaluation and protection panel carries the firewall console screenshot, while the remaining
-panels keep the neutral placeholder. Desktop and mobile preserve copy, dimensions, focus and no
+order; every panel on that page now carries route-owned media. On the Swift AI page the supply
+chain risk tracking panel carries the AI-BOM asset list screenshot and the LLM evaluation and
+protection panel carries the firewall console screenshot, while the remaining two panels keep the
+neutral placeholder. Desktop and mobile preserve copy, dimensions, focus and no
 horizontal overflow.
