@@ -3,6 +3,7 @@ import { Boxes, Brain, Layers, ShieldCheck } from "lucide-react";
 
 import { HomeAccordion } from "@/components/site/HomeAccordion";
 import aiLlmFirewall from "@/assets/ai-llm-firewall.png";
+import aiSupplyChainBom from "@/assets/ai-supply-chain-bom.png";
 
 
 import {
@@ -80,6 +81,10 @@ function AiPage() {
             icon: <Boxes size={56} strokeWidth={1.25} aria-hidden />,
             title: "供应链风险追踪",
             desc: "自动化检测AI组件、数据与模型资产，进行物料清单管理、溯源追踪、安全评估与防护，识别供应链风险，生成完整AI-BOM与安全追踪报告。",
+            image: {
+              src: aiSupplyChainBom,
+              alt: "AI-BOM 物料清单管理界面，展示模型 BOM 的版本与序列号等元数据、资产数量统计，以及模型、数据集、推理框架与硬件等资产卡片",
+            },
           },
           {
             icon: <Layers size={56} strokeWidth={1.25} aria-hidden />,
