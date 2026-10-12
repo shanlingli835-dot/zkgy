@@ -17,6 +17,7 @@ import protocolConsoleImage from "@/assets/saas-hero-1-16x9.png.asset.json";
 import protocolTemplatesImage from "@/assets/wisdom-protocol-templates.png";
 import mutationAlgorithmsImage from "@/assets/wisdom-mutation-algorithm.png";
 import targetMonitorImage from "@/assets/wisdom-target-monitor.png";
+import vulnReplayImage from "@/assets/wisdom-vuln-replay.png";
 import { AdvantageTriad } from "@/components/site/AdvantageTriad";
 import { HomeAccordion } from "@/components/site/HomeAccordion";
 import {
