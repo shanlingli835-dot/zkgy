@@ -242,6 +242,8 @@
   transform: translate(-50%, -50%);
   border: 1px solid rgba(43, 45, 49, 0.08);
   border-radius: 8px;
+  /* 配图按面板自身的 8px 圆角裁切，保留占位内容原有的圆角 */
+  overflow: hidden;
   background: #ffffff;
   filter: drop-shadow(0 24px 52px rgba(28, 30, 34, 0.08));
   transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1);

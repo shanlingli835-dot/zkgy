@@ -24,7 +24,8 @@ Lazy-loaded media uses `object-fit: cover` and `object-position: center`, so it 
 panel edge to edge; route-owned screenshots are pre-cropped to the panel's measured 1.62/1 aspect so
 the real interface reaches all four edges and no page background of its own shows. Where removing the
 screenshot's own title bar would leave a white strip on another edge, that title bar stays as the
-flush top edge. The panel keeps
+flush top edge. The panel clips the media to its own 8px corner radius, so a replaced screenshot
+keeps the rounded corners the placeholder content had. The panel keeps
 its current 900/610 frame and 1.62/1 inner card. Theme border, progress bar, autoplay, hover and focus pause,
 mobile stacking, and reduced-motion handling are unchanged. No new actions or loading, error,
 disabled, selected or expanded-control states.
