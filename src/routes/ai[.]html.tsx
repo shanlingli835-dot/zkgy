@@ -57,7 +57,7 @@ function AiPage() {
             src={aiHeroHolographic}
             alt="Swift AI 全息玻璃安全核心，连接传统模型对抗测评、LLM 安全测评与防火墙、自动化红队及 AI BOM 供应链分析"
             width={1648}
-            height={1024}
+            height={1200}
             className="h-full w-full rounded-[var(--ds-radius-surface)] object-cover"
             fetchPriority="high"
           />
