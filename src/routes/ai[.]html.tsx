@@ -5,6 +5,7 @@ import { HomeAccordion } from "@/components/site/HomeAccordion";
 import aiLlmFirewall from "@/assets/ai-llm-firewall.png";
 import aiMultimodalAdversarial from "@/assets/ai-multimodal-adversarial.png";
 import aiSupplyChainBom from "@/assets/ai-supply-chain-bom.png";
+import aiOpenSourceOverview from "@/assets/ai-open-source-overview.png";
 
 
 import {
@@ -109,6 +110,10 @@ function AiPage() {
             icon: <Brain size={56} strokeWidth={1.25} aria-hidden />,
             title: "开源大模型安全优化",
             desc: "基于开源大模型安全优化框架，开展安全对齐与对抗训练、隐私保护微调及安全知识注入，实现模型韧性防护、持续学习安全与合规评估。",
+             image: {
+               src: aiOpenSourceOverview,
+               alt: "AI 安全平台核心数据概览界面，展示模型管理、LLM 模型、数据集管理、可解释性评测、LLM 评测与 AI 安全工具等统计卡片",
+             },
           },
         ]}
       />
