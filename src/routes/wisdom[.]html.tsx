@@ -15,6 +15,7 @@ import {
 
 import protocolConsoleImage from "@/assets/saas-hero-1-16x9.png.asset.json";
 import protocolTemplatesImage from "@/assets/wisdom-protocol-templates.png";
+import mutationAlgorithmsImage from "@/assets/wisdom-mutation-algorithm.png";
 import { AdvantageTriad } from "@/components/site/AdvantageTriad";
 import { HomeAccordion } from "@/components/site/HomeAccordion";
 import {
@@ -355,6 +356,10 @@ function Capabilities() {
       icon: <Sparkles size={56} strokeWidth={1.25} aria-hidden />,
       title: "先进的变异算法",
       desc: "基于自研的变异算法生成高覆盖率测试用例,模拟真实交互行为触发潜在缺陷。",
+      image: {
+        src: mutationAlgorithmsImage,
+        alt: "Wisdom 基础组件的变异器列表界面，展示变异算法名称、类型、数据类型、标签与 CWE 编号等字段",
+      },
     },
     {
       icon: <Activity size={56} strokeWidth={1.25} aria-hidden />,
