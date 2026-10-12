@@ -52,7 +52,6 @@ function ServicePenPage() {
   return (
     <SitePageShell>
       <ProductHero
-        eyebrow="技术服务 · 渗透测试"
         title="渗透测试服务"
         description="面向整车及零部件的渗透测试与安全验证服务。模拟真实攻击者的技战术，主动分析系统弱点、技术缺陷与漏洞，帮助客户在真实攻击发生前发现并加固关键系统。"
         primaryCta={{ label: "联系我们", href: CTA_HREF }}
