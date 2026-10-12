@@ -21,8 +21,7 @@ import OrbitingCirclesGlobe from "@/components/ui/orbiting-circles-globe";
 
 import {
   CTA_HREF,
-  HeroVideo,
-  
+
   ProductHero,
   Section,
   SitePageShell,
