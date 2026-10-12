@@ -25,7 +25,6 @@
 
 .ds-feature-card__media {
   border-radius: var(--ds-radius-surface);
-  border: var(--ds-border-width-default) solid var(--ds-color-border-subtle);
   background-color: var(--ds-color-surface-subtle);
   overflow: hidden;
 }
