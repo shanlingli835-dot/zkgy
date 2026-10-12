@@ -378,26 +378,8 @@ export function ProductHero({
       >
 
         <div>
-          {eyebrow && (
-            <div
-              style={{
-                display: "inline-flex",
-                alignItems: "center",
-                gap: "var(--ds-space-sm)",
-                padding: "var(--ds-space-xs) var(--ds-space-md)",
-                borderRadius: "var(--ds-radius-round)",
-                border:
-                  "var(--ds-border-width-default) solid var(--ds-color-border-inverse)",
-                color: "var(--ds-color-text-inverse-secondary)",
-                fontSize: "var(--ds-font-size-sm)",
-              }}
-            >
-              {eyebrow}
-            </div>
-          )}
           <h1
             style={{
-              marginTop: eyebrow ? "var(--ds-space-lg)" : undefined,
               fontSize: "clamp(2rem, 4.5vw, 3.5rem)",
               lineHeight: 1.15,
               fontWeight: "var(--ds-font-weight-semibold)",

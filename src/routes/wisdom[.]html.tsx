@@ -67,7 +67,6 @@ function WisdomPage() {
   return (
     <SitePageShell>
       <ProductHero
-        eyebrow="协议安全 · Wisdom"
         title={
           <>
             在黑客攻击之前发现漏洞
