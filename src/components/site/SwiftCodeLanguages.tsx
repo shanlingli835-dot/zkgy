@@ -162,6 +162,8 @@ function LanguageTile({ tile }: { tile: Tile }) {
       title={tile.label}
       className={tile.logo ? "swiftcode-languages-tile--logo" : undefined}
       style={{
+        gridRow: tile.row + 1,
+        gridColumn: tile.col + 1,
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
