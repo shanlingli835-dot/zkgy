@@ -80,11 +80,7 @@ function SwiftCodePage() {
         ]}
       />
 
-      <Section title="支持20多种开发语言">
-        <div style={{ display: "flex", justifyContent: "center" }}>
-          <PrimaryCta href={CTA_HREF}>免费试用</PrimaryCta>
-        </div>
-      </Section>
+      <SwiftCodeLanguages />
 
       <AdvantageTriad
         title="产品优势"
