@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Code2, Cpu, Gauge, Copy, Target, ListChecks, FileBadge2 } from "lucide-react";
 
-import swiftCodeHeroPlanes from "@/assets/swiftcode-hero-code-planes.jpg";
+import swiftCodeHeroDashboard from "@/assets/swiftcode-hero-dashboard.jpg";
 import { AdvantageTriad } from "@/components/site/AdvantageTriad";
 import { HomeAccordion } from "@/components/site/HomeAccordion";
 import {
@@ -44,10 +44,10 @@ function SwiftCodePage() {
         primaryCta={{ label: "免费试用", href: CTA_HREF }}
         visual={
           <img
-            src={swiftCodeHeroPlanes}
-            alt="源代码审计概念图：明亮空间中的上下两层透明玻璃代码面板，由中央数据光束连接，面板上铺满代码与检测数据"
-            width={1291}
-            height={941}
+            src={swiftCodeHeroDashboard}
+            alt="Swift Code 检测仪表盘截图：项目总数、扫描次数、发现数量按严重程度分布、合规标准状态分布，以及依赖项、代码发现与高风险许可证统计"
+            width={1336}
+            height={974}
             className="h-full w-full rounded-[var(--ds-radius-surface)] object-cover"
             fetchPriority="high"
           />
