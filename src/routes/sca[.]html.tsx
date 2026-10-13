@@ -17,7 +17,7 @@ import scaSbomComponentsImage from "@/assets/sca-sbom-components.png";
 import scaVulnManagementImage from "@/assets/sca-vuln-management.png";
 import scaComplianceVerificationImage from "@/assets/sca-compliance-verification.png";
 import scaIncidentResponseImage from "@/assets/sca-incident-response.png";
-import scaHeroGlassShield from "@/assets/sca-hero-glass-shield.jpg";
+import scaHeroDashboard from "@/assets/sca-hero-dashboard.png";
 import { AdvantageTriad } from "@/components/site/AdvantageTriad";
 import { GalleryHoverCarousel } from "@/components/site/GalleryHoverCarousel";
 import { HomeAccordion } from "@/components/site/HomeAccordion";
@@ -64,10 +64,10 @@ function ScaPage() {
         secondaryCta={{ label: "免费试用", href: CTA_HREF }}
         visual={
           <img
-            src={scaHeroGlassShield}
-            alt="Swift SCA 软件成分分析概念图：明亮银白空间中的透明玻璃防护盾环绕扫描光环，开源代码模块流经光束汇入防护盾，旁侧玻璃漏斗筛分出淡紫色风险模块"
-            width={1376}
-            height={1008}
+            src={scaHeroDashboard}
+            alt="Swift SCA 软件成分分析产品总览：项目总数 48、扫描次数 1.5K、发现数量总计 5K 与统计总数 8，按严重程度的发现数量和合规标准状态分布，以及依赖项、代码、高风险许可证发现数量统计"
+            width={1404}
+            height={1024}
             className="h-full w-full rounded-[var(--ds-radius-surface)] object-cover"
             fetchPriority="high"
           />
