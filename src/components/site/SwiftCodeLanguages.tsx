@@ -5,66 +5,42 @@ import logoJava from "@/assets/lang/java.svg";
 import logoCsharp from "@/assets/lang/csharp.svg";
 import logoPython from "@/assets/lang/python.svg";
 import logoKotlin from "@/assets/lang/kotlin.svg";
-import logoObjc from "@/assets/lang/objectivec.svg";
 import logoSwift from "@/assets/lang/swift.svg";
 import logoJs from "@/assets/lang/javascript.svg";
 import logoTs from "@/assets/lang/typescript.svg";
 import logoGo from "@/assets/lang/go.svg";
-import logoRust from "@/assets/lang/rust.svg";
 import logoPhp from "@/assets/lang/php.svg";
-import logoRuby from "@/assets/lang/ruby.svg";
-import logoPerl from "@/assets/lang/perl.svg";
-import logoLua from "@/assets/lang/lua.svg";
-import logoScala from "@/assets/lang/scala.svg";
-import logoDelphi from "@/assets/lang/delphi.svg";
-import logoShell from "@/assets/lang/shell.svg";
 
 /**
  * SwiftCodeLanguages
  *
  * "支持20多种开发语言" 模块。
- * 排版参考 integrations-4：左侧标题 + 说明 + 主操作，右侧 5×5 散布瓷片网格，
+ * 排版参考 integrations-4：左侧标题 + 说明 + 主操作，右侧散布瓷片网格，
  * 外缘用径向渐变遮罩淡出。瓷片内容为各语言官方 Logo（devicon 图标库），
  * 「汇编」无官方 Logo，保留文字瓷片。
  */
 
-type Tile = {
-  row: number;
-  col: number;
-  label?: string;
-  logo?: string;
-  muted?: boolean;
-};
+type Tile = { row: number; col: number; label?: string; logo?: string };
 
-const CELL = 72;
-const GRID = CELL * 5;
+const CELL = 80;
+const COLS = 4;
+const ROWS = 4;
+const GRID = CELL * COLS;
 
+/** 四角留空，瓷片聚成中心密、四角疏的簇，配合径向遮罩自然淡出。 */
 const tiles: Tile[] = [
-  { row: 0, col: 0, label: "C", logo: logoC },
-  { row: 0, col: 1 },
+  { row: 0, col: 1, label: "C", logo: logoC },
   { row: 0, col: 2, label: "C++", logo: logoCpp },
-  { row: 0, col: 3, label: "Java", logo: logoJava },
-  { row: 0, col: 4, label: "C#", logo: logoCsharp },
-  { row: 1, col: 0, label: "Python", logo: logoPython },
-  { row: 1, col: 1, label: "Kotlin", logo: logoKotlin },
-  { row: 1, col: 2 },
-  { row: 1, col: 3, label: "Objective-C", logo: logoObjc, muted: true },
-  { row: 1, col: 4, label: "Swift", logo: logoSwift },
-  { row: 2, col: 0 },
+  { row: 1, col: 0, label: "Java", logo: logoJava },
+  { row: 1, col: 1, label: "C#", logo: logoCsharp },
+  { row: 1, col: 2, label: "Python", logo: logoPython },
+  { row: 1, col: 3, label: "Kotlin", logo: logoKotlin },
+  { row: 2, col: 0, label: "Swift", logo: logoSwift },
   { row: 2, col: 1, label: "JavaScript", logo: logoJs },
   { row: 2, col: 2, label: "TypeScript", logo: logoTs },
   { row: 2, col: 3, label: "Go", logo: logoGo },
-  { row: 2, col: 4, label: "Rust", logo: logoRust, muted: true },
-  { row: 3, col: 0, label: "PHP", logo: logoPhp },
-  { row: 3, col: 1, label: "Ruby", logo: logoRuby, muted: true },
-  { row: 3, col: 2 },
-  { row: 3, col: 3, label: "Perl", logo: logoPerl, muted: true },
-  { row: 3, col: 4, label: "Lua", logo: logoLua, muted: true },
-  { row: 4, col: 0, label: "Scala", logo: logoScala, muted: true },
-  { row: 4, col: 1 },
-  { row: 4, col: 2, label: "Delphi", logo: logoDelphi, muted: true },
-  { row: 4, col: 3, label: "Shell", logo: logoShell, muted: true },
-  { row: 4, col: 4, label: "汇编" },
+  { row: 3, col: 1, label: "PHP", logo: logoPhp },
+  { row: 3, col: 2, label: "汇编" },
 ];
 
 export function SwiftCodeLanguages() {
@@ -126,10 +102,10 @@ export function SwiftCodeLanguages() {
             aria-label="Swift Code 支持的开发语言"
             style={{
               display: "grid",
-              gridTemplateColumns: `repeat(5, ${CELL}px)`,
-              gridTemplateRows: `repeat(5, ${CELL}px)`,
+              gridTemplateColumns: `repeat(${COLS}, ${CELL}px)`,
+              gridTemplateRows: `repeat(${ROWS}, ${CELL}px)`,
               width: GRID,
-              height: GRID,
+              height: CELL * ROWS,
               WebkitMaskImage:
                 "radial-gradient(ellipse at center, black 55%, transparent 100%)",
               maskImage:
@@ -151,14 +127,16 @@ export function SwiftCodeLanguages() {
         }
         @media (max-width: 640px) {
           .swiftcode-languages-tiles {
-            grid-template-columns: repeat(5, 56px) !important;
-            grid-template-rows: repeat(5, 56px) !important;
-            width: 280px !important;
-            height: 280px !important;
+            grid-template-columns: repeat(${COLS}, 60px) !important;
+            grid-template-rows: repeat(${ROWS}, 60px) !important;
+            width: ${COLS * 60}px !important;
+            height: ${ROWS * 60}px !important;
           }
           .swiftcode-languages-tiles > div {
             font-size: 10px !important;
-            padding: 2px !important;
+          }
+          .swiftcode-languages-tile--logo {
+            padding: 12px !important;
           }
         }
       `}</style>
@@ -182,11 +160,14 @@ function LanguageTile({ tile }: { tile: Tile }) {
     <div
       role="listitem"
       title={tile.label}
+      className={tile.logo ? "swiftcode-languages-tile--logo" : undefined}
       style={{
+        gridRow: tile.row + 1,
+        gridColumn: tile.col + 1,
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        padding: tile.logo ? "14px" : "4px",
+        padding: tile.logo ? "16px" : "4px",
         backgroundColor: "var(--ds-color-surface-default)",
         border: "var(--ds-border-width-default) solid var(--ds-color-border-subtle)",
         borderRadius: "var(--ds-radius-surface)",
