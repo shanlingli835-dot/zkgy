@@ -203,9 +203,9 @@ import logoHorizontalReverse from '@/assets/brand/logos/zkgy-logo-horizontal-rev
 
 ## Swift Code「支持20多种开发语言」瓷片 Logo
 
-- 目录：`src/assets/lang/`，19 个 SVG，仅用于 `/swiftcode.html`「支持20多种开发语言」模块右侧 5×5 散布瓷片。
-- 来源：devicon 官方图标库（cdn.jsdelivr.net/gh/devicons/devicon），文件与语言一一对应：c / cpp / java / csharp / python / kotlin / objectivec / swift / javascript / typescript / go / rust / php / ruby / perl / lua / scala / delphi / shell。
-- 「汇编」无官方 Logo，保留文字瓷片；空瓷片无内容。
+- 目录：`src/assets/lang/`，11 个 SVG，仅用于 `/swiftcode.html`「支持20多种开发语言」模块右侧 4×4 散布瓷片。
+- 来源：devicon 官方图标库（cdn.jsdelivr.net/gh/devicons/devicon），文件与语言一一对应：c / cpp / java / csharp / python / kotlin / swift / javascript / typescript / go / php。
+- 「汇编」无官方 Logo，保留文字瓷片；四角瓷片留空。Ruby、Perl、Lua、Scala、Delphi、Shell、Rust、Objective-C 已按用户要求删除（对应 SVG 一并移除）。
 - 通过 `SwiftCodeLanguages` 组件以 `<img>` 接入，瓷片内 `object-fit: contain` 等比缩放，`title`/`alt` 为语言名。
 
 ## Swift Code 首屏概念配图（未引用）
