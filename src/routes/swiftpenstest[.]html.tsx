@@ -121,17 +121,17 @@ function SwiftPenPage() {
         title="产品优势"
         items={[
           {
-            icon: <Crosshair size={22} />,
+            icon: <Crosshair size={56} strokeWidth={1.25} aria-hidden />,
             title: "高精准",
             desc: "内置漏洞验证与利用组件，确保漏洞经过充分验证并可深入利用进行风险检查。",
           },
           {
-            icon: <BellRing size={22} />,
+            icon: <BellRing size={56} strokeWidth={1.25} aria-hidden />,
             title: "自预警",
             desc: "通过攻击模拟与态势感知联动，主动检测并预警网络资产风险。",
           },
           {
-            icon: <Coins size={22} />,
+            icon: <Coins size={56} strokeWidth={1.25} aria-hidden />,
             title: "低成本",
             desc: "以自动化为主的人机结合模式，降低安全验证的人力依赖与实施成本。",
           },
