@@ -201,6 +201,13 @@ import logoHorizontalReverse from '@/assets/brand/logos/zkgy-logo-horizontal-rev
 - 画面内容：项目总数 48、扫描次数 1.5K、发现数量总计 5K、按严重程度的发现数量（严重 540 / 高危 1.8K / 中危 2.3K / 低危 660）、合规标准状态分布（通过 10 / 不通过 2K），以及依赖项发现数量 2.2K、代码发现数量 2.2K、高风险许可证数量 791。
 - 通过 `ProductHero` 的 `visual` 接入，配图框尺寸（600 × 437.5）、圆角与高优先级加载与 `sca.html`、`lens.html` 首屏一致；alt 为中文描述。
 
+## Swift Code「支持20多种开发语言」瓷片 Logo
+
+- 目录：`src/assets/lang/`，19 个 SVG，仅用于 `/swiftcode.html`「支持20多种开发语言」模块右侧 5×5 散布瓷片。
+- 来源：devicon 官方图标库（cdn.jsdelivr.net/gh/devicons/devicon），文件与语言一一对应：c / cpp / java / csharp / python / kotlin / objectivec / swift / javascript / typescript / go / rust / php / ruby / perl / lua / scala / delphi / shell。
+- 「汇编」无官方 Logo，保留文字瓷片；空瓷片无内容。
+- 通过 `SwiftCodeLanguages` 组件以 `<img>` 接入，瓷片内 `object-fit: contain` 等比缩放，`title`/`alt` 为语言名。
+
 ## Swift Code 首屏概念配图（未引用）
 
 - 文件：`src/assets/swiftcode-hero-code-planes.jpg`（1291 × 941），当前未被任何页面引用。
