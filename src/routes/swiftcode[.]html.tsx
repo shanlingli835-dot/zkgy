@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Code2, Cpu, Gauge, Copy, Target, ListChecks, FileBadge2 } from "lucide-react";
 
-import swiftCodeHeroDashboard from "@/assets/swiftcode-hero-dashboard.jpg";
+import swiftCodeHeroAudit from "@/assets/swiftcode-hero-audit.jpg";
 import { AdvantageTriad } from "@/components/site/AdvantageTriad";
 import { HomeAccordion } from "@/components/site/HomeAccordion";
 import { SwiftCodeLanguages } from "@/components/site/SwiftCodeLanguages";
@@ -43,10 +43,10 @@ function SwiftCodePage() {
         primaryCta={{ label: "免费试用", href: CTA_HREF }}
         visual={
           <img
-            src={swiftCodeHeroDashboard}
-            alt="Swift Code 检测仪表盘截图：项目总数、扫描次数、发现数量按严重程度分布、合规标准状态分布，以及依赖项、代码发现与高风险许可证统计"
-            width={1336}
-            height={974}
+            src={swiftCodeHeroAudit}
+            alt="Swift Code 源代码审计概念插图：SQL 注入风险代码扫描界面，红色标记的缺陷行、扫描进度 52% 与严重、高危、中危、可修复缺陷数量"
+            width={1448}
+            height={1056}
             className="h-full w-full rounded-[var(--ds-radius-surface)] object-cover"
             fetchPriority="high"
           />
