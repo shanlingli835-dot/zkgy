@@ -16,6 +16,7 @@ import scaOssShareImage from "@/assets/sca-oss-share.jpg";
 import scaSbomComponentsImage from "@/assets/sca-sbom-components.png";
 import scaVulnManagementImage from "@/assets/sca-vuln-management.png";
 import scaComplianceVerificationImage from "@/assets/sca-compliance-verification.png";
+import scaIncidentResponseImage from "@/assets/sca-incident-response.png";
 import scaHeroGlassShield from "@/assets/sca-hero-glass-shield.jpg";
 import { AdvantageTriad } from "@/components/site/AdvantageTriad";
 import { GalleryHoverCarousel } from "@/components/site/GalleryHoverCarousel";
@@ -142,6 +143,10 @@ function ScaPage() {
             icon: <AlarmClock size={56} strokeWidth={1.25} aria-hidden />,
             title: "安全事件响应",
             desc: "持续监测多重威胁源，提供上下文相关的预警信息，并支持调查分析，以确保您的产品在发布后长期保持安全。",
+            image: {
+              src: scaIncidentResponseImage,
+              alt: "Swift SCA 产品界面截图：开源政策评估列表，共 3 条记录，展示名称、通过率、要求、项目名称、版本与政策列，开源政策页签处于选中状态",
+            },
           },
         ]}
       />
