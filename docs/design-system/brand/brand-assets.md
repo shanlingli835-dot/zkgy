@@ -200,8 +200,6 @@ import logoHorizontalReverse from '@/assets/brand/logos/zkgy-logo-horizontal-rev
 - 用户上传的源代码审计概念插图（1448 × 1086），上下各裁 15px 后等比匹配配图框；画面为绿色调代码扫描界面：SQL 注入风险代码行红色标记、扫描进度 52%，以及严重 6 / 高危 24 / 中危 17 / 可修复 38 缺陷数量胶囊。
 - 通过 `ProductHero` 的 `visual` 接入，配图框尺寸（600 × 437.5）、圆角与高优先级加载与 `sca.html`、`lens.html` 首屏一致；alt 为中文描述。
 
-## Swift Code「支持20多种开发语言」瓷片 Logo
- 
 ## Swift Code「产品功能」概念插图
 
 用户指定的四张上传插图，依次用于 `/swiftcode.html` 产品功能右侧展示框；已按用户指定用途确认，不作为真实产品界面或客户数据证据，不用于 Logo。
@@ -215,7 +213,7 @@ import logoHorizontalReverse from '@/assets/brand/logos/zkgy-logo-horizontal-rev
 
 第一张上下裁为 1536 × 948，其余左右居中裁为 1524 × 941，匹配 1.62:1 内框，只移除外围背景，保留主体及说明文字；等比 cover、居中显示，原有尺寸、圆角、文案、顺序、自动切换及手机端显隐规则不变。
 
-### 语言瓷片资产
+## Swift Code「支持20多种开发语言」瓷片 Logo
 
 - 目录：`src/assets/lang/`，11 个 SVG，仅用于 `/swiftcode.html`「支持20多种开发语言」模块右侧 4×4 散布瓷片。
 - 来源：devicon 官方图标库（cdn.jsdelivr.net/gh/devicons/devicon），文件与语言一一对应：c / cpp / java / csharp / python / kotlin / swift / javascript / typescript / go / php。
