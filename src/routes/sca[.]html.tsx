@@ -15,6 +15,7 @@ import scaOssFilterImage from "@/assets/sca-oss-filter.jpg";
 import scaOssShareImage from "@/assets/sca-oss-share.jpg";
 import scaSbomComponentsImage from "@/assets/sca-sbom-components.png";
 import scaVulnManagementImage from "@/assets/sca-vuln-management.png";
+import scaComplianceVerificationImage from "@/assets/sca-compliance-verification.png";
 import scaHeroGlassShield from "@/assets/sca-hero-glass-shield.jpg";
 import { AdvantageTriad } from "@/components/site/AdvantageTriad";
 import { GalleryHoverCarousel } from "@/components/site/GalleryHoverCarousel";
@@ -132,6 +133,10 @@ function ScaPage() {
             icon: <ClipboardCheck size={56} strokeWidth={1.25} aria-hidden />,
             title: "网络合规性",
             desc: "为 FDA PMA、ISO 21434、CRA 及组织自定义的政策框架，提供合规证据的管理与自动化生成。",
+            image: {
+              src: scaComplianceVerificationImage,
+              alt: "Swift SCA 产品界面截图：需求验证评估列表，共 7 条记录，展示名称、通过率、要求、项目名称与版本列，需求验证页签处于选中状态",
+            },
           },
           {
             icon: <AlarmClock size={56} strokeWidth={1.25} aria-hidden />,
