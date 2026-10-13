@@ -128,7 +128,6 @@ export function SwiftCodeLanguages() {
         @media (max-width: 640px) {
           .swiftcode-languages-tiles {
             grid-template-columns: repeat(5, 56px) !important;
-            gridTemplateRows: unset !important;
             grid-template-rows: repeat(5, 56px) !important;
             width: 280px !important;
             height: 280px !important;
