@@ -31,3 +31,4 @@
 - [x] swiftcode.html「支持20多种开发语言」改为左文案右散布瓷片，瓷片填入各语言官方 Logo
 - [x] swiftcode.html「支持20多种开发语言」删除 Ruby、Perl、Lua、Scala、Delphi、Shell、Rust、Objective-C 八个瓷片并重排为 4×4 留角布局
 - [x] swiftcode.html 首屏右侧配图替换为用户上传的 SQL 注入扫描概念插图（1448×1056 裁切自 1448×1086），保持尺寸与圆角
+- [ ] swiftcode.html 产品功能四项按上传顺序替换概念配图，保持尺寸、圆角与文案并验证切换
