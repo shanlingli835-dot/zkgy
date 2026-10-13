@@ -200,6 +200,19 @@ import logoHorizontalReverse from '@/assets/brand/logos/zkgy-logo-horizontal-rev
 - 用户上传的源代码审计概念插图（1448 × 1086），上下各裁 15px 后等比匹配配图框；画面为绿色调代码扫描界面：SQL 注入风险代码行红色标记、扫描进度 52%，以及严重 6 / 高危 24 / 中危 17 / 可修复 38 缺陷数量胶囊。
 - 通过 `ProductHero` 的 `visual` 接入，配图框尺寸（600 × 437.5）、圆角与高优先级加载与 `sca.html`、`lens.html` 首屏一致；alt 为中文描述。
 
+## Swift Code「产品功能」概念插图
+
+用户指定的四张上传插图，依次用于 `/swiftcode.html` 产品功能右侧展示框；已按用户指定用途确认，不作为真实产品界面或客户数据证据，不用于 Logo。
+
+| 资产 ID | 指针文件 | 来源 | 语义 / 中文 alt |
+|---|---|---|---|
+| swiftcode-feature-analysis | `src/assets/swiftcode-feature-analysis.jpg.asset.json` | 用户上传 image-54.png | 代码分析概念插图：源代码、函数调用关系图与缓冲区溢出风险定位 |
+| swiftcode-feature-dual-engine | `src/assets/swiftcode-feature-dual-engine.jpg.asset.json` | 用户上传 image-55.png | 双引擎检测概念插图：基础检测引擎与人工智能检测引擎协同分析 |
+| swiftcode-feature-metrics | `src/assets/swiftcode-feature-metrics.jpg.asset.json` | 用户上传 image-56.png | 软件全方位度量概念插图：代码质量评分及复杂度、扇入扇出、注释率等指标 |
+| swiftcode-feature-clone | `src/assets/swiftcode-feature-clone.jpg.asset.json` | 用户上传 image-57.png | 代码克隆检测概念插图：重复代码对比、相似度与文件行号定位 |
+
+第一张上下裁为 1536 × 948，其余左右居中裁为 1524 × 941，匹配 1.62:1 内框，只移除外围背景，保留主体及说明文字；等比 cover、居中显示，原有尺寸、圆角、文案、顺序、自动切换及手机端显隐规则不变。
+
 ## Swift Code「支持20多种开发语言」瓷片 Logo
 
 - 目录：`src/assets/lang/`，11 个 SVG，仅用于 `/swiftcode.html`「支持20多种开发语言」模块右侧 4×4 散布瓷片。

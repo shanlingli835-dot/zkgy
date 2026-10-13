@@ -2,6 +2,10 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Code2, Cpu, Gauge, Copy, Target, ListChecks, FileBadge2 } from "lucide-react";
 
 import swiftCodeHeroAudit from "@/assets/swiftcode-hero-audit.jpg";
+import codeAnalysis from "@/assets/swiftcode-feature-analysis.jpg.asset.json";
+import dualEngine from "@/assets/swiftcode-feature-dual-engine.jpg.asset.json";
+import codeMetrics from "@/assets/swiftcode-feature-metrics.jpg.asset.json";
+import codeClone from "@/assets/swiftcode-feature-clone.jpg.asset.json";
 import { AdvantageTriad } from "@/components/site/AdvantageTriad";
 import { HomeAccordion } from "@/components/site/HomeAccordion";
 import { SwiftCodeLanguages } from "@/components/site/SwiftCodeLanguages";
@@ -60,21 +64,25 @@ function SwiftCodePage() {
             icon: <Code2 size={56} strokeWidth={1.25} aria-hidden />,
             title: "代码分析",
             desc: "根据用户指定的任意内容，自动生成函数间调用关系图、控制流图，代码审计等。",
+            image: { src: codeAnalysis.url, alt: "代码分析概念插图：源代码、函数调用关系图与缓冲区溢出风险定位" },
           },
           {
             icon: <Cpu size={56} strokeWidth={1.25} aria-hidden />,
             title: "双引擎检测",
             desc: "基本检测引擎支持到达值分析、前支配分析、后支配分析、活跃变量分析等；人工智能检测引擎支持代码基因图谱分析、修改影响分析、类继承关系分析、多态分析等。",
+            image: { src: dualEngine.url, alt: "双引擎检测概念插图：基础检测引擎与人工智能检测引擎协同分析" },
           },
           {
             icon: <Gauge size={56} strokeWidth={1.25} aria-hidden />,
             title: "软件全方位度量",
             desc: "提供圈复杂度、函数扇入、函数扇出、代码注释率、代码行数、循环嵌套深度、循环数目、面向对象度量集等指标。",
+            image: { src: codeMetrics.url, alt: "软件全方位度量概念插图：代码质量评分及复杂度、扇入扇出、注释率等指标" },
           },
           {
             icon: <Copy size={56} strokeWidth={1.25} aria-hidden />,
             title: "代码克隆检测",
             desc: "精准识别并定位重复代码，减少冗余和潜在缺陷。",
+            image: { src: codeClone.url, alt: "代码克隆检测概念插图：重复代码对比、相似度与文件行号定位" },
           },
         ]}
       />

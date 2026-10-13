@@ -8,7 +8,8 @@
 Replace the neutral icon plus title/description placeholder inside the accordion's right-hand
 visual panel with a route-owned product screenshot, without changing tab content, order, panel
 dimensions, autoplay, or interactions. Do not present generated imagery as real product evidence;
-only actual product interfaces may be supplied here.
+actual product interfaces may be supplied here. Explicitly user-selected conceptual illustrations
+may also be supplied when registered as illustrations, never as real product interface evidence.
 
 ## Anatomy and implementation
 
@@ -49,3 +50,8 @@ panel carries the firewall console screenshot, and the open-source model securit
 panel carries the AI security platform core data overview screenshot. All four Swift AI panels
 now carry route-owned media. Desktop and mobile preserve copy, dimensions, focus and no
 horizontal overflow.
+
+On Swift Code, four user-uploaded conceptual illustrations appear in order for code analysis,
+dual-engine detection, software metrics, and clone detection. They are centered, pre-cropped
+to 1.62/1, served through asset pointers, and identified as conceptual illustrations in alt text
+and the asset registry. Existing responsive visibility and all interactions remain unchanged.
