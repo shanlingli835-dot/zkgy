@@ -121,7 +121,7 @@ function SwiftPenPage() {
         title="产品优势"
         items={[
           {
-            icon: <Crosshair size={22} />,
+            icon: <Crosshair size={56} strokeWidth={1.25} aria-hidden />,
             title: "高精准",
             desc: "内置漏洞验证与利用组件，确保漏洞经过充分验证并可深入利用进行风险检查。",
           },

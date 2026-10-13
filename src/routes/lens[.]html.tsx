@@ -94,17 +94,17 @@ function LensPage() {
         title="产品优势"
         items={[
           {
-            icon: <Sparkles size={22} />,
+            icon: <Sparkles size={56} strokeWidth={1.25} aria-hidden />,
             title: "智能化测试用例构建",
             desc: "基于 AI 大模型自动生成高质量的测试用例，提升漏洞检测的覆盖率与准确性。",
           },
           {
-            icon: <Repeat size={22} />,
+            icon: <Repeat size={56} strokeWidth={1.25} aria-hidden />,
             title: "漏洞自动复现与 PoC 生成",
             desc: "自动生成最小化输入用例和 PoC 脚本，快速验证漏洞可行性，提升复现效率。",
           },
           {
-            icon: <Search size={22} />,
+            icon: <Search size={56} strokeWidth={1.25} aria-hidden />,
             title: "可视化报告与根因定位",
             desc: "展示漏洞相关的函数、调用栈和源代码片段，直观定位问题。",
           },
