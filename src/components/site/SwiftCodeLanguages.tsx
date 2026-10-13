@@ -131,6 +131,10 @@ export function SwiftCodeLanguages() {
             width: 280px !important;
             height: 280px !important;
           }
+          .swiftcode-languages-tiles > div {
+            font-size: 10px !important;
+            padding: 2px !important;
+          }
         }
       `}</style>
     </section>
