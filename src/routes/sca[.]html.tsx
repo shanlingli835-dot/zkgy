@@ -15,6 +15,7 @@ import scaOssFilterImage from "@/assets/sca-oss-filter.jpg";
 import scaOssShareImage from "@/assets/sca-oss-share.jpg";
 import scaSbomComponentsImage from "@/assets/sca-sbom-components.png";
 import scaVulnManagementImage from "@/assets/sca-vuln-management.png";
+import scaComplianceVerificationImage from "@/assets/sca-compliance-verification.png";
 import scaHeroGlassShield from "@/assets/sca-hero-glass-shield.jpg";
 import { AdvantageTriad } from "@/components/site/AdvantageTriad";
 import { GalleryHoverCarousel } from "@/components/site/GalleryHoverCarousel";
