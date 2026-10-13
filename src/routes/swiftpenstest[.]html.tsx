@@ -7,16 +7,12 @@ import {
   Crosshair,
   BellRing,
   Coins,
-  Boxes,
-  Puzzle,
-  Building2,
 } from "lucide-react";
 
 import { AdvantageTriad } from "@/components/site/AdvantageTriad";
 import { HomeAccordion } from "@/components/site/HomeAccordion";
 import {
   CTA_HREF,
-  FeatureGrid,
   HeroVideo,
   PrimaryCta,
   ProductHero,
@@ -57,39 +53,6 @@ function SwiftPenPage() {
         primaryCta={{ label: "免费试用", href: CTA_HREF }}
         visual={<HeroVideo label="Swift Pentest 自动化渗透测试产品演示" />}
       />
-
-      <Section>
-        <FeatureGrid
-          columns={3}
-          items={[
-            {
-              icon: <Radar size={22} />,
-              title: "全协议智能探测",
-              desc: "支持多种端口探测与协议识别，精准发现资产。",
-            },
-            {
-              icon: <Workflow size={22} />,
-              title: "自动化渗透闭环",
-              desc: "从发现到利用全自动，支持迭代与横向攻击。",
-            },
-            {
-              icon: <Boxes size={22} />,
-              title: "漏洞库全面覆盖",
-              desc: "内置超20万漏洞知识，覆盖多类型系统与设备。",
-            },
-            {
-              icon: <Puzzle size={22} />,
-              title: "灵活场景与扩展",
-              desc: "支持自定义场景、模块插件化，适应各类环境。",
-            },
-            {
-              icon: <Building2 size={22} />,
-              title: "企业级管控与协同",
-              desc: "提供多级权限、审计日志与合规报告输出。",
-            },
-          ]}
-        />
-      </Section>
 
       <HomeAccordion
         title="产品功能"
