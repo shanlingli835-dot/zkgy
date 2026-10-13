@@ -4,9 +4,9 @@ import { Code2, Cpu, Gauge, Copy, Target, ListChecks, FileBadge2 } from "lucide-
 import swiftCodeHeroDashboard from "@/assets/swiftcode-hero-dashboard.jpg";
 import { AdvantageTriad } from "@/components/site/AdvantageTriad";
 import { HomeAccordion } from "@/components/site/HomeAccordion";
+import { SwiftCodeLanguages } from "@/components/site/SwiftCodeLanguages";
 import {
   CTA_HREF,
-  PrimaryCta,
   ProductHero,
   Section,
   SitePageShell,
