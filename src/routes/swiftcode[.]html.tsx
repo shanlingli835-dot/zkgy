@@ -8,7 +8,6 @@ import { SwiftCodeLanguages } from "@/components/site/SwiftCodeLanguages";
 import {
   CTA_HREF,
   ProductHero,
-  Section,
   SitePageShell,
 } from "@/components/site/ProductPageKit";
 

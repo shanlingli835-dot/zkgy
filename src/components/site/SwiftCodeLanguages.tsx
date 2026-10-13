@@ -1,5 +1,4 @@
-import { PrimaryCta } from "@/components/site/ProductPageKit";
-import { CTA_HREF } from "@/components/site/ProductPageKit";
+import { CTA_HREF, PrimaryCta } from "@/components/site/ProductPageKit";
 
 /**
  * SwiftCodeLanguages
