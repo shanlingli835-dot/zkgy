@@ -8,6 +8,7 @@ import {
 } from "@/components/site/ProductPageKit";
 import { ZigzagShowcase } from "@/components/site/ZigzagShowcase";
 import companyOverviewImage from "@/assets/about-company-overview.jpg";
+import aboutHeroSecurityLab from "@/assets/about-hero-security-lab.jpg";
 import { TimelineTabs } from "@/components/site/TimelineTabs";
 import { QualificationCarousel } from "@/components/site/QualificationCarousel";
 import qual01 from "@/assets/qualifications/qual-01.png.asset.json";
@@ -208,6 +209,16 @@ function AboutPage() {
         title="成为全球领先的模糊测试技术企业"
         description="中科固源产品及解决方案已应用于智能网联汽车、工业控制、智能医疗、科研院所、检测机构等领域，凭借高效、稳定、精准的检测能力，为不同行业客户提供专业的网络安全测试产品与技术服务。"
         primaryCta={{ label: "联系我们", href: CTA_HREF }}
+        visual={
+          <img
+            src={aboutHeroSecurityLab}
+            alt="网络安全测试实验室摄影风格示意：代码与网络分析双屏、协议测试设备及嵌入式电路板，非公司现场实拍"
+            width={1536}
+            height={1120}
+            className="h-full w-full rounded-[var(--ds-radius-surface)] object-cover"
+            fetchPriority="high"
+          />
+        }
       />
 
       <ZigzagShowcase

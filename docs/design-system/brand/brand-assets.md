@@ -327,3 +327,10 @@ import logoHorizontalReverse from '@/assets/brand/logos/zkgy-logo-horizontal-rev
 - 关键基础设施：`src/assets/pentest-case-infrastructure-photo.png.asset.json`，用户提供的电厂航拍照片。
 - 银行风险验证：`src/assets/pentest-case-bank-photo.jpg.asset.json`，Unsplash 实拍城市摄影，来源 `https://images.unsplash.com/photo-1519501025264-65ba15a82390`。
 - 均为行业场景示意，非特定客户项目现场；等比 cover 展示，不再引用原四张玻璃概念插图。
+
+## 关于我们首屏摄影风格配图
+
+- 文件：`src/assets/about-hero-security-lab.jpg`（1536 × 1120），仅用于 `/about.html` 首屏右侧，直接导入。
+- 用户指定生成的写实摄影风格业务示意：网络协议与嵌入式安全测试工作台，包含代码与网络分析双屏、网络设备、电路板及示波器；对应整页的模糊测试、协议安全、固件安全、自主研发与软件质量保障业务。
+- 非公司实验室、员工或客户项目现场实拍，不作为资质、设备归属或真实产品界面证据；无人物、Logo 或品牌标牌。
+- 沿用 `ProductHero.visual` 图片接入方式，等比 cover、原有尺寸与圆角不变，首屏高优先级加载；不改业务文案、模块顺序、CTA 与 SEO。
