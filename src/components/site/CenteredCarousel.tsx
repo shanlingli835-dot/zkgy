@@ -16,6 +16,8 @@ export type CenteredCarouselItem = {
 
 export type CenteredCarouselProps = {
   items: CenteredCarouselItem[];
+  /** 模块可见标题，渲染为卡片上方的居中 h2；省略时仅保留屏幕阅读器标题。 */
+  title?: string;
   /** 供屏幕阅读器使用的模块名称，不产生可见标题。 */
   label?: string;
 };
@@ -28,6 +30,7 @@ export type CenteredCarouselProps = {
  */
 export function CenteredCarousel({
   items,
+  title,
   label = "产品亮点",
 }: CenteredCarouselProps) {
   const [emblaRef, emblaApi] = useEmblaCarousel({
@@ -74,8 +77,12 @@ export function CenteredCarousel({
   }, [emblaApi, scrolling]);
 
   return (
-    <section className="ds-carousel" aria-label={label}>
-      <h2 className="ds-carousel__sr-only">{label}</h2>
+    <section className="ds-carousel" aria-label={title ?? label}>
+      {title ? (
+        <h2 className="ds-carousel__heading">{title}</h2>
+      ) : (
+        <h2 className="ds-carousel__sr-only">{label}</h2>
+      )}
 
       <div
         ref={emblaRef}

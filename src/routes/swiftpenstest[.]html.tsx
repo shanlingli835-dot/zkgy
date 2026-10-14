@@ -155,7 +155,8 @@ function SwiftPenPage() {
       />
 
       <CenteredCarousel
-        label="行业案例"
+        title="典型案例"
+        label="典型案例"
         items={[
           {
             id: "finance-telecom",
