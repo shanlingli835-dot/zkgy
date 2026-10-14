@@ -184,6 +184,14 @@
   border: 0;
 }
 
+/* 窄屏下 16:7 的高度放不下文案，改为固定高度卡片 */
+@media (max-width: 36rem) {
+  .ds-carousel__card {
+    aspect-ratio: auto;
+    height: 16rem;
+  }
+}
+
 @media (max-width: 767px) {
   .ds-carousel__content {
     max-width: 88%;

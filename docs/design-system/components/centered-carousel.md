@@ -37,8 +37,8 @@
   - 1024–1439px：`78vw`
   - 768–1023px：`86vw`
   - < 768px：`92vw`，内容最大宽度放宽到 88%。
+- 卡片比例：≥ 577px 保持 16:7；< 577px 高度放不下文案，改为固定 `height: 16rem`（约 256px），确保标题、描述与 CTA 不溢出。
 - 容器尺寸变化由 Embla 内置 ResizeObserver（`watchResize` 默认实现）重新计算吸附位置；卡片宽度本身由 CSS 变量驱动，无需 JS 重算。
-- 卡片在窄屏保持 16:7，但设 `min-height: 15rem` 以保证标题、描述与 CTA 不溢出。
 - States：Default；Hover（箭头底色加深）；Focus visible（2px `--ds-color-focus` 描边）；Active（箭头按下）；非当前卡片暗化；Disabled 未使用（循环轮播箭头始终可用）。
 
 ## Content
