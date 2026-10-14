@@ -312,3 +312,10 @@ import logoHorizontalReverse from '@/assets/brand/logos/zkgy-logo-horizontal-rev
 - 文件：`src/assets/swift-pentest-hero-intro.mp4.asset.json`（CDN 指针，73.7 秒 H.264 + AAC，1920 × 1080，25fps，约 9.4MB，仅用于 `/swiftpenstest.html` 首屏右侧配图框）。
 - 用户上传的「Swift Pentest 产品介绍视频（快速版）」，通过 `HeroVideo` 以 `autoPlay muted loop playsInline preload="metadata"` 接入；原占位演示视频（`HERO_VIDEO_SRC` 外链）不再引用。
 - `HeroVideo` 新增可选 `poster` 参数；封面帧为原有的 `swift-pentest-attack-surface.png` 攻击面识别流程示意，加载时先显示封面帧再自动播放，配图框尺寸、圆角、边框与背景均不变。
+
+## Swift Pentest「产品优势」下方居中轮播示意插图
+
+- 文件：`src/assets/pentest-carousel-topology.jpg`（1920 × 840，16:7）、`src/assets/pentest-carousel-loop.jpg`（1920 × 840）、`src/assets/pentest-carousel-library.jpg`（1920 × 840）、`src/assets/pentest-carousel-distributed.jpg`（1920 × 840），仅用于 `/swiftpenstest.html`「产品优势」下方 CenteredCarousel 的四张卡片背景。
+- 生成式示意插图，冷色极简科技风格：银白亮底、磨砂玻璃、冰蓝光线、淡紫高光、大量留白、无灰色线框，主体偏右、左侧留白供文案叠加；与 solution-auto「业务场景」配图风格一致。
+- 文案为待替换的示意内容（攻击面全景视图 / 自动化渗透闭环 / 海量漏洞知识库 / 分布式弹性扩容），用户确认后替换为真实内容，并同步更新本条目与 alt 描述。
+- 通过 `CenteredCarouselItem.image` 接入，卡片 16:7、圆角 0.75rem，左深右浅渐变遮罩保证文字可读。
