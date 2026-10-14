@@ -340,3 +340,18 @@ import logoHorizontalReverse from '@/assets/brand/logos/zkgy-logo-horizontal-rev
 - 用户指定生成的写实摄影风格业务示意：网络协议与嵌入式安全测试工作台，包含代码与网络分析双屏、网络设备、电路板及示波器；对应整页的模糊测试、协议安全、固件安全、自主研发与软件质量保障业务。
 - 非公司实验室、员工或客户项目现场实拍，不作为资质、设备归属或真实产品界面证据；无人物、Logo 或品牌标牌。
 - 沿用 `ProductHero.visual` 图片接入方式，等比 cover、原有尺寸与圆角不变，首屏高优先级加载；不改业务文案、模块顺序、CTA 与 SEO。
+
+
+## 首页「与您现有的工具和系统无缝集成」官方 Logo
+
+用户指定五个平台的官方静态 Logo，仅用于首页现有 16 个浮动瓷片，交错重复展示，不代表新增伙伴关系。图片原色、原比例、不裁切，不引入运行时 Logo 查询服务。
+
+| 平台 | CDN 指针 | 官方来源 |
+|---|---|---|
+| GitLab | `src/assets/integrations/gitlab.svg.asset.json` | https://gitlab.com/gitlab-com/gitlab-artwork/-/raw/master/logo/logo-square.svg |
+| Jenkins | `src/assets/integrations/jenkins.svg.asset.json` | https://archives.jenkins.io/art/jenkins-logo/logo.svg |
+| Ansible | `src/assets/integrations/ansible.svg.asset.json` | https://raw.githubusercontent.com/ansible/logos/main/community-marks/Ansible-Community-Mark-Black.svg |
+| Jira | `src/assets/integrations/jira.png.asset.json` | https://unpkg.com/@atlassian/brand-logos/dist/favicons/fav-jira.png |
+| 禅道 | `src/assets/integrations/zentao.png.asset.json` | https://cdn.easycorp.cn/web/data/upload/zentaopm/202211/f_9109066084a4ed70a637d56a6bb7811c.png |
+
+HTML 使用指针提供的 CDN URL，以 `img` 等比 contain 显示；保留现有位置、尺寸、动画、文案与 `/contact.html` CTA。禅道使用官方蓝色图形 Logo。
