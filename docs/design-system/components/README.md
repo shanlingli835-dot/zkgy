@@ -4,6 +4,7 @@
 
 - Hero Video: Implemented; spec `hero-video.md`; canonical `HeroVideo` in `src/components/site/ProductPageKit.tsx`.
 
+- Centered Carousel: Implemented; spec `centered-carousel.md`; canonical `src/components/site/CenteredCarousel.tsx` (+ `.css`), Embla-based centered slide carousel with arrows, drag and loop.
 - Evidence Section: Implemented; spec `evidence-section.md`; canonical `src/components/ui/evidence-section.tsx`.
 - Feature Cards: Implemented; spec `feature-cards.md`; canonical `src/components/ui/feature-cards.tsx`.
 

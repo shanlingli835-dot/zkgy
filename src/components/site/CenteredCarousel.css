@@ -1,0 +1,199 @@
+/*
+ * CenteredCarousel — Adobe 风格居中横向轮播。
+ * 规范：docs/design-system/components/centered-carousel.md
+ * 卡片宽度、间距与圆角在组件级 Token 中定义（模板允许的组件规范值），
+ * 颜色一律走 --ds-color-* 语义层，不在此处新增页面级颜色值。
+ */
+
+.ds-carousel {
+  --ds-carousel-gap: var(--ds-space-2xl);
+  --ds-carousel-radius: 0.75rem;
+  --ds-carousel-slide-w: 92vw;
+
+  position: relative;
+  background: var(--ds-color-surface-default);
+  padding: var(--ds-section-y-desktop) 0;
+}
+
+@media (min-width: 48rem) {
+  .ds-carousel {
+    --ds-carousel-slide-w: 86vw;
+  }
+}
+
+@media (min-width: 64rem) {
+  .ds-carousel {
+    --ds-carousel-slide-w: 78vw;
+  }
+}
+
+@media (min-width: 90rem) {
+  .ds-carousel {
+    --ds-carousel-slide-w: min(70vw, 90rem);
+  }
+}
+
+.ds-carousel__viewport {
+  overflow: hidden;
+  width: 100%;
+}
+
+.ds-carousel__container {
+  display: flex;
+  align-items: stretch;
+  touch-action: pan-y;
+  cursor: grab;
+}
+
+.ds-carousel__container:active {
+  cursor: grabbing;
+}
+
+.ds-carousel__slide {
+  flex: 0 0 var(--ds-carousel-slide-w);
+  min-width: 0;
+  padding-right: var(--ds-carousel-gap);
+}
+
+.ds-carousel__card {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  aspect-ratio: 16 / 7;
+  min-height: 15rem;
+  border-radius: var(--ds-carousel-radius);
+  background: var(--ds-color-surface-muted);
+}
+
+.ds-carousel__media {
+  position: absolute;
+  inset: 0;
+  z-index: -3;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+/* 左深右浅的渐变遮罩，保证左侧文案可读 */
+.ds-carousel__scrim {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background: linear-gradient(
+    90deg,
+    color-mix(in srgb, var(--ds-color-surface-inverse) 72%, transparent) 0%,
+    color-mix(in srgb, var(--ds-color-surface-inverse) 38%, transparent) 40%,
+    transparent 72%
+  );
+}
+
+/* 非当前卡片的轻微暗色遮罩 */
+.ds-carousel__dim {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: color-mix(in srgb, var(--ds-color-surface-inverse) 28%, transparent);
+  opacity: 0;
+  transition: opacity var(--ds-duration-slow) var(--ds-ease-standard);
+}
+
+.ds-carousel__slide:not(.is-selected) .ds-carousel__dim {
+  opacity: 1;
+}
+
+.ds-carousel__content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: var(--ds-space-lg);
+  max-width: min(36rem, 52%);
+  padding: clamp(1.5rem, 3vw, 4rem);
+  color: var(--ds-color-text-inverse);
+}
+
+.ds-carousel__title {
+  margin: 0;
+  font-size: clamp(1.25rem, 2.2vw, 2rem);
+  font-weight: var(--ds-font-weight-semibold);
+  line-height: 1.25;
+}
+
+.ds-carousel__desc {
+  margin: 0;
+  font-size: clamp(0.875rem, 1.1vw, 1.125rem);
+  line-height: 1.65;
+  color: var(--ds-color-text-inverse-secondary);
+}
+
+.ds-carousel__cta {
+  margin-top: var(--ds-space-md);
+}
+
+.ds-carousel__arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  padding: 0;
+  border: var(--ds-border-width-default) solid var(--ds-color-border-strong);
+  border-radius: var(--ds-radius-round);
+  background: var(--ds-color-surface-default);
+  color: var(--ds-color-text-primary);
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.ds-carousel__arrow:hover {
+  background: var(--ds-color-surface-subtle);
+}
+
+.ds-carousel__arrow:active {
+  background: var(--ds-color-surface-muted);
+}
+
+.ds-carousel__arrow:focus-visible {
+  outline: var(--ds-border-width-strong) solid var(--ds-color-focus);
+  outline-offset: 0.125rem;
+}
+
+.ds-carousel__arrow--prev {
+  left: clamp(0.5rem, 2vw, 3rem);
+}
+
+.ds-carousel__arrow--next {
+  right: clamp(0.5rem, 2vw, 3rem);
+}
+
+.ds-carousel__sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* 窄屏下 16:7 的高度放不下文案，改为固定高度卡片 */
+@media (max-width: 36rem) {
+  .ds-carousel__card {
+    aspect-ratio: auto;
+    height: 16rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .ds-carousel__content {
+    max-width: 88%;
+  }
+}

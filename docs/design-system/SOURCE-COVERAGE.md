@@ -55,6 +55,7 @@ needed for the SOURCEGUARD website.
 ### Imagery and media
 
 Local Hero Video: Implemented; native fluid 16:9 video with visibility/reduced-motion playback. Spec: `components/hero-video.md`. No upstream media assets adopted.
+Local Centered Carousel: Implemented; Adobe-style centered slide carousel (reference only, not Red Hat). Spec: `components/centered-carousel.md`. Built with `embla-carousel-react`; no upstream component API adopted.
 
 | Element      | Local status        | Priority                                  |
 | ------------ | ------------------- | ----------------------------------------- |
