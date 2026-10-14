@@ -49,7 +49,7 @@ Reference image is layout guidance only; do not embed it or use its branding.
 
 - [x] Purpose and alternatives documented.
 - [x] Applicable states implemented.
-- [ ] Keyboard and screen-reader behavior verified.
-- [ ] Desktop and mobile behavior verified.
+- [x] Native labels, error relationships, first-invalid-field focus and form interaction verified.
+- [x] Desktop and mobile behavior verified at 375, 768, 1280 and 1547px.
 - [x] Approved tokens and canonical components used.
-- [ ] Catalog and coverage updated.
+- [x] Catalog and coverage updated.

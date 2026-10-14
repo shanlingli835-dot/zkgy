@@ -13,7 +13,12 @@ import { HomeHero } from "@/components/site/home/HomeHero";
 export const Route = createFileRoute("/home-react-preview")({
   head: () => ({
     meta: [
-      { title: "首页迁移预览 · Stage A Hero" },
+      { title: "首页预览 | 中科固源 SOURCEGUARD" },
+      { name: "description", content: "中科固源 SOURCEGUARD 首页独立预览。" },
+      { property: "og:title", content: "首页预览 | 中科固源 SOURCEGUARD" },
+      { property: "og:description", content: "中科固源 SOURCEGUARD 安全产品首页预览。" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
       { name: "robots", content: "noindex" },
     ],
   }),
