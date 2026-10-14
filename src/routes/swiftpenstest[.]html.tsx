@@ -4,6 +4,8 @@ import {
   ShieldAlert,
   Workflow,
   FileBarChart2,
+  Swords,
+  Network,
   Crosshair,
   BellRing,
   Coins,
@@ -14,6 +16,8 @@ import swiftPentestTopology from "@/assets/swift-pentest-topology.png";
 import swiftPentestAttackChain from "@/assets/swift-pentest-attack-chain.png";
 import swiftPentestAttackConfig from "@/assets/swift-pentest-attack-config.png";
 import swiftPentestKnowledgeAdd from "@/assets/swift-pentest-knowledge-add.png";
+import swiftPentestExploitExec from "@/assets/swift-pentest-exploit-exec.png";
+import swiftPentestDistributedNodes from "@/assets/swift-pentest-distributed-nodes.png";
 import swiftPentestHeroVideo from "@/assets/swift-pentest-hero-intro.mp4.asset.json";
 import { AdvantageTriad } from "@/components/site/AdvantageTriad";
 import { HomeAccordion } from "@/components/site/HomeAccordion";
@@ -104,6 +108,24 @@ function SwiftPenPage() {
             image: {
               src: swiftPentestKnowledgeAdd,
               alt: "创建知识弹窗界面：深蓝科技风格对话框标题为「创建知识」，表单自上而下依次为站点（必填）、标题、操作系统（已填写 centos）、CMS、中间件、编程语言、开发框架、是否为 CDN 开关与 WAF（显示「无」），右下角为「创建」按钮",
+            },
+          },
+          {
+            icon: <Swords size={56} strokeWidth={1.25} aria-hidden />,
+            title: "漏洞利用",
+            desc: "系统内的漏洞利用模型可调用海量的漏洞利用组件，对系统内已验证的漏洞点进行攻击利用，从而以黑客视角展示渗透攻击成功后可能带来的业务影响。",
+            image: {
+              src: swiftPentestExploitExec,
+              alt: "创建攻击任务界面：左侧导航为攻击任务、漏洞利用组件、目标管理、攻击记录与报告中心；中部四步流程下可选本地攻击与横向攻击两种方式，下方漏洞利用组件表列出 SMB 远程代码执行、Tomcat 管理后台弱口令、MySQL UDF 提权、Redis 未授权命令执行、SSH 弱口令爆破等组件及其类型、适用场景与 CVE 编号；右侧为攻击目标列表与攻击路径预览",
+            },
+          },
+          {
+            icon: <Network size={56} strokeWidth={1.25} aria-hidden />,
+            title: "分布式：多节点",
+            desc: "智能自动化渗透测试平台采用服务端与多节点分布式架构，支持快速部署和灵活扩容，提升扫描效率与系统性能。",
+            image: {
+              src: swiftPentestDistributedNodes,
+              alt: "分布式多节点架构示意图：VPC 1、VPC 2、VPC 3 三个虚拟私有云面板内各含一个 Agent 节点与两个 Server 节点，VPC 1 的 Agent 沿两条链路分别连向 VPC 2 与 VPC 3 的 Agent",
             },
           },
         ]}
