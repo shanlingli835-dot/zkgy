@@ -11,6 +11,7 @@ import {
 
 import swiftPentestAttackSurface from "@/assets/swift-pentest-attack-surface.png";
 import swiftPentestAttackPath from "@/assets/swift-pentest-attack-path.jpg";
+import swiftPentestHeroVideo from "@/assets/swift-pentest-hero-intro.mp4.asset.json";
 import { AdvantageTriad } from "@/components/site/AdvantageTriad";
 import { HomeAccordion } from "@/components/site/HomeAccordion";
 import {
@@ -53,13 +54,10 @@ function SwiftPenPage() {
         description="结合AI与渗透攻防技术，自动化探析攻击链，优先定位高风险漏洞，化被动防御为主动应对。"
         primaryCta={{ label: "免费试用", href: CTA_HREF }}
         visual={
-          <img
-            src={swiftPentestAttackSurface}
-            alt="攻击面识别流程示意：资产发现（IP / Domain）、服务识别（Port / Service）、Web 入口（URL / API）经自动扫描与关联分析汇入攻击面识别引擎，输出访问入口、开放端口与暴露风险三类攻击面识别结果"
-            width={1102}
-            height={804}
-            className="h-full w-full rounded-[var(--ds-radius-surface)] object-cover"
-            fetchPriority="high"
+          <HeroVideo
+            label="Swift Pentest 自动化渗透测试产品演示"
+            src={swiftPentestHeroVideo.url}
+            poster={swiftPentestAttackSurface}
           />
         }
       />

@@ -222,7 +222,7 @@ import logoHorizontalReverse from '@/assets/brand/logos/zkgy-logo-horizontal-rev
 
 ## Swift Pentest 首屏配图
 
-- 文件：`src/assets/swift-pentest-attack-surface.png`（1102 × 804，宽高比 1.3706 与首屏配图框 600 / 437.5 一致），仅用于 `/swiftpenstest.html` 首屏右侧配图框。
+- 文件：`src/assets/swift-pentest-attack-surface.png`（1102 × 804，宽高比 1.3706 与首屏配图框 600 / 437.5 一致），现用作 `/swiftpenstest.html` 首屏视频的封面帧（`HeroVideo` 的 `poster`）。
 - 用户上传的「ATTACK SURFACE DISCOVERY」攻击面识别流程示意（1102 × 642，宽高比 1.7165）：画面已顶满画布、四周为均匀暗背景，无法靠裁切凑出配图框比例（左右裁切会切掉最外侧的「资产发现」与「Web 入口」两个输入框）；按「产品截图裁切铺满规则」的补边分支，在上下各延展 81 行边缘中位暗色 `#11111C`，使宽高比与配图框一致，`object-fit: cover` 不再切掉任何元素。
 - 画面内容全部保留：顶部「资产发现 IP / Domain」「服务识别 Port / Service」「Web 入口 URL / API」三个输入框、「自动扫描与关联分析」连接层、「攻击面识别引擎（资产关联 · 服务指纹 · 入口发现）」处理层，以及底部「攻击面识别结果」的访问入口 / 开放端口 / 暴露风险三列。
 - 延展区为原图同色暗背景，上下无接缝、无白边；首屏底色 `#151515` 与示意暗背景过渡自然。
