@@ -162,6 +162,7 @@
   /* Layout */
   --ds-container-page: 80rem;
   --ds-container-reading: 45rem;
+  --ds-size-video-max: 120rem;
   --ds-container-summary: 20rem;
   --ds-size-header: 4.5rem;
   --ds-size-control-min: 2.75rem;

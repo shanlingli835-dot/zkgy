@@ -54,6 +54,8 @@ needed for the SOURCEGUARD website.
 
 ### Imagery and media
 
+Local Hero Video: Implemented; native fluid 16:9 video with visibility/reduced-motion playback. Spec: `components/hero-video.md`. No upstream media assets adopted.
+
 | Element      | Local status        | Priority                                  |
 | ------------ | ------------------- | ----------------------------------------- |
 | Avatar       | Existing unreviewed | As needed                                 |
