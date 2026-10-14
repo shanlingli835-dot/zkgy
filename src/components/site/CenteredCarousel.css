@@ -33,6 +33,31 @@
   }
 }
 
+.ds-carousel__heading {
+  max-width: var(--ds-container-page);
+  margin: 0 auto;
+  margin-bottom: var(--ds-space-3xl);
+  padding-inline: var(--ds-gutter-mobile);
+  color: var(--ds-color-text-primary);
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  font-weight: var(--ds-font-weight-semibold);
+  line-height: 1.3;
+  text-align: center;
+}
+
+@media (min-width: 48rem) {
+  .ds-carousel__heading {
+    padding-inline: var(--ds-gutter-tablet);
+  }
+}
+
+@media (min-width: 64rem) {
+  .ds-carousel__heading {
+    padding-inline: var(--ds-gutter-desktop);
+    margin-bottom: var(--ds-space-4xl);
+  }
+}
+
 .ds-carousel__viewport {
   overflow: hidden;
   width: 100%;
