@@ -13,6 +13,7 @@ import swiftPentestAttackSurface from "@/assets/swift-pentest-attack-surface.png
 import swiftPentestTopology from "@/assets/swift-pentest-topology.png";
 import swiftPentestAttackChain from "@/assets/swift-pentest-attack-chain.png";
 import swiftPentestAttackConfig from "@/assets/swift-pentest-attack-config.png";
+import swiftPentestKnowledgeAdd from "@/assets/swift-pentest-knowledge-add.png";
 import swiftPentestHeroVideo from "@/assets/swift-pentest-hero-intro.mp4.asset.json";
 import { AdvantageTriad } from "@/components/site/AdvantageTriad";
 import { HomeAccordion } from "@/components/site/HomeAccordion";
@@ -98,8 +99,12 @@ function SwiftPenPage() {
           },
           {
             icon: <FileBarChart2 size={56} strokeWidth={1.25} aria-hidden />,
-            title: "风险报告生成",
-            desc: "通过攻击链图的方式直观呈现渗透攻击路径。",
+            title: "知识项添加",
+            desc: "在任务执行过程中，智能自动化攻击验证平台支持为用户在原有目标的基础上，扩充检测知识项。可添加的知识项包括：目标、主机和网站类漏洞、端口攻击面、URL攻击面、站点攻击面以及凭证等知识项。",
+            image: {
+              src: swiftPentestKnowledgeAdd,
+              alt: "创建知识弹窗界面：深蓝科技风格对话框标题为「创建知识」，表单自上而下依次为站点（必填）、标题、操作系统（已填写 centos）、CMS、中间件、编程语言、开发框架、是否为 CDN 开关与 WAF（显示「无」），右下角为「创建」按钮",
+            },
           },
         ]}
       />
