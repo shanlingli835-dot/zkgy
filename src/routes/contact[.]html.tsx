@@ -4,10 +4,10 @@ import { TrialRequestPage } from "@/components/site/TrialRequestPage";
 export const Route = createFileRoute("/contact.html")({
   head: () => ({
     meta: [
-      { title: "免费试用申请 | 中科固源 SOURCEGUARD" },
-      { name: "description", content: "申请试用中科固源 SOURCEGUARD 安全产品，选择感兴趣的产品并填写联系信息与需求。" },
-      { property: "og:title", content: "免费试用申请 | 中科固源 SOURCEGUARD" },
-      { property: "og:description", content: "选择感兴趣的安全产品，填写联系信息与试用需求。" },
+      { title: "预约产品演示 | 中科固源 SOURCEGUARD" },
+      { name: "description", content: "预约中科固源 SOURCEGUARD 产品演示：了解核心产品能力、自动化安全测试流程与风险分析报告，填写企业邮箱与联系电话，我们将与您联系。" },
+      { property: "og:title", content: "预约产品演示 | 中科固源 SOURCEGUARD" },
+      { property: "og:description", content: "预约产品演示，了解中科固源安全产品能力与自动化安全测试流程。" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
