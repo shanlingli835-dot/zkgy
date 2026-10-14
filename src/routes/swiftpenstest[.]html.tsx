@@ -12,6 +12,7 @@ import {
 import swiftPentestAttackSurface from "@/assets/swift-pentest-attack-surface.png";
 import swiftPentestTopology from "@/assets/swift-pentest-topology.png";
 import swiftPentestAttackPath from "@/assets/swift-pentest-attack-path.jpg";
+import swiftPentestAttackChain from "@/assets/swift-pentest-attack-chain.png";
 import swiftPentestHeroVideo from "@/assets/swift-pentest-hero-intro.mp4.asset.json";
 import { AdvantageTriad } from "@/components/site/AdvantageTriad";
 import { HomeAccordion } from "@/components/site/HomeAccordion";
@@ -79,8 +80,12 @@ function SwiftPenPage() {
           },
           {
             icon: <ShieldAlert size={56} strokeWidth={1.25} aria-hidden />,
-            title: "漏洞扫描与验证",
-            desc: "支持对多种漏洞进行检测，包括系统漏洞、Web应用漏洞等，并对扫描出的漏洞进行验证。",
+            title: "攻击链路",
+            desc: "从多个视角对目标系统风险进行主动探测、分析，形成多维度分析视图和攻击链路图等，能够展示具体的风险或漏洞从目标发现到攻击成功的完整链路，为业务人员呈现可能的黑客攻击路径。",
+            image: {
+              src: swiftPentestAttackChain,
+              alt: "攻击链路图界面：顶部统计栏显示风险评分、存活目标、未存活目标、扩展目标、攻击面、攻击路径与攻击成果数量，主体从 VulnBot 扫描节点沿连线指向目标主机，再按端口与网络服务分出多条链路，红色节点标注 Docker Registry 未授权访问、Spring Cloud Config 路径穿越、Drupal 核心代码执行、Spring Boot 未授权访问、vsftpd 后门等漏洞",
+            },
           },
           {
             icon: <Workflow size={56} strokeWidth={1.25} aria-hidden />,

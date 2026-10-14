@@ -268,6 +268,13 @@ import logoHorizontalReverse from '@/assets/brand/logos/zkgy-logo-horizontal-rev
 - 通过 `HomeAccordionItem.image` 接入，配图框尺寸、圆角、主题边框、自动切换与暂停行为均不变；alt 为中文描述。
 - 该 Tab 原配图 `src/assets/swift-pentest-attack-graph.jpg` 已不再被引用，文件暂留仓库。
 
+## Swift Pentest「产品功能」攻击链路面板截图
+
+- 文件：`src/assets/swift-pentest-attack-chain.png`（1646 × 1016，宽高比 1.6201 与配图框 1.62 一致，仅用于 `/swiftpenstest.html`「产品功能」第二个 Tab「攻击链路」的右侧配图框）。
+- 用户上传的真实产品界面截图（攻击链路图页，1646 × 708，宽高比 2.324）：顶部统计栏横向铺满整幅画布，右侧为均匀暗色画布留白（约 45%），既无法横向裁切（会切掉最右侧统计项与画布缩放控件）、也无法纵向裁切凑出配图框比例；按「产品截图裁切铺满规则」的补边分支，在底部延展 308 行画布同色底（逐行噪声 + 接缝 8 行羽化），使宽高比与配图框一致，`object-fit: cover` 不切掉任何元素。
+- 画面内容全部保留：顶部「风险评分 0」与「统计」栏（存活目标 195、未存活目标 829、扩展目标 0、攻击面 46186、攻击路径 2278、攻击成果 559）、右上角缩放与「返回」控件，以及主体链路图——从 VulnBot 扫描节点沿连线指向目标主机 `192.168.2.140`，再按端口与网络服务（5000、8888、8084、21 等）分出多条链路，红色节点标注 Docker Registry 未授权访问、Spring Cloud Config 路径穿越（CVE-2019-3799 / CVE-2020-5410）、Drupal 核心代码执行（CVE-2018-7600）、Spring Boot 未授权访问、vsftpd 2.3.4 后门等漏洞。
+- 延展区与原画布同色、无接缝、无白边；通过 `HomeAccordionItem.image` 接入，配图框尺寸、圆角、主题边框、自动切换与暂停行为均不变；alt 为中文描述。
+
 ## Swift Pentest 首屏视频
 
 - 文件：`src/assets/swift-pentest-hero-intro.mp4.asset.json`（CDN 指针，73.7 秒 H.264 + AAC，1920 × 1080，25fps，约 9.4MB，仅用于 `/swiftpenstest.html` 首屏右侧配图框）。
