@@ -1,5 +1,8 @@
 # Roadmap
 
+- [x] /contact.html según el borrador del usuario (截屏2026-10-14_17.52.51): izquierda “预约产品演示” con eyebrow PRODUCT DEMO, frase introductoria, lista “在演示中，你将了解” con 4 ítems y tilde verde, nota final; derecha “获取专属产品演示” con 5 campos (sin textarea) y botón primario “提交申请” + nota de privacidad; validación, foco al primer error y estado no-entrega intactos; 1280/375 px sin scroll horizontal, build OK
+
+
 - [x] 首页集成模块替换为 GitLab、Jenkins、Ansible、Jira、禅道官方 Logo，交错重复填满现有 16 个位置；1547/1280/375px 图片完整加载、无横向滚动，免费试用跳转通过，保留文案、CTA、布局
 
 - [x] /contact.html 按新参考图调整浅灰页面、居中 Logo、左侧产品界面图、右侧白色轻阴影单列表单；保留六项字段及提交状态，桌面手机验证通过
