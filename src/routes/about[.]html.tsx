@@ -194,6 +194,7 @@ export const Route = createFileRoute("/about.html")({
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "/about.html" },
+      { name: "twitter:card", content: "summary" },
     ],
     links: [{ rel: "canonical", href: "/about.html" }],
   }),

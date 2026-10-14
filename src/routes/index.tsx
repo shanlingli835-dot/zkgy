@@ -28,6 +28,8 @@ export const Route = createFileRoute("/")({
           "面向网联汽车、工业控制与特种领域，提供模糊测试、代码审计、供应链分析与 AI 安全检测能力。",
       },
       { property: "og:title", content: "中科固源 | SOURCEGUARD" },
+      { property: "og:description", content: "面向网联汽车、工业控制与特种领域，提供模糊测试、代码审计、供应链分析与 AI 安全检测能力。" },
+      { name: "twitter:card", content: "summary" },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "/" },
     ],

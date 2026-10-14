@@ -51,6 +51,7 @@ export const Route = createFileRoute("/solution-special.html")({
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "/solution-special.html" },
+      { name: "twitter:card", content: "summary" },
     ],
     links: [{ rel: "canonical", href: "/solution-special.html" }],
   }),

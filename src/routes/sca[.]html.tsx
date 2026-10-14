@@ -48,6 +48,7 @@ export const Route = createFileRoute("/sca.html")({
       { property: "og:description", content: SEO_DESCRIPTION },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "/sca.html" },
+      { name: "twitter:card", content: "summary" },
     ],
     links: [{ rel: "canonical", href: "/sca.html" }],
   }),
