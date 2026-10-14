@@ -1,5 +1,7 @@
 # Roadmap
 
+- [x] swiftpenstest.html 三个行业案例轮播上方增加可见模块标题「典型案例」，同步轮播规范与无障碍语义，验证桌面与手机
+
 - [x] swiftpenstest.html 删除「DevSecOps集成」模块（含居中免费试用按钮），清理未使用导入，验证桌面与手机
 
 - [x] Swift Pentest 轮播替换为三个指定行业案例，删除卡片红色按钮，接入真实摄影并验证桌面与手机
