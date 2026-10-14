@@ -11,7 +11,6 @@ import {
 
 import swiftPentestAttackSurface from "@/assets/swift-pentest-attack-surface.png";
 import swiftPentestTopology from "@/assets/swift-pentest-topology.png";
-import swiftPentestAttackPath from "@/assets/swift-pentest-attack-path.jpg";
 import swiftPentestAttackChain from "@/assets/swift-pentest-attack-chain.png";
 import swiftPentestAttackConfig from "@/assets/swift-pentest-attack-config.png";
 import swiftPentestHeroVideo from "@/assets/swift-pentest-hero-intro.mp4.asset.json";
