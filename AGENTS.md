@@ -13,7 +13,9 @@
 
 # Project Instructions
 
-This project is a source-faithful UI rebuild for the official 中科固源 / SOURCEGUARD website.
+Source-faithful rebuild of the official 中科固源 / SOURCEGUARD website.
+
+- Shared HeroVideo owns fluid sizing and visibility/motion-aware playback to preserve other media layouts.
 
 Before implementing anything, follow:
 
@@ -42,9 +44,7 @@ meaning while normalizing the visible brand to `中科固源 / SOURCEGUARD`.
 ## Design System Instructions
 
 `docs/design-system/` is the single routing source for UI design and implementation.
-Red Hat Design System is the approved upstream source for the complete original color
-Token snapshot plus component hierarchy, behavior, content guidance, responsive rules,
-and accessibility. It is not the public site brand.
+Red Hat supplies the full color snapshot, component hierarchy, behavior, content, responsive and accessibility guidance; never the public brand.
 
 ## Current Homepage Migration Source
 
