@@ -28,9 +28,7 @@ import { HomeAccordion } from "@/components/site/HomeAccordion";
 import {
   CTA_HREF,
   HeroVideo,
-  PrimaryCta,
   ProductHero,
-  Section,
   SitePageShell,
 } from "@/components/site/ProductPageKit";
 
@@ -179,12 +177,6 @@ function SwiftPenPage() {
           },
         ]}
       />
-
-      <Section title="DevSecOps集成">
-        <div style={{ display: "flex", justifyContent: "center" }}>
-          <PrimaryCta href={CTA_HREF}>免费试用</PrimaryCta>
-        </div>
-      </Section>
     </SitePageShell>
   );
 }
