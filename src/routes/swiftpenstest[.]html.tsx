@@ -13,6 +13,7 @@ import swiftPentestAttackSurface from "@/assets/swift-pentest-attack-surface.png
 import swiftPentestTopology from "@/assets/swift-pentest-topology.png";
 import swiftPentestAttackPath from "@/assets/swift-pentest-attack-path.jpg";
 import swiftPentestAttackChain from "@/assets/swift-pentest-attack-chain.png";
+import swiftPentestAttackConfig from "@/assets/swift-pentest-attack-config.png";
 import swiftPentestHeroVideo from "@/assets/swift-pentest-hero-intro.mp4.asset.json";
 import { AdvantageTriad } from "@/components/site/AdvantageTriad";
 import { HomeAccordion } from "@/components/site/HomeAccordion";
@@ -89,11 +90,11 @@ function SwiftPenPage() {
           },
           {
             icon: <Workflow size={56} strokeWidth={1.25} aria-hidden />,
-            title: "智能化渗透测试",
-            desc: "自主分析并探索可能的攻击路径，自动进行多轮攻击尝试与横向渗透。",
+            title: "攻击配置",
+            desc: "在任务创建过程中，智能自动化攻击验证平台提供有危害模块的控制功能，来预防系统运行特殊攻击利用组件时，对用户的网络环境可能造成的服务不可用、服务重启、系统不可用、系统重启等潜在影响。",
             image: {
-              src: swiftPentestAttackPath,
-              alt: "智能化渗透测试的攻击路径关系图界面：顶部统计栏显示风险评分、存活目标、攻击面、攻击路径与攻击成果数量，主体从攻击者节点沿连线串联多台内网主机与服务器，红色节点标注 SQL 注入漏洞、SMB 弱口令攻击、RDP 暴力破解等攻击成果",
+              src: swiftPentestAttackConfig,
+              alt: "攻击配置界面：左侧为渗透测试说明与目标配置、情报搜集、攻击配置、插件配置四步流程，当前停在攻击配置；右侧依次是攻击策略开关（模糊匹配、漏洞利用、控制解除、横向移动）、账户配置的用户名与密码填写表、密码爆破弱口令勾选项（FTP、SQL Server、MySQL、postgresql、Redis、SMB、SSH、Telnet、SNMP、SMTP 服务弱口令）、可能造成危害的检测（Spring Framework 远程代码执行 CVE-2022-22965）与可能造成危害的利用（SMB 远程溢出永恒之蓝 MS17-010、Windows 远程桌面服务远程代码执行 CVE-2019-0708、Windows 域服务权限提升漏洞 CVE-2021-42287 与 CVE-2021-42278、SaltStack 任意文件写入 CVE-2021-25281），底部为后渗透攻击方式",
             },
           },
           {
