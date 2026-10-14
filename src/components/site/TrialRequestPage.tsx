@@ -4,6 +4,7 @@ import { BrandLogo } from "@/components/site/BrandLogo";
 import { Button } from "@/components/ui/button";
 import { TrialField } from "@/components/ui/trial-field";
 import { primaryNav } from "@/content/navigation";
+import wisdomDashboard from "@/assets/wisdom-dashboard.png.asset.json";
 
 const productOptions = (primaryNav.find(group => group.id === "products")?.children ?? []).map(product => ({ label: product.label, value: product.label }));
 const copyPlaceholders = ["产品能力介绍文案", "安全检测价值说明文案", "适用业务场景说明文案", "试用与服务支持说明文案"];
@@ -43,6 +44,7 @@ export function TrialRequestPage() {
         <section className="ds-trial-copy" aria-labelledby="trial-title">
           <h1 id="trial-title">免费试用<span>中科固源安全产品</span></h1>
           <ul>{copyPlaceholders.map((text, index) => <li key={text}><span aria-hidden="true">0{index + 1}</span>{text}</li>)}</ul>
+          <div className="ds-trial-product"><img src={wisdomDashboard.url} alt="Wisdom 模糊测试产品界面" /></div>
         </section>
         <form className="ds-trial-form" noValidate onSubmit={handleSubmit} aria-labelledby="trial-form-title" onChange={() => { setErrors({}); setStatus(""); }}>
           <h2 id="trial-form-title">申请免费试用</h2>

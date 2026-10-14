@@ -19,7 +19,7 @@ Provide the explicitly requested trial application page at the existing `/contac
 
 ## Anatomy and variants
 
-Logo-only header, left large heading with four user-requested copy placeholders, right unframed pale-gray form region. The form uses the canonical TrialField primitive and Button with the existing tertiary variant. Fields: name, phone, email, organization, product select, message textarea. Product choices come from the existing product navigation.
+Logo-only centered white header, pale-gray page, left large heading with four user-requested copy placeholders and an existing SOURCEGUARD product screenshot, right white framed form with a subtle semantic shadow matching the updated user reference. All six fields stack in one column; the heading and submit action are centered. The form uses canonical TrialField and Button with the existing tertiary variant. Fields: name, phone, email, organization, product select, message textarea. Product choices come from the existing product navigation. No reference brand, dark header, purple arrow or unsupported customer quote is copied.
 
 ## Behavior and states
 
