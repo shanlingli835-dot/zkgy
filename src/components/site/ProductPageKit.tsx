@@ -310,7 +310,15 @@ export function Section({
 export const HERO_VIDEO_SRC =
   "https://www.getharvest.com/hubfs/Imported_Blog_Media/Harvest_HeroVideo_1700x1080_20s_Webm_EN.webm";
 
-export function HeroVideo({ label, src }: { label: string; src?: string }) {
+export function HeroVideo({
+  label,
+  src,
+  poster = "/source-site/assets/secops-dashboard-placeholder.svg",
+}: {
+  label: string;
+  src?: string;
+  poster?: string;
+}) {
   return (
     <video
       autoPlay
@@ -319,7 +327,7 @@ export function HeroVideo({ label, src }: { label: string; src?: string }) {
       playsInline
       preload="metadata"
       aria-label={label}
-      poster="/source-site/assets/secops-dashboard-placeholder.svg"
+      poster={poster}
       style={{
         width: "100%",
         height: "100%",

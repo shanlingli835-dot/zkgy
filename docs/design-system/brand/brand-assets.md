@@ -222,7 +222,7 @@ import logoHorizontalReverse from '@/assets/brand/logos/zkgy-logo-horizontal-rev
 
 ## Swift Pentest 首屏配图
 
-- 文件：`src/assets/swift-pentest-attack-surface.png`（1102 × 804，宽高比 1.3706 与首屏配图框 600 / 437.5 一致），仅用于 `/swiftpenstest.html` 首屏右侧配图框。
+- 文件：`src/assets/swift-pentest-attack-surface.png`（1102 × 804，宽高比 1.3706 与首屏配图框 600 / 437.5 一致），现用作 `/swiftpenstest.html` 首屏视频的封面帧（`HeroVideo` 的 `poster`）。
 - 用户上传的「ATTACK SURFACE DISCOVERY」攻击面识别流程示意（1102 × 642，宽高比 1.7165）：画面已顶满画布、四周为均匀暗背景，无法靠裁切凑出配图框比例（左右裁切会切掉最外侧的「资产发现」与「Web 入口」两个输入框）；按「产品截图裁切铺满规则」的补边分支，在上下各延展 81 行边缘中位暗色 `#11111C`，使宽高比与配图框一致，`object-fit: cover` 不再切掉任何元素。
 - 画面内容全部保留：顶部「资产发现 IP / Domain」「服务识别 Port / Service」「Web 入口 URL / API」三个输入框、「自动扫描与关联分析」连接层、「攻击面识别引擎（资产关联 · 服务指纹 · 入口发现）」处理层，以及底部「攻击面识别结果」的访问入口 / 开放端口 / 暴露风险三列。
 - 延展区为原图同色暗背景，上下无接缝、无白边；首屏底色 `#151515` 与示意暗背景过渡自然。
@@ -259,3 +259,9 @@ import logoHorizontalReverse from '@/assets/brand/logos/zkgy-logo-horizontal-rev
 - 用户上传的真实产品界面截图（攻击路径关系图页）原尺寸 1254 × 1254，画面已顶满画布、四周为均匀深色底（约 `#141F2A` 一带，边缘逐列标准差 < 1.2），无法靠裁切凑出配图框比例（上下裁切会切掉顶部统计栏与底部路径节点）；按「产品截图裁切铺满规则」的补边分支，在左右各延展 388 / 389 列边缘像素列（逐列外推保留纵向渐变与噪声），使宽高比与配图框 1.62 一致，`object-fit: cover` 不再额外切掉内容。
 - 画面内容全部保留：顶部统计栏（风险评分 0、存活目标 195、未存活目标 829、扩展目标、攻击面 46186、攻击路径 2278、攻击成果 559）与「攻击路径关系图」面板——从攻击者节点沿蓝色连线串联 192.168.1.10、172.16.10.20、WIN-DC01、MAIL-SRV、APP-SRV、DB-SRV 等资产，红色节点标注 SQL 注入漏洞、SMB 弱口令攻击、RDP 暴力破解（CVE-2019-0708）、WebShell 上传（CVE-2021-41773）、命令执行（CVE-2021-44228）、权限提升（CVE-2022-26809）、应用漏洞利用、内网横向移动、数据库弱口令（CVE-2019-19781）、数据窃取与持久化等攻击成果。
 - 延展区为原图同色深底，左右无接缝、无白边；通过 `HomeAccordionItem.image` 接入，配图框尺寸、圆角、主题边框、自动切换与暂停行为均不变；alt 为中文描述；本 Tab 其余三项仍为中性图标占位。
+
+## Swift Pentest 首屏视频
+
+- 文件：`src/assets/swift-pentest-hero-intro.mp4.asset.json`（CDN 指针，73.7 秒 H.264 + AAC，1920 × 1080，25fps，约 9.4MB，仅用于 `/swiftpenstest.html` 首屏右侧配图框）。
+- 用户上传的「Swift Pentest 产品介绍视频（快速版）」，通过 `HeroVideo` 以 `autoPlay muted loop playsInline preload="metadata"` 接入；原占位演示视频（`HERO_VIDEO_SRC` 外链）不再引用。
+- `HeroVideo` 新增可选 `poster` 参数；封面帧为原有的 `swift-pentest-attack-surface.png` 攻击面识别流程示意，加载时先显示封面帧再自动播放，配图框尺寸、圆角、边框与背景均不变。
