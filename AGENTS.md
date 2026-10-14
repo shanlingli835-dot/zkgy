@@ -15,7 +15,8 @@
 
 Source-faithful rebuild of the official 中科固源 / SOURCEGUARD website.
 
-- Shared HeroVideo owns fluid sizing and visibility/motion-aware playback to preserve other media layouts.
+- HeroVideo owns fluid sizing and motion-aware playback.
+- `/contact.html` uses TrialRequestPage and canonical TrialField; keep CTA URLs and never fake submission delivery.
 
 Before implementing anything, follow:
 
@@ -44,7 +45,7 @@ meaning while normalizing the visible brand to `中科固源 / SOURCEGUARD`.
 ## Design System Instructions
 
 `docs/design-system/` is the single routing source for UI design and implementation.
-Red Hat supplies the full color snapshot, component hierarchy, behavior, content, responsive and accessibility guidance; never the public brand.
+Red Hat supplies color and UI guidance, never public branding.
 
 ## Current Homepage Migration Source
 

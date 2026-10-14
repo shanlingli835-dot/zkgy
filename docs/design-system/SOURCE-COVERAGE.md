@@ -5,6 +5,8 @@ implementation APIs from being treated as local components.
 
 ## Source snapshot
 
+- Local Trial Request / TrialField: Implemented; spec `components/trial-request.md`; native form from user reference, no upstream assets adopted.
+
 - Upstream website version：Red Hat Design System `v4.2.0`
 - Official elements：<https://ux.redhat.com/elements/>
 - Official repository：<https://github.com/RedHat-UX/red-hat-design-system>
