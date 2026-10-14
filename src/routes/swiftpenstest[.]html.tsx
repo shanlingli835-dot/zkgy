@@ -10,7 +10,7 @@ import {
 } from "lucide-react";
 
 import swiftPentestAttackSurface from "@/assets/swift-pentest-attack-surface.png";
-import swiftPentestAttackGraph from "@/assets/swift-pentest-attack-graph.jpg";
+import swiftPentestTopology from "@/assets/swift-pentest-topology.png";
 import swiftPentestAttackPath from "@/assets/swift-pentest-attack-path.jpg";
 import swiftPentestHeroVideo from "@/assets/swift-pentest-hero-intro.mp4.asset.json";
 import { AdvantageTriad } from "@/components/site/AdvantageTriad";
