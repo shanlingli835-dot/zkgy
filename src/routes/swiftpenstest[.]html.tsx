@@ -10,6 +10,7 @@ import {
 } from "lucide-react";
 
 import swiftPentestAttackSurface from "@/assets/swift-pentest-attack-surface.png";
+import swiftPentestAttackGraph from "@/assets/swift-pentest-attack-graph.jpg";
 import swiftPentestAttackPath from "@/assets/swift-pentest-attack-path.jpg";
 import swiftPentestHeroVideo from "@/assets/swift-pentest-hero-intro.mp4.asset.json";
 import { AdvantageTriad } from "@/components/site/AdvantageTriad";
@@ -71,6 +72,10 @@ function SwiftPenPage() {
             icon: <Radar size={56} strokeWidth={1.25} aria-hidden />,
             title: "攻击面识别",
             desc: "支持自动挖掘各种攻击面信息，包括端口服务、WEB指纹、URL、后台登录入口、文件上传入口等。",
+            image: {
+              src: swiftPentestAttackGraph,
+              alt: "攻击路径关系图界面：顶部统计栏显示风险评分、存活目标、未存活目标、扩展目标、攻击面、攻击路径与攻击成果数量，主体从攻击者节点沿连线串联多台内网主机与服务器，红色节点标注 SQL 注入漏洞、SMB 弱口令攻击、RDP 暴力破解等攻击成果",
+            },
           },
           {
             icon: <ShieldAlert size={56} strokeWidth={1.25} aria-hidden />,
