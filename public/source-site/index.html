@@ -9381,6 +9381,15 @@ main > :not(.jasper-hero-shell):not(.solution-cta-bar) :where(h1, h2, h3, h4, h5
         .floating-icons-hero__subtitle { font-size: 15px; }
         .floating-icons-hero__icon { width: 44px; height: 44px; }
         .floating-icons-hero__icon img { width: 24px; height: 24px; }
+        .floating-icons-hero__icon { top: auto !important; right: auto !important; bottom: auto !important; }
+        .floating-icons-hero__icon:nth-child(4n + 1) { left: 8% !important; }
+        .floating-icons-hero__icon:nth-child(4n + 2) { left: 30% !important; }
+        .floating-icons-hero__icon:nth-child(4n + 3) { left: 55% !important; }
+        .floating-icons-hero__icon:nth-child(4n) { left: 75% !important; }
+        .floating-icons-hero__icon:nth-child(-n + 4) { top: 5% !important; }
+        .floating-icons-hero__icon:nth-child(n + 5):nth-child(-n + 8) { top: 15% !important; }
+        .floating-icons-hero__icon:nth-child(n + 9):nth-child(-n + 12) { top: 80% !important; }
+        .floating-icons-hero__icon:nth-child(n + 13) { top: 90% !important; }
       }
     </style>
     <script>
