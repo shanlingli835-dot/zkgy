@@ -10,6 +10,7 @@ import {
 } from "lucide-react";
 
 import swiftPentestAttackSurface from "@/assets/swift-pentest-attack-surface.png";
+import swiftPentestAttackPath from "@/assets/swift-pentest-attack-path.jpg";
 import { AdvantageTriad } from "@/components/site/AdvantageTriad";
 import { HomeAccordion } from "@/components/site/HomeAccordion";
 import {
@@ -80,6 +81,10 @@ function SwiftPenPage() {
             icon: <Workflow size={56} strokeWidth={1.25} aria-hidden />,
             title: "智能化渗透测试",
             desc: "自主分析并探索可能的攻击路径，自动进行多轮攻击尝试与横向渗透。",
+            image: {
+              src: swiftPentestAttackPath,
+              alt: "智能化渗透测试的攻击路径关系图界面：顶部统计栏显示风险评分、存活目标、攻击面、攻击路径与攻击成果数量，主体从攻击者节点沿连线串联多台内网主机与服务器，红色节点标注 SQL 注入漏洞、SMB 弱口令攻击、RDP 暴力破解等攻击成果",
+            },
           },
           {
             icon: <FileBarChart2 size={56} strokeWidth={1.25} aria-hidden />,
