@@ -19,6 +19,7 @@
 ## Anatomy and variants
 
 - 区域根元素：全宽 section，垂直方向使用 section 间距，水平不加内边距。
+- 模块标题（可选 `title`）：卡片上方居中的 h2，最大宽度 `--ds-container-page`，字号 `clamp(1.5rem, 3vw, 2.25rem)`、`--ds-font-weight-semibold`，下间距 `--ds-space-3xl`（≥1024px 为 `--ds-space-4xl`），水平内边距走 `--ds-gutter-*`。
 - 视口（viewport）：`overflow: hidden`，宽度 100%。
 - 轨道（container）：flex 行排列，每个 slide 含一张卡片。
 - 卡片：16:7 统一宽高比，`border-radius: 0.75rem`（组件级 Token，超出 surface 8px 的既定例外），背景图为 `object-fit: cover` 的已批准摄影、插图或截图。Swift Pentest 行业案例只使用真实摄影。
@@ -44,13 +45,13 @@
 ## Content
 
 - 卡片承载完整行业案例标题与描述；图片必须有描述画面的中文 alt。桌面内容最大宽度为 `min(42rem, 62%)`。
-- Swift Pentest 行业案例为三张卡片，不设置 CTA；示意摄影不得暗示为客户项目现场。
+- Swift Pentest 行业案例为三张卡片，模块可见标题为「典型案例」，不设置 CTA；示意摄影不得暗示为客户项目现场。
 - CTA 遵循站内跳转目标规则（当前各页均为「免费试用」→ `/contact.html`）。
 - 公共文案不出现实现状态、占位说明等内部注释。
 
 ## Accessibility
 
-- 区域：`role="region"` + `aria-roledescription="轮播"`；另有一个不可见的 h2 提供模块语义。
+- 区域：`role="region"` + `aria-roledescription="轮播"`；提供 `title` 时可见 h2 即模块名称并作为区域可访问名称，否则有一个不可见的 h2 提供模块语义。
 - Slide：`role="group"`、`aria-roledescription="幻灯片"`、`aria-label="第 n 项，共 m 项"`。
 - 箭头：真实 button，含可见的 `aria-label="上一张/下一张"`，键盘可聚焦、Enter/Space 生效。
 - 状态播报：`role="status"` 的不可见段落播报「第 n 张，共 m 张」。
@@ -60,7 +61,7 @@
 ## Local implementation contract
 
 - Canonical path：`src/components/site/CenteredCarousel.tsx` + `src/components/site/CenteredCarousel.css`
-- Public API：`items: { id; image: {src, alt}; title; description; cta?: {label, href} }[]`、`label?: string`。
+- Public API：`items: { id; image: {src, alt}; title; description; cta?: {label, href} }[]`、`title?: string`、`label?: string`。
 - Tokens：颜色全部走 `--ds-color-*`；间距走 `--ds-space-*` / section 间距；组件级例外 Token：`--ds-carousel-radius: 0.75rem`、`--ds-carousel-gap: var(--ds-space-2xl)`、`--ds-carousel-slide-w`。
 - Dependencies：`embla-carousel-react`（已安装）；`lucide-react` 箭头图标；`buttonVariants` 提供 CTA。
 - Forbidden：`<rh-*>`、直接 `--rh-color-*`、Red Hat 资产、路由级重复实现。
