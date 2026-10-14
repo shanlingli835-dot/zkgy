@@ -2,6 +2,8 @@
 
 ## Local content compositions
 
+- Trial Request / TrialField: Implemented; spec `trial-request.md`; canonical `src/components/ui/trial-field.tsx` and `src/components/site/TrialRequestPage.tsx`; native form, logo-only light page, online submission not connected.
+
 - Hero Video: Implemented; spec `hero-video.md`; canonical `HeroVideo` in `src/components/site/ProductPageKit.tsx`.
 
 - Centered Carousel: Implemented; spec `centered-carousel.md`; canonical `src/components/site/CenteredCarousel.tsx` (+ `.css`), Embla-based centered slide carousel with arrows, drag and loop.
