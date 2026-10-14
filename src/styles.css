@@ -264,6 +264,20 @@
 
 
 /* Product hero responsive layout */
+.ds-hero-video {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  height: auto;
+  max-width: var(--ds-size-video-max);
+  aspect-ratio: 16 / 9;
+  margin-inline: auto;
+  object-fit: contain;
+  border-radius: var(--ds-radius-surface);
+  border: var(--ds-border-width-default) solid var(--ds-color-border-inverse);
+  background-color: var(--ds-color-surface-inverse);
+}
+
 @media (max-width: 1024px) {
   .ds-hero-grid {
     grid-template-columns: 1fr !important;

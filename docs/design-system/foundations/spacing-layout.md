@@ -60,6 +60,8 @@ Do not add route-level z-index values or reuse the navigation accent as general 
 
 ## Container and grid
 
+- Video maximum width: `1920px` through `--ds-size-video-max`; fluid within its parent, with a reserved 16:9 aspect ratio.
+
 - Page content maximum width：`1280px` through `--ds-container-page`.
 - Reading content maximum width：`720px` through `--ds-container-reading`.
 - Page gutters：mobile `20px`, tablet `32px`, desktop `64px` through layout Tokens.

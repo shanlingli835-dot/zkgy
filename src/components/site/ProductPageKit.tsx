@@ -1,4 +1,5 @@
 import type { CSSProperties, ReactNode } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/button-variants";
@@ -319,24 +320,61 @@ export function HeroVideo({
   src?: string;
   poster?: string;
 }) {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [autoPlay, setAutoPlay] = useState(false);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+    const motionPreference = window.matchMedia("(prefers-reduced-motion: reduce)");
+    let visible = false;
+    let disposed = false;
+    const shouldPlay = () =>
+      !disposed && visible && !motionPreference.matches && !document.hidden;
+    const synchronizePlayback = () => {
+      const allowed = shouldPlay();
+      setAutoPlay(allowed);
+      video.autoplay = allowed;
+      if (allowed) {
+        void video.play().then(() => {
+          if (!shouldPlay()) video.pause();
+        }).catch(() => {
+          // Autoplay may be denied or the source codec unsupported.
+        });
+      } else {
+        video.pause();
+      }
+    };
+    const observer = new IntersectionObserver(([entry]) => {
+      visible = entry?.isIntersecting === true;
+      synchronizePlayback();
+    }, { threshold: 0 });
+    observer.observe(video);
+    motionPreference.addEventListener("change", synchronizePlayback);
+    document.addEventListener("visibilitychange", synchronizePlayback);
+    video.addEventListener("loadeddata", synchronizePlayback);
+    return () => {
+      disposed = true;
+      observer.disconnect();
+      motionPreference.removeEventListener("change", synchronizePlayback);
+      document.removeEventListener("visibilitychange", synchronizePlayback);
+      video.removeEventListener("loadeddata", synchronizePlayback);
+      video.autoplay = false;
+      video.pause();
+    };
+  }, [src]);
+
   return (
     <video
-      autoPlay
+      ref={videoRef}
+      className="ds-hero-video"
+      autoPlay={autoPlay}
       muted
       loop
       playsInline
       preload="metadata"
       aria-label={label}
       poster={poster}
-      style={{
-        width: "100%",
-        height: "100%",
-        objectFit: "cover",
-        borderRadius: "var(--ds-radius-surface)",
-        border:
-          "var(--ds-border-width-default) solid var(--ds-color-border-inverse)",
-        backgroundColor: "#0a0a0a",
-      }}
     >
       <source
         src={src ?? HERO_VIDEO_SRC}
@@ -353,12 +391,14 @@ export function ProductHero({
   primaryCta = { label: "免费试用", href: CTA_HREF },
   secondaryCta,
   visual,
+  visualAspectRatio = "600 / 437.5",
 }: {
   title: ReactNode;
   description: string;
   primaryCta?: { label: string; href: string };
   secondaryCta?: { label: string; href: string };
   visual?: ReactNode;
+  visualAspectRatio?: "600 / 437.5" | "16 / 9";
 }) {
   return (
     <section
@@ -428,8 +468,9 @@ export function ProductHero({
           className="ds-hero-visual"
           style={{
             width: "100%",
+            minWidth: 0,
             maxWidth: 600,
-            aspectRatio: "600 / 437.5",
+            aspectRatio: visualAspectRatio,
             justifySelf: "end",
           }}
         >

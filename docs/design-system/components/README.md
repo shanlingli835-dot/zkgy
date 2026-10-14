@@ -2,6 +2,8 @@
 
 ## Local content compositions
 
+- Hero Video: Implemented; spec `hero-video.md`; canonical `HeroVideo` in `src/components/site/ProductPageKit.tsx`.
+
 - Evidence Section: Implemented; spec `evidence-section.md`; canonical `src/components/ui/evidence-section.tsx`.
 - Feature Cards: Implemented; spec `feature-cards.md`; canonical `src/components/ui/feature-cards.tsx`.
 
