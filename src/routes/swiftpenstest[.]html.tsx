@@ -19,7 +19,12 @@ import swiftPentestKnowledgeAdd from "@/assets/swift-pentest-knowledge-add.png";
 import swiftPentestExploitExec from "@/assets/swift-pentest-exploit-exec.png";
 import swiftPentestDistributedNodes from "@/assets/swift-pentest-distributed-nodes.png";
 import swiftPentestHeroVideo from "@/assets/swift-pentest-hero-intro.mp4.asset.json";
+import pentestCarouselTopology from "@/assets/pentest-carousel-topology.jpg";
+import pentestCarouselLoop from "@/assets/pentest-carousel-loop.jpg";
+import pentestCarouselLibrary from "@/assets/pentest-carousel-library.jpg";
+import pentestCarouselDistributed from "@/assets/pentest-carousel-distributed.jpg";
 import { AdvantageTriad } from "@/components/site/AdvantageTriad";
+import { CenteredCarousel } from "@/components/site/CenteredCarousel";
 import { HomeAccordion } from "@/components/site/HomeAccordion";
 import {
   CTA_HREF,
@@ -148,6 +153,51 @@ function SwiftPenPage() {
             icon: <Coins size={56} strokeWidth={1.25} aria-hidden />,
             title: "低成本",
             desc: "以自动化为主的人机结合模式，降低安全验证的人力依赖与实施成本。",
+          },
+        ]}
+      />
+
+      <CenteredCarousel
+        items={[
+          {
+            id: "surface",
+            image: {
+              src: pentestCarouselTopology,
+              alt: "冷色科技风格插图：发光的网络拓扑节点由细线连接，中心有一个盾牌图标",
+            },
+            title: "攻击面全景视图",
+            description: "自动发现端口服务、Web 指纹、URL 与入口信息，构建完整攻击面视图。",
+            cta: { label: "免费试用", href: CTA_HREF },
+          },
+          {
+            id: "loop",
+            image: {
+              src: pentestCarouselLoop,
+              alt: "冷色科技风格插图：环绕盾牌的自动化流程环，其中一个节点以红色标示漏洞",
+            },
+            title: "自动化渗透闭环",
+            description: "从目标发现到攻击验证形成完整攻击链路，全流程自动化执行。",
+            cta: { label: "免费试用", href: CTA_HREF },
+          },
+          {
+            id: "library",
+            image: {
+              src: pentestCarouselLibrary,
+              alt: "冷色科技风格插图：磨砂玻璃卡片阵列中亮起的盾牌，代表漏洞知识库",
+            },
+            title: "海量漏洞知识库",
+            description: "内置持续更新的漏洞利用组件与检测知识项，覆盖主流攻击场景。",
+            cta: { label: "免费试用", href: CTA_HREF },
+          },
+          {
+            id: "distributed",
+            image: {
+              src: pentestCarouselDistributed,
+              alt: "冷色科技风格插图：三组玻璃质感的服务器节点由光弧连接成环形",
+            },
+            title: "分布式弹性扩容",
+            description: "服务端与多节点分布式架构，支持快速部署与灵活扩容。",
+            cta: { label: "免费试用", href: CTA_HREF },
           },
         ]}
       />
