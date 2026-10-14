@@ -19,10 +19,9 @@ import swiftPentestKnowledgeAdd from "@/assets/swift-pentest-knowledge-add.png";
 import swiftPentestExploitExec from "@/assets/swift-pentest-exploit-exec.png";
 import swiftPentestDistributedNodes from "@/assets/swift-pentest-distributed-nodes.png";
 import swiftPentestHeroVideo from "@/assets/swift-pentest-hero-intro.mp4.asset.json";
-import pentestCarouselTopology from "@/assets/pentest-carousel-topology.jpg";
-import pentestCarouselLoop from "@/assets/pentest-carousel-loop.jpg";
-import pentestCarouselLibrary from "@/assets/pentest-carousel-library.jpg";
-import pentestCarouselDistributed from "@/assets/pentest-carousel-distributed.jpg";
+import pentestFinancePhoto from "@/assets/pentest-case-finance-photo.jpg.asset.json";
+import pentestInfrastructurePhoto from "@/assets/pentest-case-infrastructure-photo.png.asset.json";
+import pentestBankPhoto from "@/assets/pentest-case-bank-photo.jpg.asset.json";
 import { AdvantageTriad } from "@/components/site/AdvantageTriad";
 import { CenteredCarousel } from "@/components/site/CenteredCarousel";
 import { HomeAccordion } from "@/components/site/HomeAccordion";
@@ -158,46 +157,25 @@ function SwiftPenPage() {
       />
 
       <CenteredCarousel
+        label="行业案例"
         items={[
           {
-            id: "surface",
-            image: {
-              src: pentestCarouselTopology,
-              alt: "冷色科技风格插图：发光的网络拓扑节点由细线连接，中心有一个盾牌图标",
-            },
-            title: "攻击面全景视图",
-            description: "自动发现端口服务、Web 指纹、URL 与入口信息，构建完整攻击面视图。",
-            cta: { label: "免费试用", href: CTA_HREF },
+            id: "finance-telecom",
+            image: { src: pentestFinancePhoto.url, alt: "真实摄影：现代商务区玻璃高楼，金融与通信行业场景示意" },
+            title: "金融/通信行业案例",
+            description: "面向金融、通信等资产密集型行业，智能扫描并识别企业网络资产，精准定位 IP 对应设备，发现遗漏及沉没资产，全面掌握资产状况，筑牢网络安全防线。",
           },
           {
-            id: "loop",
-            image: {
-              src: pentestCarouselLoop,
-              alt: "冷色科技风格插图：环绕盾牌的自动化流程环，其中一个节点以红色标示漏洞",
-            },
-            title: "自动化渗透闭环",
-            description: "从目标发现到攻击验证形成完整攻击链路，全流程自动化执行。",
-            cta: { label: "免费试用", href: CTA_HREF },
+            id: "infrastructure",
+            image: { src: pentestInfrastructurePhoto.url, alt: "真实摄影：江边电厂航拍，蓝色暮光下的厂房与亮灯设施" },
+            title: "关键基础设施行业案例",
+            description: "煤炭、电力、房地产等关乎民生的国家支柱性行业，企业内软件系统体系庞大，安全要求极高，稍有不慎，就会产生巨大影响。",
           },
           {
-            id: "library",
-            image: {
-              src: pentestCarouselLibrary,
-              alt: "冷色科技风格插图：磨砂玻璃卡片阵列中亮起的盾牌，代表漏洞知识库",
-            },
-            title: "海量漏洞知识库",
-            description: "内置持续更新的漏洞利用组件与检测知识项，覆盖主流攻击场景。",
-            cta: { label: "免费试用", href: CTA_HREF },
-          },
-          {
-            id: "distributed",
-            image: {
-              src: pentestCarouselDistributed,
-              alt: "冷色科技风格插图：三组玻璃质感的服务器节点由光弧连接成环形",
-            },
-            title: "分布式弹性扩容",
-            description: "服务端与多节点分布式架构，支持快速部署与灵活扩容。",
-            cta: { label: "免费试用", href: CTA_HREF },
+            id: "bank-risk-validation",
+            image: { src: pentestBankPhoto.url, alt: "真实摄影：城市商务区夜景，银行行业场景示意，非项目现场" },
+            title: "某全国性股份制银行风险验证项目",
+            description: "针对银行外网资产暴露、系统上线排查及持续安全检测需求，通过自动化模拟真实攻击场景，精准验证漏洞、识别攻击路径，实现漏洞验证与利用的自动化，提升安全检测效率及漏洞修复效率。",
           },
         ]}
       />

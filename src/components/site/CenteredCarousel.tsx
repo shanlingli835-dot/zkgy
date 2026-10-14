@@ -42,6 +42,13 @@ export function CenteredCarousel({
   const [scrolling, setScrolling] = useState(false);
 
   useEffect(() => {
+    if (!scrolling) return;
+    // Keep controls usable if resize or drag interrupts Embla's settle event.
+    const timeout = window.setTimeout(() => setScrolling(false), 1200);
+    return () => window.clearTimeout(timeout);
+  }, [scrolling]);
+
+  useEffect(() => {
     if (!emblaApi) return;
     const onSelect = () => setSelected(emblaApi.selectedScrollSnap());
     const onSettle = () => setScrolling(false);

@@ -111,7 +111,7 @@
   justify-content: center;
   align-items: flex-start;
   gap: var(--ds-space-lg);
-  max-width: min(36rem, 52%);
+  max-width: min(42rem, 62%);
   padding: clamp(1.5rem, 3vw, 4rem);
   color: var(--ds-color-text-inverse);
 }
@@ -188,7 +188,7 @@
 @media (max-width: 36rem) {
   .ds-carousel__card {
     aspect-ratio: auto;
-    height: 16rem;
+    height: 24rem;
   }
 }
 
