@@ -19,7 +19,7 @@ Provide the explicitly requested demo/trial application page at the existing `/c
 
 ## Anatomy and variants
 
-Logo-only centered white header, pale-gray page. Left column: small uppercase eyebrow “PRODUCT DEMO”, large heading “预约产品演示”, intro sentence, section heading “在演示中，你将了解” with a four-item checklist (green success-surface check circles, lucide `Check`), and a muted footer note “面向企业安全团队、研发团队与检测机构”. No product image on this page. Right white framed form with the semantic shadow: centered heading “获取专属产品演示”, subtitle “填写信息，我们将与您联系。”, five fields in one column (name, 企业邮箱 email, 公司名称, 联系电话, product select), centered Primary submit “提交申请”, and the small note “提交信息即表示您同意我们的隐私政策。” The form uses canonical TrialField and Button with the `primary` variant. Product choices come from the existing product navigation. No reference brand, dark header, purple arrow or unsupported customer quote is copied.
+Logo-only centered white header, pale-gray page. Left column: small uppercase eyebrow “PRODUCT DEMO”, large heading “预约产品演示”, intro sentence, section heading “在演示中，您将了解” with a three-item checklist (green success-surface check circles, lucide `Check`; each item is a bold title line above a secondary description line), and a muted footer note “面向企业安全团队、研发团队与检测机构”. No product image on this page. Right white framed form with the semantic shadow: centered heading “获取专属产品演示”, subtitle “填写信息，我们将与您联系。”, five fields in one column (name, 企业邮箱 email, 公司名称, 联系电话, product select), centered Primary submit “提交申请”, and the small note “提交信息即表示您同意我们的隐私政策。” The form uses canonical TrialField and Button with the `primary` variant. Product choices come from the existing product navigation. No reference brand, dark header, purple arrow or unsupported customer quote is copied.
 
 ## Behavior and states
 
@@ -27,7 +27,7 @@ Default controls are white with semantic borders. Hover strengthens borders; foc
 
 ## Content
 
-Copy comes from the user's 2026-10-14 draft verbatim: eyebrow, heading, intro, checklist items (核心产品能力与应用场景 / 自动化安全测试流程 / 风险发现与分析报告 / 与现有开发流程的集成方式), footer note, form heading, subtitle, placeholders (请输入姓名, name@company.com, 请输入公司名称, 请输入联系电话, 请选择产品), privacy note. No new business claims beyond this draft.
+Copy comes from the user's 2026-10-14 draft verbatim: eyebrow, heading, intro, checklist items (核心产品能力 / 真实业务流程 / 专属解决方案, each with the user's description sentence), footer note, form heading, subtitle, placeholders (请输入姓名, name@company.com, 请输入公司名称, 请输入联系电话, 请选择产品), privacy note. No new business claims beyond this draft.
 
 ## Accessibility
 

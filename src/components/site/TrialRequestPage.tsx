@@ -7,7 +7,11 @@ import { TrialField } from "@/components/ui/trial-field";
 import { primaryNav } from "@/content/navigation";
 
 const productOptions = (primaryNav.find(group => group.id === "products")?.children ?? []).map(product => ({ label: product.label, value: product.label }));
-const demoHighlights = ["核心产品能力与应用场景", "自动化安全测试流程", "风险发现与分析报告", "与现有开发流程的集成方式"];
+const demoHighlights = [
+  { title: "核心产品能力", desc: "深入了解产品功能、技术优势及典型应用场景。" },
+  { title: "真实业务流程", desc: "直观体验从测试配置、任务执行到漏洞分析的完整流程。" },
+  { title: "专属解决方案", desc: "结合您的业务需求，探讨适合的安全测试与集成方案。" },
+];
 const requiredLabels: Record<string, string> = { name: "姓名", phone: "联系电话", email: "企业邮箱", organization: "公司名称", product: "感兴趣的产品" };
 
 export function TrialRequestPage() {
@@ -45,12 +49,15 @@ export function TrialRequestPage() {
           <p className="ds-trial-eyebrow">PRODUCT DEMO</p>
           <h1 id="trial-title">预约产品演示</h1>
           <p className="ds-trial-lead">了解中科固源如何帮助企业识别安全风险，提升安全测试效率。</p>
-          <h2 className="ds-trial-demo-heading">在演示中，你将了解</h2>
+          <h2 className="ds-trial-demo-heading">在演示中，您将了解</h2>
           <ul className="ds-trial-checklist">
             {demoHighlights.map(item => (
-              <li key={item}>
+              <li key={item.title}>
                 <span className="ds-trial-check" aria-hidden="true"><Check size={14} strokeWidth={2.5} /></span>
-                {item}
+                <span className="ds-trial-check-body">
+                  <span className="ds-trial-check-title">{item.title}</span>
+                  <span className="ds-trial-check-desc">{item.desc}</span>
+                </span>
               </li>
             ))}
           </ul>
