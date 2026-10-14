@@ -319,3 +319,11 @@ import logoHorizontalReverse from '@/assets/brand/logos/zkgy-logo-horizontal-rev
 - 生成式示意插图，冷色极简科技风格：银白亮底、磨砂玻璃、冰蓝光线、淡紫高光、大量留白、无灰色线框，主体偏右、左侧留白供文案叠加；与 solution-auto「业务场景」配图风格一致。
 - 文案为待替换的示意内容（攻击面全景视图 / 自动化渗透闭环 / 海量漏洞知识库 / 分布式弹性扩容），用户确认后替换为真实内容，并同步更新本条目与 alt 描述。
 - 通过 `CenteredCarouselItem.image` 接入，卡片 16:7、圆角 0.75rem，左深右浅渐变遮罩保证文字可读。
+
+
+## Swift Pentest 行业案例真实摄影
+
+- 金融/通信：`src/assets/pentest-case-finance-photo.jpg.asset.json`，Unsplash 实拍商务楼摄影，来源 `https://images.unsplash.com/photo-1486406146926-c627a92ad1ab`。
+- 关键基础设施：`src/assets/pentest-case-infrastructure-photo.png.asset.json`，用户提供的电厂航拍照片。
+- 银行风险验证：`src/assets/pentest-case-bank-photo.jpg.asset.json`，Unsplash 实拍城市摄影，来源 `https://images.unsplash.com/photo-1519501025264-65ba15a82390`。
+- 均为行业场景示意，非特定客户项目现场；等比 cover 展示，不再引用原四张玻璃概念插图。
