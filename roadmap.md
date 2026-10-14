@@ -1,6 +1,6 @@
 # Roadmap
 
-- [ ] 首页集成模块替换为 GitLab、Jenkins、Ansible、Jira、禅道官方 Logo，交错重复填满现有 16 个位置，保持文案、CTA、布局并验证桌面手机
+- [x] 首页集成模块替换为 GitLab、Jenkins、Ansible、Jira、禅道官方 Logo，交错重复填满现有 16 个位置；1547/1280/375px 图片完整加载、无横向滚动，免费试用跳转通过，保留文案、CTA、布局
 
 - [x] /contact.html 按新参考图调整浅灰页面、居中 Logo、左侧产品界面图、右侧白色轻阴影单列表单；保留六项字段及提交状态，桌面手机验证通过
 
