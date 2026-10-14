@@ -12,7 +12,8 @@
 .ds-trial-check { display: inline-flex; align-items: center; justify-content: center; flex: none; width: var(--ds-space-2xl); height: var(--ds-space-2xl); border-radius: var(--ds-radius-round); background: var(--ds-color-status-success-surface); border: var(--ds-border-width-default) solid var(--ds-color-status-success-border); color: var(--ds-color-status-success); }
 .ds-trial-note { margin: var(--ds-space-3xl) var(--ds-space-0) var(--ds-space-0); margin-top: auto; padding-top: var(--ds-space-3xl); font-size: var(--ds-font-size-sm); line-height: var(--ds-line-height-sm); color: var(--ds-color-text-muted); }
 .ds-trial-form { background: var(--ds-color-surface-default); padding: var(--ds-space-3xl); border-radius: var(--ds-radius-media); box-shadow: var(--ds-shadow-md); }
-.ds-trial-form h2 { font-size: var(--ds-font-size-2xl); line-height: var(--ds-line-height-2xl); margin: var(--ds-space-0) var(--ds-space-0) var(--ds-space-2xl); font-weight: var(--ds-font-weight-medium); text-align: center; }
+.ds-trial-form h2 { font-size: var(--ds-font-size-2xl); line-height: var(--ds-line-height-2xl); margin: var(--ds-space-0) var(--ds-space-0) var(--ds-space-sm); font-weight: var(--ds-font-weight-medium); text-align: center; }
+.ds-trial-form-subtitle { margin: var(--ds-space-0) var(--ds-space-0) var(--ds-space-2xl); font-size: var(--ds-font-size-sm); line-height: var(--ds-line-height-sm); color: var(--ds-color-text-secondary); text-align: center; }
 .ds-trial-fields { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--ds-space-lg); }
 .ds-trial-field { min-width: 0; display: flex; flex-direction: column; gap: var(--ds-space-sm); }
 .ds-trial-field--wide { grid-column: 1 / -1; }
@@ -37,7 +38,7 @@ textarea.ds-trial-control { min-height: calc(var(--ds-size-control-min) * 3); re
   .ds-trial-layout { grid-template-columns: minmax(0, 1fr); padding: var(--ds-space-xl) var(--ds-gutter-mobile) var(--ds-space-3xl); gap: var(--ds-space-3xl); }
   .ds-trial-copy { padding-block: var(--ds-space-0); }
   .ds-trial-copy h1 { font-size: var(--ds-font-size-3xl); line-height: var(--ds-line-height-3xl); }
-  .ds-trial-copy ul { margin-top: var(--ds-space-2xl); gap: var(--ds-space-lg); }
+  .ds-trial-copy ul { margin-top: var(--ds-space-lg); gap: var(--ds-space-lg); }
   .ds-trial-form { padding: var(--ds-space-xl); }
   .ds-trial-fields { grid-template-columns: minmax(0, 1fr); }
 }
