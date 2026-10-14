@@ -79,6 +79,12 @@ import logoHorizontalReverse from '@/assets/brand/logos/zkgy-logo-horizontal-rev
 
 ## 网联汽车方案组成插图
 
+## 免费试用页产品配图
+
+- `/contact.html` 左侧使用现有 `src/assets/wisdom-dashboard.png.asset.json` 产品界面示意，按用户新的参考图布局展示；不作为客户数据或试用结果承诺。
+
+## 网联汽车方案组成插图详情
+
 用户指定生成的语义插图，仅用于 `/solution-auto.html` 方案组成，不作为真实设备或界面证据，不用于 Logo。
 
 | 文件 | 对应语义 |
