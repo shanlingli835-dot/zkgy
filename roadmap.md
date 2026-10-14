@@ -1,5 +1,6 @@
 # Roadmap
 
+- [x] /contact.html 演示清单改为三项「核心产品能力 / 真实业务流程 / 专属解决方案」，每项粗体标题＋说明句，标题改为「在演示中，您将了解」；1280/375px 图标对齐、文字完整、无横向滚动，build OK
 - [x] /contact.html según el borrador del usuario (截屏2026-10-14_17.52.51): izquierda “预约产品演示” con eyebrow PRODUCT DEMO, frase introductoria, lista “在演示中，你将了解” con 4 ítems y tilde verde, nota final; derecha “获取专属产品演示” con 5 campos (sin textarea) y botón primario “提交申请” + nota de privacidad; validación, foco al primer error y estado no-entrega intactos; 1280/375 px sin scroll horizontal, build OK
 
 
