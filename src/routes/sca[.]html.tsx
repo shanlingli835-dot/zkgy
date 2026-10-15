@@ -21,13 +21,11 @@ import scaHeroDashboard from "@/assets/sca-hero-dashboard.png";
 import { AdvantageTriad } from "@/components/site/AdvantageTriad";
 import { GalleryHoverCarousel } from "@/components/site/GalleryHoverCarousel";
 import { HomeAccordion } from "@/components/site/HomeAccordion";
-import OrbitingCirclesGlobe from "@/components/ui/orbiting-circles-globe";
 
 import {
   CTA_HREF,
 
   ProductHero,
-  Section,
   SitePageShell,
 } from "@/components/site/ProductPageKit";
 
