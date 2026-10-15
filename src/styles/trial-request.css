@@ -1,5 +1,6 @@
 .ds-trial-page { min-height: 100vh; background: var(--ds-color-surface-subtle); color: var(--ds-color-text-primary); }
-.ds-trial-header { display: flex; justify-content: center; padding: var(--ds-space-xl) var(--ds-gutter-desktop); background: var(--ds-color-canvas); border-bottom: var(--ds-border-width-default) solid var(--ds-color-border-subtle); }
+.ds-trial-header { padding-block: var(--ds-space-xl); background: var(--ds-color-canvas); border-bottom: var(--ds-border-width-default) solid var(--ds-color-border-subtle); }
+.ds-trial-header-inner { max-width: var(--ds-container-page); margin-inline: auto; padding-inline: var(--ds-gutter-desktop); display: flex; justify-content: flex-start; }
 .ds-trial-logo { display: inline-flex; align-items: center; min-height: var(--ds-size-control-min); }
 .ds-trial-layout { max-width: var(--ds-container-page); margin-inline: auto; padding: var(--ds-space-3xl) var(--ds-gutter-desktop) var(--ds-space-5xl); display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--ds-space-5xl); }
 .ds-trial-copy { padding-block: var(--ds-space-lg); display: flex; flex-direction: column; align-items: flex-start; }
@@ -33,11 +34,11 @@ textarea.ds-trial-control { min-height: calc(var(--ds-size-control-min) * 3); re
 .ds-trial-privacy { margin: var(--ds-space-lg) var(--ds-space-0) var(--ds-space-0); font-size: var(--ds-font-size-xs); line-height: var(--ds-line-height-xs); color: var(--ds-color-text-muted); text-align: center; }
 .ds-trial-status { margin: var(--ds-space-lg) var(--ds-space-0) var(--ds-space-0); color: var(--ds-color-text-secondary); font-size: var(--ds-font-size-sm); text-align: center; }
 @media (max-width: 1023px) {
-  .ds-trial-header { padding-inline: var(--ds-gutter-tablet); }
+  .ds-trial-header-inner { padding-inline: var(--ds-gutter-tablet); }
   .ds-trial-layout { padding-inline: var(--ds-gutter-tablet); gap: var(--ds-space-2xl); }
 }
 @media (max-width: 767px) {
-  .ds-trial-header { padding: var(--ds-space-xl) var(--ds-gutter-mobile); }
+  .ds-trial-header-inner { padding-inline: var(--ds-gutter-mobile); }
   .ds-trial-layout { grid-template-columns: minmax(0, 1fr); padding: var(--ds-space-xl) var(--ds-gutter-mobile) var(--ds-space-3xl); gap: var(--ds-space-3xl); }
   .ds-trial-copy { padding-block: var(--ds-space-0); }
   .ds-trial-copy h1 { font-size: var(--ds-font-size-3xl); line-height: var(--ds-line-height-3xl); }
