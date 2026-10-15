@@ -53,6 +53,7 @@ changing source content meaning or introducing Red Hat typography.
 - Button and form labels remain concise; body text must be allowed to wrap.
 - Marketing body line length should stay around `60–72ch`.
 - Chinese text uses normal letter spacing; do not add negative tracking for visual effect.
+- Homepage core-product panel titles share balanced, container-driven wrapping (`text-wrap: balance`, normal word boundaries, strict CJK punctuation). Do not insert product-specific forced line breaks or split English product/technical words; preserve the full copy and let line count follow available width.
 - English buttons use sentence case.
 
 ## Public voice
