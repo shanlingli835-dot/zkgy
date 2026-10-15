@@ -42,7 +42,9 @@ export function TrialRequestPage() {
   return (
     <div className="ds-trial-page">
       <header className="ds-trial-header">
-        <Link to="/" className="ds-trial-logo" aria-label="中科固源 / SOURCEGUARD 首页"><BrandLogo variant="color" height={40} /></Link>
+        <div className="ds-trial-header-inner">
+          <Link to="/" className="ds-trial-logo" aria-label="中科固源 / SOURCEGUARD 首页"><BrandLogo variant="color" height={40} /></Link>
+        </div>
       </header>
       <main className="ds-trial-layout">
         <section className="ds-trial-copy" aria-labelledby="trial-title">
