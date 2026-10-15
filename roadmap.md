@@ -65,3 +65,4 @@
 - [x] swiftpenstest.html「产品功能」新增第六个 Tab「分布式：多节点」并接入用户上传的多节点架构图（裁掉上下画布留白至配图框比例），保持尺寸与圆角
 - [x] swiftpenstest.html「产品优势」下方接入 Adobe 风格居中轮播（CenteredCarousel，Embla loop + 居中对齐），四张卡片为待替换的示意文案与示意插图（Playwright 1920/1280/768/375 验证：主卡居中、箭头切换、无横向滚动、手机端固定高卡片）
 - [x] contact.html 顶部 Logo 改为靠左对齐，与下方正文左边缘对齐（Playwright 1280/375 验证：logo 左缘与正文左缘同位、无横向滚动）
+- [x] contact.html 背景由灰底改为用户参考图的暖色网状渐变（off-white 顶/左 → 珊瑚橙 底/右，新增 --ds-color-trial-* 语义 Token；底部注记改用 text-secondary 保证对比度），Playwright 1280/768/375 验证无横向滚动、注记对比度 7.15:1
