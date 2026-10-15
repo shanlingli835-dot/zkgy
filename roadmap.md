@@ -69,3 +69,4 @@
 - [x] contact.html 演示清单间距放宽（标题→清单 12→24px、条目间 12→24px、标题→说明句 4→8px，手机端同步），Playwright 实测间距与无横向滚动
 - [x] contact.html 背景收敛为 off-white 底 + 右下角一小片品牌红柔光（约 2.2% 页面面积，--ds-color-trial-canvas / --ds-color-trial-glow），移除大面积珊瑚橙渐变；Playwright 1280/768/375 无横向滚动、注记对比度 7.15:1
 - [x] contact.html 背景按用户新参考图（截屏2026-10-15_09.24.24.png）配色重做：off-white 冷调底 + 底边暖橙（左下最浓、向中间渐淡）+ 右边缘竖向橙带（手机端收窄至 4rem），新增 --ds-color-trial-glow-strong / --ds-color-trial-glow-soft；眉标改用 text-secondary。Playwright 1547/1280/768/375 验证无横向滚动、注记对比度 5.65:1
+- [x] contact.html 删除导航栏下方的灰色分割线（.ds-trial-header 去掉 border-bottom，背景改为透明使页面暖色底贯穿顶部）；Playwright 1280/375 验证 border-bottom 为 0px、顶栏与页面背景无缝衔接、无横向滚动
