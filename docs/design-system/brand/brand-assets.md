@@ -356,3 +356,11 @@ import logoHorizontalReverse from '@/assets/brand/logos/zkgy-logo-horizontal-rev
 | 禅道 | `src/assets/integrations/zentao.png.asset.json` | https://cdn.easycorp.cn/web/data/upload/zentaopm/202211/f_9109066084a4ed70a637d56a6bb7811c.png |
 
 HTML 使用指针提供的 CDN URL，以 `img` 等比 contain 显示；保留现有位置、尺寸、动画、文案与 `/contact.html` CTA。禅道使用官方蓝色图形 Logo。
+
+### 首页「核心安全能力」六个能力图标
+
+- 来源：用户提供的六个官方图标文件，按用户指定顺序依次替换原有内联描边图标。
+- 顺序与对应卡片：Theory-based-Prioritization（协议安全）、Frame-234703（智能安全）、Frame-234704（供应链安全）、Continuously-Monitor（代码安全）、Understand-Business-Impact（应用安全）、Proactively-Optimize-Defenses（数据安全）。
+- 素材指针：`src/assets/capabilities/{theory-prioritization.svg,frame-234703.webp,frame-234704.webp,continuously-monitor.svg,understand-business-impact.svg,proactively-optimize-defenses.svg}.asset.json`。
+- 尺寸：统一 60px × 60px（`.integrations-three__logo`），`object-fit: contain` 等比放入，不裁切、不拉伸。
+- 配色：图标自带深蓝 `#10154A` 与珊瑚红 `#D54C4E` 等点缀色，透明背景，置于 `#F3F4F5` 卡片上；图标为装饰性，`aria-hidden`，卡片本身带 `aria-label`。
