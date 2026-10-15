@@ -53,6 +53,15 @@ Red Hat supplies color and UI guidance, never public branding.
 - Overlap homepage product panels in one grid track; inactive panels stay invisible and inert to prevent tab shifts. Share `.pt-panel__title` wrapping without per-product breaks for consistent sizing.
 - Keep image fallbacks; use canonical EvidenceSection to separate data and layout.
 
+## Page Frame and Gutters
+
+- Page frames are full-bleed and take their gutter from `--ds-gutter-desktop`, which
+  `src/styles/tokens.css` steps down at `:root` for ≤768px and ≤520px to match the
+  source-site footer (80/32/20px); no per-component max-width or gutter overrides.
+  Heroes stay centred at `--ds-container-hero`, `/contact.html` at `--ds-container-trial`.
+
+
+
 Before creating or modifying UI: read `docs/design-system/README.md` for adoption
 status, only the task-relevant `foundations/` files, `components/README.md` plus
 `components/_shared/component-rules.md` and the relevant component specs (a pattern
