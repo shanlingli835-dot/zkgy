@@ -1,7 +1,7 @@
 .ds-trial-page {
   min-height: 100vh;
   background-color: var(--ds-color-trial-canvas);
-  background-image: radial-gradient(42% 38% at 100% 100%,
+  background-image: radial-gradient(34% 30% at 100% 100%,
     color-mix(in srgb, var(--ds-color-trial-glow) 62%, transparent) 0%,
     transparent 70%);
   color: var(--ds-color-text-primary);
