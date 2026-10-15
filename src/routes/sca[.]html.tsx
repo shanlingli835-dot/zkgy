@@ -150,13 +150,6 @@ function ScaPage() {
         ]}
       />
 
-      <Section title="支持20多种硬件架构和操作系统、60多种文件格式">
-        <OrbitingCirclesGlobe />
-      </Section>
-
-
-
-
       <AdvantageTriad
         title="产品优势"
         items={[
