@@ -9,7 +9,7 @@
   background-repeat: no-repeat;
   color: var(--ds-color-text-primary);
 }
-.ds-trial-header { padding-block: var(--ds-space-xl); background: var(--ds-color-canvas); border-bottom: var(--ds-border-width-default) solid var(--ds-color-border-subtle); }
+.ds-trial-header { padding-block: var(--ds-space-xl); background: transparent; }
 .ds-trial-header-inner { max-width: var(--ds-container-page); margin-inline: auto; padding-inline: var(--ds-gutter-desktop); display: flex; justify-content: flex-start; }
 .ds-trial-logo { display: inline-flex; align-items: center; min-height: var(--ds-size-control-min); }
 .ds-trial-layout { max-width: var(--ds-container-page); margin-inline: auto; padding: var(--ds-space-3xl) var(--ds-gutter-desktop) var(--ds-space-5xl); display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--ds-space-5xl); }
