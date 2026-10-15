@@ -46,9 +46,11 @@
   --ds-color-surface-disabled: var(--rh-color-gray-20);
   --ds-color-overlay: color-mix(in srgb, var(--rh-color-black) 40%, transparent);
 
-  /* Trial request page canvas: off-white with a small brand-red glow in the bottom-right corner */
+  /* Trial request page canvas: cool off-white base with warm orange glows along the bottom edge and right edge */
   --ds-color-trial-canvas: #EEEBEE;
-  --ds-color-trial-glow: color-mix(in srgb, var(--ds-color-action-primary) 55%, transparent);
+  --ds-color-trial-glow: #F9743F;
+  --ds-color-trial-glow-strong: #ED5826;
+  --ds-color-trial-glow-soft: #FAD2C4;
 
   /* Text */
   --ds-color-text-primary: var(--rh-color-text-primary-on-light);
