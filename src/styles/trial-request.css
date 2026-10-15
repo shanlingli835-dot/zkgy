@@ -48,6 +48,13 @@ textarea.ds-trial-control { min-height: calc(var(--ds-size-control-min) * 3); re
   .ds-trial-layout { padding-inline: var(--ds-gutter-tablet); gap: var(--ds-space-2xl); }
 }
 @media (max-width: 767px) {
+  .ds-trial-page {
+    background-image:
+      linear-gradient(to left, color-mix(in srgb, var(--ds-color-trial-glow-strong) 96%, transparent) 0%, transparent 4rem),
+      radial-gradient(40rem 30rem at 2% 106%, var(--ds-color-trial-glow) 0%, transparent 70%),
+      radial-gradient(60rem 30rem at 45% 109%, color-mix(in srgb, var(--ds-color-trial-glow) 85%, transparent) 0%, transparent 72%),
+      radial-gradient(60rem 34rem at 42% 108%, color-mix(in srgb, var(--ds-color-trial-glow-soft) 86%, transparent) 0%, transparent 72%);
+  }
   .ds-trial-header-inner { padding-inline: var(--ds-gutter-mobile); }
   .ds-trial-layout { grid-template-columns: minmax(0, 1fr); padding: var(--ds-space-xl) var(--ds-gutter-mobile) var(--ds-space-3xl); gap: var(--ds-space-3xl); }
   .ds-trial-copy { padding-block: var(--ds-space-0); }
