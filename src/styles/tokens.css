@@ -46,9 +46,11 @@
   --ds-color-surface-disabled: var(--rh-color-gray-20);
   --ds-color-overlay: color-mix(in srgb, var(--rh-color-black) 40%, transparent);
 
-  /* Trial request page canvas: off-white base with a brand-colour accent (~3% coverage) */
+  /* Trial request page canvas (user-specified warm mesh background) */
   --ds-color-trial-canvas: #EEEBEE;
-  --ds-color-trial-glow: var(--ds-color-action-primary);
+  --ds-color-trial-glow-soft: #F9A97A;
+  --ds-color-trial-glow-mid: #F58153;
+  --ds-color-trial-glow-strong: #E9552A;
 
   /* Text */
   --ds-color-text-primary: var(--rh-color-text-primary-on-light);
