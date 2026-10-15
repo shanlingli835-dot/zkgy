@@ -180,13 +180,30 @@
   --ds-z-navigation: 50;
   --ds-gutter-mobile: 1.25rem;
   --ds-gutter-tablet: 2rem;
-  --ds-gutter-desktop: 4rem;
+  --ds-gutter-desktop: 5rem;
   --ds-section-y-mobile: 3.5rem;
   --ds-section-y-desktop: 6rem;
   --ds-breakpoint-sm: 40rem;
   --ds-breakpoint-md: 48rem;
   --ds-breakpoint-lg: 64rem;
   --ds-breakpoint-xl: 80rem;
+}
+
+/* Page gutter ramp — mirrors the source-site footer (.jasper-footer__inner:
+   80px desktop, 32px at ≤768px, 20px at ≤520px) so navigation, page body and
+   footer keep identical edges at every width. */
+@media (max-width: 768px) {
+  :root {
+    --ds-gutter-desktop: 2rem;
+    --ds-gutter-mobile: 2rem;
+  }
+}
+
+@media (max-width: 520px) {
+  :root {
+    --ds-gutter-desktop: 1.25rem;
+    --ds-gutter-mobile: 1.25rem;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
