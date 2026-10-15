@@ -119,7 +119,7 @@ export function MobileMenu({
         if (event.target === event.currentTarget) onClose();
       }}
     >
-      <div className="max-h-full overflow-y-auto border-t border-border bg-card px-[var(--ds-gutter-mobile)] pb-[var(--ds-space-2xl)]">
+      <div className="max-h-full overflow-y-auto border-t border-border bg-card px-[var(--ds-gutter-desktop)] pb-[var(--ds-space-2xl)]">
         <div className="sticky top-0 z-[var(--ds-z-navigation)] flex min-h-[var(--ds-size-control-min)] items-center justify-between border-b border-border bg-card py-[var(--ds-space-sm)]">
           <h2
             id={titleId}
