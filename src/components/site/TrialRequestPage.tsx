@@ -75,7 +75,7 @@ export function TrialRequestPage() {
             <TrialField id="phone" label="联系电话" kind="tel" required autoComplete="tel" placeholder="请输入联系电话" error={errors.phone} />
             <TrialField id="product" label="感兴趣的产品" kind="select" required options={productOptions} error={errors.product} />
           </div>
-          <div className="ds-trial-actions"><Button type="submit" variant="primary">提交申请</Button></div>
+          <div className="ds-trial-actions"><Button type="submit" variant="primary" className="ds-trial-submit">提交申请</Button></div>
           <p className="ds-trial-privacy">提交信息即表示您同意我们的隐私政策。</p>
           <p className="ds-trial-status" role="status">{status}</p>
         </form>

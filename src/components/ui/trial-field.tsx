@@ -21,10 +21,12 @@ export function TrialField({ id, label, kind = "text", required, error, options 
     <div className={`ds-trial-field${kind === "select" || kind === "textarea" ? " ds-trial-field--wide" : ""}`}>
       <label htmlFor={id}>{label}{required && <span aria-hidden="true">*</span>}</label>
       {kind === "select" ? (
-        <select {...shared} defaultValue="">
-          <option value="" disabled>请选择产品</option>
-          {options.map(option => <option key={option.value} value={option.value}>{option.label}</option>)}
-        </select>
+        <div className="ds-trial-select">
+          <select {...shared} defaultValue="">
+            <option value="" disabled>请选择产品</option>
+            {options.map(option => <option key={option.value} value={option.value}>{option.label}</option>)}
+          </select>
+        </div>
       ) : kind === "textarea" ? (
         <textarea {...shared} placeholder={placeholder} maxLength={2000} />
       ) : (
