@@ -1,10 +1,7 @@
 .ds-trial-page {
   min-height: 100vh;
   background-color: var(--ds-color-trial-canvas);
-  background-image:
-    radial-gradient(115% 90% at 100% 100%, var(--ds-color-trial-glow-strong) 0%, transparent 55%),
-    radial-gradient(80% 70% at 100% 45%, var(--ds-color-trial-glow-mid) 0%, transparent 62%),
-    radial-gradient(90% 55% at 10% 100%, var(--ds-color-trial-glow-soft) 0%, transparent 58%);
+  background-image: radial-gradient(24rem 18rem at 100% 100%, var(--ds-color-trial-glow) 0%, transparent 70%);
   color: var(--ds-color-text-primary);
 }
 .ds-trial-header { padding-block: var(--ds-space-xl); background: var(--ds-color-canvas); border-bottom: var(--ds-border-width-default) solid var(--ds-color-border-subtle); }
