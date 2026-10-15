@@ -3,8 +3,8 @@
   background-color: var(--ds-color-trial-canvas);
   background-image:
     linear-gradient(to left, color-mix(in srgb, var(--ds-color-trial-glow-strong) 92%, transparent) 0%, transparent 13%),
-    radial-gradient(58rem 30rem at 2% 107%, var(--ds-color-trial-glow) 0%, transparent 68%),
-    radial-gradient(70rem 24rem at 40% 110%, color-mix(in srgb, var(--ds-color-trial-glow) 72%, transparent) 0%, transparent 70%),
+    radial-gradient(58rem 30rem at 2% 105%, var(--ds-color-trial-glow) 0%, transparent 68%),
+    radial-gradient(70rem 24rem at 40% 108%, color-mix(in srgb, var(--ds-color-trial-glow) 88%, transparent) 0%, transparent 70%),
     radial-gradient(60rem 34rem at 42% 108%, color-mix(in srgb, var(--ds-color-trial-glow-soft) 86%, transparent) 0%, transparent 72%);
   background-repeat: no-repeat;
   color: var(--ds-color-text-primary);
