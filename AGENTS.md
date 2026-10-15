@@ -18,15 +18,8 @@ Source-faithful rebuild of the official 中科固源 / SOURCEGUARD website.
 - HeroVideo owns fluid sizing and motion-aware playback.
 - `/contact.html` uses TrialRequestPage and canonical TrialField; keep CTA URLs and never fake submission delivery.
 
-Before implementing anything, follow:
-
-- docs/bmad/prd.md
-- docs/bmad/DESIGN.md
-- docs/bmad/EXPERIENCE.md
-- docs/bmad/ARCHITECTURE-SPINE.md
-- docs/bmad/epics.md
-- docs/source-site/page-inventory.md
-- docs/source-site/urls.md
+Before implementing anything, follow `docs/bmad/` (prd, DESIGN, EXPERIENCE,
+ARCHITECTURE-SPINE, epics) and `docs/source-site/` (page-inventory, urls).
 
 Rules:
 
@@ -49,8 +42,8 @@ Red Hat supplies color and UI guidance, never public branding.
 
 ## Current Homepage Migration Source
 
-- The user-approved homepage source is `public/source-site/index.html`.
-- Its stylesheet, scripts, product pages, and image assets live under `public/source-site/`.
+- The user-approved homepage source is `public/source-site/index.html`; its stylesheet,
+  scripts, product pages and image assets live under `public/source-site/`.
 - The canonical `/` route renders that source through `SourceHomeEmbed` so Lovable displays the
   approved page without visually regenerating it.
 - When the user requests a homepage edit, modify the files under `public/source-site/` unless the
@@ -60,17 +53,21 @@ Red Hat supplies color and UI guidance, never public branding.
 - Overlap homepage product panels in one grid track; inactive panels stay invisible and inert to prevent tab shifts. Share `.pt-panel__title` wrapping without per-product breaks for consistent sizing.
 - Keep image fallbacks; use canonical EvidenceSection to separate data and layout.
 
-Before creating or modifying UI:
+## Page Frame and Gutters
 
-1. Read `docs/design-system/README.md` and confirm the current adoption status.
-2. Read only the task-relevant files under `docs/design-system/foundations/`.
-3. Open `docs/design-system/components/README.md` to locate applicable components.
-4. Read `components/_shared/component-rules.md` and the relevant component specs.
-5. Read a pattern only when the task combines multiple components.
-6. Reuse the canonical implementation in `src/components/ui/`; do not duplicate it
-   in routes or business components.
-7. Use semantic tokens from `src/styles/tokens.css`; do not create visual values in
-   routes, business components, or one-off utility classes.
+- Page frames are full-bleed and take their gutter from `--ds-gutter-desktop`, which
+  `src/styles/tokens.css` steps down at `:root` for ≤768px and ≤520px to match the
+  source-site footer (80/32/20px); no per-component max-width or gutter overrides.
+  Heroes stay centred at `--ds-container-hero`, `/contact.html` at `--ds-container-trial`.
+
+
+
+Before creating or modifying UI: read `docs/design-system/README.md` for adoption
+status, only the task-relevant `foundations/` files, `components/README.md` plus
+`components/_shared/component-rules.md` and the relevant component specs (a pattern
+only when several components combine). Reuse the canonical implementation in
+`src/components/ui/` and semantic tokens from `src/styles/tokens.css`; never duplicate
+either in routes or business components.
 
 ### Mandatory boundaries
 
@@ -98,13 +95,10 @@ Before creating or modifying UI:
 
 ### Specification gaps
 
-If the current system does not cover a requirement:
-
-1. Try an approved component composition first.
-2. Do not invent a temporary style in a route.
-3. If a new component or variant is necessary, create its specification from
-   `docs/design-system/templates/component-spec-template.md`.
-4. Implement or adapt the canonical component only after the specification exists.
+If the system does not cover a requirement: try an approved component composition
+first, never a temporary style in a route. When a new component or variant is
+necessary, write its spec from `docs/design-system/templates/component-spec-template.md`
+before implementing or adapting the canonical component.
 
 ### Completion checks
 
