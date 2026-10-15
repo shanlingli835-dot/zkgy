@@ -165,8 +165,12 @@
   --ds-duration-slow: 240ms;
   --ds-ease-standard: cubic-bezier(0.2, 0, 0, 1);
 
-  /* Layout */
-  --ds-container-page: 80rem;
+  /* Layout
+     Page frames are full-bleed and share the source-site footer's gutter ramp
+     (80px desktop / 32px tablet / 20px phone) so the navigation, page body and
+     footer all line up on the same edges. */
+  --ds-container-page: none;
+  --ds-container-trial: 80rem;
   --ds-container-reading: 45rem;
   --ds-size-video-max: 120rem;
   --ds-container-summary: 20rem;
