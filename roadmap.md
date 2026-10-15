@@ -72,4 +72,3 @@
 - [x] contact.html 删除导航栏下方的灰色分割线（.ds-trial-header 去掉 border-bottom，背景改为透明使页面暖色底贯穿顶部）；Playwright 1280/375 验证 border-bottom 为 0px、顶栏与页面背景无缝衔接、无横向滚动
 - [x] contact.html 导航栏改为与首页导航栏一致的纯白底（--ds-color-canvas），无分割线、只保留 Logo；Playwright 1280/375 验证背景 rgb(255,255,255)、border-bottom 0px、仅 1 个 Logo 链接、无横向滚动
 - [x] contact.html 表单细节：下拉框箭头改为自绘并留出右侧 16px（appearance: none + 32px 右内边距）；必填「*」改用品牌红 --ds-color-action-primary（仅星号）；「提交申请」按钮与输入框等宽两端对齐。Playwright 1280 实测 chevronRight=16px、星号 rgb(238,0,0)、按钮 432px 与输入框左右边缘同位
-- [x] 首页「核心安全能力」六个能力图标按用户指定顺序替换为上传的官方图标，图标框统一 60×60（object-fit: contain）；Playwright 1280/375 验证 6 个 IMG 全部 60x60、加载完成、无横向滚动
