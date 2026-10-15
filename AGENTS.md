@@ -57,7 +57,7 @@ Red Hat supplies color and UI guidance, never public branding.
   request explicitly asks to refactor the page into React components.
 - Do not restore the earlier generated homepage from git history or replace the approved source
   with a new design direction.
-- Keep homepage product panels in one overlapping grid track, with inactive panels invisible and inert, so the tallest content reserves responsive space without moving the page on tab changes.
+- Overlap homepage product panels in one grid track; inactive panels stay invisible and inert to prevent tab shifts. Share `.pt-panel__title` wrapping without per-product breaks for consistent sizing.
 - Keep image fallbacks; use canonical EvidenceSection to separate data and layout.
 
 Before creating or modifying UI:
