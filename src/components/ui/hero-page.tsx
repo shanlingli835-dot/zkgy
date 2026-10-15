@@ -216,7 +216,7 @@ export default function HeroPage({
 
 
       {/* Hero Content */}
-      <div className="mx-auto grid w-full max-w-[var(--ds-container-page)] grid-cols-1 items-center gap-[var(--ds-space-4xl)] px-[var(--ds-gutter-mobile)] py-[var(--ds-section-y-desktop)] md:px-[var(--ds-gutter-tablet)] lg:grid-cols-[minmax(0,1fr)_minmax(0,600px)] lg:px-[var(--ds-gutter-desktop)]">
+      <div className="mx-auto grid w-full max-w-[var(--ds-container-hero)] grid-cols-1 items-center gap-[var(--ds-space-4xl)] px-[var(--ds-gutter-mobile)] py-[var(--ds-section-y-desktop)] md:px-[var(--ds-gutter-tablet)] lg:grid-cols-[minmax(0,1fr)_minmax(0,600px)] lg:px-[var(--ds-gutter-desktop)]">
         <AnimatedGroup variants={transitionVariants} className="w-full">
           {badge ? (
             <div className="mb-[var(--ds-space-lg)] flex">

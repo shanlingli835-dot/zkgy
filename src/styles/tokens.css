@@ -165,8 +165,15 @@
   --ds-duration-slow: 240ms;
   --ds-ease-standard: cubic-bezier(0.2, 0, 0, 1);
 
-  /* Layout */
-  --ds-container-page: 80rem;
+  /* Layout
+     Page frames are full-bleed and share the source-site footer's gutter ramp
+     (80px desktop / 32px tablet / 20px phone) so the navigation, page body and
+     footer all line up on the same edges. */
+  --ds-container-page: none;
+  --ds-container-trial: 80rem;
+  /* Split text + visual heroes stay centred at this width so the two columns
+     do not drift to opposite edges on very wide screens. */
+  --ds-container-hero: 90rem;
   --ds-container-reading: 45rem;
   --ds-size-video-max: 120rem;
   --ds-container-summary: 20rem;
@@ -176,13 +183,30 @@
   --ds-z-navigation: 50;
   --ds-gutter-mobile: 1.25rem;
   --ds-gutter-tablet: 2rem;
-  --ds-gutter-desktop: 4rem;
+  --ds-gutter-desktop: 5rem;
   --ds-section-y-mobile: 3.5rem;
   --ds-section-y-desktop: 6rem;
   --ds-breakpoint-sm: 40rem;
   --ds-breakpoint-md: 48rem;
   --ds-breakpoint-lg: 64rem;
   --ds-breakpoint-xl: 80rem;
+}
+
+/* Page gutter ramp — mirrors the source-site footer (.jasper-footer__inner:
+   80px desktop, 32px at ≤768px, 20px at ≤520px) so navigation, page body and
+   footer keep identical edges at every width. */
+@media (max-width: 768px) {
+  :root {
+    --ds-gutter-desktop: 2rem;
+    --ds-gutter-mobile: 2rem;
+  }
+}
+
+@media (max-width: 520px) {
+  :root {
+    --ds-gutter-desktop: 1.25rem;
+    --ds-gutter-mobile: 1.25rem;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

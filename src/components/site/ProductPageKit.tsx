@@ -419,7 +419,7 @@ export function ProductHero({
         style={{
           position: "relative",
           width: "100%",
-          maxWidth: "var(--ds-container-page)",
+          maxWidth: "var(--ds-container-hero)",
           margin: "0 auto",
           display: "grid",
           gridTemplateColumns: "minmax(0, 1fr) minmax(0, 600px)",
