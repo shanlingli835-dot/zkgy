@@ -2,9 +2,9 @@
   min-height: 100vh;
   background-color: var(--ds-color-trial-canvas);
   background-image:
-    radial-gradient(52rem 22rem at 6% 104%, color-mix(in srgb, var(--ds-color-trial-glow) 92%, transparent) 0%, transparent 70%),
-    radial-gradient(34rem 56rem at 101% 52%, color-mix(in srgb, var(--ds-color-trial-glow-strong) 90%, transparent) 0%, transparent 66%),
-    radial-gradient(40rem 20rem at 86% 104%, color-mix(in srgb, var(--ds-color-trial-glow) 88%, transparent) 0%, transparent 70%),
+    linear-gradient(to left, color-mix(in srgb, var(--ds-color-trial-glow-strong) 92%, transparent) 0%, transparent 13%),
+    radial-gradient(58rem 30rem at 2% 108%, var(--ds-color-trial-glow) 0%, transparent 68%),
+    radial-gradient(70rem 24rem at 40% 110%, color-mix(in srgb, var(--ds-color-trial-glow) 55%, transparent) 0%, transparent 70%),
     radial-gradient(60rem 34rem at 42% 108%, color-mix(in srgb, var(--ds-color-trial-glow-soft) 86%, transparent) 0%, transparent 72%);
   background-repeat: no-repeat;
   color: var(--ds-color-text-primary);
