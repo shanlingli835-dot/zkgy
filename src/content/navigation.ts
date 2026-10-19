@@ -52,15 +52,6 @@ const solutionsNavGroup: NavGroup = {
   ],
 };
 
-/**
- * 「服务」分组：按需求不再出现在导航栏（桌面与移动导航均不渲染），
- * 仅页脚保留源站的同名列与「渗透测试」入口；/service-penstest.html 页面本身保留。
- */
-const servicesNavGroup: NavGroup = {
-  id: "services",
-  label: "服务",
-  children: [{ label: "渗透测试", href: "/service-penstest.html" }],
-};
 
 const aboutNavGroup: NavGroup = {
   id: "about",
@@ -74,7 +65,11 @@ const contactNavGroup: NavGroup = {
   href: "/contact.html",
 };
 
-/** 导航栏一级入口：产品 / 解决方案 / 公司介绍 / 联系我们（不含「服务」） */
+/**
+ * 导航栏一级入口：产品 / 解决方案 / 公司介绍 / 联系我们。
+ * 源站的「服务」分组（渗透测试）按需求不再出现在导航栏与页脚
+ * （页脚「技术服务」列已删除）；/service-penstest.html 页面本身保留，仍可直接访问。
+ */
 export const primaryNav: NavGroup[] = [
   productsNavGroup,
   solutionsNavGroup,
