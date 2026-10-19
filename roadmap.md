@@ -79,3 +79,4 @@
 - [x] contact.html 导航栏改为与首页导航栏一致的纯白底（--ds-color-canvas），无分割线、只保留 Logo；Playwright 1280/375 验证背景 rgb(255,255,255)、border-bottom 0px、仅 1 个 Logo 链接、无横向滚动
 - [x] contact.html 表单细节：下拉框箭头改为自绘并留出右侧 16px（appearance: none + 32px 右内边距）；必填「*」改用品牌红 --ds-color-action-primary（仅星号）；「提交申请」按钮与输入框等宽两端对齐。Playwright 1280 实测 chevronRight=16px、星号 rgb(238,0,0)、按钮 432px 与输入框左右边缘同位
 - [x] 全站导航栏与正文改为通栏，适配规则与源站页脚一致（gutter 梯度 80/32/20px 由 tokens.css 的 :root 媒体查询统一，--ds-container-page 设为 none；首屏保持 --ds-container-hero 90rem 居中避免超宽空洞；移动端菜单内边距同步）；Playwright 2267/1440/1024/900/768/500/375 验证导航 Logo、正文左缘、页脚 Logo 同位、菜单展开同位、无横向滚动、无超宽正文段落
+- [x] 导航栏删除「服务」一级入口及其下拉「渗透测试」（产品页 primaryNav 与首页源站导航：桌面触发按钮、mega-resources 面板、手机端抽屉分组一并移除）；页脚「技术服务」列与 /service-penstest.html 页面保留。Playwright 实测首页桌面导航为 安全产品/解决方案/关于我们、3 个 mega 面板、抽屉 3 个分组，产品页桌面 产品/解决方案/公司介绍、手机端抽屉 产品/解决方案/公司介绍/联系我们/免费试用，无「服务」「渗透测试」、无横向滚动
