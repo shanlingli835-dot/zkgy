@@ -30,44 +30,56 @@ export type NavGroup = {
   children?: NavLink[];
 };
 
+const productsNavGroup: NavGroup = {
+  id: "products",
+  label: "产品",
+  children: [
+    { label: "Wisdom 模糊测试", href: "/wisdom.html" },
+    { label: "Swift AI 综合模型安全检测平台", href: "/ai.html" },
+    { label: "Swift SCA 软件成分分析", href: "/sca.html" },
+    { label: "Swift Code 源代码审计", href: "/swiftcode.html" },
+    { label: "Wisdom Lens 灰盒模糊测试", href: "/lens.html" },
+    { label: "Swift Pentest 自动化渗透测试", href: "/swiftpenstest.html" },
+  ],
+};
+
+const solutionsNavGroup: NavGroup = {
+  id: "solutions",
+  label: "解决方案",
+  children: [
+    { label: "网联汽车", href: "/solution-auto.html" },
+    { label: "特种装备", href: "/solution-special.html" },
+  ],
+};
+
+/**
+ * 「服务」分组：按需求不再出现在导航栏（桌面与移动导航均不渲染），
+ * 仅页脚保留源站的同名列与「渗透测试」入口；/service-penstest.html 页面本身保留。
+ */
+const servicesNavGroup: NavGroup = {
+  id: "services",
+  label: "服务",
+  children: [{ label: "渗透测试", href: "/service-penstest.html" }],
+};
+
+const aboutNavGroup: NavGroup = {
+  id: "about",
+  label: "公司介绍",
+  href: "/about.html",
+};
+
+const contactNavGroup: NavGroup = {
+  id: "contact",
+  label: "联系我们",
+  href: "/contact.html",
+};
+
+/** 导航栏一级入口：产品 / 解决方案 / 公司介绍 / 联系我们（不含「服务」） */
 export const primaryNav: NavGroup[] = [
-  {
-    id: "products",
-    label: "产品",
-    children: [
-      { label: "Wisdom 模糊测试", href: "/wisdom.html" },
-      { label: "Swift AI 综合模型安全检测平台", href: "/ai.html" },
-      { label: "Swift SCA 软件成分分析", href: "/sca.html" },
-      { label: "Swift Code 源代码审计", href: "/swiftcode.html" },
-      { label: "Wisdom Lens 灰盒模糊测试", href: "/lens.html" },
-      { label: "Swift Pentest 自动化渗透测试", href: "/swiftpenstest.html" },
-    ],
-  },
-  {
-    id: "solutions",
-    label: "解决方案",
-    children: [
-      { label: "网联汽车", href: "/solution-auto.html" },
-      { label: "特种装备", href: "/solution-special.html" },
-    ],
-  },
-  {
-    id: "services",
-    label: "服务",
-    children: [
-      { label: "渗透测试", href: "/service-penstest.html" },
-    ],
-  },
-  {
-    id: "about",
-    label: "公司介绍",
-    href: "/about.html",
-  },
-  {
-    id: "contact",
-    label: "联系我们",
-    href: "/contact.html",
-  },
+  productsNavGroup,
+  solutionsNavGroup,
+  aboutNavGroup,
+  contactNavGroup,
 ];
 
 /** 主 CTA（源站首页多处"免费试用"均指向 /contact.html） */
